@@ -1,0 +1,63 @@
+name: Apply Phase 9 Learning and Knowledge
+
+on:
+  push:
+    branches:
+      - phase9-learning-knowledge
+    paths:
+      - '.github/apply_phase9.py'
+      - '.github/workflows/apply-phase9.yml'
+      - 'assets/css/phase9-learning-knowledge-2026.css'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: phase9-learning-knowledge
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply Phase 9 safely
+        run: python .github/apply_phase9.py
+      - name: Validate Phase 9
+        run: |
+          node --check assets/js/global-experience-2026.js
+          python - <<'PY'
+          from pathlib import Path
+          targets = [
+              'learning-center.html','learning-paths.html','learning-quiz.html',
+              'devotional-dictionary.html','research-library.html',
+              'knowledge-graph-phase-4.html','cross-references.html'
+          ]
+          checked = 0
+          for name in targets:
+              path = Path(name)
+              if not path.exists():
+                  continue
+              text = path.read_text(encoding='utf-8')
+              assert text.count('assets/css/phase9-learning-knowledge-2026.css?v=20260727-1') == 1, name
+              assert text.count('assets/css/global-experience-2026.css?v=20260726-4') == 1, name
+              assert text.count('assets/js/global-experience-2026.js?v=20260726-4') == 1, name
+              assert 'osb-phase9' in text, name
+              checked += 1
+          assert checked >= 5, checked
+          print(f'Validated {checked} Phase 9 pages')
+          PY
+          git diff --check
+      - name: Commit applied Phase 9
+        run: |
+          if git diff --quiet; then
+            echo 'No changes to commit'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add learning-center.html learning-paths.html learning-quiz.html devotional-dictionary.html research-library.html knowledge-graph-phase-4.html cross-references.html
+          git commit -m 'feat: add premium learning research and knowledge experience'
+          git push origin HEAD:phase9-learning-knowledge
