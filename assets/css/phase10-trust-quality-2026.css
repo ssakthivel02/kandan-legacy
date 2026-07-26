@@ -1,0 +1,110 @@
+/* Om Saravana Bhava — Phase 10: Trust, Accessibility and Production Quality */
+body.osb-phase10{
+  --osb10-green:#176b62;
+  --osb10-gold:#d9a52c;
+  --osb10-ruby:#8f2436;
+  --osb10-ink:#1d1a20;
+  background:
+    radial-gradient(circle at 92% 8%,rgba(23,107,98,.09),transparent 32rem),
+    radial-gradient(circle at 8% 86%,rgba(217,165,44,.09),transparent 28rem),
+    var(--bg,#fff7ec);
+}
+body.osb-phase10 .hero,
+body.osb-phase10 .trust-hero,
+body.osb-phase10 .status-hero,
+body.osb-phase10 .report-hero{
+  border-radius:28px;
+  border:1px solid rgba(23,107,98,.22);
+  box-shadow:0 22px 60px rgba(16,52,47,.12);
+}
+body.osb-phase10 .card,
+body.osb-phase10 .report-card,
+body.osb-phase10 .status-card,
+body.osb-phase10 .audit-card,
+body.osb-phase10 .policy-card{
+  border-radius:20px;
+  border:1px solid rgba(23,107,98,.20);
+  box-shadow:0 12px 34px rgba(16,52,47,.09);
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+body.osb-phase10 .card:hover,
+body.osb-phase10 .report-card:hover,
+body.osb-phase10 .status-card:hover,
+body.osb-phase10 .audit-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(23,107,98,.48);
+  box-shadow:0 18px 46px rgba(16,52,47,.14);
+}
+body.osb-phase10 table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  overflow:hidden;
+  border-radius:16px;
+  border:1px solid rgba(23,107,98,.20);
+}
+body.osb-phase10 th,
+body.osb-phase10 td{
+  padding:.8rem .9rem;
+  border-bottom:1px solid rgba(23,107,98,.13);
+  text-align:left;
+  vertical-align:top;
+}
+body.osb-phase10 th{
+  background:rgba(23,107,98,.08);
+  font-weight:800;
+}
+body.osb-phase10 tr:last-child td{border-bottom:0}
+body.osb-phase10 .status,
+body.osb-phase10 .badge,
+body.osb-phase10 .pill{
+  border-radius:999px;
+  font-weight:800;
+}
+body.osb-phase10 details{
+  border:1px solid rgba(217,165,44,.24);
+  border-radius:16px;
+  padding:.85rem 1rem;
+  background:rgba(255,255,255,.68);
+}
+body.osb-phase10 details+details{margin-top:.75rem}
+body.osb-phase10 summary{
+  cursor:pointer;
+  font-weight:800;
+  min-height:44px;
+  display:flex;
+  align-items:center;
+}
+body.osb-phase10 .pass,
+body.osb-phase10 [data-status="pass"]{color:var(--osb10-green)}
+body.osb-phase10 .warning,
+body.osb-phase10 [data-status="warning"]{color:#8a5b00}
+body.osb-phase10 .fail,
+body.osb-phase10 [data-status="fail"]{color:var(--osb10-ruby)}
+body.osb-phase10 button,
+body.osb-phase10 .btn,
+body.osb-phase10 [role="button"]{min-height:44px}
+body.osb-phase10 :focus-visible{outline:3px solid var(--osb10-green);outline-offset:3px}
+@media(max-width:780px){
+  body.osb-phase10 table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  body.osb-phase10 .grid,
+  body.osb-phase10 [class*="grid"]{grid-template-columns:1fr}
+  body.osb-phase10 .hero,
+  body.osb-phase10 .trust-hero,
+  body.osb-phase10 .status-hero,
+  body.osb-phase10 .report-hero{border-radius:20px}
+}
+@media(prefers-reduced-motion:reduce){
+  body.osb-phase10 *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+@media(forced-colors:active){
+  body.osb-phase10 .card,
+  body.osb-phase10 table,
+  body.osb-phase10 details{border:1px solid CanvasText}
+}
+@media print{
+  body.osb-phase10 .osb-ai-fab,
+  body.osb-phase10 .osb-language-shell{display:none!important}
+  body.osb-phase10 .card,
+  body.osb-phase10 table{box-shadow:none!important}
+}
