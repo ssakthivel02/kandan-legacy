@@ -1,0 +1,78 @@
+/* Om Saravana Bhava — Phase 9: Learning, Research and Knowledge */
+body.osb-phase9{
+  --osb9-ruby:#8f2436;
+  --osb9-gold:#d9a52c;
+  --osb9-peacock:#176b82;
+  --osb9-ink:#20151f;
+  background:
+    radial-gradient(circle at 92% 8%,rgba(23,107,130,.10),transparent 32rem),
+    radial-gradient(circle at 8% 88%,rgba(217,165,44,.10),transparent 28rem),
+    var(--bg,#fff7ec);
+}
+body.osb-phase9 .hero,
+body.osb-phase9 .learning-hero,
+body.osb-phase9 .research-hero,
+body.osb-phase9 .knowledge-hero{
+  border-radius:30px;
+  border:1px solid rgba(217,165,44,.24);
+  background:
+    radial-gradient(circle at 90% 10%,rgba(23,107,130,.14),transparent 24rem),
+    radial-gradient(circle at 8% 90%,rgba(217,165,44,.14),transparent 22rem),
+    var(--panel,rgba(255,255,255,.90));
+  box-shadow:0 22px 64px rgba(48,22,19,.12);
+}
+body.osb-phase9 .card,
+body.osb-phase9 .lesson-card,
+body.osb-phase9 .path-card,
+body.osb-phase9 .quiz-card,
+body.osb-phase9 .research-card,
+body.osb-phase9 .graph-card,
+body.osb-phase9 .dictionary-card{
+  border-radius:22px;
+  border-color:rgba(143,36,54,.16);
+  box-shadow:0 12px 34px rgba(48,22,19,.09);
+  transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease;
+}
+body.osb-phase9 .card:hover,
+body.osb-phase9 .lesson-card:hover,
+body.osb-phase9 .path-card:hover,
+body.osb-phase9 .research-card:hover,
+body.osb-phase9 .graph-card:hover,
+body.osb-phase9 .dictionary-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(217,165,44,.50);
+  box-shadow:0 18px 48px rgba(48,22,19,.15);
+}
+body.osb-phase9 progress,
+body.osb-phase9 [role="progressbar"]{accent-color:var(--osb9-gold)}
+body.osb-phase9 code,
+body.osb-phase9 kbd{
+  border-radius:7px;
+  padding:.15rem .42rem;
+  border:1px solid rgba(143,36,54,.18);
+}
+body.osb-phase9 .relationship,
+body.osb-phase9 .edge,
+body.osb-phase9 [class*="relationship"]{
+  border-left:3px solid var(--osb9-peacock);
+}
+body.osb-phase9 button,
+body.osb-phase9 .btn,
+body.osb-phase9 [role="button"]{min-height:44px}
+body.osb-phase9 :focus-visible{outline:3px solid var(--osb9-gold);outline-offset:3px}
+@media(max-width:760px){
+  body.osb-phase9 .grid,
+  body.osb-phase9 [class*="grid"]{grid-template-columns:1fr}
+  body.osb-phase9 .hero,
+  body.osb-phase9 .learning-hero,
+  body.osb-phase9 .research-hero,
+  body.osb-phase9 .knowledge-hero{border-radius:20px}
+}
+@media(prefers-reduced-motion:reduce){
+  body.osb-phase9 *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+@media(forced-colors:active){
+  body.osb-phase9 .card,
+  body.osb-phase9 .lesson-card,
+  body.osb-phase9 .research-card{border:1px solid CanvasText}
+}
