@@ -1,0 +1,11 @@
+assets/css/phase7-sacred-places-2026.css
+temple-encyclopedia.html
+arupadai-veedu.html
+temples.html
+temple-detail.html
+festivals.html
+festival-calendar.html
+murugan-map.html
+pilgrimage-planner.html
+reports/phase7-sacred-places/SUMMARY.md
+reports/phase7-sacred-places/ACCEPTANCE.md
