@@ -34,3 +34,4 @@ html[data-language-focus=en] [lang=ta]{opacity:.62}html[data-language-focus=ta] 
 @media(prefers-reduced-motion:reduce),(pointer:coarse){html.osb-global-experience body::before{display:none}.osb-brand-symbol,.osb-language-button,.osb-ai-fab{transition:none!important}}
 @media(forced-colors:active){.osb-language-button,.osb-language-panel,.osb-language-option,.osb-language-more,.osb-ai-fab,.osb-brand-symbol{border:1px solid CanvasText}}
 @media print{.osb-language-shell,.osb-ai-fab,html.osb-global-experience body::before{display:none!important}}
+.osb-brand-symbol svg{width:100%;height:100%;display:block;overflow:visible}

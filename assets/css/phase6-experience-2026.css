@@ -1,0 +1,33 @@
+/* Om Saravana Bhava — Phase 6 global experience rollout */
+body.osb-phase6{
+  --osb-r6-radius:22px;
+  --osb-r6-shadow:0 18px 50px rgba(20,12,8,.13);
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+body.osb-phase6 main{isolation:isolate}
+body.osb-phase6 .hero,
+body.osb-phase6 .page-hero,
+body.osb-phase6 .premium-hero{position:relative;overflow:hidden}
+body.osb-phase6 .card,
+body.osb-phase6 article,
+body.osb-phase6 .result-card,
+body.osb-phase6 .tool-card{
+  border-radius:var(--osb-r6-radius);
+  transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease;
+}
+body.osb-phase6 .card:hover,
+body.osb-phase6 .result-card:hover,
+body.osb-phase6 .tool-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(242,189,84,.42);
+  box-shadow:var(--osb-r6-shadow);
+}
+body.osb-phase6 img{height:auto}
+body.osb-phase6 button,
+body.osb-phase6 .btn,
+body.osb-phase6 [role="button"]{min-height:44px}
+body.osb-phase6 :focus-visible{outline:3px solid #f2bd54;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){
+  body.osb-phase6 *{scroll-behavior:auto!important;transition-duration:.01ms!important}
+}
