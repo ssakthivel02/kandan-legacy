@@ -1,0 +1,1034 @@
+/*
+ * OmSaravanaBhava — Premium Pages Enhancement 2026
+ * Phase 3B: Additive CSS for priority pages using osb44 / release-247 design systems.
+ * Applied to: temples, thiruppugazh, murugan-song-library, gallery, audio-library,
+ *             explore, ai-search, apps, about, help-centre, privacy, sources.
+ *
+ * Rules are additive — no existing selectors are removed or destructively overridden.
+ * All new rules use specificity parity or higher only where needed.
+ */
+
+/* ─── 1. SHARED DESIGN TOKEN EXTENSIONS ────────────────────────────────────── */
+:root {
+  /* Gold palette (mirrors homepage) */
+  --p3-gold:        #f2bd54;
+  --p3-gold-2:      #ffe3a0;
+  --p3-gold-glow:   rgba(242,189,84,.4);
+  --p3-gold-rim:    rgba(242,189,84,.16);
+  --p3-gold-deep:   #c49a2a;
+
+  /* Saffron */
+  --p3-saffron:     #e8750a;
+  --p3-saffron-soft:rgba(232,117,10,.14);
+
+  /* Peacock */
+  --p3-peacock:     #1a6b8a;
+  --p3-peacock-soft:rgba(26,107,138,.14);
+
+  /* Dark backgrounds */
+  --p3-bg:          #0b0b12;
+  --p3-panel:       #0e0c14;
+  --p3-panel-2:     rgba(14,12,20,.92);
+
+  /* Text */
+  --p3-cream:       #fff8e8;
+  --p3-muted:       rgba(215,203,187,.72);
+
+  /* Spacing */
+  --p3-space-sm:    1rem;
+  --p3-space-md:    1.5rem;
+  --p3-space-lg:    2.5rem;
+  --p3-space-xl:    4rem;
+
+  /* Radius */
+  --p3-radius-sm:   12px;
+  --p3-radius-md:   20px;
+  --p3-radius-lg:   28px;
+  --p3-radius-pill: 999px;
+
+  /* Easing */
+  --p3-ease:        cubic-bezier(.2,.75,.2,1);
+  --p3-spring:      cubic-bezier(.34,1.56,.64,1);
+
+  /* Typography */
+  --p3-font-ui:     system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --p3-font-tamil:  "Noto Serif Tamil","Noto Sans Tamil","Nirmala UI",Georgia,serif;
+}
+
+/* ─── 2. GLOBAL BODY POLISH (shared) ───────────────────────────────────────── */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ─── 3. SKIP LINK ──────────────────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: .75rem 1.25rem;
+  border-radius: 0 0 var(--p3-radius-sm) var(--p3-radius-sm);
+  background: var(--p3-gold);
+  color: #1a0c04;
+  font: 700 .9rem/1 var(--p3-font-ui);
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,.4);
+  transition: top .15s ease;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* ─── 4. FOCUS RING (all pages) ─────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--p3-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── 5. NAVIGATION — PREMIUM REFINEMENTS ──────────────────────────────────── */
+
+/* osb44 nav */
+.nav {
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-bottom: 1px solid rgba(176,141,87,.18);
+  transition: box-shadow .3s ease, background .3s ease;
+}
+.nav.scrolled,
+.nav[data-scrolled] {
+  box-shadow: 0 1px 0 rgba(176,141,87,.18), 0 4px 24px rgba(0,0,0,.5);
+}
+.nav .brand {
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+.nav .links a {
+  font-size: .88rem;
+  font-weight: 500;
+  letter-spacing: .01em;
+  border-radius: var(--p3-radius-pill);
+  padding: .35rem .7rem;
+  transition: background .2s ease, color .2s ease;
+}
+.nav .links a:hover,
+.nav .links a:focus-visible {
+  background: rgba(176,141,87,.12);
+}
+.nav .links a[aria-current="page"] {
+  background: rgba(176,141,87,.18);
+  font-weight: 600;
+}
+
+/* release-247 site-header (temples.html) */
+.site-header {
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-bottom: 1px solid var(--p3-gold-rim);
+  transition: background .3s ease, box-shadow .3s ease;
+}
+.site-header.scrolled,
+[data-header].scrolled {
+  background: rgba(6,5,10,.97);
+  box-shadow: 0 1px 0 var(--p3-gold-rim), 0 4px 24px rgba(0,0,0,.6);
+}
+
+/* ─── 6. PAGE HERO SECTIONS ─────────────────────────────────────────────────── */
+
+/* premium-hero (apps.html, gallery.html) */
+.premium-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(260px, 38vw, 480px);
+  display: flex;
+  align-items: flex-end;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+  background-color: var(--p3-bg);
+  background-size: cover;
+  background-position: center 30%;
+}
+.premium-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(4,3,8,.97) 0%,
+    rgba(6,5,10,.82) 40%,
+    rgba(5,4,9,.55) 65%,
+    rgba(5,4,9,.72) 100%
+  );
+  z-index: 0;
+}
+.premium-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+.premium-hero .premium-eyebrow {
+  font-size: .7rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--p3-gold);
+  margin-bottom: .75rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+.premium-hero .premium-eyebrow::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--p3-gold);
+  flex-shrink: 0;
+}
+.premium-hero .premium-title {
+  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  line-height: 1.04;
+  letter-spacing: -.025em;
+  margin: 0 0 .6rem;
+  background: linear-gradient(135deg, var(--p3-gold-2) 0%, var(--p3-gold) 50%, var(--p3-saffron) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.premium-hero .premium-lead {
+  font-size: clamp(.95rem, 1.3vw, 1.15rem);
+  line-height: 1.72;
+  color: rgba(243,233,218,.88);
+  max-width: 560px;
+  margin-bottom: 1.4rem;
+}
+.premium-hero .premium-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin-bottom: .75rem;
+}
+
+/* osb44 card hero (audio-library, thiruppugazh) */
+.card:first-child .section-title {
+  background: linear-gradient(135deg, #8f2436 0%, #c49a2a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── 7. BUTTONS — PREMIUM TREATMENT ───────────────────────────────────────── */
+
+.premium-button,
+.btn,
+button.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .65rem 1.3rem;
+  border-radius: var(--p3-radius-pill);
+  font: 600 .88rem/1 var(--p3-font-ui);
+  letter-spacing: .02em;
+  cursor: pointer;
+  transition: transform .18s var(--p3-spring), box-shadow .2s ease, background .2s ease;
+  text-decoration: none;
+  border: none;
+  min-height: 44px;
+}
+.premium-button:not(.secondary),
+.btn:not(.secondary) {
+  background: linear-gradient(135deg, var(--p3-gold) 0%, var(--p3-saffron) 100%);
+  color: #1a0c04;
+  box-shadow: 0 4px 18px rgba(242,189,84,.3);
+}
+.premium-button:not(.secondary):hover,
+.btn:not(.secondary):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(242,189,84,.45);
+}
+.premium-button.secondary,
+.btn.secondary {
+  background: rgba(242,189,84,.1);
+  color: var(--p3-gold-2);
+  border: 1px solid var(--p3-gold-rim);
+}
+.premium-button.secondary:hover,
+.btn.secondary:hover {
+  background: rgba(242,189,84,.18);
+  transform: translateY(-1px);
+}
+
+/* ─── 8. CARDS — PREMIUM ELEVATION ─────────────────────────────────────────── */
+
+/* premium-card (apps, gallery, audio) */
+.premium-card {
+  border-radius: var(--p3-radius-lg);
+  border: 1px solid rgba(176,141,87,.14);
+  background: rgba(14,12,20,.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  transition: transform .22s var(--p3-spring), box-shadow .22s ease, border-color .22s ease;
+}
+.premium-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0,0,0,.4), 0 0 0 1px rgba(242,189,84,.18);
+  border-color: rgba(242,189,84,.28);
+}
+.premium-card h2 {
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  line-height: 1.2;
+  letter-spacing: -.01em;
+  margin: 0 0 .6rem;
+  color: var(--p3-gold-2);
+}
+.premium-card h3 {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.3;
+  color: var(--p3-cream);
+}
+.premium-card p {
+  font-size: .9rem;
+  line-height: 1.72;
+  color: var(--p3-muted);
+}
+
+/* osb44 .card refinements */
+.card {
+  transition: transform .22s var(--p3-spring), box-shadow .22s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* ─── 9. PILLS / BADGES ─────────────────────────────────────────────────────── */
+
+.premium-pill,
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: .25rem .7rem;
+  border-radius: var(--p3-radius-pill);
+  font: 600 .7rem/1 var(--p3-font-ui);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  background: rgba(242,189,84,.12);
+  color: var(--p3-gold);
+  border: 1px solid var(--p3-gold-rim);
+}
+.premium-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-bottom: .75rem;
+}
+
+/* ─── 10. EYEBROW LABELS ────────────────────────────────────────────────────── */
+
+.premium-eyebrow,
+.eyebrow {
+  font-size: .7rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--p3-gold);
+  font-family: var(--p3-font-ui);
+  font-weight: 600;
+}
+
+/* ─── 11. TEMPLES PAGE ──────────────────────────────────────────────────────── */
+
+/* Temple hero */
+.temples-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(280px, 42vw, 520px);
+  display: flex;
+  align-items: flex-end;
+  padding: clamp(2rem, 5vw, 4.5rem) clamp(1.5rem, 5vw, 4rem);
+  background: var(--p3-bg);
+}
+.temples-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(4,3,8,.96) 0%,
+    rgba(8,5,14,.78) 45%,
+    rgba(5,4,9,.45) 65%,
+    rgba(5,4,9,.82) 100%
+  );
+  z-index: 1;
+}
+.temples-hero-bg {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.temples-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+.temples-hero h1 {
+  font-size: clamp(2.8rem, 7vw, 6.4rem);
+  line-height: 1.04;
+  letter-spacing: -.025em;
+  margin: 0 0 .5rem;
+  background: linear-gradient(135deg, var(--p3-gold-2) 0%, var(--p3-gold) 55%, var(--p3-saffron) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.temples-hero p {
+  font-size: clamp(.95rem, 1.4vw, 1.15rem);
+  line-height: 1.72;
+  color: rgba(243,233,218,.85);
+  max-width: 540px;
+  margin-bottom: 1.4rem;
+}
+
+/* Temple cards grid */
+.temple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.temple-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--p3-radius-lg);
+  border: 1px solid rgba(176,141,87,.14);
+  background: rgba(14,12,20,.88);
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform .25s var(--p3-spring), box-shadow .25s ease, border-color .25s ease;
+  text-decoration: none;
+  color: inherit;
+}
+.temple-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 56px rgba(0,0,0,.5), 0 0 0 1px rgba(242,189,84,.28);
+  border-color: rgba(242,189,84,.32);
+}
+.temple-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s var(--p3-ease), filter .5s ease;
+  filter: saturate(1.05) brightness(.9);
+}
+.temple-card:hover img {
+  transform: scale(1.04);
+  filter: saturate(1.15) brightness(.95);
+}
+.temple-card::after {
+  content: "";
+  position: absolute;
+  inset: 30% 0 0;
+  background: linear-gradient(transparent, rgba(6,5,10,.55) 45%, rgba(6,5,10,.97) 90%);
+  z-index: 1;
+}
+.temple-card-body {
+  position: relative;
+  z-index: 2;
+  padding: 1.2rem 1.3rem 1.3rem;
+}
+.temple-card-body h2,
+.temple-card-body h3 {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.2;
+  color: var(--p3-gold-2);
+  margin: 0 0 .3rem;
+  letter-spacing: -.01em;
+}
+.temple-card-body p {
+  font-size: .8rem;
+  color: rgba(232,222,208,.78);
+  line-height: 1.45;
+  margin: 0;
+}
+.temple-card-badge {
+  position: absolute;
+  top: .9rem;
+  left: .9rem;
+  z-index: 3;
+  padding: .2rem .6rem;
+  border-radius: var(--p3-radius-pill);
+  font: 600 .65rem/1 var(--p3-font-ui);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  background: rgba(242,189,84,.18);
+  color: var(--p3-gold);
+  border: 1px solid var(--p3-gold-rim);
+  backdrop-filter: blur(8px);
+}
+
+/* ─── 12. THIRUPPUGAZH / SONG LIBRARY ──────────────────────────────────────── */
+
+/* Toolbar refinements */
+.thiruppugazh-toolbar,
+.audio-toolbar,
+.route-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  align-items: flex-end;
+  padding: 1.2rem 1.4rem;
+  border-radius: var(--p3-radius-md);
+  background: rgba(14,12,20,.7);
+  border: 1px solid rgba(176,141,87,.14);
+  backdrop-filter: blur(12px);
+  margin-bottom: 1.2rem;
+}
+.thiruppugazh-toolbar label,
+.audio-toolbar label,
+.route-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--p3-gold);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-family: var(--p3-font-ui);
+}
+.thiruppugazh-toolbar input,
+.thiruppugazh-toolbar select,
+.audio-toolbar input,
+.audio-toolbar select,
+.route-controls input,
+.route-controls select {
+  min-height: 44px;
+  padding: .55rem .9rem;
+  border-radius: var(--p3-radius-sm);
+  border: 1px solid rgba(176,141,87,.22);
+  background: rgba(14,12,20,.9);
+  color: var(--p3-cream);
+  font: inherit;
+  font-size: .9rem;
+  transition: border-color .2s ease, box-shadow .2s ease;
+  min-width: 180px;
+}
+.thiruppugazh-toolbar input:focus,
+.thiruppugazh-toolbar select:focus,
+.audio-toolbar input:focus,
+.audio-toolbar select:focus,
+.route-controls input:focus,
+.route-controls select:focus {
+  border-color: var(--p3-gold);
+  box-shadow: 0 0 0 3px var(--p3-gold-glow);
+  outline: none;
+}
+.thiruppugazh-toolbar input::placeholder,
+.audio-toolbar input::placeholder,
+.route-controls input::placeholder {
+  color: rgba(215,203,187,.45);
+}
+
+/* Song cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.grid .card {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.grid .card h2 {
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  line-height: 1.2;
+  margin: 0 0 .3rem;
+}
+.grid .card h3 {
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  margin: 0 0 .2rem;
+}
+
+/* Verse blocks */
+.verse {
+  border-left: 3px solid var(--p3-gold);
+  padding: 1rem 1.2rem;
+  border-radius: 0 var(--p3-radius-sm) var(--p3-radius-sm) 0;
+  background: rgba(242,189,84,.05);
+  font-family: var(--p3-font-tamil);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.85;
+  letter-spacing: .01em;
+  margin: 1rem 0;
+}
+
+/* Reading progress bar */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--p3-gold), var(--p3-saffron));
+  z-index: 9999;
+  width: 0%;
+  transition: width .1s linear;
+  pointer-events: none;
+}
+
+/* ─── 13. GALLERY PAGE ──────────────────────────────────────────────────────── */
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.media-grid article,
+.media-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--p3-radius-md);
+  border: 1px solid rgba(176,141,87,.14);
+  background: rgba(14,12,20,.88);
+  transition: transform .25s var(--p3-spring), box-shadow .25s ease, border-color .25s ease;
+  cursor: pointer;
+}
+.media-grid article:hover,
+.media-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0,0,0,.45), 0 0 0 1px rgba(242,189,84,.22);
+  border-color: rgba(242,189,84,.28);
+}
+.media-grid img,
+.media-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  transition: transform .45s var(--p3-ease), filter .45s ease;
+  filter: saturate(1.05) brightness(.92);
+}
+.media-grid article:hover img,
+.media-card:hover img {
+  transform: scale(1.04);
+  filter: saturate(1.15) brightness(.98);
+}
+.media-caption {
+  padding: .9rem 1rem;
+}
+.media-caption h3 {
+  font-size: .92rem;
+  line-height: 1.3;
+  color: var(--p3-gold-2);
+  margin: 0 0 .2rem;
+}
+.media-caption p,
+.media-caption small {
+  font-size: .75rem;
+  color: var(--p3-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Gallery filters */
+.gallery-filters,
+.media-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  align-items: flex-end;
+  padding: 1rem 1.2rem;
+  border-radius: var(--p3-radius-md);
+  background: rgba(14,12,20,.7);
+  border: 1px solid rgba(176,141,87,.14);
+  margin-bottom: 1.2rem;
+}
+
+/* ─── 14. AUDIO LIBRARY ─────────────────────────────────────────────────────── */
+
+/* Audio hero */
+.audio-hero {
+  border: 1px solid rgba(176,141,87,.18) !important;
+  background: linear-gradient(135deg, rgba(14,12,20,.96), rgba(20,10,8,.92)) !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4) !important;
+}
+.audio-hero .lead {
+  color: rgba(243,233,218,.88);
+}
+.audio-hero-mark {
+  background: linear-gradient(145deg, #74170f, #a94f00, #c49a2a) !important;
+  box-shadow: 0 28px 70px rgba(116,23,15,.35), 0 0 0 1px rgba(242,189,84,.2) !important;
+}
+
+/* Audio catalog cards */
+.audio-catalog-card {
+  border: 1px solid rgba(176,141,87,.14) !important;
+  transition: transform .22s var(--p3-spring), box-shadow .22s ease, border-color .22s ease !important;
+}
+.audio-catalog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0,0,0,.4), 0 0 0 1px rgba(242,189,84,.22) !important;
+  border-color: rgba(242,189,84,.28) !important;
+}
+.audio-card-status {
+  font-size: .8rem;
+  letter-spacing: .04em;
+}
+
+/* Media player — premium treatment */
+.osb-media-player {
+  border: 1px solid rgba(176,141,87,.28) !important;
+  box-shadow: 0 30px 90px rgba(65,24,10,.35), 0 0 0 1px rgba(242,189,84,.1) !important;
+}
+
+/* ─── 15. EXPLORE PAGE ──────────────────────────────────────────────────────── */
+
+/* Explore sections */
+#exploreSections .card {
+  margin-bottom: 1rem;
+}
+#exploreSections .card h2 {
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  margin-bottom: .5rem;
+}
+
+/* Route item links */
+.route-item,
+.explore-item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .65rem .85rem;
+  border-radius: var(--p3-radius-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: background .18s ease, transform .18s var(--p3-spring);
+  border: 1px solid transparent;
+}
+.route-item:hover,
+.explore-item:hover {
+  background: rgba(242,189,84,.07);
+  border-color: var(--p3-gold-rim);
+  transform: translateX(3px);
+}
+.route-item strong,
+.explore-item strong {
+  font-size: .95rem;
+  color: var(--p3-gold-2);
+  display: block;
+}
+.route-item small,
+.explore-item small {
+  font-size: .78rem;
+  color: var(--p3-muted);
+}
+
+/* ─── 16. AI SEARCH PAGE ────────────────────────────────────────────────────── */
+
+/* Search input */
+#aiQuery,
+.ai-search-input {
+  width: 100%;
+  min-height: 52px;
+  padding: .75rem 1.2rem;
+  border-radius: var(--p3-radius-pill);
+  border: 1px solid rgba(176,141,87,.28);
+  background: rgba(14,12,20,.9);
+  color: var(--p3-cream);
+  font: inherit;
+  font-size: 1rem;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+#aiQuery:focus,
+.ai-search-input:focus {
+  border-color: var(--p3-gold);
+  box-shadow: 0 0 0 4px var(--p3-gold-glow);
+  outline: none;
+}
+#aiQuery::placeholder,
+.ai-search-input::placeholder {
+  color: rgba(215,203,187,.4);
+}
+
+/* Search results */
+.ai-result,
+.search-result {
+  padding: 1rem 1.2rem;
+  border-radius: var(--p3-radius-md);
+  border: 1px solid rgba(176,141,87,.14);
+  background: rgba(14,12,20,.7);
+  margin-bottom: .65rem;
+  transition: border-color .2s ease, background .2s ease;
+}
+.ai-result:hover,
+.search-result:hover {
+  border-color: rgba(242,189,84,.28);
+  background: rgba(14,12,20,.9);
+}
+.ai-result h3,
+.search-result h3 {
+  font-size: 1rem;
+  color: var(--p3-gold-2);
+  margin: 0 0 .3rem;
+}
+.ai-result p,
+.search-result p {
+  font-size: .85rem;
+  color: var(--p3-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─── 17. APPS PAGE ─────────────────────────────────────────────────────────── */
+
+/* Install button */
+#installWebApp {
+  background: linear-gradient(135deg, var(--p3-gold) 0%, var(--p3-saffron) 100%);
+  color: #1a0c04;
+  font-weight: 700;
+  box-shadow: 0 6px 24px rgba(242,189,84,.35);
+}
+#installWebApp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(242,189,84,.5);
+}
+#installStatus {
+  font-size: .82rem;
+  color: var(--p3-muted);
+  margin-top: .5rem;
+}
+
+/* ─── 18. FOOTER — SHARED PREMIUM TREATMENT ────────────────────────────────── */
+
+/* Simple footer (osb44 pages) */
+footer {
+  border-top: 1px solid rgba(176,141,87,.14);
+  padding: 2rem clamp(1.2rem, 4vw, 3rem);
+  font-size: .82rem;
+  color: rgba(215,203,187,.6);
+}
+footer p:first-child {
+  font-size: .95rem;
+  color: var(--p3-gold);
+  font-family: var(--p3-font-tamil);
+  margin-bottom: .5rem;
+}
+footer nav a {
+  color: rgba(215,203,187,.65);
+  text-decoration: none;
+  transition: color .18s ease;
+  padding: .2rem .1rem;
+}
+footer nav a:hover {
+  color: var(--p3-gold-2);
+}
+footer small {
+  display: block;
+  margin-top: .75rem;
+  font-size: .72rem;
+  color: rgba(215,203,187,.4);
+}
+
+/* ─── 19. SCROLL REVEAL ─────────────────────────────────────────────────────── */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .55s var(--p3-ease), transform .55s var(--p3-ease);
+}
+[data-reveal][data-visible] {
+  opacity: 1;
+  transform: none;
+}
+[data-reveal][data-reveal-delay="1"] { transition-delay: .1s; }
+[data-reveal][data-reveal-delay="2"] { transition-delay: .2s; }
+[data-reveal][data-reveal-delay="3"] { transition-delay: .3s; }
+
+/* ─── 20. BREADCRUMB ────────────────────────────────────────────────────────── */
+
+nav[aria-label="Breadcrumb"] p,
+.breadcrumb {
+  font-size: .8rem;
+  color: var(--p3-muted);
+  margin-bottom: 1.5rem;
+}
+nav[aria-label="Breadcrumb"] a,
+.breadcrumb a {
+  color: var(--p3-gold);
+  text-decoration: none;
+  transition: color .18s ease;
+}
+nav[aria-label="Breadcrumb"] a:hover,
+.breadcrumb a:hover {
+  color: var(--p3-gold-2);
+}
+
+/* ─── 21. BACK TO TOP ───────────────────────────────────────────────────────── */
+
+.back-to-top,
+[data-back-top] {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(14,12,20,.92);
+  border: 1px solid var(--p3-gold-rim);
+  color: var(--p3-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform .2s var(--p3-spring), opacity .2s ease, box-shadow .2s ease;
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(12px);
+}
+.back-to-top.visible,
+[data-back-top].visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.back-to-top:hover,
+[data-back-top]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.4);
+}
+
+/* ─── 22. MOBILE RESPONSIVE ─────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .premium-hero {
+    min-height: clamp(220px, 55vw, 360px);
+    padding: 1.5rem 1.2rem;
+    align-items: flex-end;
+  }
+  .premium-hero .premium-title {
+    font-size: clamp(2rem, 9vw, 3.2rem);
+  }
+  .premium-hero .premium-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .temple-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: .75rem;
+  }
+  .temple-card {
+    min-height: 200px;
+  }
+  .media-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: .75rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .thiruppugazh-toolbar,
+  .audio-toolbar,
+  .route-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .thiruppugazh-toolbar input,
+  .thiruppugazh-toolbar select,
+  .audio-toolbar input,
+  .audio-toolbar select,
+  .route-controls input,
+  .route-controls select {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .temple-grid {
+    grid-template-columns: 1fr;
+  }
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+  .premium-hero .premium-title {
+    font-size: clamp(1.8rem, 11vw, 2.8rem);
+  }
+  .back-to-top,
+  [data-back-top] {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+/* ─── 23. ACCESSIBILITY ─────────────────────────────────────────────────────── */
+
+@media (forced-colors: active) {
+  .premium-hero .premium-title,
+  .temples-hero h1,
+  .card:first-child .section-title {
+    -webkit-text-fill-color: CanvasText;
+    background: none;
+    color: CanvasText;
+  }
+  .temple-card::after,
+  .media-grid article::after {
+    background: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  .temple-card,
+  .temple-card img,
+  .media-grid article,
+  .media-grid img,
+  .premium-card,
+  .card,
+  .premium-button,
+  .btn,
+  .route-item,
+  .explore-item {
+    animation: none !important;
+    transition: none !important;
+  }
+  .temple-card:hover img,
+  .media-grid article:hover img {
+    transform: none;
+  }
+  .temple-card:hover,
+  .premium-card:hover,
+  .card:hover {
+    transform: none;
+  }
+}
+
+/* ─── 24. PRINT ─────────────────────────────────────────────────────────────── */
+
+@media print {
+  .nav,
+  .site-header,
+  .skip-link,
+  .back-to-top,
+  .tools,
+  .osb-media-player,
+  .reading-progress {
+    display: none !important;
+  }
+  .premium-hero .premium-title,
+  .temples-hero h1,
+  .card:first-child .section-title {
+    -webkit-text-fill-color: #000;
+    background: none;
+    color: #000;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+}

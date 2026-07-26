@@ -14,6 +14,7 @@
 <meta property="og:url" content="https://omsaravanabhava.org/thiruppugazh.html">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/css/osb44.css">
+<link rel="stylesheet" href="assets/css/premium-pages-2026.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://omsaravanabhava.org/thiruppugazh.html#webpage","url":"https://omsaravanabhava.org/thiruppugazh.html","name":"Thiruppugazh Digital Library","alternateName":"திருப்புகழ் மின்னியல் நூலகம்","description":"Read the first verified source-linked Thiruppugazh songs digitised from the user-uploaded Arunagirinathar compilation, with venue and rhythmic metadata.","inLanguage":["ta","en"],"dateModified":"2026-07-11","isPartOf":{"@id":"https://omsaravanabhava.org/#website"},"about":{"@type":"Book","name":"Thiruppugazh","alternateName":"திருப்புகழ்","author":{"@type":"Person","name":"Arunagirinathar"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://omsaravanabhava.org/"},{"@type":"ListItem","position":2,"name":"Slokas","item":"https://omsaravanabhava.org/sloka-library.html"},{"@type":"ListItem","position":3,"name":"Thiruppugazh","item":"https://omsaravanabhava.org/thiruppugazh.html"}]}]}</script>
 <script defer src="assets/js/osb44.js"></script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -30,35 +31,97 @@
 <script defer src="assets/js/desktop-layout.js"></script>
 </head>
 <body data-module="thiruppugazh">
+
+<!-- Reading progress bar -->
 <a href="#main-content" class="skip-link">Skip to main content</a>
-<div class="top">🛕 ஓம் சரவணபவ · Source-linked Thiruppugazh digitisation</div>
-<nav class="nav" aria-label="Primary navigation"><div class="nav-inner"><a class="brand" href="index.html" aria-label="Om Saravana Bhava home">ஓம் சரவணபவ</a><div class="links"><a href="temples.html">Temples</a><a href="sloka-library.html">Slokas</a><a href="festivals.html">Festivals</a><a href="ai-search.html">AI Search</a><a href="audio-library.html">Audio</a></div></div></nav>
+<div class="top" role="banner" aria-label="Site announcement">
+  <span aria-hidden="true">🛕</span> ஓம் சரவணபவ · Source-linked Thiruppugazh digitisation
+</div>
+<nav class="nav" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a class="brand" href="index.html" aria-label="Om Saravana Bhava home">ஓம் சரவணபவ</a>
+    <div class="links" role="list">
+      <a href="temples.html" role="listitem">Temples</a>
+      <a href="sloka-library.html" role="listitem">Slokas</a>
+      <a href="festivals.html" role="listitem">Festivals</a>
+      <a href="ai-search.html" role="listitem">AI Search</a>
+      <a href="audio-library.html" role="listitem">Audio</a>
+    </div>
+  </div>
+</nav>
+
 <main id="main-content" class="wrap">
-<nav aria-label="Breadcrumb"><p><a href="index.html">Home</a> › <a href="sloka-library.html">Slokas</a> › <span aria-current="page">Thiruppugazh</span></p></nav>
-<section class="card">
-<span class="pill">Release 155 · Volumes 1–2</span>
-<h1 class="section-title">திருப்புகழ் மின்னியல் நூலகம்</h1>
-<h2>Thiruppugazh Digital Library</h2>
-<p>Read the first verified source-linked Thiruppugazh songs digitised from the user-uploaded Arunagirinathar compilation, with venue and rhythmic metadata.</p>
-<p><strong>Publication boundary:</strong> This volume contains twelve complete Tamil songs that were manually checked. Gaps in song numbering are deliberate; songs that have not completed verification are not published as filler.</p>
-<p><a class="btn secondary" href="sources.html#src-thiruppugazh-valluvar-vallalar-vattam">View source record</a></p>
-</section>
-<section class="card thiruppugazh-toolbar" aria-label="Thiruppugazh filters">
-<label for="tgq"><strong>Search songs</strong></label>
-<input type="search" id="tgq" placeholder="Title, song number, venue or Tamil text" autocomplete="off">
-<label for="tgVenue"><strong>Venue</strong></label>
-<select id="tgVenue">
-<option value="All">All published venues</option>
-<option value="Thiruvarunai">Thiruvarunai</option>
-<option value="Thirupparankundram">Thirupparankundram</option>
-</select>
-<button type="button" class="btn secondary" id="tgReset">Reset</button>
-</section>
-<p id="tgCount" role="status" aria-live="polite"></p>
-<section id="thiruppugazhGrid" class="grid" aria-busy="true"><div class="loading">Loading verified songs...</div></section>
-<noscript><div class="card" role="status">JavaScript is required for library filtering. The song pages remain available through the sitemap and source-linked internal pages.</div></noscript>
-<section class="card"><h2>Volume 3 source-review register</h2><p>No OCR-only hymn is published as verified text.</p><a class="btn secondary" href="thiruppugazh-volume-3.html">Open Volume 3 register</a></section></main>
-<div class="tools"><button type="button" class="tool" data-text aria-pressed="false" aria-label="Increase text size">A+ Text</button><button type="button" class="tool" data-dark aria-pressed="false" aria-label="Enable dark mode">☾ Night</button><button type="button" class="tool" data-share aria-label="Share this page">↗ Share</button></div>
-<footer>© Om Saravana Bhava · Static GitHub Pages safe platform · <a href="sources.html">Sources &amp; publication policy</a></footer>
+  <nav aria-label="Breadcrumb">
+    <p><a href="index.html">Home</a> › <a href="sloka-library.html">Slokas</a> › <span aria-current="page">Thiruppugazh</span></p>
+  </nav>
+
+  <!-- Hero card -->
+  <section class="card" data-reveal aria-labelledby="tg-heading">
+    <span class="pill">Release 155 · Volumes 1–2</span>
+    <h1 class="section-title" id="tg-heading" lang="ta">திருப்புகழ் மின்னியல் நூலகம்</h1>
+    <h2 lang="en">Thiruppugazh Digital Library</h2>
+    <p>Read the first verified source-linked Thiruppugazh songs digitised from the user-uploaded Arunagirinathar compilation, with venue and rhythmic metadata.</p>
+    <p><strong>Publication boundary:</strong> This volume contains twelve complete Tamil songs that were manually checked. Gaps in song numbering are deliberate; songs that have not completed verification are not published as filler.</p>
+    <p><a class="btn secondary" href="sources.html#src-thiruppugazh-valluvar-vallalar-vattam">View source record</a></p>
+  </section>
+
+  <!-- Filter toolbar -->
+  <section class="card thiruppugazh-toolbar" aria-label="Thiruppugazh filters" data-reveal>
+    <label for="tgq"><strong>Search songs</strong>
+      <input type="search" id="tgq" placeholder="Title, song number, venue or Tamil text" autocomplete="off" aria-label="Search Thiruppugazh songs">
+    </label>
+    <label for="tgVenue"><strong>Venue</strong>
+      <select id="tgVenue" aria-label="Filter by venue">
+        <option value="All">All published venues</option>
+        <option value="Thiruvarunai">Thiruvarunai</option>
+        <option value="Thirupparankundram">Thirupparankundram</option>
+      </select>
+    </label>
+    <button type="button" class="btn secondary" id="tgReset" aria-label="Reset all filters">Reset</button>
+  </section>
+
+  <p id="tgCount" role="status" aria-live="polite" aria-atomic="true"></p>
+
+  <!-- Song grid (populated by osb44.js) -->
+  <section id="thiruppugazhGrid" class="grid" aria-busy="true" aria-label="Thiruppugazh songs">
+    <div class="loading" role="status">Loading verified songs…</div>
+  </section>
+
+  <noscript>
+    <div class="card" role="status">
+      JavaScript is required for library filtering. The song pages remain available through the sitemap and source-linked internal pages.
+    </div>
+  </noscript>
+
+  <!-- Volume 3 register -->
+  <section class="card" data-reveal aria-labelledby="vol3-heading">
+    <h2 id="vol3-heading">Volume 3 source-review register</h2>
+    <p>No OCR-only hymn is published as verified text.</p>
+    <a class="btn secondary" href="thiruppugazh-volume-3.html">Open Volume 3 register</a>
+  </section>
+</main>
+
+<!-- Floating tools (existing — unchanged) -->
+<div class="tools" role="toolbar" aria-label="Reading tools">
+  <button type="button" class="tool" data-text aria-pressed="false" aria-label="Increase text size">A+ Text</button>
+  <button type="button" class="tool" data-dark aria-pressed="false" aria-label="Enable dark mode">☾ Night</button>
+  <button type="button" class="tool" data-share aria-label="Share this page">↗ Share</button>
+</div>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" hidden>
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<footer>
+  <p lang="ta">© Om Saravana Bhava · Static GitHub Pages safe platform</p>
+  <nav aria-label="Footer navigation">
+    <a href="sources.html">Sources &amp; publication policy</a>
+    <a href="sloka-library.html">Sloka Library</a>
+    <a href="platform-hub.html">All Tools</a>
+  </nav>
+</footer>
+
+<script src="assets/js/premium-pages-2026.js"></script>
 </body>
 </html>

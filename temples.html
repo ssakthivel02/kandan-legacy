@@ -17,34 +17,196 @@
   <link rel="preload" as="image" href="assets/images/temples/tirupparankundram.webp" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/release-247.css">
   <link rel="stylesheet" href="assets/css/premium-platform-2026.css">
+  <link rel="stylesheet" href="assets/css/premium-pages-2026.css">
   <script defer src="assets/js/release-247.js"></script>
   <script defer src="assets/js/pwa-register.js"></script>
   <script type="module" src="assets/js/premium-platform-2026.mjs"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="header">
-  <a class="brand" href="index.html"><span class="seal">ॐ</span><span><strong>ஓம் சரவணபவ</strong><small>Om Saravana Bhava</small></span></a>
-  <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-  <nav id="nav" class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="explore.html">Explore</a><a href="murugan-song-library.html">Songs</a><a href="thiruppugazh.html">Thiruppugazh</a><a class="active" href="temples.html">Temples</a><a href="audio-library.html">Audio</a><a href="murugan-timeline.html">Timeline</a><a href="ai-search.html">Search</a><a href="platform-hub.html">All Tools</a></nav>
+
+<!-- Reading progress bar -->
+<header class="header" data-header>
+  <a class="brand" href="index.html" aria-label="Om Saravana Bhava — Home">
+    <span class="seal" aria-hidden="true">ॐ</span>
+    <span><strong>ஓம் சரவணபவ</strong><small>Om Saravana Bhava</small></span>
+  </a>
+  <button class="menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation menu">Menu</button>
+  <nav id="nav" class="nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="murugan-song-library.html">Songs</a>
+    <a href="thiruppugazh.html">Thiruppugazh</a>
+    <a class="active" href="temples.html" aria-current="page">Temples</a>
+    <a href="audio-library.html">Audio</a>
+    <a href="murugan-timeline.html">Timeline</a>
+    <a href="ai-search.html">Search</a>
+    <a href="platform-hub.html">All Tools</a>
+  </nav>
 </header>
+
 <main id="main">
-  <section class="hero"><div class="hero-copy reveal"><p class="eyebrow">தமிழ்நாட்டின் முருகன் திருத்தலங்கள்</p><h1>ஆறுபடை வீடு</h1><p>The Six Sacred Abodes of Lord Murugan—presented as a visual pilgrimage with clear Tamil context, respectful devotional artwork and direct access to each temple record.</p><div class="hero-actions"><a class="btn" href="#temple-journey">Begin the temple journey</a><a class="btn alt" href="festival-calendar.html">View festival calendar</a><a class="btn alt" href="temple-encyclopedia.html">Temple encyclopedia</a></div></div></section>
+  <!-- ── HERO ─────────────────────────────────────────────────────────────── -->
+  <section class="hero" aria-labelledby="temples-hero-heading">
+    <div class="hero-copy reveal">
+      <p class="eyebrow" lang="ta">தமிழ்நாட்டின் முருகன் திருத்தலங்கள்</p>
+      <h1 id="temples-hero-heading">ஆறுபடை வீடு</h1>
+      <p>The Six Sacred Abodes of Lord Murugan — presented as a visual pilgrimage with clear Tamil context, respectful devotional artwork and direct access to each temple record.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#temple-journey">Begin the temple journey</a>
+        <a class="btn alt" href="festival-calendar.html">View festival calendar</a>
+        <a class="btn alt" href="temple-encyclopedia.html">Temple encyclopedia</a>
+      </div>
+    </div>
+  </section>
+
   <div class="shell">
-    <section id="temple-journey"><div class="intro reveal"><div><p class="eyebrow">Sacred temple journey</p><h2>Six temples. Six spiritual meanings.</h2><p>Swipe on mobile or use the arrows on desktop. Each card links to the existing temple-detail route.</p></div><div class="slider-controls"><button data-prev type="button" aria-label="Previous temple">←</button><button data-next type="button" aria-label="Next temple">→</button></div></div>
-      <div class="temple-slider" data-slider tabindex="0" aria-label="Six Sacred Abodes">
-        <article class="temple-card reveal"><img src="assets/images/temples/tirupparankundram.webp" alt="Devotional illustration representing Tirupparankundram Murugan Temple" decoding="async" fetchpriority="high"><div class="content"><span class="number">01</span><h3>Tirupparankundram</h3><div class="ta">திருப்பரங்குன்றம்</div><p>Wisdom, divine union and victory.</p><a href="temple-detail.html?id=tirupparankundram">Open temple guide →</a></div></article>
-        <article class="temple-card reveal"><img src="assets/images/temples/tiruchendur.webp" alt="Devotional illustration representing Tiruchendur Murugan Temple" loading="lazy" decoding="async"><div class="content"><span class="number">02</span><h3>Tiruchendur</h3><div class="ta">திருச்செந்தூர்</div><p>Courage, protection and victory over adversity.</p><a href="temple-detail.html?id=tiruchendur">Open temple guide →</a></div></article>
-        <article class="temple-card reveal"><img src="assets/images/temples/palani.webp" alt="Devotional illustration representing Palani Murugan Temple" loading="lazy" decoding="async"><div class="content"><span class="number">03</span><h3>Palani</h3><div class="ta">பழனி</div><p>Renunciation, humility and inner wisdom.</p><a href="temple-detail.html?id=palani">Open temple guide →</a></div></article>
-        <article class="temple-card reveal"><img src="assets/images/temples/swamimalai.webp" alt="Devotional illustration representing Swamimalai Murugan Temple" loading="lazy" decoding="async"><div class="content"><span class="number">04</span><h3>Swamimalai</h3><div class="ta">சுவாமிமலை</div><p>Knowledge, teaching and the meaning of Pranava.</p><a href="temple-detail.html?id=swamimalai">Open temple guide →</a></div></article>
-        <article class="temple-card reveal"><img src="assets/images/temples/tiruttani.webp" alt="Devotional illustration representing Tiruttani Murugan Temple" loading="lazy" decoding="async"><div class="content"><span class="number">05</span><h3>Tiruttani</h3><div class="ta">திருத்தணி</div><p>Peace, restoration and divine grace.</p><a href="temple-detail.html?id=tiruttani">Open temple guide →</a></div></article>
-        <article class="temple-card reveal"><img src="assets/images/temples/pazhamudircholai.webp" alt="Devotional illustration representing Pazhamudircholai Murugan Temple" loading="lazy" decoding="async"><div class="content"><span class="number">06</span><h3>Pazhamudircholai</h3><div class="ta">பழமுதிர்சோலை</div><p>Grace, abundance and harmony with nature.</p><a href="temple-detail.html?id=pazhamudircholai">Open temple guide →</a></div></article>
+    <!-- ── TEMPLE JOURNEY ─────────────────────────────────────────────────── -->
+    <section id="temple-journey" aria-labelledby="journey-heading">
+      <div class="intro reveal">
+        <div>
+          <p class="eyebrow">Sacred temple journey</p>
+          <h2 id="journey-heading">Six temples. Six spiritual meanings.</h2>
+          <p>Swipe on mobile or use the arrows on desktop. Each card links to the existing temple-detail route.</p>
+        </div>
+        <div class="slider-controls">
+          <button data-prev type="button" aria-label="Previous temple">←</button>
+          <button data-next type="button" aria-label="Next temple">→</button>
+        </div>
+      </div>
+
+      <div class="temple-slider" data-slider tabindex="0" aria-label="Six Sacred Abodes" role="region">
+        <article class="temple-card reveal" data-reveal data-reveal-delay="1">
+          <img src="assets/images/temples/tirupparankundram.webp"
+               alt="Devotional illustration representing Tirupparankundram Murugan Temple"
+               decoding="async" fetchpriority="high" width="480" height="320">
+          <div class="content">
+            <span class="number" aria-hidden="true">01</span>
+            <h3>Tirupparankundram</h3>
+            <div class="ta" lang="ta">திருப்பரங்குன்றம்</div>
+            <p>Wisdom, divine union and victory.</p>
+            <a href="temple-detail.html?id=tirupparankundram">Open temple guide →</a>
+          </div>
+        </article>
+
+        <article class="temple-card reveal" data-reveal data-reveal-delay="2">
+          <img src="assets/images/temples/tiruchendur.webp"
+               alt="Devotional illustration representing Tiruchendur Murugan Temple"
+               loading="lazy" decoding="async" width="480" height="320">
+          <div class="content">
+            <span class="number" aria-hidden="true">02</span>
+            <h3>Tiruchendur</h3>
+            <div class="ta" lang="ta">திருச்செந்தூர்</div>
+            <p>Courage, protection and victory over adversity.</p>
+            <a href="temple-detail.html?id=tiruchendur">Open temple guide →</a>
+          </div>
+        </article>
+
+        <article class="temple-card reveal" data-reveal data-reveal-delay="3">
+          <img src="assets/images/temples/palani.webp"
+               alt="Devotional illustration representing Palani Murugan Temple"
+               loading="lazy" decoding="async" width="480" height="320">
+          <div class="content">
+            <span class="number" aria-hidden="true">03</span>
+            <h3>Palani</h3>
+            <div class="ta" lang="ta">பழனி</div>
+            <p>Renunciation, humility and inner wisdom.</p>
+            <a href="temple-detail.html?id=palani">Open temple guide →</a>
+          </div>
+        </article>
+
+        <article class="temple-card reveal" data-reveal data-reveal-delay="1">
+          <img src="assets/images/temples/swamimalai.webp"
+               alt="Devotional illustration representing Swamimalai Murugan Temple"
+               loading="lazy" decoding="async" width="480" height="320">
+          <div class="content">
+            <span class="number" aria-hidden="true">04</span>
+            <h3>Swamimalai</h3>
+            <div class="ta" lang="ta">சுவாமிமலை</div>
+            <p>Knowledge, teaching and the meaning of Pranava.</p>
+            <a href="temple-detail.html?id=swamimalai">Open temple guide →</a>
+          </div>
+        </article>
+
+        <article class="temple-card reveal" data-reveal data-reveal-delay="2">
+          <img src="assets/images/temples/tiruttani.webp"
+               alt="Devotional illustration representing Tiruttani Murugan Temple"
+               loading="lazy" decoding="async" width="480" height="320">
+          <div class="content">
+            <span class="number" aria-hidden="true">05</span>
+            <h3>Tiruttani</h3>
+            <div class="ta" lang="ta">திருத்தணி</div>
+            <p>Peace, restoration and divine grace.</p>
+            <a href="temple-detail.html?id=tiruttani">Open temple guide →</a>
+          </div>
+        </article>
+
+        <article class="temple-card reveal" data-reveal data-reveal-delay="3">
+          <img src="assets/images/temples/pazhamudircholai.webp"
+               alt="Devotional illustration representing Pazhamudircholai Murugan Temple"
+               loading="lazy" decoding="async" width="480" height="320">
+          <div class="content">
+            <span class="number" aria-hidden="true">06</span>
+            <h3>Pazhamudircholai</h3>
+            <div class="ta" lang="ta">பழமுதிர்சோலை</div>
+            <p>Grace, abundance and harmony with nature.</p>
+            <a href="temple-detail.html?id=pazhamudircholai">Open temple guide →</a>
+          </div>
+        </article>
       </div>
     </section>
-    <section class="experience reveal"><p class="eyebrow">Interactive devotional experience</p><h2>More than a static temple gallery</h2><div class="experience-grid"><article><span>↔</span><h3>Swipe exploration</h3><p>Touch-friendly horizontal temple navigation.</p></article><article><span>✦</span><h3>Motion with restraint</h3><p>Subtle depth that respects reduced-motion settings.</p></article><article><span>♫</span><h3>Audio-ready routes</h3><p>Temple pages can connect to governed songs and chants.</p></article><article><span>⌕</span><h3>Command search</h3><p>Press Ctrl/Command + K to search every governed route.</p></article></div></section>
-    <div class="notice reveal"><strong>Image integrity notice:</strong> the included visuals are devotional illustrations created for the interface. They must not be described as documentary or official temple photography. Verified real temple photographs should be added later with source, licence and attribution metadata.</div>
+
+    <!-- ── EXPERIENCE FEATURES ────────────────────────────────────────────── -->
+    <section class="experience reveal" data-reveal aria-labelledby="experience-heading">
+      <p class="eyebrow">Interactive devotional experience</p>
+      <h2 id="experience-heading">More than a static temple gallery</h2>
+      <div class="experience-grid">
+        <article>
+          <span aria-hidden="true">↔</span>
+          <h3>Swipe exploration</h3>
+          <p>Touch-friendly horizontal temple navigation.</p>
+        </article>
+        <article>
+          <span aria-hidden="true">✦</span>
+          <h3>Motion with restraint</h3>
+          <p>Subtle depth that respects reduced-motion settings.</p>
+        </article>
+        <article>
+          <span aria-hidden="true">♫</span>
+          <h3>Audio-ready routes</h3>
+          <p>Temple pages can connect to governed songs and chants.</p>
+        </article>
+        <article>
+          <span aria-hidden="true">⌕</span>
+          <h3>Command search</h3>
+          <p>Press Ctrl/Command + K to search every governed route.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── IMAGE INTEGRITY NOTICE ─────────────────────────────────────────── -->
+    <div class="notice reveal" data-reveal role="note">
+      <strong>Image integrity notice:</strong> the included visuals are devotional illustrations created for the interface. They must not be described as documentary or official temple photography. Verified real temple photographs should be added later with source, licence and attribution metadata.
+    </div>
   </div>
 </main>
-<footer><p>வேலவேல் முருகா! அருள்புரிவாய்!</p><nav aria-label="Footer navigation"><a href="temple-encyclopedia.html">Encyclopedia</a><a href="pilgrimage-planner.html">Pilgrimage</a><a href="sources.html">Sources</a><a href="platform-hub.html">All Tools</a></nav><small>Phase G–H · Interactive Temple Experience</small></footer>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" hidden>
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<footer>
+  <p lang="ta">வேலவேல் முருகா! அருள்புரிவாய்!</p>
+  <nav aria-label="Footer navigation">
+    <a href="temple-encyclopedia.html">Encyclopedia</a>
+    <a href="pilgrimage-planner.html">Pilgrimage</a>
+    <a href="sources.html">Sources</a>
+    <a href="platform-hub.html">All Tools</a>
+  </nav>
+  <small>Phase G–H · Interactive Temple Experience</small>
+</footer>
+
+<script src="assets/js/premium-pages-2026.js"></script>
 </body>
 </html>

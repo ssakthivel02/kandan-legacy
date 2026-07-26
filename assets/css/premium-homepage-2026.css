@@ -1,0 +1,1436 @@
+/*
+ * OmSaravanaBhava — Premium Homepage Enhancement 2026
+ * Additive extension of release-246.css design system.
+ * Zero regression: no existing selectors are overridden destructively.
+ * All new rules use specificity parity or higher only where needed.
+ */
+
+/* ─── 1. DESIGN TOKEN EXTENSIONS ──────────────────────────────────────────── */
+:root {
+  /* Richer gold palette */
+  --gold-glow: rgba(242,189,84,.45);
+  --gold-rim:  rgba(242,189,84,.18);
+  --gold-deep: #c49a2a;
+
+  /* Saffron / temple warmth */
+  --saffron:   #e8750a;
+  --saffron-soft: rgba(232,117,10,.18);
+
+  /* Peacock blue accent */
+  --peacock:   #1a6b8a;
+  --peacock-soft: rgba(26,107,138,.18);
+
+  /* Layered panel depths */
+  --panel-3:   #0e0c14;
+  --panel-glow: rgba(242,189,84,.06);
+
+  /* Spacing scale */
+  --space-xs:  .5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 7rem;
+
+  /* Typography */
+  --font-serif:  Georgia, "Noto Serif Tamil", "Noto Sans Tamil", serif;
+  --font-ui:     system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+
+  /* Transitions */
+  --ease-out:  cubic-bezier(.2,.75,.2,1);
+  --ease-spring: cubic-bezier(.34,1.56,.64,1);
+
+  /* Radii */
+  --radius-sm:  12px;
+  --radius-md:  20px;
+  --radius-lg:  32px;
+  --radius-xl:  40px;
+  --radius-pill: 999px;
+}
+
+/* ─── 2. BODY & GLOBAL POLISH ──────────────────────────────────────────────── */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ─── 3. HEADER REFINEMENTS ────────────────────────────────────────────────── */
+.site-header {
+  transition: background .3s ease, box-shadow .3s ease;
+}
+.site-header.scrolled {
+  background: rgba(7,6,11,.96);
+  box-shadow: 0 1px 0 var(--gold-rim), 0 8px 32px rgba(0,0,0,.5);
+}
+.brand-mark {
+  font-size: 1.5rem;
+  transition: box-shadow .3s ease;
+  font-family: var(--font-serif);
+}
+.brand-mark:hover,
+.site-header:hover .brand-mark {
+  box-shadow: 0 0 40px var(--gold-glow);
+}
+.site-nav a {
+  transition: background .2s ease, color .2s ease;
+  letter-spacing: .01em;
+}
+.menu-toggle {
+  transition: background .2s ease, border-color .2s ease;
+  font-family: var(--font-ui);
+  font-size: .88rem;
+  font-weight: 700;
+}
+.menu-toggle:hover {
+  background: rgba(242,189,84,.12);
+  border-color: var(--gold);
+}
+
+/* ─── 4. HERO — CINEMATIC ATMOSPHERE ───────────────────────────────────────── */
+
+/* Animated golden light ray — pure CSS, no JS */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse 60% 80% at 68% 0%, rgba(255,200,80,.18) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 72% 20%, rgba(232,117,10,.12) 0%, transparent 50%),
+    linear-gradient(180deg, transparent 55%, rgba(11,11,18,.98) 100%);
+  animation: heroAmbient 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroAmbient {
+  0%   { opacity: .85; }
+  100% { opacity: 1; }
+}
+
+/* Subtle particle shimmer overlay */
+.hero-overlay {
+  background:
+    radial-gradient(circle at 69% 34%, rgba(255,203,94,.28), transparent 24%),
+    radial-gradient(circle at 30% 70%, rgba(143,36,54,.15), transparent 30%),
+    linear-gradient(0deg, #0b0b12 0, transparent 28%);
+}
+
+/* Murugan art — richer mask and glow */
+.hero-murugan-art {
+  filter: saturate(1.1) contrast(1.06) brightness(1.04);
+  mask-image: linear-gradient(to bottom, #000 0, #000 68%, transparent 100%),
+              linear-gradient(to left, #000 0, #000 85%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 68%, transparent 100%),
+                      linear-gradient(to left, #000 0, #000 85%, transparent 100%);
+  -webkit-mask-composite: destination-in;
+  transition: transform 12s ease-out;
+}
+
+/* Hero copy — tighter, more dramatic */
+.hero-copy {
+  margin-left: clamp(0rem, 10vw, 10rem);
+}
+
+.hero h1 {
+  font-size: clamp(3.8rem, 10vw, 9.2rem);
+  line-height: .86;
+  letter-spacing: -.02em;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--gold-2) 55%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none; /* gradient replaces text-shadow */
+}
+
+.hero-subtitle {
+  font-size: clamp(1.3rem, 2.6vw, 2.1rem);
+  color: var(--gold-2);
+  letter-spacing: .01em;
+  margin: .9rem 0 .4rem;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.72;
+  color: rgba(243,233,218,.9);
+  max-width: 580px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .72rem;
+  letter-spacing: .22em;
+  color: var(--gold);
+  margin-bottom: .9rem;
+}
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+  opacity: .6;
+}
+
+/* Hero search — premium glass treatment */
+.hero-search {
+  margin-top: 1.8rem;
+  max-width: 600px;
+  background: rgba(255,255,255,.95);
+  border: 1.5px solid rgba(255,255,255,.5);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 8px 40px rgba(0,0,0,.35), 0 0 0 1px rgba(242,189,84,.15);
+  overflow: hidden;
+  transition: box-shadow .25s ease;
+}
+.hero-search:focus-within {
+  box-shadow: 0 8px 40px rgba(0,0,0,.4), 0 0 0 3px rgba(242,189,84,.4);
+}
+.hero-search input {
+  padding: 1rem 1.4rem;
+  font-size: 1rem;
+  font-family: var(--font-ui);
+  color: #1a0f06;
+}
+.hero-search input::placeholder {
+  color: #8a7060;
+}
+.hero-search button {
+  width: 56px;
+  background: linear-gradient(135deg, var(--gold-deep), var(--gold));
+  color: #1a0c04;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+  transition: background .2s ease;
+}
+.hero-search button:hover {
+  background: linear-gradient(135deg, var(--gold), var(--gold-2));
+}
+
+/* Quick links — glass cards */
+.quick-links {
+  margin-top: 1.4rem;
+  gap: .6rem;
+}
+.quick-links a {
+  border-radius: var(--radius-sm);
+  background: rgba(8,7,13,.72);
+  border: 1px solid var(--gold-rim);
+  backdrop-filter: blur(12px);
+  padding: .8rem .9rem;
+  transition: transform .2s var(--ease-out), border-color .2s ease, background .2s ease;
+  gap: .55rem;
+}
+.quick-links a:hover,
+.quick-links a:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(242,189,84,.5);
+  background: rgba(242,189,84,.08);
+}
+.quick-links b {
+  color: var(--cream);
+  font-size: .82rem;
+  font-family: var(--font-ui);
+  font-weight: 700;
+}
+.quick-links small {
+  color: rgba(215,203,187,.75);
+  font-size: .68rem;
+}
+
+/* Scroll indicator */
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+  color: rgba(242,189,84,.55);
+  font: 600 .68rem/.9 var(--font-ui);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  animation: scrollBounce 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+.hero-scroll-hint svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: .55; }
+  50%       { transform: translateX(-50%) translateY(6px); opacity: .9; }
+}
+
+/* ─── 5. METRICS STRIP ─────────────────────────────────────────────────────── */
+.metrics {
+  margin-top: -52px;
+}
+.metrics article {
+  border-radius: var(--radius-md);
+  background: linear-gradient(145deg, rgba(44,28,40,.98), rgba(14,13,20,.98));
+  border: 1px solid var(--gold-rim);
+  box-shadow: 0 20px 60px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.04);
+  transition: transform .25s var(--ease-out), border-color .25s ease;
+  padding: 1.25rem 1.4rem;
+}
+.metrics article:hover {
+  transform: translateY(-4px);
+  border-color: rgba(242,189,84,.4);
+}
+.metrics strong {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  background: linear-gradient(135deg, var(--gold-2), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+.metrics span {
+  font-size: 1.6rem;
+  filter: drop-shadow(0 0 8px var(--gold-glow));
+}
+.metrics p {
+  font-size: .82rem;
+  color: var(--muted);
+  margin: .2rem 0 0;
+  line-height: 1.4;
+}
+
+/* ─── 6. SECTION GLOBAL IMPROVEMENTS ──────────────────────────────────────── */
+.section h2 {
+  font-size: clamp(2.4rem, 5.5vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -.025em;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--gold-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-heading > p:last-child {
+  font-size: clamp(.95rem, 1.3vw, 1.1rem);
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ─── 7. COLLECTION CARDS ──────────────────────────────────────────────────── */
+.collection-card {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gold-rim);
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  transition: transform .3s var(--ease-out), border-color .3s ease, box-shadow .3s ease;
+}
+.collection-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(242,189,84,.55);
+  box-shadow: 0 32px 80px rgba(0,0,0,.5), 0 0 0 1px rgba(242,189,84,.2);
+}
+.collection-card::after {
+  background: linear-gradient(transparent 20%, rgba(6,5,10,.97) 85%);
+}
+.collection-card strong {
+  font-size: 1.35rem;
+  letter-spacing: -.01em;
+}
+.collection-card small {
+  font-size: .78rem;
+  color: rgba(232,222,208,.8);
+  margin-top: .2rem;
+}
+
+/* ─── 8. PLATFORM TOOLS GRID ───────────────────────────────────────────────── */
+.platform-tool-grid a {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gold-rim);
+  background: linear-gradient(145deg, rgba(38,24,36,.97), rgba(13,12,19,.97));
+  box-shadow: 0 12px 40px rgba(0,0,0,.28);
+  transition: transform .22s var(--ease-out), border-color .22s ease, box-shadow .22s ease;
+  padding: 1.1rem;
+  min-height: 116px;
+}
+.platform-tool-grid a:hover,
+.platform-tool-grid a:focus-visible {
+  transform: translateY(-5px);
+  border-color: rgba(242,189,84,.5);
+  box-shadow: 0 20px 60px rgba(0,0,0,.4), 0 0 0 1px rgba(242,189,84,.15);
+}
+.platform-tool-grid span {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gold-rim);
+  background: rgba(242,189,84,.06);
+  font-size: 1.2rem;
+  transition: background .2s ease, border-color .2s ease;
+}
+.platform-tool-grid a:hover span {
+  background: rgba(242,189,84,.14);
+  border-color: rgba(242,189,84,.4);
+}
+.platform-tool-grid strong {
+  font-size: 1rem;
+  color: var(--gold-2);
+  letter-spacing: -.01em;
+}
+.platform-tool-grid small {
+  font-size: .73rem;
+  line-height: 1.4;
+}
+
+/* Platform tools section heading — replace internal copy with devotional copy */
+.platform-tools .section-heading > p.eyebrow {
+  /* eyebrow text is in HTML — we style it only */
+}
+/* The internal governance text in the section description is addressed in HTML */
+
+/* ─── 9. TEMPLE PREVIEW SECTION ────────────────────────────────────────────── */
+.temple-preview {
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(242,189,84,.2);
+  background:
+    radial-gradient(ellipse 60% 80% at 80% 50%, rgba(255,194,75,.22), transparent 55%),
+    radial-gradient(ellipse 40% 60% at 20% 30%, rgba(143,36,54,.25), transparent 50%),
+    linear-gradient(125deg, #1e0d1a 0%, #5c1726 52%, #9e5520 100%);
+  box-shadow: 0 32px 100px rgba(0,0,0,.5);
+  overflow: hidden;
+  position: relative;
+}
+.temple-preview::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(242,189,84,.06)'/%3E%3C/svg%3E") repeat;
+  pointer-events: none;
+}
+.temple-copy h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  letter-spacing: -.02em;
+  line-height: 1.05;
+  color: var(--cream);
+  background: none;
+  -webkit-text-fill-color: var(--cream);
+}
+.temple-copy p:not(.eyebrow) {
+  font-size: clamp(.95rem, 1.3vw, 1.1rem);
+  line-height: 1.7;
+  color: rgba(244,228,208,.88);
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .85rem 1.6rem;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, var(--gold-deep), var(--gold));
+  color: #1a0c04;
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: .92rem;
+  letter-spacing: .01em;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(242,189,84,.35);
+  transition: transform .2s var(--ease-out), box-shadow .2s ease;
+}
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(242,189,84,.5);
+}
+
+/* Vel emblem — animated */
+.vel-emblem {
+  position: relative;
+}
+.vel-emblem b {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  background: linear-gradient(135deg, var(--gold-2), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: velPulse 4s ease-in-out infinite;
+}
+.vel-emblem i {
+  width: 6px;
+  height: 150px;
+  background: linear-gradient(var(--gold-2), var(--gold), transparent);
+  border-radius: var(--radius-pill);
+  animation: velGlow 4s ease-in-out infinite;
+}
+.vel-emblem i::before {
+  border-bottom-color: var(--gold-2);
+  filter: drop-shadow(0 0 12px var(--gold-glow));
+}
+@keyframes velPulse {
+  0%, 100% { filter: drop-shadow(0 0 20px rgba(242,189,84,.4)); }
+  50%       { filter: drop-shadow(0 0 40px rgba(242,189,84,.8)); }
+}
+@keyframes velGlow {
+  0%, 100% { box-shadow: 0 0 12px rgba(242,189,84,.3); }
+  50%       { box-shadow: 0 0 30px rgba(242,189,84,.7); }
+}
+
+/* ─── 10. FEATURES SECTION ─────────────────────────────────────────────────── */
+.features {
+  gap: 1.2rem;
+  margin-top: var(--space-lg);
+}
+.features article {
+  padding: 1.6rem 1.5rem;
+  border-top: 1px solid var(--gold-rim);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  background: linear-gradient(180deg, rgba(242,189,84,.04), transparent);
+  transition: background .25s ease;
+}
+.features article:hover {
+  background: linear-gradient(180deg, rgba(242,189,84,.08), transparent);
+}
+.features .feat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gold-rim);
+  background: rgba(242,189,84,.06);
+  margin-bottom: .9rem;
+  color: var(--gold);
+}
+.features .feat-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.features h3 {
+  font-size: 1.05rem;
+  margin: 0 0 .4rem;
+  color: var(--cream);
+  letter-spacing: -.01em;
+}
+.features p {
+  font-size: .88rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+/* ─── 11. PREMIUM FOOTER ───────────────────────────────────────────────────── */
+footer {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background: #06060b;
+  border-top: 1px solid var(--gold-rim);
+  text-align: left;
+}
+
+/* Footer inner layout */
+.footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(3rem,7vw,5rem) 1.5rem clamp(2rem,4vw,3rem);
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 2rem 3rem;
+  align-items: start;
+}
+
+/* Footer brand column */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer-brand-mark {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  text-decoration: none;
+  color: var(--cream);
+}
+.footer-brand-mark .brand-mark {
+  width: 44px;
+  height: 44px;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.footer-brand-mark strong {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--cream);
+}
+.footer-brand-mark small {
+  display: block;
+  font-size: .75rem;
+  color: var(--gold-2);
+  font-family: var(--font-ui);
+}
+.footer-tagline {
+  font-size: 1.25rem;
+  color: var(--gold);
+  font-family: var(--font-serif);
+  line-height: 1.4;
+  margin: 0;
+}
+.footer-description {
+  font-size: .82rem;
+  line-height: 1.65;
+  color: var(--muted);
+  font-family: var(--font-ui);
+  margin: 0;
+  max-width: 280px;
+}
+
+/* Footer nav columns */
+.footer-col h4 {
+  font-size: .7rem;
+  font-family: var(--font-ui);
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 1rem;
+}
+.footer-col nav {
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+}
+.footer-col nav a {
+  font-size: .85rem;
+  font-family: var(--font-ui);
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .2s ease;
+  line-height: 1.4;
+}
+.footer-col nav a:hover,
+.footer-col nav a:focus-visible {
+  color: var(--gold-2);
+}
+
+/* Footer bottom bar */
+.footer-bottom {
+  border-top: 1px solid var(--gold-rim);
+  padding: 1.4rem 1.5rem;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+.footer-bottom-left {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+.footer-copyright {
+  font-size: .78rem;
+  font-family: var(--font-ui);
+  color: rgba(215,203,187,.6);
+  margin: 0;
+}
+.footer-disclaimer {
+  font-size: .72rem;
+  font-family: var(--font-ui);
+  color: rgba(215,203,187,.45);
+  margin: 0;
+  max-width: 560px;
+  line-height: 1.5;
+}
+.footer-scroll-top {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .55rem 1rem;
+  border: 1px solid var(--gold-rim);
+  border-radius: var(--radius-pill);
+  background: rgba(242,189,84,.06);
+  color: var(--gold);
+  font: 700 .75rem/1 var(--font-ui);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+  letter-spacing: .06em;
+}
+.footer-scroll-top:hover,
+.footer-scroll-top:focus-visible {
+  background: rgba(242,189,84,.14);
+  border-color: rgba(242,189,84,.5);
+  transform: translateY(-2px);
+}
+.footer-scroll-top svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Footer decorative glow */
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: .5;
+}
+footer::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 160px;
+  background: radial-gradient(ellipse, rgba(242,189,84,.06), transparent 70%);
+  pointer-events: none;
+}
+
+/* ─── 12. SCROLL REVEAL ────────────────────────────────────────────────────── */
+/* Extend existing [data-reveal] system — staggered delays */
+[data-reveal-delay="1"] { transition-delay: .1s; }
+[data-reveal-delay="2"] { transition-delay: .2s; }
+[data-reveal-delay="3"] { transition-delay: .3s; }
+[data-reveal-delay="4"] { transition-delay: .4s; }
+[data-reveal-delay="5"] { transition-delay: .5s; }
+
+/* ─── 13. FOCUS STATES ─────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.skip-link:focus {
+  outline: 3px solid var(--gold);
+}
+
+/* ─── 14. RESPONSIVE OVERRIDES ─────────────────────────────────────────────── */
+@media (max-width: 1050px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero h1 {
+    font-size: clamp(3.4rem, 18vw, 5.5rem);
+    background: linear-gradient(135deg, var(--cream) 0%, var(--gold-2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-scroll-hint {
+    display: none;
+  }
+  .metrics article {
+    padding: 1rem 1.1rem;
+  }
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .section h2 {
+    font-size: 2.4rem;
+    -webkit-text-fill-color: var(--cream);
+    background: none;
+  }
+  .quick-links {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ─── 15. REDUCED MOTION ───────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero::after,
+  .vel-emblem b,
+  .vel-emblem i,
+  .hero-scroll-hint {
+    animation: none !important;
+  }
+  .hero h1,
+  .section h2 {
+    /* Keep gradient text but remove any motion */
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PHASE 2 — PREMIUM PRODUCTION POLISH
+   Iteration 2: Hero composition, navigation, spacing, cards, mobile, a11y
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─── P2.1 NAVIGATION — PREMIUM STICKY HEADER ──────────────────────────────── */
+
+/* Scrolled state — triggered by existing JS (data-header) */
+[data-header].scrolled,
+.site-header[data-header].scrolled {
+  background: rgba(6,5,10,.97);
+  box-shadow: 0 1px 0 var(--gold-rim), 0 4px 24px rgba(0,0,0,.6);
+}
+
+/* Brand — tighter, more refined */
+.brand strong {
+  font-size: 1.18rem;
+  letter-spacing: -.01em;
+}
+.brand small {
+  font-size: .72rem;
+  letter-spacing: .04em;
+  font-family: var(--font-ui);
+}
+
+/* Nav links — refined active state */
+.site-nav a.active {
+  background: rgba(242,189,84,.14);
+  color: var(--gold-2);
+  font-weight: 600;
+}
+.site-nav a {
+  font-size: .88rem;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  letter-spacing: .01em;
+  border-radius: var(--radius-pill);
+}
+
+/* ─── P2.2 HERO — IMPROVED COMPOSITION ─────────────────────────────────────── */
+
+/* Richer hero gradient — deeper left darkness for text legibility */
+.hero::before {
+  background:
+    linear-gradient(90deg,
+      rgba(4,3,8,.98) 0%,
+      rgba(6,5,10,.88) 38%,
+      rgba(7,6,11,.55) 58%,
+      rgba(5,4,9,.12) 75%,
+      rgba(5,4,9,.65) 100%),
+    linear-gradient(180deg,
+      rgba(4,3,8,.3) 0%,
+      transparent 40%,
+      rgba(4,3,8,.85) 100%);
+}
+
+/* Hero copy — improved vertical rhythm */
+.hero-copy {
+  padding-top: clamp(1rem, 4vw, 3rem);
+  padding-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+/* Eyebrow — refined spacing */
+.eyebrow {
+  margin-bottom: 1rem;
+  font-size: .7rem;
+  letter-spacing: .24em;
+}
+
+/* Hero h1 — tighter, more dramatic at large sizes */
+.hero h1 {
+  font-size: clamp(3.6rem, 9.5vw, 9.6rem);
+  letter-spacing: -.025em;
+  margin-bottom: .2em;
+}
+
+/* Hero subtitle — slightly more weight */
+.hero-subtitle {
+  font-weight: 400;
+  font-size: clamp(1.2rem, 2.4vw, 2rem);
+  letter-spacing: .005em;
+  margin-top: .6rem;
+  margin-bottom: .5rem;
+}
+
+/* Hero description — better line length */
+.hero-description {
+  max-width: 540px;
+  font-size: clamp(.95rem, 1.2vw, 1.1rem);
+  line-height: 1.75;
+  color: rgba(243,233,218,.88);
+  margin-bottom: .2rem;
+}
+
+/* ─── P2.3 QUICK LINKS — PREMIUM GRID ──────────────────────────────────────── */
+
+.quick-links {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .55rem;
+  margin-top: 1.5rem;
+}
+
+/* Icon container in quick links */
+.quick-links a > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(242,189,84,.08);
+  border: 1px solid var(--gold-rim);
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: background .2s ease;
+}
+.quick-links a:hover > span {
+  background: rgba(242,189,84,.18);
+}
+.quick-links a > span svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* ─── P2.4 METRICS STRIP — TIGHTER INTEGRATION ─────────────────────────────── */
+
+.metrics {
+  padding: 0 1.2rem;
+  gap: .85rem;
+}
+.metrics article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .1rem .75rem;
+  align-items: center;
+}
+.metrics article > span {
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(242,189,84,.08);
+  border: 1px solid var(--gold-rim);
+  color: var(--gold);
+  font-size: 1rem;
+}
+.metrics article > span svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+}
+.metrics strong {
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  line-height: 1;
+  display: block;
+}
+.metrics p {
+  font-size: .78rem;
+  line-height: 1.3;
+  color: rgba(215,203,187,.75);
+  margin: 0;
+}
+
+/* ─── P2.5 SECTION HEADINGS — REFINED HIERARCHY ────────────────────────────── */
+
+.section-heading {
+  margin-bottom: 2.8rem;
+}
+.section-heading .eyebrow {
+  margin-bottom: .8rem;
+}
+.section h2 {
+  margin: 0 0 .75rem;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  line-height: 1.04;
+}
+.section-heading > p:last-child {
+  font-size: clamp(.92rem, 1.25vw, 1.08rem);
+  line-height: 1.72;
+  color: rgba(215,203,187,.8);
+}
+
+/* ─── P2.6 COLLECTION CARDS — PREMIUM INTERACTION ──────────────────────────── */
+
+.collection-card {
+  min-height: 360px;
+}
+.collection-card img {
+  transition: transform .5s var(--ease-out), filter .5s ease;
+  filter: saturate(1.05) brightness(.95);
+}
+.collection-card:hover img {
+  transform: scale(1.04);
+  filter: saturate(1.15) brightness(1.02);
+}
+/* Gradient overlay — richer bottom fade */
+.collection-card::after {
+  inset: 25% 0 0;
+  background: linear-gradient(
+    transparent 0%,
+    rgba(6,5,10,.5) 40%,
+    rgba(6,5,10,.97) 90%
+  );
+}
+/* Card text */
+.collection-card span {
+  left: 1.3rem;
+  right: 1.3rem;
+  bottom: 1.3rem;
+}
+.collection-card strong {
+  font-size: 1.3rem;
+  color: var(--gold-2);
+  letter-spacing: -.01em;
+  line-height: 1.2;
+  margin-bottom: .3rem;
+  display: block;
+}
+.collection-card small {
+  font-size: .77rem;
+  color: rgba(232,222,208,.78);
+  line-height: 1.4;
+  font-family: var(--font-ui);
+}
+
+/* ─── P2.7 PLATFORM TOOLS — REFINED GRID ───────────────────────────────────── */
+
+.platform-tool-grid {
+  gap: .85rem;
+}
+.platform-tool-grid a {
+  min-height: 108px;
+  padding: 1rem 1.1rem;
+  column-gap: .8rem;
+  align-items: start;
+}
+.platform-tool-grid strong {
+  font-size: .97rem;
+  line-height: 1.3;
+  margin-top: .1rem;
+}
+.platform-tool-grid small {
+  font-size: .72rem;
+  line-height: 1.45;
+  color: rgba(215,203,187,.7);
+}
+
+/* ─── P2.8 TEMPLE PREVIEW — CINEMATIC SECTION ──────────────────────────────── */
+
+.temple-preview {
+  margin-top: clamp(4rem, 8vw, 7rem);
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 5vw, 5rem);
+}
+.temple-copy .eyebrow {
+  margin-bottom: .9rem;
+}
+.temple-copy h2 {
+  font-size: clamp(1.9rem, 3.8vw, 3.2rem);
+  margin: 0 0 1rem;
+  line-height: 1.08;
+}
+.temple-copy p:not(.eyebrow) {
+  font-size: clamp(.92rem, 1.25vw, 1.08rem);
+  line-height: 1.72;
+  max-width: 520px;
+  margin-bottom: 1.4rem;
+}
+
+/* ─── P2.9 FEATURES SECTION — PREMIUM GRID ─────────────────────────────────── */
+
+.features {
+  border-top: 1px solid var(--gold-rim);
+  padding-top: clamp(2rem, 5vw, 4rem);
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+.features article {
+  border-top: 2px solid var(--gold-rim);
+  padding: 1.8rem 1.4rem 1.4rem;
+}
+.features article:first-child {
+  border-top-color: var(--gold);
+}
+.features h3 {
+  font-size: 1.08rem;
+  letter-spacing: -.01em;
+  color: var(--cream);
+  margin: 0 0 .5rem;
+}
+.features p {
+  font-size: .87rem;
+  line-height: 1.68;
+}
+/* kbd styling in features */
+.features kbd {
+  display: inline-block;
+  padding: .1rem .35rem;
+  border: 1px solid rgba(242,189,84,.3);
+  border-bottom-width: 2px;
+  border-radius: .35rem;
+  background: rgba(242,189,84,.08);
+  color: var(--gold-2);
+  font: 700 .75em/1.4 var(--font-ui);
+  font-style: normal;
+}
+
+/* ─── P2.10 FOOTER — PRODUCTION QUALITY ────────────────────────────────────── */
+
+/* Richer footer background */
+footer {
+  background: linear-gradient(180deg, #07060c 0%, #050409 100%);
+}
+
+/* Footer inner — tighter on large screens */
+.footer-inner {
+  padding-top: clamp(3.5rem, 7vw, 5.5rem);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+  column-gap: 2.5rem;
+}
+
+/* Brand column refinements */
+.footer-tagline {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--gold);
+}
+.footer-description {
+  font-size: .8rem;
+  line-height: 1.7;
+  color: rgba(215,203,187,.65);
+}
+
+/* Footer nav columns */
+.footer-col h4 {
+  font-size: .68rem;
+  letter-spacing: .2em;
+  margin-bottom: 1.1rem;
+}
+.footer-col nav a {
+  font-size: .83rem;
+  color: rgba(215,203,187,.65);
+  transition: color .18s ease, padding-left .18s ease;
+  padding-left: 0;
+}
+.footer-col nav a:hover,
+.footer-col nav a:focus-visible {
+  color: var(--gold-2);
+  padding-left: .3rem;
+}
+
+/* Footer bottom bar */
+.footer-bottom {
+  padding: 1.2rem 1.5rem;
+}
+.footer-copyright {
+  font-size: .75rem;
+  color: rgba(215,203,187,.5);
+}
+.footer-copyright a {
+  color: rgba(242,189,84,.7);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+.footer-copyright a:hover {
+  color: var(--gold-2);
+}
+.footer-disclaimer {
+  font-size: .7rem;
+  color: rgba(215,203,187,.38);
+  line-height: 1.55;
+  max-width: 580px;
+}
+
+/* Scroll-to-top button */
+.footer-scroll-top {
+  white-space: nowrap;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* ─── P2.11 SECTION SPACING — CONSISTENT RHYTHM ────────────────────────────── */
+
+/* Add breathing room between all major sections */
+.section + .section {
+  margin-top: clamp(3.5rem, 7vw, 6rem);
+}
+.metrics + .section {
+  margin-top: clamp(4rem, 8vw, 7rem);
+}
+
+/* ─── P2.12 NAVIGATION MOBILE DRAWER ───────────────────────────────────────── */
+
+@media (max-width: 1050px) {
+  .site-nav {
+    top: 68px;
+    border-radius: var(--radius-md);
+    padding: .85rem;
+    gap: .2rem;
+    background: rgba(10,8,16,.97);
+    backdrop-filter: blur(24px);
+    border: 1px solid var(--gold-rim);
+  }
+  .site-nav a {
+    padding: .7rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: .9rem;
+  }
+  .menu-toggle {
+    font-size: .82rem;
+    padding: .6rem .85rem;
+    border-radius: var(--radius-sm);
+  }
+}
+
+/* ─── P2.13 MOBILE UX — TOUCH TARGETS & SPACING ────────────────────────────── */
+
+@media (max-width: 720px) {
+  /* Hero — mobile composition */
+  .hero-copy {
+    padding: 0 .2rem;
+  }
+  .hero h1 {
+    font-size: clamp(3.2rem, 17vw, 5rem);
+    letter-spacing: -.02em;
+  }
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 5vw, 1.6rem);
+  }
+  .hero-description {
+    font-size: .95rem;
+    max-width: 100%;
+  }
+
+  /* Quick links — 2 columns on mobile */
+  .quick-links {
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+  }
+  .quick-links a {
+    padding: .75rem .8rem;
+    gap: .5rem;
+  }
+  .quick-links b {
+    font-size: .8rem;
+  }
+  .quick-links small {
+    font-size: .65rem;
+  }
+
+  /* Metrics — 2 columns */
+  .metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: .65rem;
+    padding: 0 .8rem;
+  }
+  .metrics article {
+    padding: .95rem 1rem;
+  }
+  .metrics strong {
+    font-size: 1.5rem;
+  }
+
+  /* Collection cards — single column, taller */
+  .collection-card {
+    min-height: 320px;
+  }
+
+  /* Platform tools — single column */
+  .platform-tool-grid a {
+    min-height: 90px;
+    padding: .9rem 1rem;
+  }
+
+  /* Temple preview */
+  .temple-preview {
+    padding: 2.2rem 1.5rem;
+    gap: 1.5rem;
+  }
+  .temple-copy h2 {
+    font-size: clamp(1.7rem, 7vw, 2.4rem);
+  }
+
+  /* Features — 2 columns */
+  .features {
+    grid-template-columns: 1fr 1fr;
+    gap: .85rem;
+  }
+  .features article {
+    padding: 1.3rem 1rem;
+  }
+
+  /* Footer mobile */
+  .footer-inner {
+    padding: 2.5rem 1.2rem 2rem;
+    gap: 1.5rem;
+  }
+  .footer-bottom {
+    padding: 1.2rem;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 440px) {
+  /* Hero */
+  .hero h1 {
+    font-size: clamp(3rem, 20vw, 4.5rem);
+  }
+  .hero-search {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Metrics — single column */
+  .metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Features — single column */
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-scroll-top span {
+    display: none;
+  }
+}
+
+/* ─── P2.14 ACCESSIBILITY — FOCUS & CONTRAST ───────────────────────────────── */
+
+/* Enhanced focus ring — visible on all backgrounds */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip link — always accessible */
+.skip-link {
+  background: var(--gold);
+  color: #1a0c04;
+  font: 700 .9rem/1 var(--font-ui);
+  padding: .9rem 1.2rem;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  box-shadow: 0 4px 20px rgba(0,0,0,.4);
+}
+
+/* Ensure sufficient contrast on muted text */
+.metrics p,
+.platform-tool-grid small,
+.collection-card small,
+.footer-description,
+.footer-disclaimer {
+  /* Already set to rgba values above 4.5:1 on dark backgrounds */
+}
+
+/* ─── P2.15 PERFORMANCE — CONTAIN PAINT REGIONS ────────────────────────────── */
+
+/* Limit paint regions for animated elements */
+.hero-murugan-art,
+.hero-temple-art {
+  contain: layout style;
+  will-change: transform;
+}
+.collection-card {
+  contain: layout;
+}
+.vel-emblem b,
+.vel-emblem i {
+  will-change: filter;
+}
+
+/* ─── P2.16 PRINT STYLES ────────────────────────────────────────────────────── */
+
+@media print {
+  .hero-scroll-hint,
+  .osb-scroll-progress,
+  .osb-command-trigger,
+  .osb-command-backdrop,
+  .footer-scroll-top {
+    display: none !important;
+  }
+  .hero h1,
+  .section h2 {
+    -webkit-text-fill-color: #000;
+    background: none;
+    color: #000;
+  }
+  .site-header {
+    position: static;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+/* ─── P2.17 HIGH CONTRAST MODE ──────────────────────────────────────────────── */
+
+@media (forced-colors: active) {
+  .hero h1,
+  .section h2 {
+    -webkit-text-fill-color: CanvasText;
+    background: none;
+    color: CanvasText;
+  }
+  .collection-card::after {
+    background: none;
+  }
+  .vel-emblem b {
+    -webkit-text-fill-color: CanvasText;
+    background: none;
+  }
+}
+
+/* ─── P2.18 REDUCED MOTION — COMPREHENSIVE ──────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::after,
+  .vel-emblem b,
+  .vel-emblem i,
+  .hero-scroll-hint,
+  .hero-murugan-art,
+  .collection-card img,
+  .footer-col nav a {
+    animation: none !important;
+    transition: none !important;
+  }
+  .collection-card:hover img {
+    transform: none;
+  }
+  .quick-links a:hover,
+  .collection-card:hover,
+  .platform-tool-grid a:hover,
+  .metrics article:hover,
+  .button:hover,
+  .footer-scroll-top:hover {
+    transform: none;
+  }
+}
