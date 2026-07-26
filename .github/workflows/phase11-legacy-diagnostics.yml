@@ -1,0 +1,67 @@
+name: Phase 11 Legacy CI Diagnostics
+
+on:
+  push:
+    branches:
+      - phase11-premium-production-gate
+    paths:
+      - '.github/workflows/phase11-legacy-diagnostics.yml'
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Capture concise legacy CI diagnostics
+        shell: bash
+        run: |
+          mkdir -p artifacts/legacy-ci
+          set +e
+          python -B -m tools.production_baseline.validate --root . --mode package > artifacts/legacy-ci/production-baseline.txt 2>&1
+          baseline=$?
+          python -B -m tools.operations_observability.validate --root . --mode package --report artifacts/legacy-ci/operations-report.json > artifacts/legacy-ci/operations.txt 2>&1
+          operations=$?
+          python -B -m tools.effective_route_consumers.validate --root . > artifacts/legacy-ci/effective-route.txt 2>&1
+          routes=$?
+          node --test tests/js/*.test.mjs > artifacts/legacy-ci/js-tests.txt 2>&1
+          js=$?
+          python -B -m unittest discover -s tests/deployment_conformance -p 'test_*.py' -v > artifacts/legacy-ci/deployment-tests.txt 2>&1
+          deployment=$?
+          python - <<PY
+          import json
+          from pathlib import Path
+          result = {
+              'productionBaselineExit': int('$baseline'),
+              'operationsExit': int('$operations'),
+              'effectiveRouteExit': int('$routes'),
+              'javascriptTestsExit': int('$js'),
+              'deploymentTestsExit': int('$deployment'),
+          }
+          Path('artifacts/legacy-ci/exit-codes.json').write_text(json.dumps(result, indent=2) + '\n', encoding='utf-8')
+          PY
+          for file in artifacts/legacy-ci/*.txt; do
+            tail -n 160 "$file" > "$file.tail"
+          done
+          exit 0
+      - name: Upload diagnostics
+        uses: actions/upload-artifact@v7
+        with:
+          name: phase11-legacy-ci-diagnostics
+          path: artifacts/legacy-ci
+          if-no-files-found: error
+          retention-days: 7
