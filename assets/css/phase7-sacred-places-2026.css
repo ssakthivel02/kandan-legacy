@@ -1,0 +1,96 @@
+/* Om Saravana Bhava — Phase 7: Sacred Places, Festivals and Pilgrimage */
+body.osb-phase7{
+  --osb7-gold:#d9a52c;
+  --osb7-saffron:#e8750a;
+  --osb7-ruby:#8f2436;
+  --osb7-peacock:#176b82;
+  --osb7-panel:rgba(255,250,241,.92);
+  background:
+    radial-gradient(circle at 8% 4%,rgba(232,117,10,.10),transparent 30rem),
+    radial-gradient(circle at 92% 14%,rgba(23,107,130,.10),transparent 34rem),
+    var(--bg,#fff7ec);
+}
+body.osb-phase7 .hero,
+body.osb-phase7 .page-hero,
+body.osb-phase7 .intro,
+body.osb-phase7 .temple-hero,
+body.osb-phase7 .festival-hero{
+  position:relative;
+  overflow:hidden;
+  border-radius:30px;
+  border:1px solid rgba(217,165,44,.30);
+  box-shadow:0 24px 70px rgba(55,31,9,.14);
+}
+body.osb-phase7 .hero::after,
+body.osb-phase7 .page-hero::after,
+body.osb-phase7 .temple-hero::after,
+body.osb-phase7 .festival-hero::after{
+  content:"";
+  position:absolute;
+  inset:auto -12% -65% auto;
+  width:28rem;
+  aspect-ratio:1;
+  border-radius:50%;
+  pointer-events:none;
+  background:radial-gradient(circle,rgba(242,189,84,.24),transparent 66%);
+}
+body.osb-phase7 .temple-card,
+body.osb-phase7 .festival-card,
+body.osb-phase7 .place-card,
+body.osb-phase7 .pilgrimage-card,
+body.osb-phase7 .card{
+  border-radius:22px;
+  border-color:rgba(217,165,44,.24);
+  box-shadow:0 12px 34px rgba(55,31,9,.09);
+  transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease;
+}
+body.osb-phase7 .temple-card:hover,
+body.osb-phase7 .festival-card:hover,
+body.osb-phase7 .place-card:hover,
+body.osb-phase7 .pilgrimage-card:hover,
+body.osb-phase7 .card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(217,165,44,.58);
+  box-shadow:0 20px 50px rgba(55,31,9,.16);
+}
+body.osb-phase7 .temple-card img,
+body.osb-phase7 .festival-card img,
+body.osb-phase7 .place-card img{
+  width:100%;
+  object-fit:cover;
+  transition:transform .45s ease,filter .45s ease;
+}
+body.osb-phase7 .temple-card:hover img,
+body.osb-phase7 .festival-card:hover img,
+body.osb-phase7 .place-card:hover img{
+  transform:scale(1.035);
+  filter:saturate(1.08) contrast(1.03);
+}
+body.osb-phase7 .badge,
+body.osb-phase7 .pill,
+body.osb-phase7 .tag{
+  border-radius:999px;
+  border-color:rgba(217,165,44,.35);
+}
+body.osb-phase7 .timeline,
+body.osb-phase7 [class*="timeline"]{position:relative}
+body.osb-phase7 button,
+body.osb-phase7 .btn,
+body.osb-phase7 [role="button"]{min-height:44px}
+body.osb-phase7 :focus-visible{outline:3px solid var(--osb7-gold);outline-offset:3px}
+@media(max-width:760px){
+  body.osb-phase7 .grid,
+  body.osb-phase7 [class*="grid"]{grid-template-columns:1fr}
+  body.osb-phase7 .hero,
+  body.osb-phase7 .page-hero,
+  body.osb-phase7 .temple-hero,
+  body.osb-phase7 .festival-hero{border-radius:22px}
+}
+@media(prefers-reduced-motion:reduce){
+  body.osb-phase7 *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+@media(forced-colors:active){
+  body.osb-phase7 .card,
+  body.osb-phase7 .temple-card,
+  body.osb-phase7 .festival-card{border:1px solid CanvasText}
+}
