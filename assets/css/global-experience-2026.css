@@ -1,0 +1,24 @@
+/*
+ * Om Saravana Bhava — Global Experience Foundation 2026
+ * Additive: brand emblem, language focus, pointer ambience and AI gateway.
+ */
+:root{--osb-pointer-x:50%;--osb-pointer-y:20%;--osb-experience-gold:#f2bd54;--osb-experience-panel:rgba(12,9,17,.94);--osb-experience-border:rgba(242,189,84,.28)}
+html.osb-global-experience body::before{content:"";position:fixed;z-index:9990;left:var(--osb-pointer-x);top:var(--osb-pointer-y);width:28rem;height:28rem;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;opacity:.16;background:radial-gradient(circle,rgba(242,189,84,.36),rgba(23,107,130,.10) 38%,transparent 70%);mix-blend-mode:screen}
+.osb-brand-symbol,.brand-mark.osb-brand-symbol{width:46px;height:46px;min-width:46px;display:inline-grid;place-items:center;overflow:hidden;border-radius:50%;border:1px solid rgba(242,189,84,.48);background:#09070d;box-shadow:0 0 0 5px rgba(242,189,84,.06),0 12px 32px rgba(0,0,0,.20);transition:transform .28s ease,box-shadow .28s ease}
+.osb-brand-symbol img{width:100%;height:100%;display:block}.brand:hover .osb-brand-symbol,.brand:focus-visible .osb-brand-symbol{transform:rotate(-4deg) scale(1.05);box-shadow:0 0 0 6px rgba(242,189,84,.10),0 0 34px rgba(242,189,84,.35)}
+.osb-language-shell{position:relative;z-index:100;margin-inline-start:auto}.site-header .osb-language-shell{order:2;margin-left:auto;margin-right:.35rem}.site-header .menu-toggle{order:3}.site-header .site-nav{order:1}.nav-inner .osb-language-shell{align-self:center}
+.osb-language-button{min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.55rem .72rem;border:1px solid var(--osb-experience-border);border-radius:999px;color:inherit;background:rgba(255,255,255,.07);backdrop-filter:blur(14px);cursor:pointer;font:700 .78rem/1 system-ui,sans-serif}
+.osb-language-button:hover,.osb-language-button[aria-expanded=true]{transform:translateY(-1px);border-color:var(--osb-experience-gold);box-shadow:0 10px 28px rgba(0,0,0,.18)}.osb-language-button svg{width:18px;height:18px}
+.osb-language-panel{position:absolute;top:calc(100% + .65rem);right:0;width:min(320px,calc(100vw - 24px));padding:.75rem;border:1px solid var(--osb-experience-border);border-radius:18px;color:#fff8e8;background:var(--osb-experience-panel);box-shadow:0 24px 70px rgba(0,0,0,.42);backdrop-filter:blur(22px)}
+.osb-language-panel[hidden]{display:none}.osb-language-panel strong,.osb-language-panel small{display:block}.osb-language-panel small{margin-top:.25rem;color:#d7cbbb;line-height:1.45}.osb-language-options{display:grid;gap:.45rem;margin-top:.7rem}
+.osb-language-option,.osb-language-more{width:100%;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.7rem .8rem;border:1px solid rgba(242,189,84,.17);border-radius:12px;color:#fff8e8;background:rgba(255,255,255,.045);text-decoration:none;cursor:pointer;font:700 .86rem/1.2 system-ui,sans-serif}
+.osb-language-option:hover,.osb-language-more:hover,.osb-language-option[aria-pressed=true]{border-color:var(--osb-experience-gold);background:rgba(242,189,84,.12)}.osb-language-option[aria-pressed=true]::after{content:"✓";color:var(--osb-experience-gold)}
+html[data-language-focus=en] [lang=ta]{opacity:.62}html[data-language-focus=ta] [lang=ta]{text-shadow:0 0 18px rgba(242,189,84,.15)}
+.osb-ai-fab{position:fixed;z-index:9960;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));min-height:48px;display:inline-flex;align-items:center;gap:.55rem;padding:.7rem 1rem;border:1px solid rgba(242,189,84,.38);border-radius:999px;color:#fff8e8;background:linear-gradient(135deg,rgba(143,36,54,.96),rgba(19,13,27,.97));box-shadow:0 16px 45px rgba(0,0,0,.38),0 0 26px rgba(242,189,84,.13);text-decoration:none;font:800 .84rem/1 system-ui,sans-serif}
+.osb-ai-fab:hover,.osb-ai-fab:focus-visible{transform:translateY(-3px);box-shadow:0 22px 56px rgba(0,0,0,.44),0 0 34px rgba(242,189,84,.23)}.osb-ai-fab svg{width:18px;height:18px;color:var(--osb-experience-gold)}
+.osb-global-note{border-left:4px solid var(--osb-experience-gold)}
+@media(max-width:880px){.site-header .osb-language-shell{margin-left:auto}.osb-language-button .osb-language-label{display:none}}
+@media(max-width:520px){.osb-ai-fab span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.osb-ai-fab{width:50px;padding:0;justify-content:center}}
+@media(prefers-reduced-motion:reduce),(pointer:coarse){html.osb-global-experience body::before{display:none}.osb-brand-symbol,.osb-language-button,.osb-ai-fab{transition:none!important}}
+@media(forced-colors:active){.osb-language-button,.osb-language-panel,.osb-language-option,.osb-language-more,.osb-ai-fab,.osb-brand-symbol{border:1px solid CanvasText}}
+@media print{.osb-language-shell,.osb-ai-fab,html.osb-global-experience body::before{display:none!important}}
