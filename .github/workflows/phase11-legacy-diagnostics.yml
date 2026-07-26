@@ -6,6 +6,14 @@ on:
       - phase11-premium-production-gate
     paths:
       - '.github/workflows/phase11-legacy-diagnostics.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase11-legacy-diagnostics.yml'
+      - 'index.html'
+      - 'service-worker.js'
+      - 'data/operations/**'
+      - 'data/deployment-conformance.json'
 
 permissions:
   contents: read
