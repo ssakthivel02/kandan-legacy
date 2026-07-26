@@ -17,8 +17,8 @@
 <script src="assets/js/route-status-reconciliation.js"></script>
 <script defer src="assets/js/pwa-register.js"></script>
 <script type="module" src="assets/js/discovery-workspace.mjs"></script>
-<script type="module" src="assets/js/discovery-resilience-2026.mjs"></script>
-<link rel="stylesheet" href="assets/css/global-experience-2026.css">
+<script type="module" src="assets/js/discovery-resilience-2026.mjs?v=20260726-2"></script>
+<link rel="stylesheet" href="assets/css/global-experience-2026.css?v=20260726-2">
 </head>
 <body data-release="238" class="phase4-page discovery-page">
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -92,6 +92,253 @@
 <noscript><section class="card" role="status"><h2>JavaScript is disabled</h2><p>The dynamic discovery workspace requires JavaScript. Use the <a href="explore.html">structured Explore page</a> or <a href="site-directory.html">site directory</a>.</p></section></noscript>
 </main>
 <footer>© Om Saravana Bhava · <a href="personal-library.html">My Library</a> · <a href="reading-notes.html">Reading Notes</a> · <a href="reading-workspace.html">Reading Workspace</a> · <a href="discovery.html">Discover</a> · <a href="explore.html">Explore</a> · <a href="site-directory.html">Directory</a> · <a href="sources.html">Sources &amp; publication policy</a></footer>
-<script defer src="assets/js/global-experience-2026.js"></script>
+<script defer src="assets/js/global-experience-2026.js?v=20260726-2"></script>
+
+<script>
+/*
+ * Release 5.1: network-independent Discovery fallback.
+ * Activates only when the governed dynamic workspace is unavailable.
+ */
+(() => {
+  "use strict";
+
+  const ROOT_ATTR = "data-osb-discovery-resilience-init";
+  const RELEASE = "251-static";
+  const byId = id => document.getElementById(id);
+  const value = input => String(input ?? "").trim();
+
+  const ROUTES = Object.freeze([
+    {path:"site-directory.html",titleTa:"தள வழித்தட அட்டவணை",titleEn:"Site Directory",category:"Start Here",status:"directory",summary:"Search every public route and review its publication status."},
+    {path:"platform-hub.html",titleTa:"தள மையம்",titleEn:"Complete Platform Hub",category:"Start Here",status:"published",summary:"Open the principal knowledge, temple, literature and research modules."},
+    {path:"ai-search.html",titleTa:"அறிவு தேடல்",titleEn:"Local Knowledge Search",category:"Start Here",status:"published",summary:"Search published local records without a remote AI service."},
+    {path:"content-status.html",titleTa:"உள்ளடக்க நிலை",titleEn:"Content Status",category:"Start Here",status:"source-register",summary:"Review verification boundaries and incomplete-content disclosures."},
+
+    {path:"daily-devotional.html",titleTa:"தினசரி பக்தி",titleEn:"Daily Devotional",category:"Devotion",status:"published",summary:"Open the browser-local daily devotional companion."},
+    {path:"murugan-mantras.html",titleTa:"முருகன் மந்திரங்கள்",titleEn:"Murugan Mantras",category:"Devotion",status:"published",summary:"Published mantra records with stated source boundaries."},
+    {path:"sloka-library.html",titleTa:"ஸ்லோக நூலகம்",titleEn:"Sloka Library",category:"Devotion",status:"published",summary:"Browse published prayers and bounded reviewed extracts."},
+    {path:"festivals.html",titleTa:"முருகன் திருவிழாக்கள்",titleEn:"Festival Calendar",category:"Devotion",status:"published",summary:"Festival guidance that defers exact dates to authoritative calendars."},
+
+    {path:"arupadai-veedu.html",titleTa:"ஆறுபடை வீடு",titleEn:"Six Sacred Abodes",category:"Sacred Places",status:"published",summary:"Explore the six principal Murugan abodes."},
+    {path:"temple-encyclopedia.html",titleTa:"திருத்தலக் கலைக்களஞ்சியம்",titleEn:"Temple Encyclopedia",category:"Sacred Places",status:"published",summary:"Source-aware temple profiles."},
+    {path:"murugan-map.html",titleTa:"முருகன் வரைபடம்",titleEn:"Murugan Map Index",category:"Sacred Places",status:"published",summary:"Open the local map-index records."},
+    {path:"pilgrimage-planner.html",titleTa:"யாத்திரை திட்டமிடல்",titleEn:"Pilgrimage Planner",category:"Sacred Places",status:"published",summary:"Browser-local pilgrimage planning guidance."},
+
+    {path:"thiruppugazh.html",titleTa:"திருப்புகழ்",titleEn:"Thiruppugazh Library",category:"Literature",status:"published",summary:"Manually reviewed published song records."},
+    {path:"literature/thirumurugatruppadai-complete.html",titleTa:"திருமுருகாற்றுப்படை",titleEn:"Thirumurugatruppadai",category:"Literature",status:"published",summary:"Structured reading route with source limitations disclosed."},
+    {path:"literature/kandar-anubhuti.html",titleTa:"கந்தர் அனுபூதி",titleEn:"Kandar Anubhuti",category:"Literature",status:"published",summary:"Published literature route governed by its source record."},
+    {path:"literature/kanda-sashti-kavasam-edition.html",titleTa:"கந்த சஷ்டி கவசம்",titleEn:"Kanda Sashti Kavasam Edition",category:"Literature",status:"partial-reviewed",summary:"A bounded reviewed edition with completeness disclosed."},
+
+    {path:"learning-center.html",titleTa:"கற்றல் மையம்",titleEn:"Learning Centre",category:"Learning",status:"published",summary:"Entry point for structured learning."},
+    {path:"learning-paths.html",titleTa:"கற்றல் பாதைகள்",titleEn:"Learning Paths",category:"Learning",status:"published",summary:"Beginner and advanced study sequences."},
+    {path:"learning-quiz.html",titleTa:"வினாடி வினா",titleEn:"Learning Quiz",category:"Learning",status:"published",summary:"Local quiz interactions using published data."},
+    {path:"devotional-dictionary.html",titleTa:"பக்தி அகராதி",titleEn:"Devotional Dictionary",category:"Learning",status:"published",summary:"Tamil–English devotional terminology."},
+
+    {path:"knowledge-graph-phase-4.html",titleTa:"அறிவு தொடர்புகள்",titleEn:"Knowledge Graph",category:"Knowledge",status:"published",summary:"Published local knowledge relationships."},
+    {path:"cross-references.html",titleTa:"குறுக்கு மேற்கோள்கள்",titleEn:"Cross References",category:"Knowledge",status:"published",summary:"Alias and relationship navigation."},
+    {path:"murugan-timeline.html",titleTa:"முருகன் காலவரிசை",titleEn:"Murugan Timeline",category:"Knowledge",status:"published",summary:"Qualified chronology with evidence-aware language."},
+    {path:"research-library.html",titleTa:"ஆய்வு நூலகம்",titleEn:"Research Library",category:"Knowledge",status:"published",summary:"Research-oriented resources and source records."},
+
+    {path:"audio-library.html",titleTa:"ஒலி நூலகம்",titleEn:"Audio Library",category:"Audio",status:"published",summary:"Device read-aloud entries and governed audio metadata."},
+    {path:"audio-collections.html",titleTa:"ஒலி தொகுப்புகள்",titleEn:"Audio Collections",category:"Audio",status:"published",summary:"Local audio grouping and metadata."},
+    {path:"personal-library.html",titleTa:"என் நூலகம்",titleEn:"My Library",category:"Personal Tools",status:"published",summary:"Browser-local saved routes and reading progress."},
+    {path:"reading-workspace.html",titleTa:"வாசிப்பு பணிமனை",titleEn:"Reading Workspace",category:"Personal Tools",status:"published",summary:"Continue eligible long-form reading locally."}
+  ]);
+
+  const shouldActivate = () => {
+    const status = value(byId("discoveryLoadStatus")?.textContent).toLowerCase();
+    const count = Number(byId("discoveryRouteCount")?.textContent || 0);
+    return status.includes("unavailable") ||
+      status.includes("http 503") ||
+      status.includes("failed") ||
+      (count === 0 && (status.includes("loading") || status.includes("preparing")));
+  };
+
+  const createOption = (optionValue, label) => {
+    const option = document.createElement("option");
+    option.value = optionValue;
+    option.textContent = label;
+    return option;
+  };
+
+  const createRouteCard = route => {
+    const article = document.createElement("article");
+    article.className = "card discovery-route-card";
+
+    const meta = document.createElement("div");
+    meta.className = "discovery-route-meta";
+
+    [route.category, route.status].forEach(text => {
+      const badge = document.createElement("span");
+      badge.className = "pill";
+      badge.textContent = text;
+      meta.appendChild(badge);
+    });
+
+    const heading = document.createElement("h3");
+    heading.textContent = `${route.titleTa} · ${route.titleEn}`;
+
+    const summary = document.createElement("p");
+    summary.textContent = route.summary;
+
+    const audience = document.createElement("p");
+    audience.className = "discovery-route-audience";
+    audience.textContent = "Audience: General";
+
+    const link = document.createElement("a");
+    link.className = "btn";
+    link.href = route.path;
+    link.textContent = "Open route";
+
+    article.append(meta, heading, summary, audience, link);
+    return article;
+  };
+
+  const activate = () => {
+    if (!shouldActivate()) return false;
+
+    const root = document.documentElement;
+    if (root.hasAttribute(ROOT_ATTR)) return false;
+    root.setAttribute(ROOT_ATTR, RELEASE);
+
+    const search = byId("discoverySearch");
+    const audience = byId("discoveryAudience");
+    const statusSelect = byId("discoveryStatusFilter");
+    const reset = byId("discoveryReset");
+    const lensGrid = byId("discoveryLensGrid");
+    const results = byId("discoveryResults");
+    const resultStatus = byId("discoveryResultStatus");
+
+    if (!search || !audience || !statusSelect || !reset || !results) {
+      root.dataset.osbDiscoveryMode = "static-fallback-unavailable";
+      return false;
+    }
+
+    const categories = [...new Set(ROUTES.map(route => route.category))].sort();
+    const statuses = [...new Set(ROUTES.map(route => route.status))].sort();
+
+    audience.replaceChildren(createOption("all", "All visitors"));
+    audience.disabled = false;
+
+    statusSelect.replaceChildren(createOption("all", "All publication states"));
+    statuses.forEach(status => statusSelect.appendChild(createOption(status, status)));
+    statusSelect.disabled = false;
+
+    let activeCategory = "all";
+
+    if (lensGrid) {
+      lensGrid.replaceChildren();
+      categories.forEach(category => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "discovery-lens";
+        button.dataset.staticCategory = category;
+        button.setAttribute("aria-pressed", "false");
+
+        const strong = document.createElement("strong");
+        strong.textContent = category;
+        const note = document.createElement("span");
+        note.className = "discovery-lens-summary";
+        note.textContent = "Offline-safe category";
+
+        button.append(strong, note);
+        lensGrid.appendChild(button);
+      });
+    }
+
+    const render = () => {
+      const query = value(search.value).toLocaleLowerCase();
+      const status = statusSelect.value;
+
+      const filtered = ROUTES
+        .filter(route =>
+          activeCategory === "all" || route.category === activeCategory
+        )
+        .filter(route =>
+          status === "all" || route.status === status
+        )
+        .filter(route => {
+          if (!query) return true;
+          return [
+            route.titleTa,
+            route.titleEn,
+            route.category,
+            route.status,
+            route.summary,
+            route.path
+          ].join(" ").toLocaleLowerCase().includes(query);
+        });
+
+      results.replaceChildren(...filtered.map(createRouteCard));
+
+      if (!filtered.length) {
+        const empty = document.createElement("article");
+        empty.className = "card";
+        empty.textContent = "No governed routes match this view.";
+        results.appendChild(empty);
+      }
+
+      if (resultStatus) {
+        resultStatus.textContent =
+          `${filtered.length} governed route${filtered.length === 1 ? "" : "s"} shown from the built-in resilient directory.`;
+      }
+    };
+
+    search.addEventListener("input", render, {passive: true});
+    statusSelect.addEventListener("change", render);
+
+    reset.addEventListener("click", () => {
+      search.value = "";
+      statusSelect.value = "all";
+      activeCategory = "all";
+      lensGrid?.querySelectorAll("button").forEach(button =>
+        button.setAttribute("aria-pressed", "false")
+      );
+      render();
+    });
+
+    lensGrid?.addEventListener("click", event => {
+      const button = event.target.closest("[data-static-category]");
+      if (!button) return;
+
+      activeCategory =
+        activeCategory === button.dataset.staticCategory
+          ? "all"
+          : button.dataset.staticCategory;
+
+      lensGrid.querySelectorAll("button").forEach(item =>
+        item.setAttribute(
+          "aria-pressed",
+          item === button && activeCategory !== "all" ? "true" : "false"
+        )
+      );
+      render();
+    });
+
+    byId("discoveryRouteCount").textContent = String(ROUTES.length);
+    byId("discoverySectionCount").textContent = String(categories.length);
+    byId("discoveryCategoryCount").textContent = String(categories.length);
+    byId("discoveryLoadStatus").textContent =
+      "Built-in resilient directory loaded because the dynamic discovery data was temporarily unavailable.";
+
+    root.dataset.osbDiscoveryMode = "built-in-static-fallback";
+    render();
+    return true;
+  };
+
+  const schedule = () => {
+    setTimeout(activate, 1800);
+    window.addEventListener("online", () => setTimeout(activate, 500), {
+      passive: true
+    });
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", schedule, {once: true});
+  } else {
+    schedule();
+  }
+})();
+</script>
+
 </body>
 </html>
