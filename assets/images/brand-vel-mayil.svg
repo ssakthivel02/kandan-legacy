@@ -1,22 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
-<title id="title">Vel and peacock emblem</title>
-<desc id="desc">A golden Vel spear combined with a blue-green peacock feather inside a circular devotional emblem.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+<title id="title">Vel and Mayil emblem</title>
+<desc id="desc">A bright golden Vel beside a blue-green peacock feather on a cream devotional medallion.</desc>
 <defs>
-<radialGradient id="bg" cx="50%" cy="38%" r="70%"><stop offset="0" stop-color="#2b2434"/><stop offset="1" stop-color="#09070d"/></radialGradient>
-<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0ad"/><stop offset=".42" stop-color="#f2bd54"/><stop offset="1" stop-color="#b87416"/></linearGradient>
-<linearGradient id="feather" x1=".1" y1=".1" x2=".9" y2=".9"><stop offset="0" stop-color="#42c6b7"/><stop offset=".5" stop-color="#187e9d"/><stop offset="1" stop-color="#14346e"/></linearGradient>
-<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <linearGradient id="medallion" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fff9e8"/>
+    <stop offset="1" stop-color="#ffd77a"/>
+  </linearGradient>
+  <linearGradient id="velGold" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fff3ad"/>
+    <stop offset=".45" stop-color="#f2bd54"/>
+    <stop offset="1" stop-color="#b86a08"/>
+  </linearGradient>
+  <linearGradient id="feather" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#59e1ca"/>
+    <stop offset=".48" stop-color="#1686a5"/>
+    <stop offset="1" stop-color="#143a7d"/>
+  </linearGradient>
 </defs>
-<circle cx="80" cy="80" r="75" fill="url(#bg)" stroke="#f2bd54" stroke-width="3"/>
-<circle cx="80" cy="80" r="66" fill="none" stroke="#f2bd54" stroke-opacity=".24"/>
-<path d="M39 112C30 82 42 45 69 26c-8 29-2 55 18 79-17 17-31 22-48 7Z" fill="none" stroke="url(#feather)" stroke-width="8" stroke-linecap="round"/>
-<path d="M47 103c9-22 19-42 35-60" fill="none" stroke="#6bd7c5" stroke-opacity=".7" stroke-width="2"/>
-<ellipse cx="63" cy="63" rx="16" ry="22" transform="rotate(-27 63 63)" fill="#14346e" stroke="#42c6b7" stroke-width="4"/>
-<ellipse cx="63" cy="63" rx="8" ry="12" transform="rotate(-27 63 63)" fill="#f2bd54"/>
-<ellipse cx="63" cy="63" rx="3.5" ry="6" transform="rotate(-27 63 63)" fill="#09070d"/>
-<g filter="url(#glow)">
-<path d="M102 18c-2 12-9 23-19 32l13 9-9 10 9 10-9 10 8 9-8 10 7 8-9 25h34l-9-25 7-8-8-10 8-9-9-10 9-10-9-10 13-9c-10-9-17-20-19-32Z" fill="url(#gold)" stroke="#fff3c2" stroke-width="1.5" stroke-linejoin="round"/>
-<path d="M102 40v82" stroke="#7a4709" stroke-width="3" stroke-linecap="round" opacity=".75"/>
-<path d="M88 140h28" stroke="url(#gold)" stroke-width="6" stroke-linecap="round"/>
-</g>
+
+<circle cx="64" cy="64" r="59" fill="url(#medallion)" stroke="#d89618" stroke-width="6"/>
+<circle cx="64" cy="64" r="50" fill="#fff8e7" stroke="#8f2436" stroke-opacity=".22" stroke-width="2"/>
+
+<!-- Mayil feather: deliberately thick for 40–50 px rendering -->
+<path d="M30 96C22 72 29 39 53 23C47 48 53 70 70 91C57 106 43 109 30 96Z"
+      fill="none" stroke="url(#feather)" stroke-width="10" stroke-linecap="round"/>
+<path d="M34 91C41 69 48 50 57 35"
+      fill="none" stroke="#0d566f" stroke-width="3" stroke-linecap="round"/>
+<ellipse cx="49" cy="52" rx="15" ry="20" transform="rotate(-25 49 52)"
+         fill="#176b82" stroke="#0d3f6d" stroke-width="3"/>
+<ellipse cx="49" cy="52" rx="9" ry="12" transform="rotate(-25 49 52)"
+         fill="#f2bd54"/>
+<ellipse cx="49" cy="52" rx="4" ry="7" transform="rotate(-25 49 52)"
+         fill="#8f2436"/>
+
+<!-- Vel: large, simple and high contrast -->
+<path d="M83 17C80 29 74 38 65 45L76 52L70 61L78 69L71 78L77 86L72 95L76 105H96L100 95L95 86L101 78L94 69L102 61L96 52L107 45C98 38 92 29 89 17Z"
+      fill="url(#velGold)" stroke="#8a4d05" stroke-width="3" stroke-linejoin="round"/>
+<path d="M86 34V104" stroke="#8a4d05" stroke-width="4" stroke-linecap="round"/>
+<path d="M75 105H98" stroke="#8f2436" stroke-width="6" stroke-linecap="round"/>
+<circle cx="86" cy="24" r="4" fill="#fff8d5"/>
 </svg>
