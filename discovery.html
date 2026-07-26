@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="assets/css/osb44.css">
 <link rel="stylesheet" href="assets/css/discovery-workspace.css">
 <link rel="stylesheet" href="assets/css/route-status-reconciliation.css">
+<link rel="stylesheet" href="assets/css/premium-phase4-2026.css">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#a51d17">
 <link rel="manifest" href="manifest.json">
@@ -17,7 +18,7 @@
 <script defer src="assets/js/pwa-register.js"></script>
 <script type="module" src="assets/js/discovery-workspace.mjs"></script>
 </head>
-<body data-release="238">
+<body data-release="238" class="phase4-page discovery-page">
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <div class="top">🛕 ஓம் சரவணபவ · Explicit effective route-registry discovery workspace</div>
 <nav class="nav" aria-label="Primary navigation"><div class="nav-inner">
@@ -27,12 +28,13 @@
 <main id="main-content" class="wrap">
 <nav aria-label="Breadcrumb"><p><a href="index.html">Home</a> › <span aria-current="page">Discovery Workspace</span></p></nav>
 
-<section class="card discovery-hero">
+<section class="card discovery-hero phase4-hero" aria-labelledby="discovery-title">
 <div>
 <span class="pill">Release 238 · Explicit effective registry consumer</span>
-<h1 class="section-title" lang="ta">கண்டறியும் பணிமனை</h1>
+<p class="phase4-eyebrow">Private, local and governed discovery</p>
+<h1 id="discovery-title" class="section-title" lang="ta">கண்டறியும் பணிமனை</h1>
 <h2>Discovery Workspace</h2>
-<p>Choose a purpose, audience or publication boundary. Every count and route is derived from local navigation data after direct composition of the historical registry and canonical overrides.</p>
+<p class="phase4-lead">Choose a purpose, audience or publication boundary. Every count and route is derived from local navigation data after direct composition of the historical registry and canonical overrides.</p>
 </div>
 <div class="discovery-metric"><strong id="discoveryRouteCount">0</strong><span>eligible public routes</span></div>
 <div class="discovery-metric"><strong id="discoverySectionCount">0</strong><span>active navigation sections</span></div>
@@ -41,8 +43,8 @@
 
 <p id="discoveryLoadStatus" role="status" aria-live="polite">Loading local discovery registries…</p>
 
-<section class="discovery-workspace">
-<aside class="card discovery-controls">
+<section class="discovery-workspace phase4-discovery-workspace" aria-label="Discovery filters and results">
+<aside class="card discovery-controls phase4-controls">
 <h2>Refine discovery</h2>
 <label for="discoverySearch">Tamil or English search
 <input id="discoverySearch" type="search" placeholder="Murugan, temple, literature…" autocomplete="off">
@@ -58,20 +60,22 @@
 <div id="discoveryLensGrid" class="discovery-lens-grid"></div>
 </aside>
 
-<div>
+<div class="phase4-results-panel">
 <p id="discoveryResultStatus" role="status" aria-live="polite">Preparing eligible routes…</p>
-<div id="discoveryResults" class="grid discovery-results"><article class="card">Loading discovery routes…</article></div>
+<div id="discoveryResults" class="grid discovery-results phase4-route-results"><article class="card">Loading discovery routes…</article></div>
 </div>
 </section>
 
-<section class="card"><h2>Continue reading</h2><p>The Reading Workspace adds browser-local progress, focus mode and reading-list integration to eligible literature routes.</p><a class="btn" href="reading-workspace.html">Open Reading Workspace</a></section>
-<section class="card"><h2>Personal reading notes</h2><p>Eligible reading pages can save your own notes and heading bookmarks locally without storing selected devotional text.</p><a class="btn" href="reading-notes.html">Open Reading Notes</a></section>
-<section class="card"><h2>Browser-local data portability</h2><p>Back up or restore registered reading, accessibility and listening data without a server account.</p><a class="btn" href="personal-data.html">Open Personal Data Centre</a></section>
-<section class="card"><h2>Personal Library Dashboard</h2><p>Bring together valid saved routes, reading progress, notes and listening history from this browser.</p><a class="btn" href="personal-library.html">Open My Library</a></section>
-<section class="card"><h2>Devotional collections</h2><p>Organise eligible published routes into named browser-local collections without copying source text.</p><a class="btn" href="devotional-collections.html">Open Collections</a></section>
-<section class="card"><h2>Devotional Practice Planner</h2><p>Use eligible discovery routes in bounded browser-local plans with organisational check-ins.</p><a class="btn" href="devotional-practice-planner.html">Open Practice Planner</a></section>
+<section class="phase4-support-grid" aria-label="Continue with personal and reading tools">
+<article class="card"><h2>Continue reading</h2><p>The Reading Workspace adds browser-local progress, focus mode and reading-list integration to eligible literature routes.</p><a class="btn" href="reading-workspace.html">Open Reading Workspace</a></article>
+<article class="card"><h2>Personal reading notes</h2><p>Eligible reading pages can save your own notes and heading bookmarks locally without storing selected devotional text.</p><a class="btn" href="reading-notes.html">Open Reading Notes</a></article>
+<article class="card"><h2>Browser-local data portability</h2><p>Back up or restore registered reading, accessibility and listening data without a server account.</p><a class="btn" href="personal-data.html">Open Personal Data Centre</a></article>
+<article class="card"><h2>Personal Library Dashboard</h2><p>Bring together valid saved routes, reading progress, notes and listening history from this browser.</p><a class="btn" href="personal-library.html">Open My Library</a></article>
+<article class="card"><h2>Devotional collections</h2><p>Organise eligible published routes into named browser-local collections without copying source text.</p><a class="btn" href="devotional-collections.html">Open Collections</a></article>
+<article class="card"><h2>Devotional Practice Planner</h2><p>Use eligible discovery routes in bounded browser-local plans with organisational check-ins.</p><a class="btn" href="devotional-practice-planner.html">Open Practice Planner</a></article>
+</section>
 
-<section class="card discovery-boundary">
+<section class="card discovery-boundary phase4-boundary">
 <h2>Publication and recommendation boundary</h2>
 <ul>
 <li>Routes are shown only when they exist in the historical route directory and their explicit effective publication state is allowed.</li>

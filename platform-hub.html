@@ -14,19 +14,20 @@
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="assets/css/release-246.css">
   <link rel="stylesheet" href="assets/css/premium-platform-2026.css">
+  <link rel="stylesheet" href="assets/css/premium-phase4-2026.css">
   <script defer src="assets/js/release-246.js"></script>
   <script type="module" src="assets/js/premium-platform-2026.mjs"></script>
   <script type="module" src="assets/js/platform-hub-2026.mjs"></script>
 </head>
-<body class="premium-page">
+<body class="premium-page phase4-page hub-page">
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header" data-header>
   <a class="brand" href="index.html" aria-label="Om Saravana Bhava home"><span class="brand-mark" aria-hidden="true">ॐ</span><span><strong>ஓம் சரவணபவ</strong><small>Om Saravana Bhava</small></span></a>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-  <nav id="site-nav" class="site-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="murugan-song-library.html">Songs</a><a href="temples.html">Temples</a><a href="sloka-library.html">Literature</a><a href="audio-library.html">Audio</a><a href="ai-search.html">Search</a><a class="active" href="platform-hub.html">All Tools</a><a href="platform-roadmap.html">Roadmap</a></nav>
+  <nav id="site-nav" class="site-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="murugan-song-library.html">Songs</a><a href="temples.html">Temples</a><a href="sloka-library.html">Literature</a><a href="audio-library.html">Audio</a><a href="ai-search.html">Search</a><a class="active" aria-current="page" href="platform-hub.html">All Tools</a><a href="platform-roadmap.html">Roadmap</a></nav>
 </header>
 <main id="main-content">
-  <section class="premium-hero" style="--premium-hero-image:url('../assets/images/hero-sunrise.webp')">
+  <section class="premium-hero phase4-hub-hero" style="--premium-hero-image:url('../assets/images/hero-sunrise.webp')">
     <div class="premium-hero-content">
       <p class="premium-eyebrow">அனைத்தும் ஒரே நம்பகமான நுழைவாயில்</p>
       <h1 class="premium-title">Complete Murugan Platform</h1>
@@ -35,10 +36,10 @@
     </div>
   </section>
   <div class="premium-shell">
-    <section id="platformMetrics" class="premium-metrics" aria-label="Platform metrics"><article class="premium-metric"><strong>…</strong><span>Loading governed routes</span></article></section>
+    <section id="platformMetrics" class="premium-metrics phase4-metrics" aria-label="Platform metrics"><article class="premium-metric"><strong>…</strong><span>Loading governed routes</span></article></section>
     <section aria-labelledby="pathways-heading">
       <p class="premium-eyebrow">Guided pathways</p><h2 id="pathways-heading">Start with a purpose, not a file list.</h2>
-      <div class="premium-grid">
+      <div class="premium-grid phase4-pathway-grid">
         <article class="premium-card"><div class="premium-pills"><span class="premium-pill">Read</span><span class="premium-pill">Tamil first</span></div><h3>Murugan Songs and Sacred Texts</h3><p>Browse publication-aware collections, verified Tamil text, learner formats, meaning, audio status and source records.</p><a class="premium-button secondary" href="murugan-song-library.html">Open songs</a></article>
         <article class="premium-card"><div class="premium-pills"><span class="premium-pill">Explore</span><span class="premium-pill">Pilgrimage</span></div><h3>Temples and Sacred Geography</h3><p>Move from Arupadai Veedu to regional temples, history, festivals, architecture and travel guidance.</p><a class="premium-button secondary" href="temple-encyclopedia.html">Open temples</a></article>
         <article class="premium-card"><div class="premium-pills"><span class="premium-pill">Discover</span><span class="premium-pill">Private local search</span></div><h3>Search and Knowledge Connections</h3><p>Use Tamil–English local search, concept expansion, source-aware discovery and knowledge graph routes.</p><a class="premium-button secondary" href="ai-search.html">Open search</a></article>
@@ -49,12 +50,12 @@
     </section>
     <section id="route-browser" aria-labelledby="route-browser-heading">
       <p class="premium-eyebrow">Governed route browser</p><h2 id="route-browser-heading">Find every connected public module.</h2>
-      <div class="premium-toolbar"><label for="platformQuery">Search Tamil, English or path<input id="platformQuery" type="search" placeholder="திருப்புகழ், Palani, learning, privacy…" autocomplete="off"></label><label for="platformCategory">Category<select id="platformCategory"><option value="All">All categories</option></select></label><label for="platformRouteStatus">Publication state<select id="platformRouteStatus"><option value="All">All states</option></select></label><button id="platformClear" type="button">Clear</button></div>
-      <p id="platformStatus" class="premium-status" role="status" aria-live="polite">Loading the effective route registry…</p><div id="platformRouteGrid" class="premium-grid" aria-busy="false"><article class="premium-card">Loading governed routes…</article></div>
+      <div class="premium-toolbar phase4-toolbar"><label for="platformQuery">Search Tamil, English or path<input id="platformQuery" type="search" placeholder="திருப்புகழ், Palani, learning, privacy…" autocomplete="off"></label><label for="platformCategory">Category<select id="platformCategory"><option value="All">All categories</option></select></label><label for="platformRouteStatus">Publication state<select id="platformRouteStatus"><option value="All">All states</option></select></label><button id="platformClear" type="button">Clear</button></div>
+      <p id="platformStatus" class="premium-status" role="status" aria-live="polite">Loading the effective route registry…</p><div id="platformRouteGrid" class="premium-grid phase4-route-grid" aria-busy="false"><article class="premium-card">Loading governed routes…</article></div>
     </section>
     <section aria-labelledby="quality-heading">
       <p class="premium-eyebrow">Production integrity</p><h2 id="quality-heading">Premium design must remain truthful, fast and accessible.</h2>
-      <div class="premium-grid">
+      <div class="premium-grid phase4-quality-grid">
         <article class="premium-card"><h3>Route Recovery</h3><p>Classifies all HTML without deleting evidence or assuming every generated file is public content.</p><a class="premium-button secondary" href="route-recovery.html">Review Phase D–E</a></article>
         <article class="premium-card"><h3>Content Completeness</h3><p>Shows original Tamil, easy-reading Tamil, transliteration, meaning, source and audio-rights coverage.</p><a class="premium-button secondary" href="content-completeness.html">Review Phase F</a></article>
         <article class="premium-card"><h3>Capability Reconciliation</h3><p>Checks whether planned features have real files, governed routes, correct hub visibility and a production validation path.</p><a class="premium-button secondary" href="platform-roadmap.html">Review the roadmap</a></article>
@@ -63,6 +64,6 @@
     </section>
   </div>
 </main>
-<footer><p>வேலவேல் முருகா! அருள்புரிவாய்!</p><nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="murugan-song-library.html">Songs</a><a href="platform-roadmap.html">Roadmap</a><a href="route-recovery.html">Recovery</a><a href="content-completeness.html">Completeness</a><a href="sources.html">Sources</a><a href="privacy.html">Privacy</a></nav><small>© 2026 Om Saravana Bhava</small></footer>
+<footer><p lang="ta">வேலவேல் முருகா! அருள்புரிவாய்!</p><nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="murugan-song-library.html">Songs</a><a href="platform-roadmap.html">Roadmap</a><a href="route-recovery.html">Recovery</a><a href="content-completeness.html">Completeness</a><a href="sources.html">Sources</a><a href="privacy.html">Privacy</a></nav><small>© 2026 Om Saravana Bhava</small></footer>
 </body>
 </html>

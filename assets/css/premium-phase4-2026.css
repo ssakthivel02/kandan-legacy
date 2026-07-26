@@ -1,0 +1,505 @@
+/*
+ * Om Saravana Bhava — Premium Phase 4 (2026)
+ * Scope: murugan-timeline.html, sloka-library.html, platform-hub.html, discovery.html
+ * CSS-only interaction layer. No existing JavaScript ownership is changed.
+ */
+
+.phase4-page {
+  --p4-gold: var(--gold, #d9a52c);
+  --p4-gold-2: #ffe2a0;
+  --p4-saffron: #e8750a;
+  --p4-ruby: #8f2436;
+  --p4-peacock: #176b82;
+  --p4-ink: #17131d;
+  --p4-panel: rgba(255,255,255,.94);
+  --p4-line: rgba(151,91,28,.18);
+  --p4-shadow: 0 24px 70px rgba(45,24,10,.13);
+  --p4-shadow-soft: 0 12px 36px rgba(45,24,10,.09);
+  --p4-radius: 24px;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(232,117,10,.11), transparent 30rem),
+    radial-gradient(circle at 95% 10%, rgba(23,107,130,.10), transparent 34rem),
+    var(--bg, #fff7ec);
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.phase4-page .wrap {
+  width: min(1180px, calc(100% - 32px));
+}
+
+.phase4-page .top {
+  letter-spacing: .035em;
+}
+
+.phase4-page .nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 1px 0 rgba(151,91,28,.12);
+}
+
+.phase4-page .nav a[aria-current="page"] {
+  color: var(--p4-gold);
+  background: rgba(217,165,44,.11);
+  border-radius: 999px;
+}
+
+.phase4-page a,
+.phase4-page button,
+.phase4-page input,
+.phase4-page select {
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease,
+    background-color .22s ease,
+    color .22s ease;
+}
+
+.phase4-page a:focus-visible,
+.phase4-page button:focus-visible,
+.phase4-page input:focus-visible,
+.phase4-page select:focus-visible {
+  outline: 3px solid var(--p4-gold);
+  outline-offset: 3px;
+}
+
+.phase4-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-block: 1rem 2rem;
+  padding: clamp(2rem, 5vw, 4.5rem);
+  border: 1px solid rgba(217,165,44,.26);
+  border-radius: clamp(24px, 4vw, 40px);
+  background:
+    linear-gradient(125deg, rgba(255,255,255,.97), rgba(255,248,232,.91)),
+    radial-gradient(circle at 90% 20%, rgba(217,165,44,.22), transparent 24rem);
+  box-shadow: var(--p4-shadow);
+}
+
+.phase4-hero::before,
+.phase4-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.phase4-hero::before {
+  width: 26rem;
+  height: 26rem;
+  right: -11rem;
+  top: -13rem;
+  background: radial-gradient(circle, rgba(232,117,10,.20), transparent 68%);
+}
+
+.phase4-hero::after {
+  width: 18rem;
+  height: 18rem;
+  left: -10rem;
+  bottom: -11rem;
+  background: radial-gradient(circle, rgba(23,107,130,.16), transparent 70%);
+}
+
+.phase4-eyebrow {
+  margin: 0 0 .7rem;
+  color: #8a5d12;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.phase4-lead {
+  max-width: 72ch;
+  font-size: clamp(1.05rem, 1.8vw, 1.28rem);
+  line-height: 1.75;
+  color: var(--muted, #685a52);
+}
+
+.phase4-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 1.5rem;
+}
+
+.phase4-actions .btn,
+.phase4-page .btn {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phase4-page .btn:hover,
+.phase4-page .premium-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(124,75,14,.18);
+}
+
+.phase4-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(240px, .8fr);
+  gap: 2rem;
+  align-items: end;
+  margin: 3rem 0 1.25rem;
+}
+
+.phase4-section-heading h2,
+.phase4-page section > h2 {
+  text-wrap: balance;
+}
+
+.phase4-page .card {
+  border: 1px solid var(--p4-line);
+  box-shadow: var(--p4-shadow-soft);
+}
+
+.phase4-page .card:hover {
+  border-color: rgba(217,165,44,.42);
+  box-shadow: 0 20px 46px rgba(45,24,10,.14);
+}
+
+.phase4-featured {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.phase4-featured::after {
+  content: "வேல்";
+  position: absolute;
+  right: 1rem;
+  bottom: -.35rem;
+  color: rgba(217,165,44,.10);
+  font: 800 clamp(4rem, 12vw, 8rem)/1 Georgia, serif;
+  pointer-events: none;
+}
+
+.phase4-content-grid > .card,
+.phase4-route-results > .card,
+.phase4-support-grid > .card,
+.phase4-pathway-grid > .premium-card,
+.phase4-quality-grid > .premium-card,
+.phase4-route-grid > .premium-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 320px;
+}
+
+/* Timeline */
+.phase4-timeline {
+  position: relative;
+  display: grid;
+  gap: 1.1rem;
+  margin: 1.5rem 0 3rem;
+  padding-left: 3.25rem;
+}
+
+.phase4-timeline::before {
+  content: "";
+  position: absolute;
+  left: 1.15rem;
+  top: 1rem;
+  bottom: 1rem;
+  width: 2px;
+  background: linear-gradient(var(--p4-gold), rgba(217,165,44,.12));
+}
+
+.phase4-timeline .card {
+  position: relative;
+  margin: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: var(--p4-radius);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.98), rgba(255,249,237,.94));
+}
+
+.phase4-timeline .card::before {
+  content: counter(p4timeline);
+  counter-increment: p4timeline;
+  position: absolute;
+  left: -3.25rem;
+  top: 1.35rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #26180b;
+  background: linear-gradient(135deg, var(--p4-gold-2), var(--p4-gold));
+  box-shadow: 0 0 0 6px var(--bg, #fff7ec), 0 8px 20px rgba(124,75,14,.18);
+  font-weight: 900;
+}
+
+.phase4-timeline {
+  counter-reset: p4timeline;
+}
+
+.phase4-timeline .card:hover {
+  transform: translateX(5px);
+}
+
+.phase4-timeline h2 {
+  margin-bottom: .15rem;
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+}
+
+.phase4-timeline h3 {
+  margin-top: 0;
+  color: #6e4915;
+}
+
+.phase4-boundary {
+  border-left: 5px solid var(--p4-gold) !important;
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.98), rgba(255,244,219,.88)) !important;
+}
+
+/* Sloka library */
+.sloka-page .phase4-content-grid {
+  gap: 1.15rem;
+}
+
+.sloka-page .phase4-content-grid .card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--p4-radius);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.98), rgba(255,247,232,.94));
+}
+
+.sloka-page .phase4-content-grid .card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, var(--p4-ruby), var(--p4-gold), var(--p4-peacock));
+}
+
+.sloka-page .phase4-content-grid .card:hover {
+  transform: translateY(-4px);
+}
+
+.sloka-page .tools {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 16px 44px rgba(45,24,10,.20);
+}
+
+.sloka-page .tool {
+  min-height: 44px;
+}
+
+/* Platform hub */
+.hub-page {
+  --p4-panel: rgba(18,12,24,.82);
+}
+
+.hub-page .phase4-hub-hero {
+  min-height: min(720px, 80vh);
+}
+
+.hub-page .phase4-metrics {
+  transform: translateY(-1.25rem);
+}
+
+.hub-page .phase4-pathway-grid .premium-card,
+.hub-page .phase4-quality-grid .premium-card,
+.hub-page .phase4-route-grid .premium-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.hub-page .phase4-pathway-grid .premium-card::after,
+.hub-page .phase4-quality-grid .premium-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -55% 35%;
+  height: 11rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(242,189,84,.12), transparent 68%);
+  pointer-events: none;
+}
+
+.hub-page .phase4-pathway-grid .premium-card:hover,
+.hub-page .phase4-route-grid .premium-card:hover,
+.hub-page .phase4-quality-grid .premium-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(242,189,84,.42);
+}
+
+.hub-page .phase4-toolbar {
+  position: sticky;
+  top: 86px;
+  z-index: 15;
+  padding: 1rem;
+  border: 1px solid rgba(242,189,84,.18);
+  background: rgba(14,12,20,.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 16px 50px rgba(0,0,0,.30);
+}
+
+/* Discovery */
+.discovery-page .discovery-hero {
+  align-items: stretch;
+}
+
+.discovery-page .discovery-metric {
+  min-height: 126px;
+  display: grid;
+  align-content: center;
+  border: 1px solid rgba(217,165,44,.20);
+  border-radius: 20px;
+  background: rgba(255,255,255,.72);
+  box-shadow: var(--p4-shadow-soft);
+}
+
+.phase4-discovery-workspace {
+  align-items: start;
+}
+
+.phase4-controls {
+  position: sticky;
+  top: 92px;
+  border-radius: var(--p4-radius);
+}
+
+.phase4-controls input,
+.phase4-controls select,
+.hub-page .phase4-toolbar input,
+.hub-page .phase4-toolbar select {
+  min-height: 46px;
+  border-radius: 12px;
+}
+
+.phase4-results-panel {
+  min-width: 0;
+}
+
+.phase4-route-results .card {
+  border-radius: 20px;
+}
+
+.phase4-route-results .card:hover {
+  transform: translateY(-3px);
+}
+
+.phase4-support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-block: 2rem;
+}
+
+.phase4-support-grid .card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.phase4-support-grid .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .phase4-section-heading,
+  .phase4-support-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hub-page .phase4-toolbar,
+  .phase4-controls {
+    position: static;
+  }
+}
+
+@media (max-width: 680px) {
+  .phase4-page .wrap {
+    width: min(100% - 20px, 1180px);
+  }
+
+  .phase4-hero {
+    padding: 1.4rem;
+    border-radius: 24px;
+  }
+
+  .phase4-section-heading,
+  .phase4-support-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .phase4-actions {
+    display: grid;
+  }
+
+  .phase4-actions .btn {
+    width: 100%;
+  }
+
+  .phase4-timeline {
+    padding-left: 2.75rem;
+  }
+
+  .phase4-timeline::before {
+    left: .9rem;
+  }
+
+  .phase4-timeline .card::before {
+    left: -2.8rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .hub-page .phase4-hub-hero {
+    min-height: auto;
+  }
+}
+
+/* Accessibility and user preferences */
+@media (prefers-reduced-motion: reduce) {
+  .phase4-page *,
+  .phase4-page *::before,
+  .phase4-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .phase4-page .card,
+  .phase4-hero,
+  .phase4-page .premium-card {
+    border: 1px solid CanvasText;
+  }
+}
+
+@media print {
+  .phase4-page .nav,
+  .phase4-page .top,
+  .phase4-page .tools,
+  .phase4-actions {
+    display: none !important;
+  }
+
+  .phase4-page,
+  .phase4-hero,
+  .phase4-page .card {
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+  }
+}
