@@ -16,11 +16,11 @@
   <link rel="manifest" href="manifest.json">
   <link rel="preload" as="image" href="assets/images/hero-sunrise.webp" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/release-246.css">
-  <link rel="stylesheet" href="assets/css/murugan-song-library.css">
+  <link rel="stylesheet" href="assets/css/murugan-song-library.css?v=20260727-1">
   <link rel="stylesheet" href="assets/css/premium-platform-2026.css">
   <link rel="stylesheet" href="assets/css/premium-pages-2026.css">
   <script defer src="assets/js/release-246.js"></script>
-  <script defer src="assets/js/murugan-song-library.js"></script>
+  <script defer src="assets/js/murugan-song-library.js?v=20260727-1"></script>
   <script type="module" src="assets/js/premium-platform-2026.mjs"></script>
   <link rel="stylesheet" href="assets/css/global-experience-2026.css?v=20260727-1">
   <link rel="stylesheet" href="assets/css/phase6-experience-2026.css?v=20260726-1">
@@ -90,6 +90,19 @@
       <div id="songGrid" class="song-grid" aria-busy="false">
         <article class="song-panel song-empty">Loading collection registry…</article>
       </div>
+    </section>
+
+    <section class="verified-songs" aria-labelledby="verified-songs-heading">
+      <div class="verified-songs-heading">
+        <div>
+          <p class="eyebrow">Verified individual reading routes</p>
+          <h2 id="verified-songs-heading">12 complete Thiruppugazh songs</h2>
+          <p>These full Tamil records were already governed but hidden behind the collection card. They are now directly readable and available through device read-aloud—without copying commercial recordings.</p>
+        </div>
+        <a class="button" href="thiruppugazh.html">Open full Thiruppugazh library</a>
+      </div>
+      <p id="verifiedSongCount" role="status" aria-live="polite">Loading verified songs…</p>
+      <div id="verifiedSongGrid" class="verified-song-grid" aria-busy="true"></div>
     </section>
 
     <section class="song-panel song-roadmap" aria-labelledby="reading-format-heading">
