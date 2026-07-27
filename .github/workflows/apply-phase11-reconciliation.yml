@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/apply_phase11_reconciliation.py'
+      - '.github/fix_phase11_route_test.py'
       - '.github/workflows/apply-phase11-reconciliation.yml'
 
 permissions:
@@ -12,7 +13,7 @@ permissions:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
-  RECONCILIATION_REVISION: '7'
+  RECONCILIATION_REVISION: '8'
 
 concurrency:
   group: phase11-contract-reconciliation
@@ -34,7 +35,9 @@ jobs:
         with:
           node-version: '22'
       - name: Apply reconciliations
-        run: python .github/apply_phase11_reconciliation.py
+        run: |
+          python .github/apply_phase11_reconciliation.py
+          python .github/fix_phase11_route_test.py
       - name: Validate reconciled contracts and tests
         continue-on-error: true
         run: |
