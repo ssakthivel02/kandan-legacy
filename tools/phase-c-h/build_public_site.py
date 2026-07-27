@@ -208,6 +208,7 @@ def initial_selection() -> tuple[set[str], deque[str]]:
         'data/murugan-song-library.json',
         'data/search-index.json',
         'data/thiruppugazh.json',
+        'data/read-aloud-playlist.json',
         'data/audio-catalog.json',
         'schemas/murugan-song-record.schema.json',
         'icons/icon-192.png',

@@ -42,7 +42,8 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'data/route-recovery-summary.json', 'data/content-completeness.json',
     'data/platform-capability-matrix.json',
     'data/murugan-song-library.json', 'data/search-index.json',
-    'data/thiruppugazh.json', 'data/audio-catalog.json',
+    'data/thiruppugazh.json', 'data/read-aloud-playlist.json',
+    'data/audio-catalog.json',
     'schemas/murugan-song-record.schema.json', 'deployment-manifest.json'
 ]
 REFERENCE_RE = re.compile(

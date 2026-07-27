@@ -27,11 +27,15 @@ test('guidance motion respects reduced-motion preference', async () => {
 test('song library exposes governed full songs and one active reader', async () => {
   const html = await read('murugan-song-library.html');
   const script = await read('assets/js/murugan-song-library.js');
+  const builder = await read('tools/phase-c-h/build_public_site.py');
+  const validator = await read('tools/phase-c-h/validate_public_site.py');
   assert.match(html, /id="verifiedSongGrid"/);
   assert.match(html, /12 complete Thiruppugazh songs/);
   assert.match(html, /murugan-song-library\.js\?v=20260727-2/);
   assert.match(script, /data\/thiruppugazh\.json/);
   assert.match(script, /data\/read-aloud-playlist\.json/);
+  assert.match(builder, /data\/read-aloud-playlist\.json/);
+  assert.match(validator, /data\/read-aloud-playlist\.json/);
   assert.match(script, /speechSynthesis\.cancel/);
   assert.ok(
     script.indexOf("const stopSpeech =") < script.indexOf("addEventListener('pagehide', stopSpeech"),
