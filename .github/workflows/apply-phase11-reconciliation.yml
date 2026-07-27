@@ -18,7 +18,7 @@ permissions:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
-  RECONCILIATION_REVISION: '2'
+  RECONCILIATION_REVISION: '3'
 
 jobs:
   apply:
@@ -38,7 +38,6 @@ jobs:
       - name: Apply reconciliations
         run: python .github/apply_phase11_reconciliation.py
       - name: Validate reconciled contracts and tests
-        continue-on-error: true
         run: |
           node --check service-worker.js
           node --check assets/js/global-experience-2026.js
@@ -49,7 +48,6 @@ jobs:
           python -B -m tools.operations_observability.validate --root . --mode package --report artifacts/phase11-operations-report.json
           git diff --check
       - name: Commit reconciled files
-        if: github.event_name == 'push'
         run: |
           if git diff --quiet; then
             echo 'No changes to commit'
