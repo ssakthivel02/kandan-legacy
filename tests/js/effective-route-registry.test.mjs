@@ -65,7 +65,7 @@ test('historical and override validators accept canonical fixtures', () => {
 test('composition applies exact-path override and preserves metadata', () => {
   const effective = composeEffectiveRegistry(historical, overrides);
   assert.equal(effective.effectiveRegistryMode, 'overrides-and-append-only-additions');
-  assert.equal(effective.effectiveRegistryDiagnostics.appliedCount, 1);
+  assert.equal(effective.effectiveRegistryDiagnostics.appliedOverrideCount, 1);
   assert.equal(effective.routes[0].status, 'source-register');
   assert.equal(effective.routes[0].summary, 'Canonical summary');
   assert.equal(effective.routes[0].category, 'Literature');
