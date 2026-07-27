@@ -8,9 +8,7 @@
   },
   "capabilityCount": 32,
   "statusCounts": {
-    "connected": 24,
-    "governed-not-prominent": 7,
-    "exists-not-governed": 1
+    "connected": 32
   },
   "records": [
     {
@@ -118,9 +116,11 @@
         "literature/thirumurugatruppadai.html",
         "research-library.html"
       ],
-      "visibleFromHubs": [],
-      "status": "governed-not-prominent",
-      "nextAction": "Add the capability to the most relevant purpose-led hub."
+      "visibleFromHubs": [
+        "platform-hub.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
     },
     {
       "id": "arupadai-veedu",
@@ -186,9 +186,11 @@
         "murugan-map.html",
         "temple-travel-guidance.html"
       ],
-      "visibleFromHubs": [],
-      "status": "governed-not-prominent",
-      "nextAction": "Add the capability to the most relevant purpose-led hub."
+      "visibleFromHubs": [
+        "platform-hub.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
     },
     {
       "id": "festival-calendar",
@@ -224,9 +226,11 @@
       "governedFiles": [
         "panchangam-framework.html"
       ],
-      "visibleFromHubs": [],
-      "status": "governed-not-prominent",
-      "nextAction": "Add the capability to the most relevant purpose-led hub."
+      "visibleFromHubs": [
+        "platform-hub.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
     },
     {
       "id": "audio-rights",
@@ -312,9 +316,11 @@
         "knowledge-graph-explorer.html",
         "cross-references.html"
       ],
-      "visibleFromHubs": [],
-      "status": "governed-not-prominent",
-      "nextAction": "Add the capability to the most relevant purpose-led hub."
+      "visibleFromHubs": [
+        "platform-hub.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
     },
     {
       "id": "timeline-stories",
@@ -357,9 +363,11 @@
         "learning-paths.html",
         "learning-quiz.html"
       ],
-      "visibleFromHubs": [],
-      "status": "governed-not-prominent",
-      "nextAction": "Add the capability to the most relevant purpose-led hub."
+      "visibleFromHubs": [
+        "platform-hub.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
     },
     {
       "id": "apps-downloads",
@@ -377,7 +385,8 @@
         "apps.html"
       ],
       "visibleFromHubs": [
-        "index.html"
+        "index.html",
+        "platform-hub.html"
       ],
       "status": "connected",
       "nextAction": "Maintain validation, sources and user experience."
@@ -498,16 +507,20 @@
       "title": "Offline and installable PWA",
       "category": "Platform",
       "candidateRoutes": [
+        "apps.html",
         "offline.html",
         "manifest.json",
         "service-worker.js"
       ],
       "existingFiles": [
+        "apps.html",
         "offline.html",
         "manifest.json",
         "service-worker.js"
       ],
-      "governedFiles": [],
+      "governedFiles": [
+        "apps.html"
+      ],
       "visibleFromHubs": [
         "index.html",
         "platform-hub.html",
@@ -516,8 +529,8 @@
         "explore.html",
         "discovery.html"
       ],
-      "status": "exists-not-governed",
-      "nextAction": "Review content quality, then register the canonical route."
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
     },
     {
       "id": "source-governance",
@@ -656,9 +669,11 @@
         "faq.html",
         "support.html"
       ],
-      "visibleFromHubs": [],
-      "status": "governed-not-prominent",
-      "nextAction": "Add the capability to the most relevant purpose-led hub."
+      "visibleFromHubs": [
+        "platform-hub.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
     },
     {
       "id": "operations-health",
@@ -679,7 +694,8 @@
         "maintenance.html"
       ],
       "visibleFromHubs": [
-        "index.html"
+        "index.html",
+        "platform-hub.html"
       ],
       "status": "connected",
       "nextAction": "Maintain validation, sources and user experience."
@@ -701,9 +717,11 @@
         "production-audit.html",
         "content-status.html"
       ],
-      "visibleFromHubs": [],
-      "status": "governed-not-prominent",
-      "nextAction": "Add the capability to the most relevant purpose-led hub."
+      "visibleFromHubs": [
+        "platform-hub.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
     },
     {
       "id": "complete-directory",
@@ -735,18 +753,8 @@
   ],
   "priorityQueues": {
     "missingCapabilityRoutes": [],
-    "existingButUngoverned": [
-      "offline-pwa"
-    ],
-    "governedButNotProminent": [
-      "classical-literature",
-      "pilgrimage-maps",
-      "panchangam-framework",
-      "knowledge-graph",
-      "learning-centre",
-      "faq-support",
-      "performance-quality"
-    ]
+    "existingButUngoverned": [],
+    "governedButNotProminent": []
   },
   "principle": "A capability is complete only when it has a useful page, a governed route, a visible purpose-led entry point and production validation."
 }

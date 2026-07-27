@@ -39,7 +39,7 @@ CAPABILITIES = [
     ('collections-planner', 'Collections and practice planner', ['devotional-collections.html', 'devotional-practice-planner.html'], 'Personal'),
     ('data-portability', 'Browser-local data export and restore', ['personal-data.html'], 'Personal'),
     ('accessibility', 'Accessibility preferences and statement', ['accessibility.html'], 'Governance'),
-    ('offline-pwa', 'Offline and installable PWA', ['offline.html', 'manifest.json', 'service-worker.js'], 'Platform'),
+    ('offline-pwa', 'Offline and installable PWA', ['apps.html', 'offline.html', 'manifest.json', 'service-worker.js'], 'Platform'),
     ('source-governance', 'Sources and publication boundaries', ['sources.html', 'source-catalog.html', 'content-status.html'], 'Governance'),
     ('route-recovery', 'Route recovery and canonical aliases', ['route-recovery.html', '404.html'], 'Platform'),
     ('content-completeness', 'Content completeness and research queue', ['content-completeness.html'], 'Governance'),

@@ -180,15 +180,14 @@ def main() -> None:
     if global_js_path.is_file():
         global_js_text = read_text(global_js_path)
         for marker in (
-            'osbMedallion',
+            '/assets/images/brand-vel-mayil.svg',
+            "m.dataset.brandFallback='true'",
             'data-osb-language-control',
             'osb-ai-fab',
             'osb-global-experience',
         ):
             if marker not in global_js_text:
                 errors.append(f'{GLOBAL_JS}: missing runtime marker {marker}')
-        if '<svg viewBox="0 0 128 128"' not in global_js_text:
-            errors.append(f'{GLOBAL_JS}: inline Vel-Mayil SVG is missing')
 
     global_css_path = SITE / GLOBAL_CSS
     if global_css_path.is_file():
