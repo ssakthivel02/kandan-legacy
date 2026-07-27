@@ -15,7 +15,7 @@
   },
   {
     "path": "about.html",
-    "title": "About | Om Saravana Bhava",
+    "title": "\u0b8e\u0b99\u0bcd\u0b95\u0bb3\u0bc8\u0baa\u0bcd \u0baa\u0bb1\u0bcd\u0bb1\u0bbf | About Om Saravana Bhava",
     "has_main": true,
     "has_viewport": true,
     "has_description": true
@@ -246,7 +246,7 @@
   },
   {
     "path": "ai-search.html",
-    "title": "Advanced Tamil\u2013English Search | Om Saravana Bhava",
+    "title": "\u0bae\u0bc7\u0bae\u0bcd\u0baa\u0b9f\u0bcd\u0b9f \u0ba4\u0bae\u0bbf\u0bb4\u0bcd\u2013\u0b86\u0b99\u0bcd\u0b95\u0bbf\u0bb2 \u0ba4\u0bc7\u0b9f\u0bb2\u0bcd | Om Saravana Bhava",
     "has_main": true,
     "has_viewport": true,
     "has_description": true
@@ -458,6 +458,13 @@
     "path": "animation-showcase.html",
     "title": "animation-showcase.html",
     "has_main": false,
+    "has_viewport": true,
+    "has_description": true
+  },
+  {
+    "path": "apps.html",
+    "title": "\u0baa\u0baf\u0ba9\u0bcd\u0baa\u0bbe\u0b9f\u0bc1\u0b95\u0bb3\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0ba8\u0bbf\u0bb1\u0bc1\u0bb5\u0bb2\u0bcd | Apps & Installation",
+    "has_main": true,
     "has_viewport": true,
     "has_description": true
   },
@@ -1758,7 +1765,14 @@
   },
   {
     "path": "contact.html",
-    "title": "Contact | Om Saravana Bhava",
+    "title": "\u0ba4\u0bbf\u0bb0\u0bc1\u0ba4\u0bcd\u0ba4\u0bae\u0bcd \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0ba4\u0bca\u0b9f\u0bb0\u0bcd\u0baa\u0bc1 | Corrections & Contact",
+    "has_main": true,
+    "has_viewport": true,
+    "has_description": true
+  },
+  {
+    "path": "content-completeness.html",
+    "title": "\u0b89\u0bb3\u0bcd\u0bb3\u0b9f\u0b95\u0bcd\u0b95 \u0ba8\u0bbf\u0bb1\u0bc8\u0bb5\u0bc1 \u0bae\u0bc8\u0baf\u0bae\u0bcd | Murugan Content Completeness",
     "has_main": true,
     "has_viewport": true,
     "has_description": true
@@ -3214,7 +3228,7 @@
   },
   {
     "path": "faq.html",
-    "title": "FAQ | Om Saravana Bhava",
+    "title": "\u0b85\u0b9f\u0bbf\u0b95\u0bcd\u0b95\u0b9f\u0bbf \u0b95\u0bc7\u0b9f\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bc1\u0bae\u0bcd \u0b95\u0bc7\u0bb3\u0bcd\u0bb5\u0bbf\u0b95\u0bb3\u0bcd | FAQ",
     "has_main": true,
     "has_viewport": true,
     "has_description": true
@@ -3963,7 +3977,7 @@
   },
   {
     "path": "gallery.html",
-    "title": "Gallery | Om Saravana Bhava",
+    "title": "\u0baa\u0b95\u0bcd\u0ba4\u0bbf \u0b95\u0bbe\u0b9f\u0bcd\u0b9a\u0bbf \u0ba8\u0bc2\u0bb2\u0b95\u0bae\u0bcd | Devotional Media Gallery",
     "has_main": true,
     "has_viewport": true,
     "has_description": true
@@ -4534,6 +4548,13 @@
     "has_main": true,
     "has_viewport": true,
     "has_description": false
+  },
+  {
+    "path": "help-centre.html",
+    "title": "\u0b89\u0ba4\u0bb5\u0bbf \u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd \u0ba8\u0bae\u0bcd\u0baa\u0bbf\u0b95\u0bcd\u0b95\u0bc8 \u0bae\u0bc8\u0baf\u0bae\u0bcd | Help & Trust Centre",
+    "has_main": true,
+    "has_viewport": true,
+    "has_description": true
   },
   {
     "path": "hero-murugan-experience.html",
@@ -6967,6 +6988,13 @@
   {
     "path": "known-issues.html",
     "title": "Known Issues \u00b7 Om Saravana Bhava",
+    "has_main": true,
+    "has_viewport": true,
+    "has_description": true
+  },
+  {
+    "path": "language-access.html",
+    "title": "Language Access | Om Saravana Bhava",
     "has_main": true,
     "has_viewport": true,
     "has_description": true
@@ -14007,6 +14035,13 @@
     "has_description": true
   },
   {
+    "path": "murugan-song-library.html",
+    "title": "\u0bae\u0bc1\u0bb0\u0bc1\u0b95\u0ba9\u0bcd \u0baa\u0bbe\u0b9f\u0bb2\u0bcd \u0ba8\u0bc2\u0bb2\u0b95\u0bae\u0bcd | Murugan Song Library",
+    "has_main": true,
+    "has_viewport": true,
+    "has_description": true
+  },
+  {
     "path": "murugan-timeline-v2.html",
     "title": "Murugan Timeline Version 2 | Om Saravana Bhava",
     "has_main": true,
@@ -15268,7 +15303,14 @@
   },
   {
     "path": "platform-hub.html",
-    "title": "Murugan Knowledge Platform Hub",
+    "title": "\u0bae\u0bc1\u0bb4\u0bc1\u0bae\u0bc8\u0baf\u0bbe\u0ba9 \u0ba4\u0bb3 \u0bae\u0bc8\u0baf\u0bae\u0bcd | Complete Murugan Platform Hub",
+    "has_main": true,
+    "has_viewport": true,
+    "has_description": true
+  },
+  {
+    "path": "platform-roadmap.html",
+    "title": "\u0ba4\u0bb3 \u0ba4\u0bbf\u0bb1\u0ba9\u0bcd \u0bb5\u0bb0\u0bc8\u0baa\u0b9f\u0bae\u0bcd | Om Saravana Bhava Platform Roadmap",
     "has_main": true,
     "has_viewport": true,
     "has_description": true
@@ -19733,6 +19775,13 @@
     "has_description": true
   },
   {
+    "path": "route-recovery.html",
+    "title": "\u0bb5\u0bb4\u0bbf\u0ba4\u0bcd\u0ba4\u0b9f \u0bae\u0bc0\u0b9f\u0bcd\u0baa\u0bc1 \u0bae\u0bc8\u0baf\u0bae\u0bcd | Route Recovery Centre",
+    "has_main": true,
+    "has_viewport": true,
+    "has_description": true
+  },
+  {
     "path": "search-facets.html",
     "title": "Published-Content Search Facets | Om Saravana Bhava",
     "has_main": true,
@@ -21792,7 +21841,7 @@
   },
   {
     "path": "support.html",
-    "title": "Support | Om Saravana Bhava",
+    "title": "\u0ba4\u0bca\u0bb4\u0bbf\u0bb2\u0bcd\u0ba8\u0bc1\u0b9f\u0bcd\u0baa \u0b89\u0ba4\u0bb5\u0bbf | Technical Support",
     "has_main": true,
     "has_viewport": true,
     "has_description": true
@@ -26797,7 +26846,7 @@
   },
   {
     "path": "terms.html",
-    "title": "Terms of Service | Om Saravana Bhava",
+    "title": "\u0baa\u0baf\u0ba9\u0bcd\u0baa\u0bbe\u0b9f\u0bcd\u0b9f\u0bc1 \u0bb5\u0bbf\u0ba4\u0bbf\u0bae\u0bc1\u0bb1\u0bc8\u0b95\u0bb3\u0bcd | Terms of Use",
     "has_main": true,
     "has_viewport": true,
     "has_description": true

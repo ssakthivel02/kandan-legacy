@@ -1,5 +1,12 @@
 [
   {
+    "path": ".github/workflows/deploy-pages-phase-h.yml",
+    "push_trigger": true,
+    "pull_request_trigger": false,
+    "workflow_dispatch": true,
+    "checkout_v4": false
+  },
+  {
     "path": ".github/workflows/deployment-conformance.yml",
     "push_trigger": true,
     "pull_request_trigger": true,
@@ -11,12 +18,19 @@
     "push_trigger": true,
     "pull_request_trigger": true,
     "workflow_dispatch": true,
-    "checkout_v4": true
+    "checkout_v4": false
   },
   {
     "path": ".github/workflows/operations-observability.yml",
     "push_trigger": true,
     "pull_request_trigger": true,
+    "workflow_dispatch": true,
+    "checkout_v4": true
+  },
+  {
+    "path": ".github/workflows/pack-101-canonical-song-registry.yml",
+    "push_trigger": true,
+    "pull_request_trigger": false,
     "workflow_dispatch": true,
     "checkout_v4": true
   },
@@ -29,6 +43,13 @@
   },
   {
     "path": ".github/workflows/pack-101-html-metadata-batch.yml",
+    "push_trigger": true,
+    "pull_request_trigger": false,
+    "workflow_dispatch": true,
+    "checkout_v4": true
+  },
+  {
+    "path": ".github/workflows/pack-101-reachability-song-audit.yml",
     "push_trigger": true,
     "pull_request_trigger": false,
     "workflow_dispatch": true,
@@ -49,11 +70,32 @@
     "checkout_v4": true
   },
   {
+    "path": ".github/workflows/phase-c-h-recovery-quality.yml",
+    "push_trigger": true,
+    "pull_request_trigger": false,
+    "workflow_dispatch": true,
+    "checkout_v4": true
+  },
+  {
+    "path": ".github/workflows/phase-h-lighthouse.yml",
+    "push_trigger": false,
+    "pull_request_trigger": false,
+    "workflow_dispatch": true,
+    "checkout_v4": true
+  },
+  {
+    "path": ".github/workflows/phase11-premium-gate.yml",
+    "push_trigger": true,
+    "pull_request_trigger": true,
+    "workflow_dispatch": true,
+    "checkout_v4": false
+  },
+  {
     "path": ".github/workflows/production-baseline.yml",
     "push_trigger": true,
     "pull_request_trigger": true,
     "workflow_dispatch": true,
-    "checkout_v4": true
+    "checkout_v4": false
   },
   {
     "path": ".github/workflows/production-pack-01-quality.yml",
