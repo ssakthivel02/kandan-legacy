@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const state = {collections: []};
+  const state = {collections: [], songs: [], playlist: []};
   const byId = id => document.getElementById(id);
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -76,21 +76,83 @@
 
   const load = async () => {
     try {
-      const response = await fetch('data/murugan-song-library.json', {
-        cache: 'default', credentials: 'same-origin', headers: {'Accept': 'application/json'}
-      });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const data = await response.json();
+      const options = {cache: 'default', credentials: 'same-origin', headers: {'Accept': 'application/json'}};
+      const [libraryResponse, songsResponse, playlistResponse] = await Promise.all([
+        fetch('data/murugan-song-library.json', options),
+        fetch('data/thiruppugazh.json', options),
+        fetch('data/read-aloud-playlist.json', options)
+      ]);
+      if (!libraryResponse.ok || !songsResponse.ok || !playlistResponse.ok) throw new Error('A governed song data file could not be loaded.');
+      const [data, songs, playlist] = await Promise.all([
+        libraryResponse.json(), songsResponse.json(), playlistResponse.json()
+      ]);
       state.collections = Array.isArray(data.collections) ? data.collections : [];
+      state.songs = Array.isArray(songs) ? songs : [];
+      state.playlist = Array.isArray(playlist) ? playlist : [];
       populateSelect('songCategory', state.collections.map(item => item.category), 'All categories');
       populateSelect('songStatus', state.collections.map(item => item.status), 'All publication states');
       renderStats(state.collections);
       render();
+      renderVerifiedSongs();
     } catch (error) {
       console.error(error);
       byId('songCount').textContent = 'The governed collection registry could not be loaded.';
       byId('songGrid').innerHTML = '<article class="song-panel song-empty" role="alert">Open Thiruppugazh, Slokas or the Site Directory using the links above.</article>';
     }
+  };
+
+  let activeSpeechId = '';
+  byId('verifiedSongGrid')?.addEventListener('click', event => {
+    const button = event.target.closest('[data-song-listen]');
+    if (!button) return;
+    if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
+      button.textContent = 'Read-aloud unavailable';
+      return;
+    }
+    const item = state.playlist.find(entry => entry.id === button.dataset.songListen);
+    if (!item?.speechText) return;
+    if (activeSpeechId === item.id) {
+      stopSpeech();
+      return;
+    }
+    stopSpeech();
+    activeSpeechId = item.id;
+    const utterance = new SpeechSynthesisUtterance(item.speechText);
+    utterance.lang = item.language || 'ta-IN';
+    utterance.rate = .82;
+    utterance.onend = stopSpeech;
+    utterance.onerror = stopSpeech;
+    button.setAttribute('aria-pressed', 'true');
+    button.textContent = 'Stop';
+    window.speechSynthesis.speak(utterance);
+  });
+  addEventListener('pagehide', stopSpeech, {once: true});
+  const stopSpeech = () => {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    activeSpeechId = '';
+    document.querySelectorAll('[data-song-listen]').forEach(button => {
+      button.setAttribute('aria-pressed', 'false');
+      button.textContent = 'Listen in Tamil';
+    });
+  };
+  const renderVerifiedSongs = () => {
+    const grid = byId('verifiedSongGrid');
+    if (!grid) return;
+    const speechByRoute = new Map(state.playlist.map(item => [item.route, item]));
+    grid.innerHTML = state.songs.map((song, index) => {
+      const speech = speechByRoute.get(song.route);
+      return `<article class="verified-song">
+        <span class="verified-song-number">Thiruppugazh ${String(index + 6).padStart(4, '0')}</span>
+        <h3 lang="ta">${escapeHtml(song.titleTa)}</h3>
+        <p class="song-en">${escapeHtml(song.titleEn)}</p>
+        <div class="verified-song-actions">
+          <a href="${escapeHtml(song.route)}">Read full Tamil</a>
+          ${speech?.speechText ? `<button type="button" data-song-listen="${escapeHtml(speech.id)}" aria-pressed="false">Listen in Tamil</button>` : ''}
+        </div>
+      </article>`;
+    }).join('');
+    grid.setAttribute('aria-busy', 'false');
+    byId('verifiedSongCount').textContent = `${state.songs.length} verified full-song routes available.`;
   };
 
   ['songQuery', 'songCategory', 'songStatus'].forEach(id => {
