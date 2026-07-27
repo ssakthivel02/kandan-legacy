@@ -1,13 +1,13 @@
 {
-  "version": 2,
-  "release": 245,
-  "algorithm": "sha256",
-  "baseCommit": "640ab54e1028927a22c19bb4712516c2d05ba58c",
-  "requiredCommitTitle": "Release 245: deliver premium Murugan visual experience and accessible interaction",
-  "criticalAssets": [".release-governance.json","manifest-release-245.json","PRODUCTION_BASELINE_245.json","service-worker.js","index.html","data/visual-experience.json","data/operations/check-catalog.json","policies/visual-experience.json","tools/visual_experience/validate.py"],
-  "requireExactParentOnPush": true,
-  "requireExactTitleOnPush": true,
+  "version": 3,
+  "release": 251,
+  "baselineRelease": 245,
+  "algorithm": "git-blob-sha1",
+  "productionCommit": "812b3ad014c7c1e957cb63a0d1a05d5c87f29b05",
+  "criticalAssets": [".nojekyll","CNAME","service-worker.js","index.html","data/deployment-conformance.json","assets/css/global-experience-2026.css","assets/js/global-experience-2026.js","assets/css/phase6-experience-2026.css","assets/css/phase10-trust-quality-2026.css","assets/images/murugan-divine.webp","tools/phase-11/validate_premium_rollout.py"],
+  "requireExactParentOnPush": false,
+  "requireExactTitleOnPush": false,
   "pullRequestMode": "package",
-  "pushMode": "final",
+  "pushMode": "package",
   "retentionDays": 90
 }

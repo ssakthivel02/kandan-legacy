@@ -1,1 +1,33 @@
-{"release":245,"generated":"2026-07-17","status":"configured","serviceWorker":"/service-worker.js","cacheRelease":"245","cacheNames":["osb-static-v245","osb-runtime-v245","osb-data-v245","osb-user-reading-v1"],"offlineRoute":"/offline.html","premiumPrecache":["/index.html","/assets/css/premium-devotional.css","/assets/css/premium-motion.css","/assets/css/premium-responsive.css","/assets/js/premium-home-runtime.mjs","/assets/js/premium-nav.mjs","/assets/js/premium-accessibility.mjs","/assets/art/murugan-mayil-hero.svg","/data/visual-experience.json"],"limitations":["Optional precache failures remain visible in the browser console and do not block core installation."]}
+{
+  "release": 251,
+  "baselineRelease": 245,
+  "generated": "2026-07-27",
+  "status": "PRODUCTION_VERIFIED",
+  "serviceWorker": "/service-worker.js",
+  "cacheRelease": "251",
+  "cacheNames": [
+    "osb-static-v251",
+    "osb-runtime-v251",
+    "osb-data-v251",
+    "osb-user-reading-v1"
+  ],
+  "offlineRoute": "/offline.html",
+  "corePrecache": [
+    "/index.html",
+    "/manifest.json",
+    "/assets/css/release-246.css",
+    "/assets/css/premium-platform-2026.css",
+    "/assets/css/global-experience-2026.css",
+    "/assets/css/phase6-experience-2026.css",
+    "/assets/js/release-246.js",
+    "/assets/js/premium-platform-2026.mjs",
+    "/assets/js/global-experience-2026.js",
+    "/assets/js/premium-home-runtime.mjs"
+  ],
+  "productionCommit": "812b3ad014c7c1e957cb63a0d1a05d5c87f29b05",
+  "productionVerifiedAt": "2026-07-27T14:15:30Z",
+  "limitations": [
+    "Optional precache failures remain visible in the browser console and do not block core installation.",
+    "A previously controlled browser may require the in-app update action or one hard refresh to activate Release 251."
+  ]
+}

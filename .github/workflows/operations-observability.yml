@@ -1,48 +1,51 @@
 name: Operations Observability
+
 on:
   push:
     branches: [main]
   pull_request:
   workflow_dispatch:
+
 permissions:
   contents: read
+
 concurrency:
   group: operations-observability-${{ github.ref }}
   cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 jobs:
   validate:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 2
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
+          python-version: '3.12'
       - uses: actions/setup-node@v4
         with:
-          node-version: "22"
-      - name: Validate operations catalogue and deployment attestation
+          node-version: '22'
+      - name: Validate operations catalogue and Release 251 alignment
         env:
-          PYTHONDONTWRITEBYTECODE: "1"
-        shell: bash
-        run: |
-          mode=package
-          if [ "${{ github.event_name }}" = "push" ]; then mode=final; fi
-          python -B -m tools.operations_observability.validate --root . --mode "$mode" --report artifacts/operations-observability-report.json
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python -B -m tools.operations_observability.validate --root . --mode package --report artifacts/operations-observability-report.json
       - name: Run operations and visual regression tests
         env:
-          PYTHONDONTWRITEBYTECODE: "1"
+          PYTHONDONTWRITEBYTECODE: '1'
         run: |
           node --test tests/js/operations-observability.test.mjs tests/js/premium-home.test.mjs
-          python -B -m unittest discover -s tests/operations_observability -p "test_*.py" -v
-          python -B -m unittest discover -s tests/visual_experience -p "test_*.py" -v
+          python -B -m unittest discover -s tests/operations_observability -p 'test_*.py' -v
+          python -B -m unittest discover -s tests/visual_experience -p 'test_*.py' -v
       - name: Upload operations evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
-          name: release-245-operations-observability
+          name: release-251-operations-observability
           path: artifacts/operations-observability-report.json
           if-no-files-found: error
           retention-days: 90

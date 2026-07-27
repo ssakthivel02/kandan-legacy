@@ -1,11 +1,40 @@
 {
-  "release": 245,
-  "generated": "2026-07-17",
-  "baseCommit": "640ab54e1028927a22c19bb4712516c2d05ba58c",
-  "requiredCommitTitle": "Release 245: deliver premium Murugan visual experience and accessible interaction",
-  "status": "awaiting-pull-request-validation",
-  "hashAlgorithm": "sha256",
-  "criticalAssets": [".release-governance.json","manifest-release-245.json","PRODUCTION_BASELINE_245.json","service-worker.js","index.html","data/visual-experience.json","data/operations/check-catalog.json","policies/visual-experience.json","tools/visual_experience/validate.py"],
-  "remoteEvidence": "GitHub Actions artifact: release-245-operations-observability",
-  "limitations": ["This committed record defines the attestation target; the workflow report records evaluated hashes."]
+  "release": 251,
+  "baselineRelease": 245,
+  "generated": "2026-07-27",
+  "productionCommit": "812b3ad014c7c1e957cb63a0d1a05d5c87f29b05",
+  "phase11Commit": "faa4b2cfc0bf27b024b028a6a004acf13acfa559",
+  "status": "PRODUCTION_VERIFIED",
+  "productionUrl": "https://omsaravanabhava.org/",
+  "productionVerifiedAt": "2026-07-27T14:15:30Z",
+  "productionLastModified": "2026-07-27T14:14:13Z",
+  "hashAlgorithm": "git-blob-sha1",
+  "criticalAssets": [
+    ".nojekyll",
+    "CNAME",
+    "index.html",
+    "service-worker.js",
+    "data/deployment-conformance.json",
+    "assets/css/global-experience-2026.css",
+    "assets/js/global-experience-2026.js",
+    "assets/css/phase6-experience-2026.css",
+    "assets/css/phase10-trust-quality-2026.css",
+    "assets/images/murugan-divine.webp",
+    "tools/phase-11/validate_premium_rollout.py"
+  ],
+  "verifiedGitBlobs": {
+    "index.html": "28d5be43701f9fa149feb125d6c94c614c815567",
+    "service-worker.js": "c7f25068bb6368fcb0e3a3d1031b18e66cfdc5ed",
+    "assets/css/global-experience-2026.css": "6b43af1ca6d2c8fbe45067289160d2a05e3add73",
+    "assets/js/global-experience-2026.js": "d9db3c18463cd1a12a7e45bda2c0e494627d83cf",
+    "assets/css/phase6-experience-2026.css": "20e1662e469aaa2c8d86b36d26410130d4256703",
+    "assets/css/phase10-trust-quality-2026.css": "f09429ac35b8b5615a1e038a174728b9b6ec9960",
+    "assets/images/murugan-divine.webp": "bcbfcddd0561bf92fa3f56afed69f2dcba570563"
+  },
+  "repositoryEvidence": "reports/phase-11-premium-rollout/README.md",
+  "remoteEvidence": "GitHub Pages HTTP 200 smoke check and live Git blob identity verification",
+  "limitations": [
+    "Production verification is point-in-time evidence, not continuous uptime monitoring.",
+    "The Release 245 governance baseline remains historical while Release 251 is the current deployment overlay."
+  ]
 }
