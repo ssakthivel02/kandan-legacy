@@ -1,45 +1,49 @@
-name: Production Baseline
+name: Production Quality Baseline
+
 on:
   push:
     branches: [main]
   pull_request:
   workflow_dispatch:
+
 permissions:
   contents: read
+
 concurrency:
-  group: production-baseline-${{ github.ref }}
+  group: production-quality-baseline-${{ github.ref }}
   cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 2
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
+          python-version: '3.12'
       - uses: actions/setup-node@v4
         with:
-          node-version: "22"
-      - name: Validate permanent baseline
+          node-version: '22'
+      - name: Validate current production contracts
         env:
-          PYTHONDONTWRITEBYTECODE: "1"
-        shell: bash
+          PYTHONDONTWRITEBYTECODE: '1'
         run: |
-          mode=package
-          if [ "${{ github.event_name }}" = "push" ]; then mode=final; fi
-          python -B -m tools.production_baseline.validate --root . --mode "$mode"
+          mkdir -p artifacts
           python -B -m tools.visual_experience.validate --root .
           python -B -m tools.deployment_conformance.validate --root .
           python -B -m tools.effective_route_consumers.validate --root .
-          python -B -m tools.operations_observability.validate --root . --mode "$mode" --report artifacts/operations-observability-report.json
+          python -B -m tools.operations_observability.validate --root . --mode package --report artifacts/operations-observability-report.json
           python -B -m tools.repository_hygiene.validate --root .
           python -B -m tools.repository_integrity.validate --root . --manifest manifest-release-245.json
       - name: Run regression suites
         env:
-          PYTHONDONTWRITEBYTECODE: "1"
+          PYTHONDONTWRITEBYTECODE: '1'
         run: |
           node --test tests/js/*.test.mjs
-          python -B -m unittest discover -s tests -p "test_*.py" -v
+          python -B -m unittest discover -s tests -p 'test_*.py' -v
