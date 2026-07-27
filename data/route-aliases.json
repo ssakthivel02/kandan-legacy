@@ -1,0 +1,67 @@
+{
+  "release": 246,
+  "generated": "2026-07-22",
+  "strategy": "exact-path-client-side-aliases-only",
+  "recordCount": 9,
+  "records": [
+    {
+      "path": "/literature/kandar-alankaram.html",
+      "target": "/literature/kandar-alangaram.html",
+      "reason": "known-canonical-alias",
+      "evidenceSource": "Phase E controlled alias map"
+    },
+    {
+      "path": "/literature/kandar-andhathi.html",
+      "target": "/literature/kandar-andhadhi.html",
+      "reason": "known-canonical-alias",
+      "evidenceSource": "Phase E controlled alias map"
+    },
+    {
+      "path": "/literature/kandar-anuboothi.html",
+      "target": "/literature/kandar-anubhuti.html",
+      "reason": "known-canonical-alias",
+      "evidenceSource": "Phase E controlled alias map"
+    },
+    {
+      "path": "/slokas/kanda-sashti-kavacham.html",
+      "target": "/slokas/kanda-sashti-kavasam.html",
+      "reason": "known-canonical-alias",
+      "evidenceSource": "Phase E controlled alias map"
+    },
+    {
+      "path": "/slokas/skanda-guru-kavacham.html",
+      "target": "/slokas/skanda-guru-kavasam.html",
+      "reason": "known-canonical-alias",
+      "evidenceSource": "Phase E controlled alias map"
+    },
+    {
+      "path": "/temples/thirupparankundram.html",
+      "target": "/temples/thirupparamkundram.html",
+      "reason": "known-canonical-alias",
+      "evidenceSource": "Phase E controlled alias map"
+    },
+    {
+      "path": "/temples/tiruchendur.html",
+      "target": "/temples/thiruchendur.html",
+      "reason": "known-canonical-alias",
+      "evidenceSource": "Phase E controlled alias map"
+    },
+    {
+      "path": "/temples/tirupparankundram.html",
+      "target": "/temples/thirupparamkundram.html",
+      "reason": "known-canonical-alias",
+      "evidenceSource": "Phase E controlled alias map"
+    },
+    {
+      "path": "/temples/tiruttani.html",
+      "target": "/temples/thiruthani.html",
+      "reason": "known-canonical-alias",
+      "evidenceSource": "Phase E controlled alias map"
+    }
+  ],
+  "limitations": [
+    "Aliases are exact path mappings and never fuzzy content redirects.",
+    "A redirect is allowed only when the target file exists.",
+    "The alias registry does not delete the original repository file."
+  ]
+}

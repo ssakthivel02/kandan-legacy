@@ -1,0 +1,40 @@
+{
+  "release": 246,
+  "generated": "2026-07-22",
+  "phaseD": "route-classification",
+  "phaseE": "deterministic-link-recovery",
+  "safety": {
+    "filesDeleted": 0,
+    "productionHtmlModified": 0,
+    "automaticMassReplacement": false
+  },
+  "htmlFilesScanned": 4013,
+  "effectiveRegistryRoutes": 113,
+  "sitemapRoutes": 101,
+  "reachableHtmlAndAssets": 234,
+  "classificationCounts": {
+    "orphan-content-candidate": 3388,
+    "placeholder-or-generated": 431,
+    "canonical-public": 113,
+    "release-showcase": 51,
+    "source-register-or-bounded": 17,
+    "orphan-quality-review": 11,
+    "duplicate-name-candidate": 2
+  },
+  "unresolvedLocalReferences": 1729,
+  "unresolvedReferencesFromCanonicalPages": 0,
+  "uniqueSafeRepairSuggestions": 0,
+  "uniqueSafeRepairsOnCanonicalPages": 0,
+  "runtimeAliasCount": 9,
+  "nextControlledAction": "Review and apply canonical safe repairs in small batches; never bulk-delete orphan or duplicate candidates.",
+  "classificationDefinitions": {
+    "canonical-public": "Governed route, sitemap route or principal entrypoint.",
+    "source-register-or-bounded": "Source/coverage page or bounded publication, often intentionally noindex.",
+    "release-showcase": "Release-numbered feature presentation; not automatically canonical devotional content.",
+    "placeholder-or-generated": "Generic, small or generated content requiring editorial review.",
+    "duplicate-name-candidate": "Filename anomaly only; preserve until references and canonical target are confirmed.",
+    "orphan-quality-review": "Substantive file missing semantic page structure.",
+    "orphan-content-candidate": "Substantive ungoverned HTML that may deserve route registration or consolidation.",
+    "internal-evidence": "Tooling, test, report or release evidence not intended for devotee navigation."
+  }
+}

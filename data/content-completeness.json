@@ -1,0 +1,794 @@
+{
+  "release": 246,
+  "generated": "2026-07-22",
+  "phase": "F-content-completeness-and-ingestion-governance",
+  "safety": {
+    "lyricsGeneratedByAudit": 0,
+    "unreviewedTextPublished": 0,
+    "recordingsPublishedWithoutRights": 0
+  },
+  "governedCollections": 12,
+  "canonicalFullSongRecords": 12,
+  "audioCatalogueRecords": 14,
+  "popularSourceRequests": 14,
+  "collectionFormatAvailability": {
+    "original_tamil": 6,
+    "meaning": 3,
+    "source": 12,
+    "audio": 4
+  },
+  "collectionFormatGaps": {
+    "easy_reading_tamil": 11,
+    "transliteration": 11,
+    "audio": 8,
+    "meaning": 8,
+    "original_tamil": 5
+  },
+  "canonicalSongFormatCoverage": {
+    "original_tamil": 12,
+    "meaning": 12,
+    "source": 12
+  },
+  "audioPlayModeCounts": {
+    "not-published": 10,
+    "device-tts": 4
+  },
+  "collections": [
+    {
+      "id": "thiruppugazh",
+      "titleTa": "திருப்புகழ்",
+      "titleEn": "Thiruppugazh Digital Library",
+      "route": "thiruppugazh.html",
+      "publicationStatus": "published-source-linked",
+      "statusLabel": "12 complete source-linked songs published",
+      "availableFormats": [
+        "original_tamil",
+        "meaning",
+        "source"
+      ],
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ],
+      "completionPercent": 50.0,
+      "nextEvidenceTask": "Collect and verify Easy-reading Tamil"
+    },
+    {
+      "id": "kanda-sashti-kavasam",
+      "titleTa": "கந்த சஷ்டி கவசம்",
+      "titleEn": "Kanda Sashti Kavasam",
+      "route": "literature/kanda-sashti-kavasam-edition.html",
+      "publicationStatus": "partial-reviewed",
+      "statusLabel": "Reviewed opening extract",
+      "availableFormats": [
+        "original_tamil",
+        "audio",
+        "source"
+      ],
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "meaning"
+      ],
+      "completionPercent": 50.0,
+      "nextEvidenceTask": "Collect and verify Easy-reading Tamil"
+    },
+    {
+      "id": "skanda-guru-kavasam",
+      "titleTa": "ஸ்கந்த குரு கவசம்",
+      "titleEn": "Skanda Guru Kavasam",
+      "route": "slokas/skanda-guru-kavasam.html",
+      "publicationStatus": "partial-reviewed",
+      "statusLabel": "Reviewed opening extract",
+      "availableFormats": [
+        "original_tamil",
+        "audio",
+        "source"
+      ],
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "meaning"
+      ],
+      "completionPercent": 50.0,
+      "nextEvidenceTask": "Collect and verify Easy-reading Tamil"
+    },
+    {
+      "id": "kandar-anubhuti",
+      "titleTa": "கந்தர் அனுபூதி",
+      "titleEn": "Kandar Anubhuti",
+      "route": "literature/kandar-anubhuti.html",
+      "publicationStatus": "partial-reviewed",
+      "statusLabel": "Protection verse and verse 1 published",
+      "availableFormats": [
+        "original_tamil",
+        "source"
+      ],
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "meaning",
+        "audio"
+      ],
+      "completionPercent": 33.3,
+      "nextEvidenceTask": "Collect and verify Easy-reading Tamil"
+    },
+    {
+      "id": "kandar-alangaram",
+      "titleTa": "கந்தர் அலங்காரம்",
+      "titleEn": "Kandar Alangaram",
+      "route": "literature/kandar-alangaram.html",
+      "publicationStatus": "source-register",
+      "statusLabel": "Literary identity registered",
+      "availableFormats": [
+        "source"
+      ],
+      "missingFormats": [
+        "original_tamil",
+        "easy_reading_tamil",
+        "transliteration",
+        "meaning",
+        "audio"
+      ],
+      "completionPercent": 16.7,
+      "nextEvidenceTask": "Collect and verify Original Tamil"
+    },
+    {
+      "id": "kandar-andhadhi",
+      "titleTa": "கந்தர் அந்தாதி",
+      "titleEn": "Kandar Andhadhi",
+      "route": "literature/kandar-andhadhi.html",
+      "publicationStatus": "source-register",
+      "statusLabel": "Linked-verse form registered",
+      "availableFormats": [
+        "source"
+      ],
+      "missingFormats": [
+        "original_tamil",
+        "easy_reading_tamil",
+        "transliteration",
+        "meaning",
+        "audio"
+      ],
+      "completionPercent": 16.7,
+      "nextEvidenceTask": "Collect and verify Original Tamil"
+    },
+    {
+      "id": "shanmuga-kavasam",
+      "titleTa": "சண்முக கவசம்",
+      "titleEn": "Shanmuga Kavasam",
+      "route": "literature/shanmuga-kavasam.html",
+      "publicationStatus": "source-register",
+      "statusLabel": "Work and structure registered",
+      "availableFormats": [
+        "source"
+      ],
+      "missingFormats": [
+        "original_tamil",
+        "easy_reading_tamil",
+        "transliteration",
+        "meaning",
+        "audio"
+      ],
+      "completionPercent": 16.7,
+      "nextEvidenceTask": "Collect and verify Original Tamil"
+    },
+    {
+      "id": "vel-maaral",
+      "titleTa": "வேல் மாறல்",
+      "titleEn": "Vel Maaral",
+      "route": "literature/vel-maaral.html",
+      "publicationStatus": "source-register",
+      "statusLabel": "Source and structure registered",
+      "availableFormats": [
+        "source"
+      ],
+      "missingFormats": [
+        "original_tamil",
+        "easy_reading_tamil",
+        "transliteration",
+        "meaning",
+        "audio"
+      ],
+      "completionPercent": 16.7,
+      "nextEvidenceTask": "Collect and verify Original Tamil"
+    },
+    {
+      "id": "vel-mayil-virutham",
+      "titleTa": "வேல் மயில் விருத்தம்",
+      "titleEn": "Vel and Mayil Virutham",
+      "route": "literature/vel-mayil-virutham.html",
+      "publicationStatus": "source-register",
+      "statusLabel": "Companion works registered",
+      "availableFormats": [
+        "source"
+      ],
+      "missingFormats": [
+        "original_tamil",
+        "easy_reading_tamil",
+        "transliteration",
+        "meaning",
+        "audio"
+      ],
+      "completionPercent": 16.7,
+      "nextEvidenceTask": "Collect and verify Original Tamil"
+    },
+    {
+      "id": "thirumurugatruppadai",
+      "titleTa": "திருமுருகாற்றுப்படை",
+      "titleEn": "Thirumurugatruppadai",
+      "route": "literature/thirumurugatruppadai-complete.html",
+      "publicationStatus": "navigation",
+      "statusLabel": "Six-section source-linked navigator",
+      "availableFormats": [
+        "original_tamil",
+        "meaning",
+        "source"
+      ],
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ],
+      "completionPercent": 50.0,
+      "nextEvidenceTask": "Collect and verify Easy-reading Tamil"
+    },
+    {
+      "id": "slokas-prayers",
+      "titleTa": "ஸ்லோகங்கள் மற்றும் பிரார்த்தனைகள்",
+      "titleEn": "Slokas and Prayers",
+      "route": "sloka-library.html",
+      "publicationStatus": "navigation",
+      "statusLabel": "Mixed-status governed directory",
+      "availableFormats": [
+        "original_tamil",
+        "meaning",
+        "audio",
+        "source"
+      ],
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration"
+      ],
+      "completionPercent": 66.7,
+      "nextEvidenceTask": "Collect and verify Easy-reading Tamil"
+    },
+    {
+      "id": "audio-library",
+      "titleTa": "பக்தி ஒலி நூலகம்",
+      "titleEn": "Devotional Audio Library",
+      "route": "audio-library.html",
+      "publicationStatus": "navigation",
+      "statusLabel": "Device read-aloud and rights-status catalogue",
+      "availableFormats": [
+        "audio",
+        "source"
+      ],
+      "missingFormats": [],
+      "completionPercent": 100.0,
+      "nextEvidenceTask": "Maintain source and rights evidence"
+    }
+  ],
+  "canonicalSongs": [
+    {
+      "id": "0006",
+      "number": 6,
+      "titleTa": "முத்தைத்தரு",
+      "titleEn": "Muththaiththaru",
+      "route": "thiruppugazh/0006-muththaiththaru.html",
+      "publicationStatus": "published-source-linked",
+      "formats": {
+        "original_tamil": true,
+        "easy_reading_tamil": false,
+        "transliteration": false,
+        "meaning": true,
+        "audio": false,
+        "source": true
+      },
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ]
+    },
+    {
+      "id": "0007",
+      "number": 7,
+      "titleTa": "அருக்கு மங்கையர்",
+      "titleEn": "Arukku Mangkaiyar",
+      "route": "thiruppugazh/0007-arukku-mangkaiyar.html",
+      "publicationStatus": "published-source-linked",
+      "formats": {
+        "original_tamil": true,
+        "easy_reading_tamil": false,
+        "transliteration": false,
+        "meaning": true,
+        "audio": false,
+        "source": true
+      },
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ]
+    },
+    {
+      "id": "0008",
+      "number": 8,
+      "titleTa": "உனைத் தினம்",
+      "titleEn": "Unaith Thinam",
+      "route": "thiruppugazh/0008-unaith-thinam.html",
+      "publicationStatus": "published-source-linked",
+      "formats": {
+        "original_tamil": true,
+        "easy_reading_tamil": false,
+        "transliteration": false,
+        "meaning": true,
+        "audio": false,
+        "source": true
+      },
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ]
+    },
+    {
+      "id": "0009",
+      "number": 9,
+      "titleTa": "கருவடைந்து",
+      "titleEn": "Karuvadaindhu",
+      "route": "thiruppugazh/0009-karuvadaindhu.html",
+      "publicationStatus": "published-source-linked",
+      "formats": {
+        "original_tamil": true,
+        "easy_reading_tamil": false,
+        "transliteration": false,
+        "meaning": true,
+        "audio": false,
+        "source": true
+      },
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ]
+    },
+    {
+      "id": "0010",
+      "number": 10,
+      "titleTa": "கறுக்கும் அஞ்சன",
+      "titleEn": "Karukkum Anjana",
+      "route": "thiruppugazh/0010-karukkum-anjana.html",
+      "publicationStatus": "published-source-linked",
+      "formats": {
+        "original_tamil": true,
+        "easy_reading_tamil": false,
+        "transliteration": false,
+        "meaning": true,
+        "audio": false,
+        "source": true
+      },
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ]
+    },
+    {
+      "id": "0011",
+      "number": 11,
+      "titleTa": "கனகந்திரள்",
+      "titleEn": "Kanakan Thiral",
+      "route": "thiruppugazh/0011-kanakan-thiral.html",
+      "publicationStatus": "published-source-linked",
+      "formats": {
+        "original_tamil": true,
+        "easy_reading_tamil": false,
+        "transliteration": false,
+        "meaning": true,
+        "audio": false,
+        "source": true
+      },
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ]
+    },
+    {
+      "id": "0012",
+      "number": 12,
+      "titleTa": "காதடருங்கயல்",
+      "titleEn": "Kadhadarungkayal",
+      "route": "thiruppugazh/0012-kadhadarungkayal.html",
+      "publicationStatus": "published-source-linked",
+      "formats": {
+        "original_tamil": true,
+        "easy_reading_tamil": false,
+        "transliteration": false,
+        "meaning": true,
+        "audio": false,
+        "source": true
+      },
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ]
+    },
+    {
+      "id": "0013",
+      "number": 13,
+      "titleTa": "சந்ததம் பந்த",
+      "titleEn": "Sandhadham Bandha",
+      "route": "thiruppugazh/0013-sandhadham-bandha.html",
+      "publicationStatus": "published-source-linked",
+      "formats": {
+        "original_tamil": true,
+        "easy_reading_tamil": false,
+        "transliteration": false,
+        "meaning": true,
+        "audio": false,
+        "source": true
+      },
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ]
+    },
+    {
+      "id": "0014",
+      "number": 14,
+      "titleTa": "சருவும்படி",
+      "titleEn": "Saruvumpadi",
+      "route": "thiruppugazh/0014-saruvumpadi.html",
+      "publicationStatus": "published-source-linked",
+      "formats": {
+        "original_tamil": true,
+        "easy_reading_tamil": false,
+        "transliteration": false,
+        "meaning": true,
+        "audio": false,
+        "source": true
+      },
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ]
+    },
+    {
+      "id": "0015",
+      "number": 15,
+      "titleTa": "தடக்கைப் பங்கயம்",
+      "titleEn": "Thadakkai Pangkayam",
+      "route": "thiruppugazh/0015-thadakkai-pangkayam.html",
+      "publicationStatus": "published-source-linked",
+      "formats": {
+        "original_tamil": true,
+        "easy_reading_tamil": false,
+        "transliteration": false,
+        "meaning": true,
+        "audio": false,
+        "source": true
+      },
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ]
+    },
+    {
+      "id": "0016",
+      "number": 16,
+      "titleTa": "பதித்த செஞ்சந்த",
+      "titleEn": "Padhiththa Senchandha",
+      "route": "thiruppugazh/0016-padhiththa-senchandha.html",
+      "publicationStatus": "published-source-linked",
+      "formats": {
+        "original_tamil": true,
+        "easy_reading_tamil": false,
+        "transliteration": false,
+        "meaning": true,
+        "audio": false,
+        "source": true
+      },
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ]
+    },
+    {
+      "id": "0017",
+      "number": 17,
+      "titleTa": "பொருப்புறுங்",
+      "titleEn": "Poruppurung",
+      "route": "thiruppugazh/0017-poruppurung.html",
+      "publicationStatus": "published-source-linked",
+      "formats": {
+        "original_tamil": true,
+        "easy_reading_tamil": false,
+        "transliteration": false,
+        "meaning": true,
+        "audio": false,
+        "source": true
+      },
+      "missingFormats": [
+        "easy_reading_tamil",
+        "transliteration",
+        "audio"
+      ]
+    }
+  ],
+  "audioRecords": [
+    {
+      "id": "vel-maaral-maha-manthiram",
+      "titleTa": "வேல் மாறல் மகா மந்திரம்",
+      "titleEn": "Vel Maaral Maha Manthiram",
+      "textStatus": "source-review-required",
+      "playMode": "not-published",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": null,
+      "deviceReadAloudAvailable": false
+    },
+    {
+      "id": "kanda-sashti-kavasam",
+      "titleTa": "கந்த சஷ்டி கவசம்",
+      "titleEn": "Kanda Sashti Kavasam",
+      "textStatus": "reviewed-opening-extract",
+      "playMode": "device-tts",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": "slokas/kanda-sashti-kavasam.html",
+      "deviceReadAloudAvailable": true
+    },
+    {
+      "id": "skanda-guru-kavasam",
+      "titleTa": "ஸ்கந்த குரு கவசம்",
+      "titleEn": "Skanda Guru Kavasam",
+      "textStatus": "reviewed-opening-extract",
+      "playMode": "device-tts",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": "slokas/skanda-guru-kavasam.html",
+      "deviceReadAloudAvailable": true
+    },
+    {
+      "id": "shanmuga-kavasam",
+      "titleTa": "சண்முக கவசம்",
+      "titleEn": "Shanmuga Kavasam",
+      "textStatus": "uploaded-collection-review",
+      "playMode": "not-published",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": null,
+      "deviceReadAloudAvailable": false
+    },
+    {
+      "id": "kandar-anubhuti",
+      "titleTa": "கந்தர் அனுபூதி",
+      "titleEn": "Kandar Anubhuti",
+      "textStatus": "uploaded-source-identified",
+      "playMode": "not-published",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": null,
+      "deviceReadAloudAvailable": false
+    },
+    {
+      "id": "kandar-alangaram",
+      "titleTa": "கந்தர் அலங்காரம்",
+      "titleEn": "Kandar Alangaram",
+      "textStatus": "source-review-required",
+      "playMode": "not-published",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": null,
+      "deviceReadAloudAvailable": false
+    },
+    {
+      "id": "kandar-andhathi",
+      "titleTa": "கந்தர் அந்தாதி",
+      "titleEn": "Kandar Andhathi",
+      "textStatus": "source-review-required",
+      "playMode": "not-published",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": null,
+      "deviceReadAloudAvailable": false
+    },
+    {
+      "id": "kandar-kalivenba",
+      "titleTa": "கந்தர் கலிவெண்பா",
+      "titleEn": "Kandar Kalivenba",
+      "textStatus": "source-review-required",
+      "playMode": "not-published",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": null,
+      "deviceReadAloudAvailable": false
+    },
+    {
+      "id": "vel-virutham",
+      "titleTa": "வேல் விருத்தம்",
+      "titleEn": "Vel Virutham",
+      "textStatus": "uploaded-reference-identified",
+      "playMode": "not-published",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": null,
+      "deviceReadAloudAvailable": false
+    },
+    {
+      "id": "mayil-virutham",
+      "titleTa": "மயில் விருத்தம்",
+      "titleEn": "Mayil Virutham",
+      "textStatus": "uploaded-reference-identified",
+      "playMode": "not-published",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": null,
+      "deviceReadAloudAvailable": false
+    },
+    {
+      "id": "subramanya-bhujangam",
+      "titleTa": "சுப்பிரமணிய புஜங்கம்",
+      "titleEn": "Subramanya Bhujangam",
+      "textStatus": "source-review-required",
+      "playMode": "not-published",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": null,
+      "deviceReadAloudAvailable": false
+    },
+    {
+      "id": "kanda-gayatri",
+      "titleTa": "கந்த காயத்ரி",
+      "titleEn": "Kanda Gayatri",
+      "textStatus": "published",
+      "playMode": "device-tts",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": "slokas/subramanya-gayatri.html",
+      "deviceReadAloudAvailable": true
+    },
+    {
+      "id": "saravanabhava-mantra",
+      "titleTa": "சரவணபவ மந்திரம்",
+      "titleEn": "Saravanabhava Mantra",
+      "textStatus": "published",
+      "playMode": "device-tts",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": "slokas/om-saravana-bhava.html",
+      "deviceReadAloudAvailable": true
+    },
+    {
+      "id": "arupadai-veedu-thuthigal",
+      "titleTa": "ஆறுபடை வீடு துதிகள்",
+      "titleEn": "Arupadai Veedu Thuthigal",
+      "textStatus": "source-linked-sections-available",
+      "playMode": "not-published",
+      "recordingStatus": "owned-or-licensed-recording-required",
+      "textRoute": "literature/thirumurugatruppadai.html",
+      "deviceReadAloudAvailable": false
+    }
+  ],
+  "missingPopularSongs": [
+    {
+      "slug": "kaithala-niraikani",
+      "titleTa": "கைத்தல நிறைகனி",
+      "titleEn": "Kaithala Niraikani",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    },
+    {
+      "slug": "aarumuga-mangalathai",
+      "titleTa": "ஆறுமுக மங்களத்தை",
+      "titleEn": "Aarumuga Mangalathai",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    },
+    {
+      "slug": "maruthamalai-maamaniye",
+      "titleTa": "மருதமலை மாமணியே",
+      "titleEn": "Maruthamalai Maamaniye",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    },
+    {
+      "slug": "senthil-andavan",
+      "titleTa": "செந்தில் ஆண்டவன்",
+      "titleEn": "Senthil Andavan",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    },
+    {
+      "slug": "muruga-muruga-endral",
+      "titleTa": "முருகா முருகா என்றால்",
+      "titleEn": "Muruga Muruga Endral",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    },
+    {
+      "slug": "kandhan-karunai-purivaan",
+      "titleTa": "கந்தன் கருணை புரிவான்",
+      "titleEn": "Kandhan Karunai Purivaan",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    },
+    {
+      "slug": "pazham-neeyappa",
+      "titleTa": "பழம் நீயப்பா",
+      "titleEn": "Pazham Neeyappa",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    },
+    {
+      "slug": "chinna-chinna-muruga",
+      "titleTa": "சின்ன சின்ன முருகா",
+      "titleEn": "Chinna Chinna Muruga",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    },
+    {
+      "slug": "kundrathile-kumaranukku",
+      "titleTa": "குன்றத்திலே குமரனுக்கு",
+      "titleEn": "Kundrathile Kumaranukku",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    },
+    {
+      "slug": "vadivel-muruganukku-arohara",
+      "titleTa": "வடிவேல் முருகனுக்கு அரோகரா",
+      "titleEn": "Vadivel Muruganukku Arohara",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    },
+    {
+      "slug": "thiruchenduril-por-purindhu",
+      "titleTa": "திருச்செந்தூரில் போர் புரிந்து",
+      "titleEn": "Thiruchenduril Por Purindhu",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    },
+    {
+      "slug": "palani-malai-vaasa",
+      "titleTa": "பழனி மலை வாசா",
+      "titleEn": "Palani Malai Vaasa",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    },
+    {
+      "slug": "azhagendra-sollukku-muruga",
+      "titleTa": "அழகென்ற சொல்லுக்கு முருகா",
+      "titleEn": "Azhagendra Sollukku Muruga",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    },
+    {
+      "slug": "karpanai-endralum",
+      "titleTa": "கற்பனை என்றாலும்",
+      "titleEn": "Karpanai Endralum",
+      "task": "Identify a redistribution-safe source and rights status; do not reconstruct lyrics."
+    }
+  ],
+  "priorityResearchTasks": [
+    {
+      "priority": 1,
+      "workstream": "Canonical source identification",
+      "scope": "14 popular requested titles without exact canonical records",
+      "publicationRule": "Metadata and source evidence first; no lyric generation from memory."
+    },
+    {
+      "priority": 2,
+      "workstream": "Easy-reading Tamil",
+      "scope": "12 canonical Thiruppugazh songs currently lack a reviewed easy-reading field",
+      "publicationRule": "Spacing and punctuation only; preserve canonical text separately."
+    },
+    {
+      "priority": 3,
+      "workstream": "Transliteration",
+      "scope": "12 canonical Thiruppugazh songs currently lack transliteration",
+      "publicationRule": "Use one documented system and human review."
+    },
+    {
+      "priority": 4,
+      "workstream": "Meaning and devotional explanation",
+      "scope": "Separate literal meaning, original site summary and third-party commentary rights.",
+      "publicationRule": "Do not copy modern copyrighted commentary without permission."
+    },
+    {
+      "priority": 5,
+      "workstream": "Audio rights and synchronisation",
+      "scope": "10 audio catalogue entries are not published as recordings",
+      "publicationRule": "Owned, licensed or permission-confirmed recording only; otherwise labelled device TTS."
+    },
+    {
+      "priority": 6,
+      "workstream": "Collection expansion",
+      "scope": "Kandar Anubhuti, Kandar Alangaram, Kandar Andhadhi, Shanmuga Kavasam, Vel Maaral, Vel/Mayil Virutham, Subramanya Bhujangam and the surviving Thiruppugazh corpus.",
+      "publicationRule": "Select a verifiable edition and record source boundaries before transcription."
+    }
+  ],
+  "requiredRecordSchema": "/schemas/murugan-song-record.schema.json"
+}

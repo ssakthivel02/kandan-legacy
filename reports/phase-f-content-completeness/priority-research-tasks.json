@@ -1,0 +1,38 @@
+[
+  {
+    "priority": 1,
+    "workstream": "Canonical source identification",
+    "scope": "14 popular requested titles without exact canonical records",
+    "publicationRule": "Metadata and source evidence first; no lyric generation from memory."
+  },
+  {
+    "priority": 2,
+    "workstream": "Easy-reading Tamil",
+    "scope": "12 canonical Thiruppugazh songs currently lack a reviewed easy-reading field",
+    "publicationRule": "Spacing and punctuation only; preserve canonical text separately."
+  },
+  {
+    "priority": 3,
+    "workstream": "Transliteration",
+    "scope": "12 canonical Thiruppugazh songs currently lack transliteration",
+    "publicationRule": "Use one documented system and human review."
+  },
+  {
+    "priority": 4,
+    "workstream": "Meaning and devotional explanation",
+    "scope": "Separate literal meaning, original site summary and third-party commentary rights.",
+    "publicationRule": "Do not copy modern copyrighted commentary without permission."
+  },
+  {
+    "priority": 5,
+    "workstream": "Audio rights and synchronisation",
+    "scope": "10 audio catalogue entries are not published as recordings",
+    "publicationRule": "Owned, licensed or permission-confirmed recording only; otherwise labelled device TTS."
+  },
+  {
+    "priority": 6,
+    "workstream": "Collection expansion",
+    "scope": "Kandar Anubhuti, Kandar Alangaram, Kandar Andhadhi, Shanmuga Kavasam, Vel Maaral, Vel/Mayil Virutham, Subramanya Bhujangam and the surviving Thiruppugazh corpus.",
+    "publicationRule": "Select a verifiable edition and record source boundaries before transcription."
+  }
+]

@@ -1,0 +1,752 @@
+{
+  "release": 246,
+  "generated": "2026-07-22",
+  "purpose": "planned-versus-connected-capability-audit",
+  "safety": {
+    "filesDeleted": 0,
+    "contentGenerated": 0
+  },
+  "capabilityCount": 32,
+  "statusCounts": {
+    "connected": 24,
+    "governed-not-prominent": 7,
+    "exists-not-governed": 1
+  },
+  "records": [
+    {
+      "id": "devotional-home",
+      "title": "Devotional cinematic home",
+      "category": "Experience",
+      "candidateRoutes": [
+        "index.html"
+      ],
+      "existingFiles": [
+        "index.html"
+      ],
+      "governedFiles": [
+        "index.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "site-directory.html",
+        "murugan-song-library.html",
+        "explore.html",
+        "discovery.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "song-library",
+      "title": "Murugan Song Library",
+      "category": "Devotional",
+      "candidateRoutes": [
+        "murugan-song-library.html"
+      ],
+      "existingFiles": [
+        "murugan-song-library.html"
+      ],
+      "governedFiles": [
+        "murugan-song-library.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "murugan-song-library.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "thiruppugazh-reader",
+      "title": "Thiruppugazh reader and discovery",
+      "category": "Devotional",
+      "candidateRoutes": [
+        "thiruppugazh.html"
+      ],
+      "existingFiles": [
+        "thiruppugazh.html"
+      ],
+      "governedFiles": [
+        "thiruppugazh.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "site-directory.html",
+        "murugan-song-library.html",
+        "explore.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "kavasam-prayers",
+      "title": "Kavasam, slokas and prayers",
+      "category": "Devotional",
+      "candidateRoutes": [
+        "sloka-library.html"
+      ],
+      "existingFiles": [
+        "sloka-library.html"
+      ],
+      "governedFiles": [
+        "sloka-library.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "site-directory.html",
+        "explore.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "classical-literature",
+      "title": "Classical Murugan literature",
+      "category": "Literature",
+      "candidateRoutes": [
+        "literature/thirumurugatruppadai.html",
+        "research-library.html"
+      ],
+      "existingFiles": [
+        "literature/thirumurugatruppadai.html",
+        "research-library.html"
+      ],
+      "governedFiles": [
+        "literature/thirumurugatruppadai.html",
+        "research-library.html"
+      ],
+      "visibleFromHubs": [],
+      "status": "governed-not-prominent",
+      "nextAction": "Add the capability to the most relevant purpose-led hub."
+    },
+    {
+      "id": "arupadai-veedu",
+      "title": "Arupadai Veedu visual journey",
+      "category": "Temples",
+      "candidateRoutes": [
+        "temples.html",
+        "arupadai-veedu.html"
+      ],
+      "existingFiles": [
+        "temples.html",
+        "arupadai-veedu.html"
+      ],
+      "governedFiles": [
+        "temples.html",
+        "arupadai-veedu.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "site-directory.html",
+        "murugan-song-library.html",
+        "explore.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "temple-encyclopedia",
+      "title": "Temple encyclopedia and research",
+      "category": "Temples",
+      "candidateRoutes": [
+        "temple-encyclopedia.html"
+      ],
+      "existingFiles": [
+        "temple-encyclopedia.html"
+      ],
+      "governedFiles": [
+        "temple-encyclopedia.html"
+      ],
+      "visibleFromHubs": [
+        "platform-hub.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "pilgrimage-maps",
+      "title": "Pilgrimage planner, maps and travel guidance",
+      "category": "Temples",
+      "candidateRoutes": [
+        "pilgrimage-planner.html",
+        "murugan-map.html",
+        "temple-travel-guidance.html"
+      ],
+      "existingFiles": [
+        "pilgrimage-planner.html",
+        "murugan-map.html",
+        "temple-travel-guidance.html"
+      ],
+      "governedFiles": [
+        "pilgrimage-planner.html",
+        "murugan-map.html",
+        "temple-travel-guidance.html"
+      ],
+      "visibleFromHubs": [],
+      "status": "governed-not-prominent",
+      "nextAction": "Add the capability to the most relevant purpose-led hub."
+    },
+    {
+      "id": "festival-calendar",
+      "title": "Festivals and calendar",
+      "category": "Festivals",
+      "candidateRoutes": [
+        "festivals.html",
+        "festival-calendar.html"
+      ],
+      "existingFiles": [
+        "festivals.html",
+        "festival-calendar.html"
+      ],
+      "governedFiles": [
+        "festivals.html"
+      ],
+      "visibleFromHubs": [
+        "site-directory.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "panchangam-framework",
+      "title": "Panchangam verification framework",
+      "category": "Festivals",
+      "candidateRoutes": [
+        "panchangam-framework.html"
+      ],
+      "existingFiles": [
+        "panchangam-framework.html"
+      ],
+      "governedFiles": [
+        "panchangam-framework.html"
+      ],
+      "visibleFromHubs": [],
+      "status": "governed-not-prominent",
+      "nextAction": "Add the capability to the most relevant purpose-led hub."
+    },
+    {
+      "id": "audio-rights",
+      "title": "Rights-aware audio and device read-aloud",
+      "category": "Audio",
+      "candidateRoutes": [
+        "audio-library.html"
+      ],
+      "existingFiles": [
+        "audio-library.html"
+      ],
+      "governedFiles": [
+        "audio-library.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "murugan-song-library.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "media-gallery",
+      "title": "Devotional gallery with provenance",
+      "category": "Media",
+      "candidateRoutes": [
+        "gallery.html",
+        "media-gallery.html",
+        "visual-gallery.html"
+      ],
+      "existingFiles": [
+        "gallery.html"
+      ],
+      "governedFiles": [
+        "gallery.html"
+      ],
+      "visibleFromHubs": [
+        "index.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "local-search",
+      "title": "Tamil-English local search",
+      "category": "Search",
+      "candidateRoutes": [
+        "ai-search.html"
+      ],
+      "existingFiles": [
+        "ai-search.html"
+      ],
+      "governedFiles": [
+        "ai-search.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "site-directory.html",
+        "murugan-song-library.html",
+        "explore.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "knowledge-graph",
+      "title": "Knowledge graph and cross references",
+      "category": "Knowledge",
+      "candidateRoutes": [
+        "knowledge-graph.html",
+        "knowledge-graph-explorer.html",
+        "cross-references.html"
+      ],
+      "existingFiles": [
+        "knowledge-graph.html",
+        "knowledge-graph-explorer.html",
+        "cross-references.html"
+      ],
+      "governedFiles": [
+        "knowledge-graph.html",
+        "knowledge-graph-explorer.html",
+        "cross-references.html"
+      ],
+      "visibleFromHubs": [],
+      "status": "governed-not-prominent",
+      "nextAction": "Add the capability to the most relevant purpose-led hub."
+    },
+    {
+      "id": "timeline-stories",
+      "title": "Murugan timeline and stories",
+      "category": "Knowledge",
+      "candidateRoutes": [
+        "murugan-timeline.html",
+        "murugan-timeline-v2.html"
+      ],
+      "existingFiles": [
+        "murugan-timeline.html",
+        "murugan-timeline-v2.html"
+      ],
+      "governedFiles": [
+        "murugan-timeline.html",
+        "murugan-timeline-v2.html"
+      ],
+      "visibleFromHubs": [
+        "index.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "learning-centre",
+      "title": "Learning, quizzes and family pathways",
+      "category": "Learning",
+      "candidateRoutes": [
+        "learning-center.html",
+        "learning-paths.html",
+        "learning-quiz.html"
+      ],
+      "existingFiles": [
+        "learning-center.html",
+        "learning-paths.html",
+        "learning-quiz.html"
+      ],
+      "governedFiles": [
+        "learning-center.html",
+        "learning-paths.html",
+        "learning-quiz.html"
+      ],
+      "visibleFromHubs": [],
+      "status": "governed-not-prominent",
+      "nextAction": "Add the capability to the most relevant purpose-led hub."
+    },
+    {
+      "id": "apps-downloads",
+      "title": "Apps and downloads gateway",
+      "category": "Product",
+      "candidateRoutes": [
+        "apps.html",
+        "downloads.html",
+        "app.html"
+      ],
+      "existingFiles": [
+        "apps.html"
+      ],
+      "governedFiles": [
+        "apps.html"
+      ],
+      "visibleFromHubs": [
+        "index.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "personal-library",
+      "title": "Browser-local personal library",
+      "category": "Personal",
+      "candidateRoutes": [
+        "personal-library.html"
+      ],
+      "existingFiles": [
+        "personal-library.html"
+      ],
+      "governedFiles": [
+        "personal-library.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "discovery.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "reading-tools",
+      "title": "Reading workspace, notes and print",
+      "category": "Personal",
+      "candidateRoutes": [
+        "reading-workspace.html",
+        "reading-notes.html",
+        "print-pdf.html"
+      ],
+      "existingFiles": [
+        "reading-workspace.html",
+        "reading-notes.html",
+        "print-pdf.html"
+      ],
+      "governedFiles": [
+        "reading-workspace.html",
+        "reading-notes.html",
+        "print-pdf.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "discovery.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "collections-planner",
+      "title": "Collections and practice planner",
+      "category": "Personal",
+      "candidateRoutes": [
+        "devotional-collections.html",
+        "devotional-practice-planner.html"
+      ],
+      "existingFiles": [
+        "devotional-collections.html",
+        "devotional-practice-planner.html"
+      ],
+      "governedFiles": [
+        "devotional-collections.html",
+        "devotional-practice-planner.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "discovery.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "data-portability",
+      "title": "Browser-local data export and restore",
+      "category": "Personal",
+      "candidateRoutes": [
+        "personal-data.html"
+      ],
+      "existingFiles": [
+        "personal-data.html"
+      ],
+      "governedFiles": [
+        "personal-data.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "discovery.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "accessibility",
+      "title": "Accessibility preferences and statement",
+      "category": "Governance",
+      "candidateRoutes": [
+        "accessibility.html"
+      ],
+      "existingFiles": [
+        "accessibility.html"
+      ],
+      "governedFiles": [
+        "accessibility.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "murugan-song-library.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "offline-pwa",
+      "title": "Offline and installable PWA",
+      "category": "Platform",
+      "candidateRoutes": [
+        "offline.html",
+        "manifest.json",
+        "service-worker.js"
+      ],
+      "existingFiles": [
+        "offline.html",
+        "manifest.json",
+        "service-worker.js"
+      ],
+      "governedFiles": [],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "site-directory.html",
+        "murugan-song-library.html",
+        "explore.html",
+        "discovery.html"
+      ],
+      "status": "exists-not-governed",
+      "nextAction": "Review content quality, then register the canonical route."
+    },
+    {
+      "id": "source-governance",
+      "title": "Sources and publication boundaries",
+      "category": "Governance",
+      "candidateRoutes": [
+        "sources.html",
+        "source-catalog.html",
+        "content-status.html"
+      ],
+      "existingFiles": [
+        "sources.html",
+        "source-catalog.html",
+        "content-status.html"
+      ],
+      "governedFiles": [
+        "sources.html",
+        "source-catalog.html",
+        "content-status.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "site-directory.html",
+        "murugan-song-library.html",
+        "explore.html",
+        "discovery.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "route-recovery",
+      "title": "Route recovery and canonical aliases",
+      "category": "Platform",
+      "candidateRoutes": [
+        "route-recovery.html",
+        "404.html"
+      ],
+      "existingFiles": [
+        "route-recovery.html",
+        "404.html"
+      ],
+      "governedFiles": [
+        "route-recovery.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "murugan-song-library.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "content-completeness",
+      "title": "Content completeness and research queue",
+      "category": "Governance",
+      "candidateRoutes": [
+        "content-completeness.html"
+      ],
+      "existingFiles": [
+        "content-completeness.html"
+      ],
+      "governedFiles": [
+        "content-completeness.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "murugan-song-library.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "privacy-legal",
+      "title": "Privacy, terms and legal boundaries",
+      "category": "Governance",
+      "candidateRoutes": [
+        "privacy.html",
+        "terms.html"
+      ],
+      "existingFiles": [
+        "privacy.html",
+        "terms.html"
+      ],
+      "governedFiles": [
+        "privacy.html",
+        "terms.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "murugan-song-library.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "about-contact",
+      "title": "About and contact routes",
+      "category": "Community",
+      "candidateRoutes": [
+        "about.html",
+        "contact.html"
+      ],
+      "existingFiles": [
+        "about.html",
+        "contact.html"
+      ],
+      "governedFiles": [
+        "about.html",
+        "contact.html"
+      ],
+      "visibleFromHubs": [
+        "index.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "faq-support",
+      "title": "FAQ and support routes",
+      "category": "Community",
+      "candidateRoutes": [
+        "faq.html",
+        "support.html",
+        "help.html"
+      ],
+      "existingFiles": [
+        "faq.html",
+        "support.html"
+      ],
+      "governedFiles": [
+        "faq.html",
+        "support.html"
+      ],
+      "visibleFromHubs": [],
+      "status": "governed-not-prominent",
+      "nextAction": "Add the capability to the most relevant purpose-led hub."
+    },
+    {
+      "id": "operations-health",
+      "title": "Operations and production health evidence",
+      "category": "Operations",
+      "candidateRoutes": [
+        "operations-observability.html",
+        "production-audit.html",
+        "maintenance.html"
+      ],
+      "existingFiles": [
+        "operations-observability.html",
+        "production-audit.html",
+        "maintenance.html"
+      ],
+      "governedFiles": [
+        "production-audit.html",
+        "maintenance.html"
+      ],
+      "visibleFromHubs": [
+        "index.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "performance-quality",
+      "title": "Performance, accessibility and regression gates",
+      "category": "Operations",
+      "candidateRoutes": [
+        "performance.html",
+        "production-audit.html",
+        "content-status.html"
+      ],
+      "existingFiles": [
+        "production-audit.html",
+        "content-status.html"
+      ],
+      "governedFiles": [
+        "production-audit.html",
+        "content-status.html"
+      ],
+      "visibleFromHubs": [],
+      "status": "governed-not-prominent",
+      "nextAction": "Add the capability to the most relevant purpose-led hub."
+    },
+    {
+      "id": "complete-directory",
+      "title": "Complete governed route directory",
+      "category": "Platform",
+      "candidateRoutes": [
+        "site-directory.html",
+        "platform-hub.html"
+      ],
+      "existingFiles": [
+        "site-directory.html",
+        "platform-hub.html"
+      ],
+      "governedFiles": [
+        "site-directory.html",
+        "platform-hub.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "site-directory.html",
+        "murugan-song-library.html",
+        "explore.html",
+        "discovery.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    }
+  ],
+  "priorityQueues": {
+    "missingCapabilityRoutes": [],
+    "existingButUngoverned": [
+      "offline-pwa"
+    ],
+    "governedButNotProminent": [
+      "classical-literature",
+      "pilgrimage-maps",
+      "panchangam-framework",
+      "knowledge-graph",
+      "learning-centre",
+      "faq-support",
+      "performance-quality"
+    ]
+  },
+  "principle": "A capability is complete only when it has a useful page, a governed route, a visible purpose-led entry point and production validation."
+}
