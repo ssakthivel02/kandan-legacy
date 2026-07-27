@@ -126,7 +126,6 @@
     button.textContent = 'Stop';
     window.speechSynthesis.speak(utterance);
   });
-  addEventListener('pagehide', stopSpeech, {once: true});
   const stopSpeech = () => {
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
     activeSpeechId = '';
@@ -135,6 +134,7 @@
       button.textContent = 'Listen in Tamil';
     });
   };
+  addEventListener('pagehide', stopSpeech, {once: true});
   const renderVerifiedSongs = () => {
     const grid = byId('verifiedSongGrid');
     if (!grid) return;

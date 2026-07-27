@@ -32,4 +32,8 @@ test('song library exposes governed full songs and one active reader', async () 
   assert.match(script, /data\/thiruppugazh\.json/);
   assert.match(script, /data\/read-aloud-playlist\.json/);
   assert.match(script, /speechSynthesis\.cancel/);
+  assert.ok(
+    script.indexOf("const stopSpeech =") < script.indexOf("addEventListener('pagehide', stopSpeech"),
+    'stopSpeech must be initialized before the pagehide listener is registered'
+  );
 });
