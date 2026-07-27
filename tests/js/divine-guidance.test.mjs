@@ -29,6 +29,7 @@ test('song library exposes governed full songs and one active reader', async () 
   const script = await read('assets/js/murugan-song-library.js');
   assert.match(html, /id="verifiedSongGrid"/);
   assert.match(html, /12 complete Thiruppugazh songs/);
+  assert.match(html, /murugan-song-library\.js\?v=20260727-2/);
   assert.match(script, /data\/thiruppugazh\.json/);
   assert.match(script, /data\/read-aloud-playlist\.json/);
   assert.match(script, /speechSynthesis\.cancel/);
