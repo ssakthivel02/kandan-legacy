@@ -64,7 +64,7 @@ test('historical and override validators accept canonical fixtures', () => {
 
 test('composition applies exact-path override and preserves metadata', () => {
   const effective = composeEffectiveRegistry(historical, overrides);
-  assert.equal(effective.effectiveRegistryMode, 'explicit-overrides');
+  assert.equal(effective.effectiveRegistryMode, 'overrides-and-append-only-additions');
   assert.equal(effective.effectiveRegistryDiagnostics.appliedCount, 1);
   assert.equal(effective.routes[0].status, 'source-register');
   assert.equal(effective.routes[0].summary, 'Canonical summary');
@@ -113,7 +113,9 @@ test('loader composes explicit registry with mocked fetch', async () => {
     status: 200,
     json: async () => path.includes('effective-overrides')
       ? overrides
-      : historical
+      : path.includes('site-routes-additions')
+        ? {release: 246, generated: '2026-07-17', recordCount: 0, records: []}
+        : historical
   });
   const registry = await loadEffectiveRouteRegistry({
     fetcher,
