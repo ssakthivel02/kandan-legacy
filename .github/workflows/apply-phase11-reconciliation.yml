@@ -12,7 +12,7 @@ permissions:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
-  RECONCILIATION_REVISION: '6'
+  RECONCILIATION_REVISION: '7'
 
 concurrency:
   group: phase11-contract-reconciliation
@@ -47,7 +47,7 @@ jobs:
           mkdir -p artifacts
           python -B -m tools.operations_observability.validate --root . --mode package --report artifacts/phase11-operations-report.json
           git diff --check
-      - name: Commit reconciled files
+      - name: Commit reconciled production files
         if: always()
         run: |
           if git diff --quiet; then
@@ -61,9 +61,8 @@ jobs:
             service-worker.js \
             data/deployment-conformance.json \
             data/operations/check-catalog.json \
-            tests/js/effective-route-registry.test.mjs \
-            .github/workflows/production-baseline.yml \
-            .github/workflows/effective-route-consumers.yml
+            tests/js/effective-route-registry.test.mjs
           git commit -m 'fix: reconcile premium rollout production contracts'
+          git restore .github/workflows/production-baseline.yml .github/workflows/effective-route-consumers.yml
           git pull --rebase origin phase11-premium-production-gate
           git push origin HEAD:phase11-premium-production-gate
