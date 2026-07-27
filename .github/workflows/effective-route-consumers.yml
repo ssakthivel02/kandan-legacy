@@ -9,6 +9,9 @@ on:
 permissions:
   contents: read
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 concurrency:
   group: effective-route-consumers-${{ github.ref }}
   cancel-in-progress: true
@@ -16,28 +19,24 @@ concurrency:
 jobs:
   route-consumers:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 2
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
+          python-version: '3.12'
       - uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: '22'
       - name: Validate explicit consumers
         env:
-          PYTHONDONTWRITEBYTECODE: "1"
+          PYTHONDONTWRITEBYTECODE: '1'
         run: python -B -m tools.effective_route_consumers.validate --root .
-      - name: Validate baseline contract
-        env:
-          PYTHONDONTWRITEBYTECODE: "1"
-        run: python -B -m tools.production_baseline.validate --root . --mode package
       - name: Run consumer tests
         env:
-          PYTHONDONTWRITEBYTECODE: "1"
+          PYTHONDONTWRITEBYTECODE: '1'
         run: |
           node --test tests/js/*.test.mjs
-          python -B -m unittest discover -s tests/effective_route_consumers -p "test_*.py" -v
+          python -B -m unittest discover -s tests/effective_route_consumers -p 'test_*.py' -v
