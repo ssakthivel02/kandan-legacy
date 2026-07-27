@@ -2,7 +2,21 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Deployment attestation target",
   "type": "object",
-  "required": ["release","baseCommit","requiredCommitTitle","hashAlgorithm","criticalAssets"],
-  "properties": {"release":{"const":245},"baseCommit":{"const":"640ab54e1028927a22c19bb4712516c2d05ba58c"},"requiredCommitTitle":{"const":"Release 245: deliver premium Murugan visual experience and accessible interaction"},"hashAlgorithm":{"const":"sha256"},"criticalAssets":{"type":"array","minItems":7}},
+  "required": ["release","baselineRelease","productionCommit","status","productionUrl","productionVerifiedAt","hashAlgorithm","criticalAssets","verifiedGitBlobs"],
+  "properties": {
+    "release": {"const": 251},
+    "baselineRelease": {"const": 245},
+    "productionCommit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "status": {"const": "PRODUCTION_VERIFIED"},
+    "productionUrl": {"const": "https://omsaravanabhava.org/"},
+    "productionVerifiedAt": {"type": "string", "format": "date-time"},
+    "hashAlgorithm": {"const": "git-blob-sha1"},
+    "criticalAssets": {"type": "array", "minItems": 10, "uniqueItems": true},
+    "verifiedGitBlobs": {
+      "type": "object",
+      "minProperties": 7,
+      "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{40}$"}
+    }
+  },
   "additionalProperties": true
 }

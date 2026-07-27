@@ -1,1 +1,21 @@
-{"release":245,"generated":"2026-07-17","status":"baseline-ready","checkCount":60,"automatedCount":36,"advisoryCount":24,"domains":12,"remoteValidation":"Runs in GitHub Actions on the Release 245 pull request and on main after merge.","privacy":"No analytics, cookies, personal data or external telemetry.","limitations":["The committed summary is a release baseline, not a live uptime monitor.","GitHub Actions evidence is authoritative for repository validation.","Browser diagnostics are same-origin and read-only."]}
+{
+  "release": 251,
+  "baselineRelease": 245,
+  "generated": "2026-07-27",
+  "status": "PASS",
+  "checkCount": 60,
+  "automatedCount": 36,
+  "advisoryCount": 24,
+  "domains": 12,
+  "productionCommit": "812b3ad014c7c1e957cb63a0d1a05d5c87f29b05",
+  "productionUrl": "https://omsaravanabhava.org/",
+  "productionVerifiedAt": "2026-07-27T14:15:30Z",
+  "remoteValidation": "Phase 11 validates the Release 251 repository artifact; Phase 12 reconciles the live deployment and operational evidence.",
+  "privacy": "No analytics, cookies, personal data or external telemetry.",
+  "limitations": [
+    "The committed production check is point-in-time evidence, not a live uptime monitor.",
+    "GitHub Actions evidence is authoritative for repository validation.",
+    "Browser diagnostics are same-origin and read-only.",
+    "Release 245 remains the governance baseline; Release 251 is the current premium deployment overlay."
+  ]
+}
