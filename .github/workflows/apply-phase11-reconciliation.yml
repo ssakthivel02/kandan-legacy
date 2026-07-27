@@ -1,12 +1,6 @@
 name: Apply Phase 11 Contract Reconciliation
 
 on:
-  push:
-    branches:
-      - phase11-premium-production-gate
-    paths:
-      - '.github/apply_phase11_reconciliation.py'
-      - '.github/workflows/apply-phase11-reconciliation.yml'
   pull_request:
     branches: [main]
     paths:
@@ -18,7 +12,11 @@ permissions:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
-  RECONCILIATION_REVISION: '4'
+  RECONCILIATION_REVISION: '5'
+
+concurrency:
+  group: phase11-contract-reconciliation
+  cancel-in-progress: true
 
 jobs:
   apply:
@@ -38,7 +36,6 @@ jobs:
       - name: Apply reconciliations
         run: python .github/apply_phase11_reconciliation.py
       - name: Validate reconciled contracts and tests
-        continue-on-error: true
         run: |
           node --check service-worker.js
           node --check assets/js/global-experience-2026.js
@@ -49,7 +46,6 @@ jobs:
           python -B -m tools.operations_observability.validate --root . --mode package --report artifacts/phase11-operations-report.json
           git diff --check
       - name: Commit reconciled files
-        if: always()
         run: |
           if git diff --quiet; then
             echo 'No changes to commit'
@@ -66,4 +62,5 @@ jobs:
             .github/workflows/production-baseline.yml \
             .github/workflows/effective-route-consumers.yml
           git commit -m 'fix: reconcile premium rollout production contracts'
+          git pull --rebase origin phase11-premium-production-gate
           git push origin HEAD:phase11-premium-production-gate
