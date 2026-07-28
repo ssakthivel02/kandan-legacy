@@ -22,6 +22,7 @@ REPORT = ROOT / 'reports/phase-h-validation'
 
 CRITICAL_HTML = [
     'index.html', '404.html', 'offline.html', 'murugan-song-library.html',
+    'devotional-listening.html', 'song-source-requests.html',
     'platform-hub.html', 'platform-roadmap.html', 'route-recovery.html',
     'content-completeness.html', 'site-directory.html', 'ai-search.html',
     'thiruppugazh.html', 'temples.html', 'audio-library.html'
@@ -33,6 +34,10 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'assets/js/release-246.js', 'assets/js/premium-platform-2026.mjs',
     'assets/js/effective-route-registry.mjs',
     'assets/js/murugan-song-library.js',
+    'assets/css/devotional-listening-2026.css',
+    'assets/css/song-source-requests-2026.css',
+    'assets/js/devotional-listening-2026.js',
+    'assets/js/song-source-requests-2026.js',
     'assets/js/platform-hub-2026.mjs',
     'assets/js/platform-roadmap-2026.mjs',
     'assets/js/route-recovery-2026.mjs',
@@ -41,10 +46,13 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'data/site-routes-effective-overrides.json', 'data/route-aliases.json',
     'data/route-recovery-summary.json', 'data/content-completeness.json',
     'data/platform-capability-matrix.json',
-    'data/murugan-song-library.json', 'data/search-index.json',
+    'data/murugan-song-library.json', 'data/devotional-listening-paths.json',
+    'data/song-source-requests.json', 'data/search-index.json',
     'data/thiruppugazh.json', 'data/read-aloud-playlist.json',
     'data/audio-catalog.json',
-    'schemas/murugan-song-record.schema.json', 'deployment-manifest.json'
+    'schemas/murugan-song-record.schema.json',
+    'schemas/devotional-listening-path.schema.json',
+    'schemas/song-source-request.schema.json', 'deployment-manifest.json'
 ]
 REFERENCE_RE = re.compile(
     r'''(?:href|src|poster|action|data-src|data-href)\s*=\s*["']([^"']+)["']''',
@@ -317,6 +325,7 @@ def main() -> None:
         text = read_text(service_worker)
         for required in (
             'murugan-song-library.html', 'platform-hub.html',
+            'devotional-listening.html', 'song-source-requests.html',
             'platform-roadmap.html', 'route-recovery.html',
             'content-completeness.html', 'premium-platform-2026'
         ):

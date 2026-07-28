@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "release": "phase15",
+  "generated": "2026-07-28",
+  "recordCount": 14,
+  "publicationBoundary": "These are requested song identities, not published lyrics or playable recordings. A song becomes publishable only after an edition, text rights and recording rights are verified.",
+  "evidenceRequirements": [
+    "Exact title and any alternate spelling",
+    "Author, lyricist or traditional attribution",
+    "Edition, publisher, archive or source image",
+    "Text redistribution status",
+    "Recording owner and explicit permission when audio is proposed"
+  ],
+  "records": [
+    {"id":"kaithala-niraikani","titleTa":"கைத்தல நிறைகனி","titleEn":"Kaithala Niraikani","status":"source-needed","category":"Popular request","priorityBand":"high"},
+    {"id":"aarumuga-mangalathai","titleTa":"ஆறுமுக மங்களத்தை","titleEn":"Aarumuga Mangalathai","status":"source-needed","category":"Popular request","priorityBand":"high"},
+    {"id":"maruthamalai-maamaniye","titleTa":"மருதமலை மாமணியே","titleEn":"Maruthamalai Maamaniye","status":"rights-and-source-needed","category":"Modern devotional song","priorityBand":"high"},
+    {"id":"senthil-andavan","titleTa":"செந்தில் ஆண்டவன்","titleEn":"Senthil Andavan","status":"identity-disambiguation-needed","category":"Title match review","priorityBand":"medium"},
+    {"id":"muruga-muruga-endral","titleTa":"முருகா முருகா என்றால்","titleEn":"Muruga Muruga Endral","status":"rights-and-source-needed","category":"Modern devotional song","priorityBand":"high"},
+    {"id":"kandhan-karunai-purivaan","titleTa":"கந்தன் கருணை புரிவான்","titleEn":"Kandhan Karunai Purivaan","status":"rights-and-source-needed","category":"Modern devotional song","priorityBand":"medium"},
+    {"id":"pazham-neeyappa","titleTa":"பழம் நீயப்பா","titleEn":"Pazham Neeyappa","status":"rights-and-source-needed","category":"Modern devotional song","priorityBand":"high"},
+    {"id":"chinna-chinna-muruga","titleTa":"சின்ன சின்ன முருகா","titleEn":"Chinna Chinna Muruga","status":"identity-disambiguation-needed","category":"Title match review","priorityBand":"medium"},
+    {"id":"kundrathile-kumaranukku","titleTa":"குன்றத்திலே குமரனுக்கு","titleEn":"Kundrathile Kumaranukku","status":"rights-and-source-needed","category":"Modern devotional song","priorityBand":"medium"},
+    {"id":"vadivel-muruganukku-arohara","titleTa":"வடிவேல் முருகனுக்கு அரோகரா","titleEn":"Vadivel Muruganukku Arohara","status":"identity-disambiguation-needed","category":"Title match review","priorityBand":"medium"},
+    {"id":"thiruchenduril-por-purindhu","titleTa":"திருச்செந்தூரில் போர் புரிந்து","titleEn":"Thiruchenduril Por Purindhu","status":"source-needed","category":"Popular request","priorityBand":"medium"},
+    {"id":"palani-malai-vaasa","titleTa":"பழனி மலை வாசா","titleEn":"Palani Malai Vaasa","status":"identity-disambiguation-needed","category":"Title match review","priorityBand":"medium"},
+    {"id":"azhagendra-sollukku-muruga","titleTa":"அழகென்ற சொல்லுக்கு முருகா","titleEn":"Azhagendra Sollukku Muruga","status":"rights-and-source-needed","category":"Modern devotional song","priorityBand":"high"},
+    {"id":"karpanai-endralum","titleTa":"கற்பனை என்றாலும்","titleEn":"Karpanai Endralum","status":"rights-and-source-needed","category":"Modern devotional song","priorityBand":"high"}
+  ]
+}

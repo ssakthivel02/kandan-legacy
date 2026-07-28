@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://omsaravanabhava.org/schemas/song-source-request.schema.json",
+  "title": "Missing Murugan song source requests",
+  "type": "object",
+  "required": ["version", "release", "recordCount", "publicationBoundary", "evidenceRequirements", "records"],
+  "properties": {
+    "version": {"type": "integer", "minimum": 1},
+    "release": {"const": "phase15"},
+    "recordCount": {"const": 14},
+    "publicationBoundary": {"type": "string", "minLength": 40},
+    "evidenceRequirements": {
+      "type": "array",
+      "minItems": 4,
+      "items": {"type": "string", "minLength": 8}
+    },
+    "records": {
+      "type": "array",
+      "minItems": 14,
+      "maxItems": 14,
+      "items": {
+        "type": "object",
+        "required": ["id", "titleTa", "titleEn", "status", "category", "priorityBand"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "titleTa": {"type": "string", "minLength": 2},
+          "titleEn": {"type": "string", "minLength": 2},
+          "status": {"enum": ["source-needed", "rights-and-source-needed", "identity-disambiguation-needed"]},
+          "category": {"type": "string", "minLength": 3},
+          "priorityBand": {"enum": ["high", "medium", "low"]}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

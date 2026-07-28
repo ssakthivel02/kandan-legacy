@@ -2,7 +2,7 @@
   "release": 246,
   "generated": "2026-07-22",
   "strategy": "append-only-governed-route-additions",
-  "recordCount": 13,
+  "recordCount": 15,
   "records": [
     {
       "path": "/murugan-song-library.html",
@@ -126,6 +126,26 @@
       "status": "published",
       "summary": "Platform-use, source-status, content-rights, local-data, external-link and availability boundaries.",
       "readingEligible": true
+    },
+    {
+      "path": "/devotional-listening.html",
+      "titleTa": "முருகன் பக்தி பயணம்",
+      "titleEn": "Devotional Listening",
+      "category": "Devotional",
+      "status": "published-source-linked",
+      "summary": "Six private devotional practice paths combining governed Tamil read-aloud, verified song routes, quiet reflection and browser-local progress.",
+      "readingEligible": true,
+      "sourceDataPath": "/data/devotional-listening-paths.json"
+    },
+    {
+      "path": "/song-source-requests.html",
+      "titleTa": "விடுபட்ட முருகன் பாடல்கள்",
+      "titleEn": "Missing Song Source Requests",
+      "category": "Sources",
+      "status": "source-register",
+      "summary": "Transparent research queue for 14 popular requested song identities that still require exact source, edition and publication-rights evidence.",
+      "readingEligible": false,
+      "sourceDataPath": "/data/song-source-requests.json"
     }
   ],
   "limitations": [

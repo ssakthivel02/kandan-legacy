@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ta">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>முருகன் பக்தி பயணம் | Devotional Listening</title>
+  <meta name="description" content="Choose a private, source-governed Murugan devotional path using verified Tamil reading routes and device read-aloud.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://omsaravanabhava.org/devotional-listening.html">
+  <meta name="theme-color" content="#110912">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preload" as="image" href="assets/images/murugan-divine.webp" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/release-246.css">
+  <link rel="stylesheet" href="assets/css/premium-platform-2026.css">
+  <link rel="stylesheet" href="assets/css/premium-pages-2026.css">
+  <link rel="stylesheet" href="assets/css/devotional-listening-2026.css?v=20260728-1">
+  <link rel="stylesheet" href="assets/css/global-experience-2026.css?v=20260727-1">
+  <script defer src="assets/js/release-246.js"></script>
+  <script defer src="assets/js/devotional-listening-2026.js?v=20260728-1"></script>
+  <script type="module" src="assets/js/premium-platform-2026.mjs"></script>
+</head>
+<body class="osb-phase6 listening-page">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header" data-header>
+  <a class="brand" href="index.html" aria-label="Om Saravana Bhava home">
+    <span class="brand-mark osb-brand-symbol" aria-hidden="true"><img src="/assets/images/brand-vel-mayil.svg?v=20260727-1" alt="" width="50" height="50"></span>
+    <span><strong>ஓம் சரவணபவ</strong><small>Om Saravana Bhava</small></span>
+  </a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">Menu</button>
+  <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a><a href="murugan-song-library.html">Songs</a><a href="thiruppugazh.html">Thiruppugazh</a><a href="temples.html">Temples</a><a href="audio-library.html">Audio</a><a href="ai-search.html">AI Search</a><a href="platform-hub.html">All Tools</a>
+  </nav>
+</header>
+
+<main id="main-content" data-listening-app>
+  <section class="listening-hero">
+    <div class="listening-hero-art" aria-hidden="true">
+      <div class="vel-orbit"><span></span><span></span><span></span></div>
+      <img src="assets/images/murugan-divine.webp" alt="" width="720" height="900">
+    </div>
+    <div class="listening-hero-copy">
+      <p class="eyebrow" lang="ta">வேல் · மயில் · பாடல் · அமைதி</p>
+      <h1 lang="ta">முருகனுடன்<br>ஒரு பக்தி நேரம்</h1>
+      <h2>Choose a devotional path for this moment.</h2>
+      <p>Listen to verified Tamil text through your device voice, read the source-linked song, pause and reflect. Your practice record stays only in this browser.</p>
+      <div class="hero-actions">
+        <a class="listening-button primary" href="#choose-path">Begin a path</a>
+        <a class="listening-button" href="murugan-song-library.html">Browse verified songs</a>
+      </div>
+      <p class="truth-boundary">A devotional aid—not prophecy, personalised divine instruction, medical advice or a substitute for a teacher, family tradition or temple authority.</p>
+    </div>
+  </section>
+
+  <section class="listening-trust" aria-label="Listening experience boundaries">
+    <article><strong>16</strong><span>governed read-aloud records</span></article>
+    <article><strong>12</strong><span>verified full-song routes</span></article>
+    <article><strong>0</strong><span>third-party recordings copied</span></article>
+    <article><strong>Local</strong><span>notes and practice progress</span></article>
+  </section>
+
+  <div class="listening-shell">
+    <section id="choose-path" aria-labelledby="path-heading">
+      <p class="eyebrow">Choose by intention</p>
+      <h2 id="path-heading">Six gentle ways to begin</h2>
+      <p class="section-lede">Each path combines a quiet prompt with already-governed text. It does not manufacture sacred verses or claim supernatural personalisation.</p>
+      <div id="pathGrid" class="path-grid" aria-busy="true">
+        <article class="path-card loading">Loading devotional paths…</article>
+      </div>
+    </section>
+
+    <section id="practice" class="practice-stage" aria-labelledby="practice-heading" hidden>
+      <div class="practice-heading">
+        <div>
+          <p class="eyebrow" id="practiceKicker">Selected path</p>
+          <h2 id="practice-heading">Your devotional path</h2>
+          <p id="practiceIntention"></p>
+        </div>
+        <button id="closePractice" class="listening-button" type="button">Choose another path</button>
+      </div>
+      <div class="practice-progress" aria-label="Practice progress">
+        <span id="progressLabel">0 of 0 steps complete</span>
+        <div><i id="progressBar"></i></div>
+      </div>
+      <ol id="practiceSteps" class="practice-steps"></ol>
+      <div class="practice-controls">
+        <button id="stopListening" class="listening-button" type="button">Stop voice</button>
+        <button id="completePractice" class="listening-button primary" type="button">Complete this practice</button>
+      </div>
+      <p id="practiceStatus" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="local-practice" aria-labelledby="local-practice-heading">
+      <div>
+        <p class="eyebrow">Private devotional note</p>
+        <h2 id="local-practice-heading">What will you carry forward?</h2>
+        <p>Write one short intention or gratitude. It is stored only on this device and is never sent to a server.</p>
+      </div>
+      <div class="note-panel">
+        <label for="practiceNote">My private note</label>
+        <textarea id="practiceNote" maxlength="280" rows="4" placeholder="Today I will…"></textarea>
+        <div class="note-actions">
+          <button id="savePracticeNote" class="listening-button primary" type="button">Save on this device</button>
+          <button id="clearPracticeNote" class="listening-button" type="button">Clear note</button>
+        </div>
+        <p id="noteStatus" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="practice-summary" aria-labelledby="summary-heading">
+      <div>
+        <p class="eyebrow">Your browser-local rhythm</p>
+        <h2 id="summary-heading">Return without pressure.</h2>
+        <p>Devotion is not a score. These numbers are simple local reminders and can be cleared at any time.</p>
+      </div>
+      <div class="summary-metrics">
+        <article><strong id="practiceCount">0</strong><span>completed practices</span></article>
+        <article><strong id="practiceDays">0</strong><span>distinct practice days</span></article>
+        <article><strong id="queuedSongs">0</strong><span>songs in local prayer queue</span></article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <p lang="ta">வேலவேல் முருகா! அருள்புரிவாய்!</p>
+  <nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="murugan-song-library.html">Songs</a><a href="song-source-requests.html">Missing songs</a><a href="sources.html">Sources</a><a href="privacy.html">Privacy</a><a href="accessibility.html">Accessibility</a></nav>
+  <small>© 2026 Om Saravana Bhava</small>
+</footer>
+<script src="assets/js/premium-pages-2026.js"></script>
+<script defer src="assets/js/global-experience-2026.js?v=20260727-1"></script>
+</body>
+</html>

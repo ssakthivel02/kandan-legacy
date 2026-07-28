@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "release": "phase15",
+  "generated": "2026-07-28",
+  "privacy": "All practice progress, notes and preferences stay in this browser.",
+  "audioBoundary": "Playback uses device text-to-speech from source-governed Tamil text. No third-party performance recording is bundled.",
+  "paths": [
+    {
+      "id": "morning-vel",
+      "titleTa": "காலை வேல் வழி",
+      "titleEn": "Morning Vel",
+      "intention": "Begin with steadiness and devotion.",
+      "minutes": 7,
+      "accent": "gold",
+      "steps": [
+        {
+          "type": "breath",
+          "titleTa": "அமைதியான மூச்சு",
+          "titleEn": "Arrive quietly",
+          "instructionTa": "ஆறு மெதுவான மூச்சுகள். கவனத்தை இக்கணத்திற்குக் கொண்டு வா.",
+          "instructionEn": "Take six unhurried breaths and bring your attention to this moment."
+        },
+        {
+          "type": "listen",
+          "trackId": "saravanabhava-mantra",
+          "titleTa": "சரவணபவ மந்திரம்",
+          "titleEn": "Saravanabhava mantra"
+        },
+        {
+          "type": "read",
+          "trackId": "thiruppugazh-0006",
+          "titleTa": "முத்தைத்தரு",
+          "titleEn": "Muththaiththaru"
+        }
+      ]
+    },
+    {
+      "id": "courage-with-vel",
+      "titleTa": "வேலுடன் துணிவு",
+      "titleEn": "Courage with the Vel",
+      "intention": "Meet one difficult task without haste.",
+      "minutes": 10,
+      "accent": "vermilion",
+      "steps": [
+        {
+          "type": "reflect",
+          "titleTa": "நேர்மையான ஒரு படி",
+          "titleEn": "One honest step",
+          "instructionTa": "இன்று நீ எடுக்கக்கூடிய ஒரு நேர்மையான சிறிய படியை நினை.",
+          "instructionEn": "Name one honest, manageable step you can take today."
+        },
+        {
+          "type": "listen",
+          "trackId": "kanda-sashti-kavasam",
+          "titleTa": "கந்த சஷ்டி கவசம்",
+          "titleEn": "Kanda Sashti Kavasam — reviewed opening"
+        },
+        {
+          "type": "read",
+          "trackId": "thiruppugazh-0007",
+          "titleTa": "அருக்கு மங்கையர்",
+          "titleEn": "Arukku Mangkaiyar"
+        }
+      ]
+    },
+    {
+      "id": "clarity-and-learning",
+      "titleTa": "தெளிவும் கற்றலும்",
+      "titleEn": "Clarity and Learning",
+      "intention": "Slow the rush before making a decision.",
+      "minutes": 10,
+      "accent": "sapphire",
+      "steps": [
+        {
+          "type": "breath",
+          "titleTa": "அவசரத்தை அமைதிப்படுத்து",
+          "titleEn": "Quiet the rush",
+          "instructionTa": "பதில் தேடுவதற்கு முன் ஒரு நிமிடம் அமைதியாக இரு.",
+          "instructionEn": "Pause for one quiet minute before searching for an answer."
+        },
+        {
+          "type": "listen",
+          "trackId": "kanda-gayatri",
+          "titleTa": "கந்த காயத்ரி",
+          "titleEn": "Kanda Gayatri"
+        },
+        {
+          "type": "read",
+          "trackId": "thiruppugazh-0008",
+          "titleTa": "உனைத் தினம்",
+          "titleEn": "Unaith Thinam"
+        }
+      ]
+    },
+    {
+      "id": "peaceful-evening",
+      "titleTa": "அமைதியான மாலை",
+      "titleEn": "Peaceful Evening",
+      "intention": "Set down the day with gratitude.",
+      "minutes": 12,
+      "accent": "peacock",
+      "steps": [
+        {
+          "type": "reflect",
+          "titleTa": "நன்றியுடன் நிறைவு",
+          "titleEn": "Close with gratitude",
+          "instructionTa": "இன்றைய ஒரு நன்மையை நினைத்து நன்றி கூறு.",
+          "instructionEn": "Remember one good thing from today and offer quiet gratitude."
+        },
+        {
+          "type": "listen",
+          "trackId": "thiruppugazh-0010",
+          "titleTa": "கறுக்கும் அஞ்சன",
+          "titleEn": "Karukkum Anjana"
+        },
+        {
+          "type": "read",
+          "trackId": "thiruppugazh-0011",
+          "titleTa": "கனகந்திரள்",
+          "titleEn": "Kanakan Thiral"
+        }
+      ]
+    },
+    {
+      "id": "six-abodes-pilgrimage",
+      "titleTa": "ஆறுபடை வீடு நினைவு",
+      "titleEn": "Six Abodes Pilgrimage",
+      "intention": "Connect song, place and pilgrimage.",
+      "minutes": 15,
+      "accent": "temple",
+      "steps": [
+        {
+          "type": "reflect",
+          "titleTa": "திருத்தல நினைவு",
+          "titleEn": "Remember a sacred place",
+          "instructionTa": "ஒரு முருகன் திருத்தலத்தை மனதில் நினைத்து மரியாதையுடன் தொடங்கு.",
+          "instructionEn": "Begin by respectfully remembering one Murugan sacred place."
+        },
+        {
+          "type": "listen",
+          "trackId": "thiruppugazh-0012",
+          "titleTa": "காதடருங்கயல்",
+          "titleEn": "Kadhadarungkayal"
+        },
+        {
+          "type": "read",
+          "trackId": "thiruppugazh-0014",
+          "titleTa": "சருவும்படி",
+          "titleEn": "Saruvumpadi"
+        }
+      ]
+    },
+    {
+      "id": "family-devotion",
+      "titleTa": "குடும்ப பக்தி நேரம்",
+      "titleEn": "Family Devotion",
+      "intention": "Share a short, screen-light devotional moment.",
+      "minutes": 8,
+      "accent": "rose",
+      "steps": [
+        {
+          "type": "breath",
+          "titleTa": "ஒன்றாக அமைதி",
+          "titleEn": "Settle together",
+          "instructionTa": "அனைவரும் அமைதியாக அமர்ந்து மூன்று மெதுவான மூச்சுகள் எடுக்கவும்.",
+          "instructionEn": "Sit together and take three unhurried breaths."
+        },
+        {
+          "type": "listen",
+          "trackId": "saravanabhava-mantra",
+          "titleTa": "சரவணபவ மந்திரம்",
+          "titleEn": "Saravanabhava mantra"
+        },
+        {
+          "type": "read",
+          "trackId": "thiruppugazh-0017",
+          "titleTa": "பொருப்புறுங்",
+          "titleEn": "Poruppurung"
+        }
+      ]
+    }
+  ]
+}
