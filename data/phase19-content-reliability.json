@@ -10,6 +10,7 @@
     "publishedTempleGuideRecords": 6,
     "officialIdentityReviewRecords": 10,
     "readerScriptsLoadedAsModules": true,
+    "readingNotesDataDeployed": true,
     "readingWorkspaceDataDeployed": true,
     "effectiveRouteRuntimeDataDeployed": true
   },

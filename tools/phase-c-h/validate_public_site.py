@@ -59,6 +59,7 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'data/song-source-requests.json', 'data/mantra-practice.json',
     'data/daily-darshan.json',
     'data/responsive-homepage-images.json',
+    'data/reading-notes.json',
     'data/reading-workspace.json',
     'data/effective-route-registry-runtime.json',
     'data/temple-directory.json',
