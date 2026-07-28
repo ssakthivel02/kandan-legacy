@@ -206,11 +206,15 @@ def initial_selection() -> tuple[set[str], deque[str]]:
         'data/content-completeness.json',
         'data/platform-capability-matrix.json',
         'data/murugan-song-library.json',
+        'data/devotional-listening-paths.json',
+        'data/song-source-requests.json',
         'data/search-index.json',
         'data/thiruppugazh.json',
         'data/read-aloud-playlist.json',
         'data/audio-catalog.json',
         'schemas/murugan-song-record.schema.json',
+        'schemas/devotional-listening-path.schema.json',
+        'schemas/song-source-request.schema.json',
         'icons/icon-192.png',
         'icons/icon-512.png',
     ):
@@ -286,7 +290,8 @@ def main() -> None:
 
     critical = [
         'index.html', '404.html', 'offline.html',
-        'murugan-song-library.html', 'platform-hub.html',
+        'murugan-song-library.html', 'devotional-listening.html',
+        'song-source-requests.html', 'platform-hub.html',
         'platform-roadmap.html', 'route-recovery.html',
         'content-completeness.html', 'site-directory.html', 'ai-search.html',
         'thiruppugazh.html', 'temples.html', 'audio-library.html',

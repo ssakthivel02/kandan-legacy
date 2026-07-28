@@ -10,6 +10,7 @@ test('homepage exposes bounded interactive Murugan guidance', async () => {
   assert.match(html, /Devotional reflection—not prophecy/);
   assert.match(html, /data-guidance-intent="courage"/);
   assert.match(html, /divine-guidance-2026\.js/);
+  assert.match(html, /devotional-listening\.html/);
 });
 
 test('guidance read-aloud is local and Tamil', async () => {
@@ -31,12 +32,14 @@ test('song library exposes governed full songs and one active reader', async () 
   const validator = await read('tools/phase-c-h/validate_public_site.py');
   assert.match(html, /id="verifiedSongGrid"/);
   assert.match(html, /12 complete Thiruppugazh songs/);
-  assert.match(html, /murugan-song-library\.js\?v=20260727-2/);
+  assert.match(html, /murugan-song-library\.js\?v=20260728-3/);
   assert.match(script, /data\/thiruppugazh\.json/);
   assert.match(script, /data\/read-aloud-playlist\.json/);
   assert.match(builder, /data\/read-aloud-playlist\.json/);
   assert.match(validator, /data\/read-aloud-playlist\.json/);
   assert.match(script, /speechSynthesis\.cancel/);
+  assert.match(script, /osb-prayer-queue/);
+  assert.match(html, /song-source-requests\.html/);
   assert.ok(
     script.indexOf("const stopSpeech =") < script.indexOf("addEventListener('pagehide', stopSpeech"),
     'stopSpeech must be initialized before the pagehide listener is registered'

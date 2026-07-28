@@ -9,9 +9,10 @@ document.addEventListener('DOMContentLoaded',async()=>{
  const form=document.getElementById('advancedSearchForm'),q=document.getElementById('q'),type=document.getElementById('searchType'),results=document.getElementById('results'),count=document.getElementById('resultCount'),recentBox=document.getElementById('searchSuggestions');
  if(!form||!q||!type||!results||!count||!recentBox)return;
  try{
-  const [baseIndex,songLibrary]=await Promise.all([
+  const [baseIndex,songLibrary,sourceRequests]=await Promise.all([
    load('data/search-index.json'),
-   load('data/murugan-song-library.json').catch(()=>({collections:[]}))
+   load('data/murugan-song-library.json').catch(()=>({collections:[]})),
+   load('data/song-source-requests.json').catch(()=>({records:[]}))
   ]);
   const collectionRecords=(songLibrary.collections||[]).map(item=>({
    kind:'Song Collection',
@@ -23,7 +24,17 @@ document.addEventListener('DOMContentLoaded',async()=>{
    tags:[item.category,item.status,...(item.availableFormats||[]),...(item.missingFormats||[])].filter(Boolean),
    status:item.status
   }));
-  const index=[...baseIndex,...collectionRecords].filter(item=>item&&item.route&&item.titleEn);
+  const requestRecords=(sourceRequests.records||[]).map(item=>({
+   kind:'Song Source Request',
+   id:item.id,
+   titleTa:item.titleTa,
+   titleEn:item.titleEn,
+   summary:'Requested song identity. Exact source and publication rights are still required; no lyrics or recording are claimed.',
+   route:`song-source-requests.html?q=${encodeURIComponent(item.titleEn||item.id)}`,
+   tags:[item.category,item.status,'missing song','source request'].filter(Boolean),
+   status:item.status
+  }));
+  const index=[...baseIndex,...collectionRecords,...requestRecords].filter(item=>item&&item.route&&item.titleEn);
   const types=[...new Set(index.map(x=>x.kind))].sort();type.innerHTML='<option value="All">All content</option>'+types.map(x=>`<option>${e(x)}</option>`).join('');
   const render=()=>{
    const query=q.value.trim(),terms=n(query).split(/\s+/).filter(Boolean),selected=type.value;

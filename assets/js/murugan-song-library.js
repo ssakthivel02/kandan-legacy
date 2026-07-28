@@ -2,6 +2,7 @@
   'use strict';
 
   const state = {collections: [], songs: [], playlist: []};
+  const PRAYER_QUEUE_KEY = 'osb-prayer-queue';
   const byId = id => document.getElementById(id);
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -134,6 +135,27 @@
       button.textContent = 'Listen in Tamil';
     });
   };
+  const getPrayerQueue = () => {
+    try {
+      const value = JSON.parse(localStorage.getItem(PRAYER_QUEUE_KEY) || '[]');
+      return Array.isArray(value) ? value : [];
+    } catch {
+      return [];
+    }
+  };
+  const renderPrayerQueue = () => {
+    const queue = getPrayerQueue();
+    if (byId('prayerQueueCount')) byId('prayerQueueCount').textContent = queue.length;
+    document.querySelectorAll('[data-song-queue]').forEach(button => {
+      const saved = queue.includes(button.dataset.songQueue);
+      button.setAttribute('aria-pressed', saved ? 'true' : 'false');
+      button.textContent = saved ? '★ In prayer queue' : '☆ Add to prayer queue';
+    });
+  };
+  const setPrayerQueue = queue => {
+    try { localStorage.setItem(PRAYER_QUEUE_KEY, JSON.stringify(queue)); } catch {}
+    renderPrayerQueue();
+  };
   addEventListener('pagehide', stopSpeech, {once: true});
   const renderVerifiedSongs = () => {
     const grid = byId('verifiedSongGrid');
@@ -148,12 +170,23 @@
         <div class="verified-song-actions">
           <a href="${escapeHtml(song.route)}">Read full Tamil</a>
           ${speech?.speechText ? `<button type="button" data-song-listen="${escapeHtml(speech.id)}" aria-pressed="false">Listen in Tamil</button>` : ''}
+          ${speech ? `<button type="button" data-song-queue="${escapeHtml(speech.id)}" aria-pressed="false">☆ Add to prayer queue</button>` : ''}
         </div>
       </article>`;
     }).join('');
     grid.setAttribute('aria-busy', 'false');
     byId('verifiedSongCount').textContent = `${state.songs.length} verified full-song routes available.`;
+    renderPrayerQueue();
   };
+
+  byId('verifiedSongGrid')?.addEventListener('click', event => {
+    const button = event.target.closest('[data-song-queue]');
+    if (!button) return;
+    const queue = getPrayerQueue();
+    const id = button.dataset.songQueue;
+    setPrayerQueue(queue.includes(id) ? queue.filter(item => item !== id) : [...queue, id].slice(-24));
+  });
+  byId('clearPrayerQueue')?.addEventListener('click', () => setPrayerQueue([]));
 
   ['songQuery', 'songCategory', 'songStatus'].forEach(id => {
     byId(id)?.addEventListener(id === 'songQuery' ? 'input' : 'change', render);

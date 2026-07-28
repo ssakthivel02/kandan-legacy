@@ -16,11 +16,11 @@
   <link rel="manifest" href="manifest.json">
   <link rel="preload" as="image" href="assets/images/hero-sunrise.webp" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/release-246.css">
-  <link rel="stylesheet" href="assets/css/murugan-song-library.css?v=20260727-1">
+  <link rel="stylesheet" href="assets/css/murugan-song-library.css?v=20260728-2">
   <link rel="stylesheet" href="assets/css/premium-platform-2026.css">
   <link rel="stylesheet" href="assets/css/premium-pages-2026.css">
   <script defer src="assets/js/release-246.js"></script>
-  <script defer src="assets/js/murugan-song-library.js?v=20260727-2"></script>
+  <script defer src="assets/js/murugan-song-library.js?v=20260728-3"></script>
   <script type="module" src="assets/js/premium-platform-2026.mjs"></script>
   <link rel="stylesheet" href="assets/css/global-experience-2026.css?v=20260727-1">
   <link rel="stylesheet" href="assets/css/phase6-experience-2026.css?v=20260726-1">
@@ -53,7 +53,7 @@
       <h1>முருகன் பாடல் நூலகம்</h1>
       <h2>Murugan Song Library</h2>
       <p>One governed doorway to Thiruppugazh, Kavasam works, Arunagirinathar literature, classical Murugan texts, prayer routes and rights-aware audio.</p>
-      <p><a class="button" href="#song-collections">Browse collections</a> <a class="button" href="content-completeness.html">Review missing formats</a> <a class="button" href="site-directory.html">Open complete directory</a></p>
+      <p><a class="button" href="#song-collections">Browse collections</a> <a class="button" href="devotional-listening.html">Begin devotional listening</a> <a class="button" href="song-source-requests.html">Track missing songs</a></p>
     </div>
   </section>
 
@@ -102,7 +102,21 @@
         <a class="button" href="thiruppugazh.html">Open full Thiruppugazh library</a>
       </div>
       <p id="verifiedSongCount" role="status" aria-live="polite">Loading verified songs…</p>
+      <div class="song-queue-summary">
+        <span><strong id="prayerQueueCount">0</strong> songs saved in this browser’s prayer queue.</span>
+        <a href="devotional-listening.html">Open devotional listening</a>
+        <button id="clearPrayerQueue" type="button">Clear local queue</button>
+      </div>
       <div id="verifiedSongGrid" class="verified-song-grid" aria-busy="true"></div>
+    </section>
+
+    <section class="song-panel missing-song-callout" aria-labelledby="missing-song-heading">
+      <div>
+        <p class="eyebrow">14 popular missing-song identities</p>
+        <h2 id="missing-song-heading">Missing does not mean forgotten.</h2>
+        <p>Popular titles now have a public source-verification queue. Prioritise a title locally or copy the exact evidence template needed for editorial review. Unverified lyrics and commercial recordings remain unpublished.</p>
+      </div>
+      <a class="button" href="song-source-requests.html">Open missing-song queue</a>
     </section>
 
     <section class="song-panel song-roadmap" aria-labelledby="reading-format-heading">

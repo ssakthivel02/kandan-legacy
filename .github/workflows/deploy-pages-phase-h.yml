@@ -92,6 +92,14 @@ jobs:
           }, ensure_ascii=False, indent=2))
           PY
 
+      - name: Validate Phase 15 devotional contracts
+        run: |
+          python -m json.tool data/devotional-listening-paths.json > /dev/null
+          python -m json.tool data/song-source-requests.json > /dev/null
+          python -m json.tool schemas/devotional-listening-path.schema.json > /dev/null
+          python -m json.tool schemas/song-source-request.schema.json > /dev/null
+          python -m unittest tests.phase_c_h.test_phase15_publication
+
       - name: Reconcile planned versus connected capabilities
         run: python tools/phase-c-h/build_capability_matrix.py
 
@@ -117,6 +125,8 @@ jobs:
         run: |
           node --check assets/js/release-246.js
           node --check assets/js/murugan-song-library.js
+          node --check assets/js/devotional-listening-2026.js
+          node --check assets/js/song-source-requests-2026.js
           node --check assets/js/advanced-search.js
           node --check assets/js/404-suggestions.js
           node --check assets/js/effective-route-registry.mjs
@@ -126,6 +136,13 @@ jobs:
           node --check assets/js/content-completeness-2026.mjs
           node --check assets/js/platform-roadmap-2026.mjs
           node --check service-worker.js
+
+      - name: Run Phase 15 interaction regressions
+        run: |
+          node --test \
+            tests/js/divine-guidance.test.mjs \
+            tests/js/devotional-listening.test.mjs \
+            tests/js/song-source-requests.test.mjs
 
       - name: Run Phase H static production gate
         run: python tools/phase-c-h/validate_public_site.py
