@@ -11,4 +11,6 @@ official-source backed, while history, rituals, schedules, visitor information a
 documentary photography remain under review.
 
 The release also loads reader code as an ES module, deploys the two previously omitted
-reader/runtime JSON files, reduces oversized hero height and rotates the offline cache.
+reader/runtime JSON files, reduces oversized hero height, rotates the offline cache
+and versions the four modified homepage assets so existing service workers cannot
+replay the pre-Phase-19 reveal contract.

@@ -1,4 +1,5 @@
 import json
+import re
 import unittest
 from pathlib import Path
 
@@ -86,6 +87,20 @@ class Phase19PublicationTests(unittest.TestCase):
             contract['contentSafety']['placeholderTempleGuidesPublished'],
             0
         )
+
+    def test_homepage_versions_every_modified_reveal_asset(self):
+        home = (ROOT / 'index.html').read_text(encoding='utf-8')
+        for asset in (
+            'premium-platform-2026.css',
+            'phase18-responsive-imagery-2026.css',
+            'premium-platform-2026.mjs',
+            'premium-home-runtime.mjs',
+        ):
+            self.assertRegex(
+                home,
+                rf'{re.escape(asset)}\?v=20260728-p19-1',
+                msg=f'{asset} must be cache-versioned in the homepage',
+            )
 
 
 if __name__ == '__main__':

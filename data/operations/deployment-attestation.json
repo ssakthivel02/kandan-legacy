@@ -39,14 +39,14 @@
     "assets/css/phase10-trust-quality-2026.css": "f09429ac35b8b5615a1e038a174728b9b6ec9960",
     "assets/images/murugan-divine.webp": "bcbfcddd0561bf92fa3f56afed69f2dcba570563"
   },
-  "repositoryAlignmentCommit": "phase19-content-reliability-candidate",
+  "repositoryAlignmentCommit": "phase19-content-reliability-cache-delivery-candidate",
   "repositoryAlignmentStatus": "SOURCE_ALIGNED_LIVE_REVERIFY_REQUIRED",
-  "repositoryAlignmentReason": "The Phase 19 candidate makes essential homepage and devotional content resilient without JavaScript, publishes all 12 verified Thiruppugazh cards in initial HTML, exposes 16 governed temple records, repairs reader module loading and includes omitted runtime JSON dependencies. Repository package validation uses this source-alignment map while preserving historical live-production evidence until deployment is verified.",
+  "repositoryAlignmentReason": "The Phase 19 candidate makes essential homepage and devotional content resilient without JavaScript, publishes all 12 verified Thiruppugazh cards in initial HTML, exposes 16 governed temple records, repairs reader module loading and includes omitted runtime JSON dependencies. The cache-delivery follow-up versions all four modified homepage reveal assets and rotates the service-worker cache so existing visitors cannot receive the pre-Phase-19 animation contract. Repository package validation uses this source-alignment map while preserving historical live-production evidence until deployment is verified.",
   "repositoryAlignmentBlobs": {
-    "index.html": "8d5cfadc65dffb9e08c885aa00a592a37b030274",
+    "index.html": "bdbc2699e98b86d6c4a8314309e89722cf14dea8",
     "platform-hub.html": "fa512dd17118994fa05b3142fb342884fa98a11b",
     "operations-observability.html": "74330ae5618d7da7329ea4fe197cec0448e798f0",
-    "service-worker.js": "c2c4fe70dce1eab822fc2acf3acc49f07a60397e",
+    "service-worker.js": "8d33ced0c19a11c8f3424622c146aa482ed08e04",
     "data/platform-capability-matrix.json": "c5fdcde6e71016e0ef2b234e6f8ba26ee6bc08a4",
     "assets/css/global-experience-2026.css": "6b43af1ca6d2c8fbe45067289160d2a05e3add73",
     "assets/js/global-experience-2026.js": "04802e961bb8fc9afdf77c383d024c32d8c459cd",
