@@ -738,5 +738,24 @@
       "Murugan"
     ],
     "status": "published"
+  },
+  {
+    "kind": "Devotional Practice",
+    "id": "murugan-mantra-practice",
+    "titleTa": "முருகன் ஜப அறை",
+    "titleEn": "Murugan Mantra Practice",
+    "summary": "Private Tamil-first 6–108 counter backed by six existing published Murugan mantra records, with optional device speech and browser-local history.",
+    "route": "mantra-practice.html",
+    "tags": [
+      "Japa",
+      "Mantra",
+      "108",
+      "Tamil",
+      "Private practice",
+      "Om Saravanabhava",
+      "Vel Vel Muruga",
+      "Skanda Sharanam"
+    ],
+    "status": "published-source-linked"
   }
 ]

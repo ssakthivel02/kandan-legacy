@@ -22,7 +22,8 @@ REPORT = ROOT / 'reports/phase-h-validation'
 
 CRITICAL_HTML = [
     'index.html', '404.html', 'offline.html', 'murugan-song-library.html',
-    'devotional-listening.html', 'song-source-requests.html',
+    'devotional-listening.html', 'mantra-practice.html',
+    'song-source-requests.html',
     'platform-hub.html', 'platform-roadmap.html', 'route-recovery.html',
     'content-completeness.html', 'site-directory.html', 'ai-search.html',
     'thiruppugazh.html', 'temples.html', 'audio-library.html'
@@ -37,6 +38,9 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'assets/css/devotional-listening-2026.css',
     'assets/css/song-source-requests-2026.css',
     'assets/js/devotional-listening-2026.js',
+    'assets/css/mantra-practice-2026.css',
+    'assets/js/mantra-practice-2026.mjs',
+    'assets/js/mantra-practice-core.mjs',
     'assets/js/song-source-requests-2026.js',
     'assets/js/platform-hub-2026.mjs',
     'assets/js/platform-roadmap-2026.mjs',
@@ -47,12 +51,14 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'data/route-recovery-summary.json', 'data/content-completeness.json',
     'data/platform-capability-matrix.json',
     'data/murugan-song-library.json', 'data/devotional-listening-paths.json',
-    'data/song-source-requests.json', 'data/search-index.json',
+    'data/song-source-requests.json', 'data/mantra-practice.json',
+    'data/murugan-mantras.json', 'data/search-index.json',
     'data/thiruppugazh.json', 'data/read-aloud-playlist.json',
     'data/audio-catalog.json',
     'schemas/murugan-song-record.schema.json',
     'schemas/devotional-listening-path.schema.json',
-    'schemas/song-source-request.schema.json', 'deployment-manifest.json'
+    'schemas/song-source-request.schema.json',
+    'schemas/mantra-practice.schema.json', 'deployment-manifest.json'
 ]
 REFERENCE_RE = re.compile(
     r'''(?:href|src|poster|action|data-src|data-href)\s*=\s*["']([^"']+)["']''',
@@ -326,6 +332,7 @@ def main() -> None:
         for required in (
             'murugan-song-library.html', 'platform-hub.html',
             'devotional-listening.html', 'song-source-requests.html',
+            'mantra-practice.html',
             'platform-roadmap.html', 'route-recovery.html',
             'content-completeness.html', 'premium-platform-2026'
         ):

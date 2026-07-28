@@ -2,7 +2,7 @@
   "release": 246,
   "generated": "2026-07-22",
   "strategy": "append-only-governed-route-additions",
-  "recordCount": 15,
+  "recordCount": 16,
   "records": [
     {
       "path": "/murugan-song-library.html",
@@ -146,6 +146,16 @@
       "summary": "Transparent research queue for 14 popular requested song identities that still require exact source, edition and publication-rights evidence.",
       "readingEligible": false,
       "sourceDataPath": "/data/song-source-requests.json"
+    },
+    {
+      "path": "/mantra-practice.html",
+      "titleTa": "முருகன் ஜப அறை",
+      "titleEn": "Murugan Mantra Practice",
+      "category": "Devotional",
+      "status": "published-source-linked",
+      "summary": "Tamil-first private 6–108 mantra counter using six existing published source records, optional device speech and vibration, bounded browser-local history and safe metadata export.",
+      "readingEligible": true,
+      "sourceDataPath": "/data/mantra-practice.json"
     }
   ],
   "limitations": [

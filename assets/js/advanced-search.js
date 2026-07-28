@@ -9,10 +9,12 @@ document.addEventListener('DOMContentLoaded',async()=>{
  const form=document.getElementById('advancedSearchForm'),q=document.getElementById('q'),type=document.getElementById('searchType'),results=document.getElementById('results'),count=document.getElementById('resultCount'),recentBox=document.getElementById('searchSuggestions');
  if(!form||!q||!type||!results||!count||!recentBox)return;
  try{
-  const [baseIndex,songLibrary,sourceRequests]=await Promise.all([
+  const [baseIndex,songLibrary,sourceRequests,mantraPractice,mantras]=await Promise.all([
    load('data/search-index.json'),
    load('data/murugan-song-library.json').catch(()=>({collections:[]})),
-   load('data/song-source-requests.json').catch(()=>({records:[]}))
+   load('data/song-source-requests.json').catch(()=>({records:[]})),
+   load('data/mantra-practice.json').catch(()=>({mantraIds:[]})),
+   load('data/murugan-mantras.json').catch(()=>([]))
   ]);
   const collectionRecords=(songLibrary.collections||[]).map(item=>({
    kind:'Song Collection',
@@ -34,7 +36,18 @@ document.addEventListener('DOMContentLoaded',async()=>{
    tags:[item.category,item.status,'missing song','source request'].filter(Boolean),
    status:item.status
   }));
-  const index=[...baseIndex,...collectionRecords,...requestRecords].filter(item=>item&&item.route&&item.titleEn);
+  const publishedMantras=(Array.isArray(mantras)?mantras:[]).filter(item=>(mantraPractice.mantraIds||[]).includes(item.id)&&item.status==='published');
+  const mantraPracticeRecord=publishedMantras.length===6?[{
+   kind:'Devotional Practice',
+   id:'murugan-mantra-practice',
+   titleTa:'முருகன் ஜப அறை',
+   titleEn:'Murugan Mantra Practice',
+   summary:'Private Tamil-first 6–108 counter using six existing published mantra records, optional device speech and browser-local history.',
+   route:'mantra-practice.html',
+   tags:['japa','mantra','counter','108','Tamil','private',...publishedMantras.flatMap(item=>[item.titleTa,item.titleEn])],
+   status:'published-source-linked'
+  }]:[];
+  const index=[...baseIndex,...collectionRecords,...requestRecords,...mantraPracticeRecord].filter(item=>item&&item.route&&item.titleEn);
   const types=[...new Set(index.map(x=>x.kind))].sort();type.innerHTML='<option value="All">All content</option>'+types.map(x=>`<option>${e(x)}</option>`).join('');
   const render=()=>{
    const query=q.value.trim(),terms=n(query).split(/\s+/).filter(Boolean),selected=type.value;

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "release": "phase16",
+  "generated": "2026-07-28",
+  "titleTa": "முருகன் ஜப அறை",
+  "titleEn": "Murugan Mantra Practice",
+  "sourcePath": "data/murugan-mantras.json",
+  "sourceBoundary": "Only records marked published in the governed Murugan mantra collection may appear in this practice.",
+  "practiceBoundary": "This counter is a private devotional aid, not a measure of spiritual merit, prophecy, personalised divine instruction, medical advice or temple authority.",
+  "privacy": "Counts, preferences and session history remain in this browser. No account, analytics or remote sync is used.",
+  "allowedTargets": [
+    6,
+    12,
+    27,
+    54,
+    108
+  ],
+  "mantraIds": [
+    "om-saravanabhava",
+    "kanda-gayatri",
+    "vel-vel",
+    "skanda-sharanam",
+    "shanmuga-sharanam",
+    "muruga-sharanam"
+  ],
+  "relatedRoutes": [
+    {
+      "route": "murugan-mantras.html",
+      "label": "Open the governed mantra collection"
+    },
+    {
+      "route": "murugan-song-library.html",
+      "label": "Continue with verified songs"
+    },
+    {
+      "route": "devotional-listening.html",
+      "label": "Choose a guided listening path"
+    }
+  ]
+}
