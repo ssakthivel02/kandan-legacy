@@ -625,6 +625,7 @@
       "visibleFromHubs": [
         "index.html",
         "platform-hub.html",
+        "site-directory.html",
         "murugan-song-library.html"
       ],
       "status": "connected",

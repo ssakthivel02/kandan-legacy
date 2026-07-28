@@ -513,6 +513,25 @@
     "reachableFromGovernedEntry": true
   },
   {
+    "path": "android-app.html",
+    "route": "/android-app.html",
+    "classification": "orphan-content-candidate",
+    "reasons": [
+      "substantive HTML not yet governed"
+    ],
+    "title": "Saravana Bhava Android App | Om Saravana Bhava",
+    "robots": "index,follow",
+    "lang": "ta",
+    "visibleTextCharacters": 2523,
+    "mainCount": 1,
+    "h1Count": 1,
+    "imageCount": 1,
+    "registered": false,
+    "inSitemap": false,
+    "inboundLinks": 14,
+    "reachableFromGovernedEntry": true
+  },
+  {
     "path": "learning.html",
     "route": "/learning.html",
     "classification": "orphan-content-candidate",
@@ -530,6 +549,25 @@
     "inSitemap": false,
     "inboundLinks": 14,
     "reachableFromGovernedEntry": false
+  },
+  {
+    "path": "data-deletion.html",
+    "route": "/data-deletion.html",
+    "classification": "orphan-content-candidate",
+    "reasons": [
+      "substantive HTML not yet governed"
+    ],
+    "title": "Local Data Deletion | Saravana Bhava",
+    "robots": "index,follow",
+    "lang": "ta",
+    "visibleTextCharacters": 2236,
+    "mainCount": 1,
+    "h1Count": 1,
+    "imageCount": 1,
+    "registered": false,
+    "inSitemap": false,
+    "inboundLinks": 13,
+    "reachableFromGovernedEntry": true
   },
   {
     "path": "temples/encyclopedia/part-2/index.html",
@@ -9450,44 +9488,6 @@
       "substantive HTML not yet governed"
     ],
     "title": "திருப்புகழ் பாடல் 354 | Digitized Thiruppugazh Volume 10",
-    "robots": "",
-    "lang": "ta",
-    "visibleTextCharacters": 367,
-    "mainCount": 1,
-    "h1Count": 1,
-    "imageCount": 0,
-    "registered": false,
-    "inSitemap": false,
-    "inboundLinks": 1,
-    "reachableFromGovernedEntry": false
-  },
-  {
-    "path": "literature/thiruppugazh/volume-10/song-0355.html",
-    "route": "/literature/thiruppugazh/volume-10/song-0355.html",
-    "classification": "orphan-content-candidate",
-    "reasons": [
-      "substantive HTML not yet governed"
-    ],
-    "title": "திருப்புகழ் பாடல் 355 | Digitized Thiruppugazh Volume 10",
-    "robots": "",
-    "lang": "ta",
-    "visibleTextCharacters": 367,
-    "mainCount": 1,
-    "h1Count": 1,
-    "imageCount": 0,
-    "registered": false,
-    "inSitemap": false,
-    "inboundLinks": 1,
-    "reachableFromGovernedEntry": false
-  },
-  {
-    "path": "literature/thiruppugazh/volume-10/song-0356.html",
-    "route": "/literature/thiruppugazh/volume-10/song-0356.html",
-    "classification": "orphan-content-candidate",
-    "reasons": [
-      "substantive HTML not yet governed"
-    ],
-    "title": "திருப்புகழ் பாடல் 356 | Digitized Thiruppugazh Volume 10",
     "robots": "",
     "lang": "ta",
     "visibleTextCharacters": 367,

@@ -2,8 +2,8 @@
 
 This audit is non-destructive. It did not delete or edit production HTML.
 
-- HTML files scanned: **4013**
-- Effective governed routes: **113**
+- HTML files scanned: **4017**
+- Effective governed routes: **115**
 - Unresolved local references: **1729**
 - Unresolved references from canonical pages: **0**
 - Unique safe repair suggestions on canonical pages: **0**
@@ -11,9 +11,9 @@ This audit is non-destructive. It did not delete or edit production HTML.
 
 ## Classification counts
 
-- **orphan-content-candidate:** 3388
+- **orphan-content-candidate:** 3390
 - **placeholder-or-generated:** 431
-- **canonical-public:** 113
+- **canonical-public:** 115
 - **release-showcase:** 51
 - **source-register-or-bounded:** 17
 - **orphan-quality-review:** 11
