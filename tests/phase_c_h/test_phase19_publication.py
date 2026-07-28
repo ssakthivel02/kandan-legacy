@@ -56,12 +56,29 @@ class Phase19PublicationTests(unittest.TestCase):
             ROOT / 'tools/phase-c-h/build_public_site.py'
         ).read_text(encoding='utf-8')
         for path in (
+            'data/reading-notes.json',
             'data/reading-workspace.json',
             'data/effective-route-registry-runtime.json',
             'data/temple-directory.json',
             'data/phase19-content-reliability.json'
         ):
             self.assertIn(path, builder)
+
+    def test_reading_notes_configuration_is_present_and_private(self):
+        config = json.loads(
+            (ROOT / 'data/reading-notes.json').read_text(encoding='utf-8')
+        )
+        self.assertEqual(config['storageKey'], 'osb-reading-notes-v1')
+        self.assertEqual(config['maximumItems'], 100)
+        self.assertEqual(config['maximumNoteLength'], 500)
+        self.assertEqual(
+            [item['id'] for item in config['allowedKinds']],
+            ['reflection', 'question', 'practice', 'reference'],
+        )
+        self.assertTrue(any(
+            'No account, analytics, cloud synchronization' in limitation
+            for limitation in config['limitations']
+        ))
 
     def test_search_exposes_exactly_ten_bounded_regional_temples(self):
         records = json.loads(

@@ -211,6 +211,7 @@ def initial_selection() -> tuple[set[str], deque[str]]:
         'data/mantra-practice.json',
         'data/daily-darshan.json',
         'data/responsive-homepage-images.json',
+        'data/reading-notes.json',
         'data/reading-workspace.json',
         'data/effective-route-registry-runtime.json',
         'data/temple-directory.json',

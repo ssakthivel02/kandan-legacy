@@ -10,7 +10,7 @@ The ten additional temple records are deliberately bounded. Their stable identit
 official-source backed, while history, rituals, schedules, visitor information and
 documentary photography remain under review.
 
-The release also loads reader code as an ES module, deploys the two previously omitted
+The release also loads reader code as an ES module, deploys the three previously omitted
 reader/runtime JSON files, reduces oversized hero height, rotates the offline cache
 and versions the four modified homepage assets so existing service workers cannot
 replay the pre-Phase-19 reveal contract.
