@@ -23,6 +23,7 @@ REPORT = ROOT / 'reports/phase-h-validation'
 CRITICAL_HTML = [
     'index.html', '404.html', 'offline.html', 'murugan-song-library.html',
     'devotional-listening.html', 'mantra-practice.html',
+    'daily.html',
     'song-source-requests.html',
     'platform-hub.html', 'platform-roadmap.html', 'route-recovery.html',
     'content-completeness.html', 'site-directory.html', 'ai-search.html',
@@ -41,6 +42,9 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'assets/css/mantra-practice-2026.css',
     'assets/js/mantra-practice-2026.mjs',
     'assets/js/mantra-practice-core.mjs',
+    'assets/css/daily-darshan-2026.css',
+    'assets/js/daily-darshan-2026.mjs',
+    'assets/js/daily-darshan-core.mjs',
     'assets/js/song-source-requests-2026.js',
     'assets/js/platform-hub-2026.mjs',
     'assets/js/platform-roadmap-2026.mjs',
@@ -52,6 +56,7 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'data/platform-capability-matrix.json',
     'data/murugan-song-library.json', 'data/devotional-listening-paths.json',
     'data/song-source-requests.json', 'data/mantra-practice.json',
+    'data/daily-darshan.json',
     'data/murugan-mantras.json', 'data/search-index.json',
     'data/thiruppugazh.json', 'data/read-aloud-playlist.json',
     'data/audio-catalog.json',
@@ -59,6 +64,7 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'schemas/devotional-listening-path.schema.json',
     'schemas/song-source-request.schema.json',
     'schemas/mantra-practice.schema.json', 'deployment-manifest.json'
+    ,'schemas/daily-darshan.schema.json'
 ]
 REFERENCE_RE = re.compile(
     r'''(?:href|src|poster|action|data-src|data-href)\s*=\s*["']([^"']+)["']''',
@@ -333,6 +339,7 @@ def main() -> None:
             'murugan-song-library.html', 'platform-hub.html',
             'devotional-listening.html', 'song-source-requests.html',
             'mantra-practice.html',
+            'daily.html',
             'platform-roadmap.html', 'route-recovery.html',
             'content-completeness.html', 'premium-platform-2026'
         ):

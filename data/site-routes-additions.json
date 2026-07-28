@@ -2,7 +2,7 @@
   "release": 246,
   "generated": "2026-07-22",
   "strategy": "append-only-governed-route-additions",
-  "recordCount": 16,
+  "recordCount": 17,
   "records": [
     {
       "path": "/murugan-song-library.html",
@@ -156,6 +156,16 @@
       "summary": "Tamil-first private 6–108 mantra counter using six existing published source records, optional device speech and vibration, bounded browser-local history and safe metadata export.",
       "readingEligible": true,
       "sourceDataPath": "/data/mantra-practice.json"
+    },
+    {
+      "path": "/daily.html",
+      "titleTa": "இன்றைய முருகன் தரிசனம்",
+      "titleEn": "Daily Murugan Darshan",
+      "category": "Devotional",
+      "status": "published-source-linked",
+      "summary": "Tamil-first morning and evening practice rotating across six governed temple, mantra and Thiruppugazh paths with device read-aloud and browser-local completion metadata.",
+      "readingEligible": true,
+      "sourceDataPath": "/data/daily-darshan.json"
     }
   ],
   "limitations": [

@@ -6,9 +6,9 @@
     "filesDeleted": 0,
     "contentGenerated": 0
   },
-  "capabilityCount": 32,
+  "capabilityCount": 33,
   "statusCounts": {
-    "connected": 32
+    "connected": 33
   },
   "records": [
     {
@@ -30,6 +30,28 @@
         "site-directory.html",
         "murugan-song-library.html",
         "explore.html",
+        "discovery.html"
+      ],
+      "status": "connected",
+      "nextAction": "Maintain validation, sources and user experience."
+    },
+    {
+      "id": "daily-darshan",
+      "title": "Daily governed Murugan practice",
+      "category": "Devotional",
+      "candidateRoutes": [
+        "daily.html"
+      ],
+      "existingFiles": [
+        "daily.html"
+      ],
+      "governedFiles": [
+        "daily.html"
+      ],
+      "visibleFromHubs": [
+        "index.html",
+        "platform-hub.html",
+        "murugan-song-library.html",
         "discovery.html"
       ],
       "status": "connected",

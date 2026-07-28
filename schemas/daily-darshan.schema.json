@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://omsaravanabhava.org/schemas/daily-darshan.schema.json",
+  "title": "Daily Murugan Darshan configuration",
+  "type": "object",
+  "required": [
+    "version",
+    "release",
+    "rotation",
+    "sourceBoundary",
+    "practiceBoundary",
+    "privacy",
+    "sourcePaths",
+    "periods",
+    "records"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "release": {
+      "const": "phase17"
+    },
+    "rotation": {
+      "const": "local-calendar-date-modulo-six"
+    },
+    "sourceBoundary": {
+      "type": "string",
+      "minLength": 60
+    },
+    "practiceBoundary": {
+      "type": "string",
+      "minLength": 80
+    },
+    "privacy": {
+      "type": "string",
+      "minLength": 60
+    },
+    "sourcePaths": {
+      "const": [
+        "data/murugan-mantras.json",
+        "data/read-aloud-playlist.json",
+        "data/search-index.json"
+      ]
+    },
+    "periods": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["id", "titleTa", "titleEn", "introTa", "introEn"],
+        "properties": {
+          "id": {
+            "enum": ["morning", "evening"]
+          },
+          "titleTa": {
+            "type": "string",
+            "minLength": 4
+          },
+          "titleEn": {
+            "type": "string",
+            "minLength": 4
+          },
+          "introTa": {
+            "type": "string",
+            "minLength": 20
+          },
+          "introEn": {
+            "type": "string",
+            "minLength": 20
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "records": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "templeId",
+          "templeNameTa",
+          "templeNameEn",
+          "templeRoute",
+          "templeImage",
+          "mantraId",
+          "songId",
+          "themeTa",
+          "themeEn",
+          "reflectionTa",
+          "reflectionEn",
+          "actionTa",
+          "actionEn"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "templeId": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "templeNameTa": {
+            "type": "string",
+            "minLength": 3
+          },
+          "templeNameEn": {
+            "type": "string",
+            "minLength": 3
+          },
+          "templeRoute": {
+            "type": "string",
+            "pattern": "^temples/[a-z0-9-]+\\.html$"
+          },
+          "templeImage": {
+            "type": "string",
+            "pattern": "^assets/images/temples/[a-z0-9-]+\\.webp$"
+          },
+          "mantraId": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "songId": {
+            "type": "string",
+            "pattern": "^thiruppugazh-[0-9]{4}$"
+          },
+          "themeTa": {
+            "type": "string",
+            "minLength": 6
+          },
+          "themeEn": {
+            "type": "string",
+            "minLength": 6
+          },
+          "reflectionTa": {
+            "type": "string",
+            "minLength": 30
+          },
+          "reflectionEn": {
+            "type": "string",
+            "minLength": 30
+          },
+          "actionTa": {
+            "type": "string",
+            "minLength": 20
+          },
+          "actionEn": {
+            "type": "string",
+            "minLength": 20
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -39,15 +39,15 @@
     "assets/css/phase10-trust-quality-2026.css": "f09429ac35b8b5615a1e038a174728b9b6ec9960",
     "assets/images/murugan-divine.webp": "bcbfcddd0561bf92fa3f56afed69f2dcba570563"
   },
-  "repositoryAlignmentCommit": "21919d464744893c3577a242db44e7b10e8f86e1",
+  "repositoryAlignmentCommit": "4a3953dcfb4fecbcaccbd27c2591e73a60041dca",
   "repositoryAlignmentStatus": "SOURCE_ALIGNED_LIVE_REVERIFY_REQUIRED",
-  "repositoryAlignmentReason": "The Phase 16 Vel delivery candidate rotates the shared experience script reference across all 44 premium pages and refreshes the service-worker cache so existing visitors receive the refined Vel emblem. Repository package validation uses this source-alignment map while preserving the historical live-production attestation until the candidate is merged and verified.",
+  "repositoryAlignmentReason": "The Phase 17 candidate replaces the legacy daily page with a governed Tamil-first daily practice, connects it through discovery and offline delivery, and replaces approximate homepage metrics with exact dataset-derived counts. Repository package validation uses this source-alignment map while preserving the historical live-production attestation until the candidate is merged and verified.",
   "repositoryAlignmentBlobs": {
-    "index.html": "6d70e873dade6ce1f4b945dfbb5ceb7258ec6472",
-    "platform-hub.html": "e560b0b248db1ff5dd74d7fdadf76037e37b5462",
+    "index.html": "378b0b3f576d2ccea98a97c38168ef17be3c5ea8",
+    "platform-hub.html": "fa512dd17118994fa05b3142fb342884fa98a11b",
     "operations-observability.html": "74330ae5618d7da7329ea4fe197cec0448e798f0",
-    "service-worker.js": "e2d0bc12c925008fc01fe98bc7b51f0b96e4b099",
-    "data/platform-capability-matrix.json": "4559c7e08aee27510c084d8db20f4314c49e4cb9",
+    "service-worker.js": "8bb4db0741ff49eea9cdc259455986d400ba308a",
+    "data/platform-capability-matrix.json": "c5fdcde6e71016e0ef2b234e6f8ba26ee6bc08a4",
     "assets/css/global-experience-2026.css": "6b43af1ca6d2c8fbe45067289160d2a05e3add73",
     "assets/js/global-experience-2026.js": "04802e961bb8fc9afdf77c383d024c32d8c459cd",
     "assets/images/brand-vel-mayil.svg": "6ea416e9e78d232c9e570437418f6eeea52506ad",
@@ -61,6 +61,7 @@
     "Production verification is point-in-time evidence, not continuous uptime monitoring.",
     "The Release 245 governance baseline remains historical while Release 251 is the current deployment overlay.",
     "Repository source alignment after the Android app compliance update is validated separately from the historical live-production attestation.",
-    "A fresh live deployment attestation is required after the current source candidate is merged and deployed."
+    "A fresh live deployment attestation is required after the current source candidate is merged and deployed.",
+    "Phase 17 daily selection is deterministic from the visitor's local calendar date; it is not a panchangam, astrology or recommendation service."
   ]
 }

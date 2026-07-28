@@ -18,6 +18,7 @@ REPORT = ROOT / 'reports/phase-c-h-capability-matrix'
 
 CAPABILITIES = [
     ('devotional-home', 'Devotional cinematic home', ['index.html'], 'Experience'),
+    ('daily-darshan', 'Daily governed Murugan practice', ['daily.html'], 'Devotional'),
     ('song-library', 'Murugan Song Library', ['murugan-song-library.html'], 'Devotional'),
     ('thiruppugazh-reader', 'Thiruppugazh reader and discovery', ['thiruppugazh.html'], 'Devotional'),
     ('kavasam-prayers', 'Kavasam, slokas and prayers', ['sloka-library.html'], 'Devotional'),

@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "release": "phase17",
+  "generated": "2026-07-28",
+  "titleTa": "இன்றைய முருகன் தரிசனம்",
+  "titleEn": "Daily Murugan Darshan",
+  "rotation": "local-calendar-date-modulo-six",
+  "sourceBoundary": "Every mantra, song and temple route is resolved from an existing governed dataset. Reflections are clearly labelled editorial prompts, not sacred quotations.",
+  "practiceBoundary": "This is a private devotional routine, not astrology, prophecy, personalised divine instruction, a measure of spiritual merit, medical advice or temple authority.",
+  "privacy": "Completion metadata stays in this browser. No account, analytics, location, birth data, notification permission or remote synchronisation is used.",
+  "sourcePaths": [
+    "data/murugan-mantras.json",
+    "data/read-aloud-playlist.json",
+    "data/search-index.json"
+  ],
+  "periods": [
+    {
+      "id": "morning",
+      "titleTa": "காலை வழிபாடு",
+      "titleEn": "Morning practice",
+      "introTa": "அமைதியாகத் தொடங்கி, ஒரு மந்திரம் கேட்டு, இன்றைய நல்ல செயலைத் தேர்ந்தெடுக்கவும்.",
+      "introEn": "Arrive quietly, listen to one governed mantra and choose one honest action for today."
+    },
+    {
+      "id": "evening",
+      "titleTa": "மாலை நன்றியுணர்வு",
+      "titleEn": "Evening gratitude",
+      "introTa": "இன்றைய நாளை நினைத்து, ஒரு பாடலை வாசித்து, நன்றியுடன் நிறைவு செய்யவும்.",
+      "introEn": "Review the day, open one source-linked hymn and close with gratitude."
+    }
+  ],
+  "records": [
+    {
+      "id": "tirupparankundram-beginning",
+      "templeId": "thirupparamkundram",
+      "templeNameTa": "திருப்பரங்குன்றம்",
+      "templeNameEn": "Tirupparankundram",
+      "templeRoute": "temples/thirupparamkundram.html",
+      "templeImage": "assets/images/temples/tirupparankundram.webp",
+      "mantraId": "om-saravanabhava",
+      "songId": "thiruppugazh-0006",
+      "themeTa": "தாழ்மையுடன் தொடங்குதல்",
+      "themeEn": "Begin with humility",
+      "reflectionTa": "அவசரமின்றி தொடங்கும் ஒரு சிறிய நல்ல செயல், நாளின் திசையை மாற்றலாம்.",
+      "reflectionEn": "One small good action begun without haste can change the direction of a day.",
+      "actionTa": "இன்று தொடங்க வேண்டிய ஒரு நேர்மையான செயலைத் தேர்ந்தெடு.",
+      "actionEn": "Choose one honest action that deserves a beginning today."
+    },
+    {
+      "id": "tiruchendur-courage",
+      "templeId": "thiruchendur",
+      "templeNameTa": "திருச்செந்தூர்",
+      "templeNameEn": "Tiruchendur",
+      "templeRoute": "temples/thiruchendur.html",
+      "templeImage": "assets/images/temples/tiruchendur.webp",
+      "mantraId": "vel-vel",
+      "songId": "thiruppugazh-0008",
+      "themeTa": "கருணையுடன் கூடிய துணிவு",
+      "themeEn": "Courage with compassion",
+      "reflectionTa": "உண்மையான துணிவு அவசரமாக தாக்குவதில் இல்லை; தெளிவாகவும் கருணையுடனும் நிற்பதில் உள்ளது.",
+      "reflectionEn": "Courage is not haste or aggression; it is standing clearly and compassionately.",
+      "actionTa": "பயத்தை மறைக்காமல், இன்று ஒரு பொறுப்பான படியை எடு.",
+      "actionEn": "Without hiding the fear, take one responsible step today."
+    },
+    {
+      "id": "palani-simplicity",
+      "templeId": "palani",
+      "templeNameTa": "பழனி",
+      "templeNameEn": "Palani",
+      "templeRoute": "temples/palani.html",
+      "templeImage": "assets/images/temples/palani.webp",
+      "mantraId": "muruga-sharanam",
+      "songId": "thiruppugazh-0009",
+      "themeTa": "எளிமையும் உள்ளார்ந்த தெளிவும்",
+      "themeEn": "Simplicity and inner clarity",
+      "reflectionTa": "தேவையற்றதைச் சுமக்காமல் விடும்போது, முக்கியமானது தெளிவாகத் தெரியும்.",
+      "reflectionEn": "When unnecessary weight is released, what matters becomes easier to see.",
+      "actionTa": "இன்று ஒரு தேவையற்ற சுமையை குறைத்து, முக்கியமான ஒன்றில் கவனம் செலுத்து.",
+      "actionEn": "Reduce one unnecessary burden and give attention to what matters."
+    },
+    {
+      "id": "swamimalai-learning",
+      "templeId": "swamimalai",
+      "templeNameTa": "சுவாமிமலை",
+      "templeNameEn": "Swamimalai",
+      "templeRoute": "temples/swamimalai.html",
+      "templeImage": "assets/images/temples/swamimalai.webp",
+      "mantraId": "kanda-gayatri",
+      "songId": "thiruppugazh-0010",
+      "themeTa": "அறிவும் கற்றலின் பொறுப்பும்",
+      "themeEn": "Knowledge with responsibility",
+      "reflectionTa": "கற்றல் என்பது பதிலைச் சேகரிப்பது மட்டும் அல்ல; உண்மையை மரியாதையுடன் சோதிப்பதும் ஆகும்.",
+      "reflectionEn": "Learning is not only collecting answers; it is testing truth with humility and care.",
+      "actionTa": "ஒரு கருத்தை பகிர்வதற்கு முன் அதன் ஆதாரத்தைச் சரிபார்.",
+      "actionEn": "Verify the source of one claim before repeating it."
+    },
+    {
+      "id": "tiruttani-peace",
+      "templeId": "thiruthani",
+      "templeNameTa": "திருத்தணி",
+      "templeNameEn": "Tiruttani",
+      "templeRoute": "temples/thiruthani.html",
+      "templeImage": "assets/images/temples/tiruttani.webp",
+      "mantraId": "skanda-sharanam",
+      "songId": "thiruppugazh-0012",
+      "themeTa": "வெற்றிக்குப் பின் அமைதி",
+      "themeEn": "Peace after struggle",
+      "reflectionTa": "வெற்றி முழுமையடைவது மனம் மீண்டும் அமைதியைத் தேர்ந்தெடுக்கும்போது தான்.",
+      "reflectionEn": "Victory becomes complete only when the mind chooses peace again.",
+      "actionTa": "ஒரு பதிலை அனுப்புவதற்கு முன் மூன்று மெதுவான மூச்சுகள் எடு.",
+      "actionEn": "Take three unhurried breaths before sending one difficult reply."
+    },
+    {
+      "id": "pazhamudircholai-gratitude",
+      "templeId": "pazhamudircholai",
+      "templeNameTa": "பழமுதிர்சோலை",
+      "templeNameEn": "Pazhamudircholai",
+      "templeRoute": "temples/pazhamudircholai.html",
+      "templeImage": "assets/images/temples/pazhamudircholai.webp",
+      "mantraId": "shanmuga-sharanam",
+      "songId": "thiruppugazh-0013",
+      "themeTa": "நன்றியும் பகிர்வும்",
+      "themeEn": "Gratitude and generosity",
+      "reflectionTa": "நன்றியுணர்வு பெற்றதை மட்டும் நினைவுபடுத்தாது; பகிர வேண்டிய பொறுப்பையும் நினைவுபடுத்துகிறது.",
+      "reflectionEn": "Gratitude remembers not only what was received, but also the responsibility to share.",
+      "actionTa": "இன்று கிடைத்த ஒரு நன்மையை நினைத்து, ஒரு சிறிய உதவியைச் செய்.",
+      "actionEn": "Remember one good thing received today and offer one small act of help."
+    }
+  ]
+}
