@@ -107,6 +107,12 @@ jobs:
           python -m json.tool schemas/mantra-practice.schema.json > /dev/null
           python -m unittest tests.phase_c_h.test_phase16_publication
 
+      - name: Validate Phase 17 daily-darshan contracts
+        run: |
+          python -m json.tool data/daily-darshan.json > /dev/null
+          python -m json.tool schemas/daily-darshan.schema.json > /dev/null
+          python -m unittest tests.phase_c_h.test_phase17_publication
+
       - name: Reconcile planned versus connected capabilities
         run: python tools/phase-c-h/build_capability_matrix.py
 
@@ -136,6 +142,8 @@ jobs:
           node --check assets/js/song-source-requests-2026.js
           node --check assets/js/mantra-practice-core.mjs
           node --check assets/js/mantra-practice-2026.mjs
+          node --check assets/js/daily-darshan-core.mjs
+          node --check assets/js/daily-darshan-2026.mjs
           node --check assets/js/advanced-search.js
           node --check assets/js/404-suggestions.js
           node --check assets/js/effective-route-registry.mjs
@@ -146,13 +154,14 @@ jobs:
           node --check assets/js/platform-roadmap-2026.mjs
           node --check service-worker.js
 
-      - name: Run Phase 15 and 16 interaction regressions
+      - name: Run Phase 15 to 17 interaction regressions
         run: |
           node --test \
             tests/js/divine-guidance.test.mjs \
             tests/js/devotional-listening.test.mjs \
             tests/js/song-source-requests.test.mjs \
-            tests/js/mantra-practice.test.mjs
+            tests/js/mantra-practice.test.mjs \
+            tests/js/daily-darshan.test.mjs
 
       - name: Run Phase H static production gate
         run: python tools/phase-c-h/validate_public_site.py

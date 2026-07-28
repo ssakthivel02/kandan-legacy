@@ -757,5 +757,24 @@
       "Skanda Sharanam"
     ],
     "status": "published-source-linked"
+  },
+  {
+    "kind": "Devotional Practice",
+    "id": "daily-murugan-darshan",
+    "titleTa": "இன்றைய முருகன் தரிசனம்",
+    "titleEn": "Daily Murugan Darshan",
+    "summary": "Private Tamil-first morning and evening practice using six governed Murugan mantra, Thiruppugazh and Arupadai Veedu paths. No astrology, prediction or tracking.",
+    "route": "daily.html",
+    "tags": [
+      "Daily",
+      "Morning",
+      "Evening",
+      "Darshan",
+      "Tamil",
+      "Private practice",
+      "Arupadai Veedu",
+      "Thiruppugazh"
+    ],
+    "status": "published-source-linked"
   }
 ]

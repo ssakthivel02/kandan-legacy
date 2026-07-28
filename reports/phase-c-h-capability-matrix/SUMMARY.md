@@ -1,8 +1,8 @@
 # Phase C-H — Planned vs Connected Capability Matrix
 
 - Repository files deleted: **0**
-- Capabilities audited: **32**
-- **connected:** 32
+- Capabilities audited: **33**
+- **connected:** 33
 
 ## Highest-priority queues
 
