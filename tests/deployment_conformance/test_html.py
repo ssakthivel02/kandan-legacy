@@ -38,6 +38,20 @@ class HtmlTests(unittest.TestCase):
                 for item in findings
             ))
 
+    def test_versioned_module_page_passes(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "page.html").write_text(
+                '<body data-release="238">'
+                '<script type="module" '
+                'src="assets/js/page.mjs?v=20260728-p19-1"></script>',
+                encoding="utf-8",
+            )
+            self.assertEqual(validate_consumer_html(
+                root,
+                {"/page.html": "/assets/js/page.mjs"},
+            ), [])
+
 
 if __name__ == "__main__":
     unittest.main()
