@@ -1,0 +1,6 @@
+Contact: mailto:ssakthiveluk02@gmail.com
+Preferred-Languages: en, ta
+Canonical: https://omsaravanabhava.org/.well-known/security.txt
+Policy: https://omsaravanabhava.org/privacy.html
+Expires: 2027-07-28T23:59:59Z
+Acknowledgments: https://omsaravanabhava.org/support.html
