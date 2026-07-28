@@ -18,9 +18,11 @@
   <link rel="stylesheet" href="assets/css/release-247.css">
   <link rel="stylesheet" href="assets/css/premium-platform-2026.css">
   <link rel="stylesheet" href="assets/css/premium-pages-2026.css">
+  <link rel="stylesheet" href="assets/css/content-reliability-2026.css?v=20260728-1">
   <script defer src="assets/js/release-247.js"></script>
   <script defer src="assets/js/pwa-register.js"></script>
   <script type="module" src="assets/js/premium-platform-2026.mjs"></script>
+  <script type="module" src="assets/js/content-reliability-2026.mjs?v=20260728-1"></script>
   <link rel="stylesheet" href="assets/css/global-experience-2026.css?v=20260727-1">
   <link rel="stylesheet" href="assets/css/phase6-experience-2026.css?v=20260726-1">
   <link rel="stylesheet" href="assets/css/phase7-sacred-places-2026.css?v=20260727-1">
@@ -31,7 +33,7 @@
 <!-- Reading progress bar -->
 <header class="header" data-header>
   <a class="brand" href="index.html" aria-label="Om Saravana Bhava — Home">
-    <span class="seal" aria-hidden="true">ॐ</span>
+    <span class="seal osb-brand-symbol" aria-hidden="true"><img src="/assets/images/brand-vel-mayil.svg?v=20260727-1" alt="" width="50" height="50" decoding="async"></span>
     <span><strong>ஓம் சரவணபவ</strong><small>Om Saravana Bhava</small></span>
   </a>
   <button class="menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation menu">Menu</button>
@@ -155,6 +157,99 @@
             <p>Grace, abundance and harmony with nature.</p>
             <a href="temple-detail.html?id=pazhamudircholai">Open temple guide →</a>
           </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="regional-temple-directory" aria-labelledby="regional-temples-heading">
+      <div class="intro">
+        <div>
+          <p class="eyebrow">Official-identity directory</p>
+          <h2 id="regional-temples-heading">Ten more Murugan temples to discover.</h2>
+          <p>These records confirm stable temple identities from Government of Tamil Nadu HR&amp;CE sources. Historical narratives, rituals, opening times, travel advice and documentary photography remain clearly under review.</p>
+        </div>
+      </div>
+
+      <div class="content-reliability-note" role="note">
+        <strong>Publication boundary:</strong> six Arupadai Veedu routes are source-linked guides. The ten records below are identity-verified directory entries, not complete visitor guides.
+      </div>
+
+      <div class="regional-temple-toolbar" aria-label="Regional temple filters">
+        <label for="regionalTempleSearch">Search temple or district
+          <input id="regionalTempleSearch" type="search" placeholder="Marudhamalai, Erode, hill…" autocomplete="off">
+        </label>
+        <label for="regionalTempleSetting">Setting
+          <select id="regionalTempleSetting">
+            <option value="All">All settings</option>
+            <option value="Hill temple">Hill temple</option>
+            <option value="Village temple">Village temple</option>
+            <option value="Urban temple">Urban temple</option>
+          </select>
+        </label>
+        <button id="regionalTempleReset" type="button">Reset</button>
+      </div>
+      <p id="regionalTempleCount" role="status" aria-live="polite">10 of 10 official-identity temple records shown.</p>
+
+      <div class="regional-temple-grid">
+        <article class="regional-temple-card" data-regional-temple data-category="Hill temple" data-search="Marudhamalai மருதமலை Coimbatore hill temple TM009762">
+          <span class="pill">Official identity</span><h3>Marudhamalai</h3>
+          <p class="ta" lang="ta">மருதமலை சுப்பிரமணியசுவாமி திருக்கோயில்</p>
+          <p>Coimbatore · Hill temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=marudhamalai">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Hill temple" data-search="Viralimalai விராலிமலை Pudukkottai hill temple TM025691">
+          <span class="pill">Official identity</span><h3>Viralimalai</h3>
+          <p class="ta" lang="ta">விராலிமலை சுப்பிரமணியசுவாமி திருக்கோயில்</p>
+          <p>Pudukkottai · Hill temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=viralimalai">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Hill temple" data-search="Vallimalai வள்ளிமலை Vellore hill temple TM001388">
+          <span class="pill">Official identity</span><h3>Vallimalai</h3>
+          <p class="ta" lang="ta">வள்ளிமலை சுப்பிரமணியசுவாமி திருக்கோயில்</p>
+          <p>Vellore · Hill temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=vallimalai">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Hill temple" data-search="Thindal திண்டல் Erode hill temple TM010234">
+          <span class="pill">Official identity</span><h3>Thindal</h3>
+          <p class="ta" lang="ta">திண்டல் வேலாயுதசுவாமி திருக்கோயில்</p>
+          <p>Erode · Hill temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=thindal">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Hill temple" data-search="Kundrathur குன்றத்தூர் Kancheepuram hill temple TM001885">
+          <span class="pill">Official identity</span><h3>Kundrathur</h3>
+          <p class="ta" lang="ta">குன்றத்தூர் சுப்பிரமணிய சுவாமி திருக்கோயில்</p>
+          <p>Kancheepuram · Hill temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=kundrathur">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Village temple" data-search="Vallakottai வல்லக்கோட்டை Kancheepuram village temple TM001797">
+          <span class="pill">Official identity</span><h3>Vallakottai</h3>
+          <p class="ta" lang="ta">வல்லக்கோட்டை சுப்பிரமணியசுவாமி திருக்கோயில்</p>
+          <p>Kancheepuram · Village temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=vallakottai">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Hill temple" data-search="Chennimalai சென்னிமலை Erode hill temple TM010228">
+          <span class="pill">Official identity</span><h3>Chennimalai</h3>
+          <p class="ta" lang="ta">சென்னிமலை சுப்பிரமணியசுவாமி திருக்கோயில்</p>
+          <p>Erode · Hill temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=chennimalai">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Village temple" data-search="Ettukudi எட்டுக்குடி Nagapattinam village temple TM014581">
+          <span class="pill">Official identity</span><h3>Ettukudi</h3>
+          <p class="ta" lang="ta">எட்டுக்குடி சுப்பிரமணியசுவாமி திருக்கோயில்</p>
+          <p>Nagapattinam · Village temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=ettukudi">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Urban temple" data-search="Kumarakottam குமரகோட்டம் Kancheepuram urban temple TM001701">
+          <span class="pill">Official identity</span><h3>Kumarakottam</h3>
+          <p class="ta" lang="ta">குமரகோட்டம் சுப்பிரமணிய சுவாமி திருக்கோயில்</p>
+          <p>Kancheepuram · Urban temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=kumarakottam">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Urban temple" data-search="Pookara Street பூக்காரத்தெரு Thanjavur urban temple TM014103">
+          <span class="pill">Official identity</span><h3>Pookara Street, Thanjavur</h3>
+          <p class="ta" lang="ta">பூக்காரத்தெரு சுப்பிரமணிய சுவாமி திருக்கோயில்</p>
+          <p>Thanjavur · Urban temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=pookara-street-thanjavur">Open identity record →</a>
         </article>
       </div>
     </section>

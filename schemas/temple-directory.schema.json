@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://omsaravanabhava.org/schemas/temple-directory.schema.json",
+  "title": "Om Saravana Bhava Temple Directory",
+  "type": "object",
+  "required": [
+    "release",
+    "totalDiscoverableRecords",
+    "tiers",
+    "regionalRecordIds",
+    "reviewBoundary"
+  ],
+  "properties": {
+    "release": {
+      "type": "integer",
+      "minimum": 252
+    },
+    "totalDiscoverableRecords": {
+      "const": 16
+    },
+    "tiers": {
+      "type": "object",
+      "required": [
+        "publishedSourceLinkedGuides",
+        "officialIdentityRecords"
+      ]
+    },
+    "regionalRecordIds": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 2
+      }
+    },
+    "reviewBoundary": {
+      "type": "object",
+      "required": [
+        "verified",
+        "notYetPublishedAsVerified"
+      ]
+    },
+    "noPlaceholderPages": {
+      "const": true
+    },
+    "noUnverifiedSacredClaims": {
+      "const": true
+    }
+  },
+  "additionalProperties": true
+}

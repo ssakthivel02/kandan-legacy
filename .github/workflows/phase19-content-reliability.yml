@@ -1,0 +1,44 @@
+name: Phase 19 Content Reliability
+
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "temples.html"
+      - "thiruppugazh.html"
+      - "murugan-mantras.html"
+      - "sloka-library.html"
+      - "assets/css/**"
+      - "assets/js/**"
+      - "data/**"
+      - "schemas/**"
+      - "service-worker.js"
+      - "tools/phase-c-h/**"
+      - "tests/js/content-reliability.test.mjs"
+      - "tests/phase_c_h/test_phase19_publication.py"
+      - ".github/workflows/phase19-content-reliability.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reliability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run Phase 19 JavaScript tests
+        run: node --test tests/js/content-reliability.test.mjs
+      - name: Run Phase 19 publication tests
+        run: python -B -m unittest tests.phase_c_h.test_phase19_publication -v
+      - name: Build deterministic Pages artifact
+        run: python -B tools/phase-c-h/build_public_site.py
+      - name: Validate public artifact
+        run: python -B tools/phase-c-h/validate_public_site.py

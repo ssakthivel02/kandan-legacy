@@ -15,6 +15,7 @@
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/css/osb44.css">
 <link rel="stylesheet" href="assets/css/premium-pages-2026.css">
+<link rel="stylesheet" href="assets/css/content-reliability-2026.css?v=20260728-1">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://omsaravanabhava.org/thiruppugazh.html#webpage","url":"https://omsaravanabhava.org/thiruppugazh.html","name":"Thiruppugazh Digital Library","alternateName":"திருப்புகழ் மின்னியல் நூலகம்","description":"Read the first verified source-linked Thiruppugazh songs digitised from the user-uploaded Arunagirinathar compilation, with venue and rhythmic metadata.","inLanguage":["ta","en"],"dateModified":"2026-07-11","isPartOf":{"@id":"https://omsaravanabhava.org/#website"},"about":{"@type":"Book","name":"Thiruppugazh","alternateName":"திருப்புகழ்","author":{"@type":"Person","name":"Arunagirinathar"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://omsaravanabhava.org/"},{"@type":"ListItem","position":2,"name":"Slokas","item":"https://omsaravanabhava.org/sloka-library.html"},{"@type":"ListItem","position":3,"name":"Thiruppugazh","item":"https://omsaravanabhava.org/thiruppugazh.html"}]}]}</script>
 <script defer src="assets/js/osb44.js"></script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -27,12 +28,13 @@
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <script defer src="assets/js/pwa-register.js"></script>
 <script defer src="assets/js/premium-interactions.js"></script>
-<script defer src="assets/js/reader-experience.js"></script>
+<script type="module" src="assets/js/reader-experience.js"></script>
+<script type="module" src="assets/js/content-reliability-2026.mjs?v=20260728-1"></script>
 <script defer src="assets/js/desktop-layout.js"></script>
   <link rel="stylesheet" href="assets/css/global-experience-2026.css?v=20260727-1">
   <link rel="stylesheet" href="assets/css/phase6-experience-2026.css?v=20260726-1">
 </head>
-<body data-module="thiruppugazh" class="osb-phase6">
+<body data-module="static-thiruppugazh" class="osb-phase6">
 
 <!-- Reading progress bar -->
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -82,16 +84,90 @@
     <button type="button" class="btn secondary" id="tgReset" aria-label="Reset all filters">Reset</button>
   </section>
 
-  <p id="tgCount" role="status" aria-live="polite" aria-atomic="true"></p>
+  <p id="tgCount" role="status" aria-live="polite" aria-atomic="true">12 of 12 verified songs shown.</p>
 
-  <!-- Song grid (populated by osb44.js) -->
-  <section id="thiruppugazhGrid" class="grid" aria-busy="true" aria-label="Thiruppugazh songs">
-    <div class="loading" role="status">Loading verified songs…</div>
+  <div class="content-reliability-note" role="note">
+    <strong>Reliable reading:</strong> all twelve source-linked songs are included in this page before JavaScript runs. Search and venue controls progressively filter this published list.
+  </div>
+
+  <section id="thiruppugazhGrid" class="grid" aria-busy="false" aria-label="Thiruppugazh songs">
+    <article class="card thiruppugazh-card" data-song-card data-category="Thiruvarunai" data-search="6 முத்தைத்தரு Muththaiththaru திருவருணை Thiruvarunai">
+      <span class="pill">திருப்புகழ் 6</span><span class="pill">திருவருணை</span>
+      <h3>முத்தைத்தரு</h3><p>Muththaiththaru</p>
+      <p>A prayer to Murugan as the supreme guru and protector, joining sacred wisdom with images of divine victory.</p>
+      <a class="btn" href="thiruppugazh/0006-muththaiththaru.html">Read song</a>
+    </article>
+    <article class="card thiruppugazh-card" data-song-card data-category="Thirupparankundram" data-search="7 அருக்கு மங்கையர் Arukku Mangkaiyar திருப்பரங்குன்றம் Thirupparankundram">
+      <span class="pill">திருப்புகழ் 7</span><span class="pill">திருப்பரங்குன்றம்</span>
+      <h3>அருக்கு மங்கையர்</h3><p>Arukku Mangkaiyar</p>
+      <p>A confession of entanglement that turns toward Murugan, Tamil poetry and the saving presence of Tirupparankundram.</p>
+      <a class="btn" href="thiruppugazh/0007-arukku-mangkaiyar.html">Read song</a>
+    </article>
+    <article class="card thiruppugazh-card" data-song-card data-category="Thirupparankundram" data-search="8 உனைத் தினம் Unaith Thinam திருப்பரங்குன்றம் Thirupparankundram">
+      <span class="pill">திருப்புகழ் 8</span><span class="pill">திருப்பரங்குன்றம்</span>
+      <h3>உனைத் தினம்</h3><p>Unaith Thinam</p>
+      <p>A candid admission of neglected worship and a plea that Murugan arrive on the peacock when fear closes in.</p>
+      <a class="btn" href="thiruppugazh/0008-unaith-thinam.html">Read song</a>
+    </article>
+    <article class="card thiruppugazh-card" data-song-card data-category="Thirupparankundram" data-search="9 கருவடைந்து Karuvadaindhu திருப்பரங்குன்றம் Thirupparankundram">
+      <span class="pill">திருப்புகழ் 9</span><span class="pill">திருப்பரங்குன்றம்</span>
+      <h3>கருவடைந்து</h3><p>Karuvadaindhu</p>
+      <p>A reflection on birth, growth, desire and suffering that asks when Murugan’s grace will settle in the heart.</p>
+      <a class="btn" href="thiruppugazh/0009-karuvadaindhu.html">Read song</a>
+    </article>
+    <article class="card thiruppugazh-card" data-song-card data-category="Thirupparankundram" data-search="10 கறுக்கும் அஞ்சன Karukkum Anjana திருப்பரங்குன்றம் Thirupparankundram">
+      <span class="pill">திருப்புகழ் 10</span><span class="pill">திருப்பரங்குன்றம்</span>
+      <h3>கறுக்கும் அஞ்சன</h3><p>Karukkum Anjana</p>
+      <p>A plea for release from deceptive attraction, followed by praise of Murugan’s radiant spear and victorious power.</p>
+      <a class="btn" href="thiruppugazh/0010-karukkum-anjana.html">Read song</a>
+    </article>
+    <article class="card thiruppugazh-card" data-song-card data-category="Thirupparankundram" data-search="11 கனகந்திரள் Kanakan Thiral திருப்பரங்குன்றம் Thirupparankundram">
+      <span class="pill">திருப்புகழ் 11</span><span class="pill">திருப்பரங்குன்றம்</span>
+      <h3>கனகந்திரள்</h3><p>Kanakan Thiral</p>
+      <p>A plea for grace amid suffering, praising the son of Shiva and Lord of fertile Tirupparankundram.</p>
+      <a class="btn" href="thiruppugazh/0011-kanakan-thiral.html">Read song</a>
+    </article>
+    <article class="card thiruppugazh-card" data-song-card data-category="Thirupparankundram" data-search="12 காதடருங்கயல் Kadhadarungkayal திருப்பரங்குன்றம் Thirupparankundram">
+      <span class="pill">திருப்புகழ் 12</span><span class="pill">திருப்பரங்குன்றம்</span>
+      <h3>காதடருங்கயல்</h3><p>Kadhadarungkayal</p>
+      <p>A prayer to escape turbulent desire and receive Murugan’s ankleted feet as the stable centre of devotion.</p>
+      <a class="btn" href="thiruppugazh/0012-kadhadarungkayal.html">Read song</a>
+    </article>
+    <article class="card thiruppugazh-card" data-song-card data-category="Thirupparankundram" data-search="13 சந்ததம் பந்த Sandhadham Bandha திருப்பரங்குன்றம் Thirupparankundram">
+      <span class="pill">திருப்புகழ் 13</span><span class="pill">திருப்பரங்குன்றம்</span>
+      <h3>சந்ததம் பந்த</h3><p>Sandhadham Bandha</p>
+      <p>A compact prayer to leave the restless chain of attachment and behold Kandan every day with sustained love.</p>
+      <a class="btn" href="thiruppugazh/0013-sandhadham-bandha.html">Read song</a>
+    </article>
+    <article class="card thiruppugazh-card" data-song-card data-category="Thirupparankundram" data-search="14 சருவும்படி Saruvumpadi திருப்பரங்குன்றம் Thirupparankundram">
+      <span class="pill">திருப்புகழ் 14</span><span class="pill">திருப்பரங்குன்றம்</span>
+      <h3>சருவும்படி</h3><p>Saruvumpadi</p>
+      <p>A prayer arising from restless longing, seeking Murugan’s radiant feet and grace at Tirupparankundram.</p>
+      <a class="btn" href="thiruppugazh/0014-saruvumpadi.html">Read song</a>
+    </article>
+    <article class="card thiruppugazh-card" data-song-card data-category="Thirupparankundram" data-search="15 தடக்கைப் பங்கயம் Thadakkai Pangkayam திருப்பரங்குன்றம் Thirupparankundram">
+      <span class="pill">திருப்புகழ் 15</span><span class="pill">திருப்பரங்குன்றம்</span>
+      <h3>தடக்கைப் பங்கயம்</h3><p>Thadakkai Pangkayam</p>
+      <p>A prayer to end worldly dependence and establish a life of service at Murugan’s ankleted feet.</p>
+      <a class="btn" href="thiruppugazh/0015-thadakkai-pangkayam.html">Read song</a>
+    </article>
+    <article class="card thiruppugazh-card" data-song-card data-category="Thirupparankundram" data-search="16 பதித்த செஞ்சந்த Padhiththa Senchandha திருப்பரங்குன்றம் Thirupparankundram">
+      <span class="pill">திருப்புகழ் 16</span><span class="pill">திருப்பரங்குன்றம்</span>
+      <h3>பதித்த செஞ்சந்த</h3><p>Padhiththa Senchandha</p>
+      <p>A confession of mental delusion that asks for Murugan’s lotus feet, with images of Deivayanai and Valli.</p>
+      <a class="btn" href="thiruppugazh/0016-padhiththa-senchandha.html">Read song</a>
+    </article>
+    <article class="card thiruppugazh-card" data-song-card data-category="Thirupparankundram" data-search="17 பொருப்புறுங் Poruppurung திருப்பரங்குன்றம் Thirupparankundram">
+      <span class="pill">திருப்புகழ் 17</span><span class="pill">திருப்பரங்குன்றம்</span>
+      <h3>பொருப்புறுங்</h3><p>Poruppurung</p>
+      <p>An appeal to turn from destructive attachment toward Murugan’s gracious lotus feet and sanctuary.</p>
+      <a class="btn" href="thiruppugazh/0017-poruppurung.html">Read song</a>
+    </article>
   </section>
 
   <noscript>
     <div class="card" role="status">
-      JavaScript is required for library filtering. The song pages remain available through the sitemap and source-linked internal pages.
+      Search and venue filtering require JavaScript. All twelve verified songs remain readable above.
     </div>
   </noscript>
 

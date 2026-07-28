@@ -776,5 +776,105 @@
       "Thiruppugazh"
     ],
     "status": "published-source-linked"
+  },
+  {
+    "kind": "Temple",
+    "id": "marudhamalai",
+    "titleTa": "மருதமலை சுப்பிரமணியசுவாமி திருக்கோயில்",
+    "titleEn": "Marudhamalai Subramaniaswamy Temple",
+    "summary": "Official temple identity record for Coimbatore. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=marudhamalai",
+    "tags": ["Coimbatore", "Hill temple", "TM009762"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "viralimalai",
+    "titleTa": "விராலிமலை சுப்பிரமணியசுவாமி திருக்கோயில்",
+    "titleEn": "Viralimalai Subramaniyaswamy Temple",
+    "summary": "Official temple identity record for Pudukkottai. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=viralimalai",
+    "tags": ["Pudukkottai", "Hill temple", "TM025691"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "vallimalai",
+    "titleTa": "வள்ளிமலை சுப்பிரமணியசுவாமி திருக்கோயில்",
+    "titleEn": "Vallimalai Subramaniaswamy Temple",
+    "summary": "Official temple identity record for Vellore. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=vallimalai",
+    "tags": ["Vellore", "Hill temple", "TM001388"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "thindal",
+    "titleTa": "திண்டல் வேலாயுதசுவாமி திருக்கோயில்",
+    "titleEn": "Thindal Velayuthasamy Temple",
+    "summary": "Official temple identity record for Erode. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=thindal",
+    "tags": ["Erode", "Hill temple", "TM010234"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "kundrathur",
+    "titleTa": "குன்றத்தூர் சுப்பிரமணிய சுவாமி திருக்கோயில்",
+    "titleEn": "Kundrathur Subramaniaswamy Temple",
+    "summary": "Official temple identity record for Kancheepuram. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=kundrathur",
+    "tags": ["Kancheepuram", "Hill temple", "TM001885"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "vallakottai",
+    "titleTa": "வல்லக்கோட்டை சுப்பிரமணியசுவாமி திருக்கோயில்",
+    "titleEn": "Vallakottai Subramaniyaswamy Temple",
+    "summary": "Official temple identity record for Kancheepuram. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=vallakottai",
+    "tags": ["Kancheepuram", "Village temple", "TM001797"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "chennimalai",
+    "titleTa": "சென்னிமலை சுப்பிரமணியசுவாமி திருக்கோயில்",
+    "titleEn": "Chennimalai Subramaniyaswamy Temple",
+    "summary": "Official temple identity record for Erode. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=chennimalai",
+    "tags": ["Erode", "Hill temple", "TM010228"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "ettukudi",
+    "titleTa": "எட்டுக்குடி சுப்பிரமணியசுவாமி திருக்கோயில்",
+    "titleEn": "Ettukudi Subramaniya Swamy Temple",
+    "summary": "Official temple identity record for Nagapattinam. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=ettukudi",
+    "tags": ["Nagapattinam", "Village temple", "TM014581"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "kumarakottam",
+    "titleTa": "குமரகோட்டம் சுப்பிரமணிய சுவாமி திருக்கோயில்",
+    "titleEn": "Kumarakottam Subramaniya Swami Temple",
+    "summary": "Official temple identity record for Kancheepuram. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=kumarakottam",
+    "tags": ["Kancheepuram", "Urban temple", "TM001701"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "pookara-street-thanjavur",
+    "titleTa": "பூக்காரத்தெரு சுப்பிரமணிய சுவாமி திருக்கோயில்",
+    "titleEn": "Pookara Street Subramaniya Swamy Temple",
+    "summary": "Official temple identity record for Thanjavur. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=pookara-street-thanjavur",
+    "tags": ["Thanjavur", "Urban temple", "TM014103"],
+    "status": "identity-verified-review-required"
   }
 ]

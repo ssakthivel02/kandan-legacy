@@ -1,0 +1,27 @@
+{
+  "release": 252,
+  "phase": "Phase 19",
+  "title": "Content reliability and temple discovery",
+  "generated": "2026-07-28",
+  "requirements": {
+    "essentialHomepageContentVisibleWithoutJavaScript": true,
+    "verifiedThiruppugazhSongsInInitialHtml": 12,
+    "discoverableTempleRecords": 16,
+    "publishedTempleGuideRecords": 6,
+    "officialIdentityReviewRecords": 10,
+    "readerScriptsLoadedAsModules": true,
+    "readingWorkspaceDataDeployed": true,
+    "effectiveRouteRuntimeDataDeployed": true
+  },
+  "contentSafety": {
+    "generatedSacredText": 0,
+    "ocrOnlyTextPromoted": 0,
+    "placeholderTempleGuidesPublished": 0,
+    "commercialAudioCopied": 0
+  },
+  "limitations": [
+    "Ten regional temple records verify stable identities only.",
+    "Time-sensitive temple information requires a fresh official-source review.",
+    "JavaScript enhances filtering but is not required to read the published lists."
+  ]
+}
