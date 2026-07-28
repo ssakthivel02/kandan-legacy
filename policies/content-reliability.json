@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "release": 252,
+  "failClosedRules": [
+    "Essential published content must exist in initial HTML.",
+    "JavaScript may filter or enhance content but must not be the only publication path.",
+    "Classic scripts must not contain module import or export syntax.",
+    "Every dynamic JSON dependency must exist in the Pages artifact.",
+    "Temple identity records must not imply verified history, rituals, schedules, travel advice or photography."
+  ],
+  "requiredStaticSongCount": 12,
+  "requiredTempleGuideCount": 6,
+  "requiredTempleIdentityCount": 10,
+  "requiredTempleDirectoryCount": 16,
+  "requiredRuntimeData": [
+    "/data/reading-workspace.json",
+    "/data/effective-route-registry-runtime.json",
+    "/data/temple-directory.json",
+    "/data/phase19-content-reliability.json"
+  ]
+}

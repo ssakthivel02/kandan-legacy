@@ -1,0 +1,99 @@
+/* Phase 19: essential devotional content remains readable before JavaScript. */
+.content-reliability-note {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(242, 189, 84, .28);
+  border-radius: 16px;
+  background: rgba(242, 189, 84, .07);
+  color: inherit;
+}
+
+.content-reliability-note strong {
+  color: var(--gold, #efb94f);
+}
+
+.regional-temple-directory {
+  margin-top: clamp(3rem, 7vw, 6rem);
+}
+
+.regional-temple-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(12rem, 1fr) auto;
+  gap: .75rem;
+  align-items: end;
+  margin: 1.25rem 0;
+}
+
+.regional-temple-toolbar label {
+  display: grid;
+  gap: .35rem;
+  font: 700 .82rem/1.3 system-ui, sans-serif;
+}
+
+.regional-temple-toolbar input,
+.regional-temple-toolbar select,
+.regional-temple-toolbar button {
+  min-height: 46px;
+  border: 1px solid rgba(242, 189, 84, .3);
+  border-radius: 12px;
+  padding: .7rem .8rem;
+  background: #0d0f16;
+  color: #fff8e9;
+}
+
+.regional-temple-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.regional-temple-card {
+  border: 1px solid rgba(242, 189, 84, .25);
+  border-radius: 18px;
+  padding: 1.1rem;
+  background: linear-gradient(145deg, rgba(35, 25, 35, .96), rgba(12, 13, 19, .98));
+}
+
+.regional-temple-card h3 {
+  margin: .55rem 0 .2rem;
+  color: #f4cf82;
+}
+
+.regional-temple-card .ta {
+  color: #fff8e9;
+  font-weight: 700;
+}
+
+.regional-temple-card p {
+  color: #d7cbbb;
+}
+
+.regional-temple-card .review-boundary {
+  font-size: .82rem;
+  color: #f1d8a2;
+}
+
+.regional-temple-card[hidden],
+[data-song-card][hidden] {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .regional-temple-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .regional-temple-toolbar,
+  .regional-temple-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

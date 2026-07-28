@@ -59,6 +59,12 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'data/song-source-requests.json', 'data/mantra-practice.json',
     'data/daily-darshan.json',
     'data/responsive-homepage-images.json',
+    'data/reading-workspace.json',
+    'data/effective-route-registry-runtime.json',
+    'data/temple-directory.json',
+    'data/phase19-content-reliability.json',
+    'data/temples/index.json',
+    'data/temples/regional/index.json',
     'data/murugan-mantras.json', 'data/search-index.json',
     'data/thiruppugazh.json', 'data/read-aloud-playlist.json',
     'data/audio-catalog.json',
@@ -68,6 +74,9 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'schemas/mantra-practice.schema.json', 'deployment-manifest.json'
     ,'schemas/daily-darshan.schema.json',
     'schemas/responsive-homepage-images.schema.json',
+    'schemas/temple-directory.schema.json',
+    'assets/css/content-reliability-2026.css',
+    'assets/js/content-reliability-2026.mjs',
     'assets/images/homepage-2026/murugan-family-hero-desktop.webp',
     'assets/images/homepage-2026/murugan-family-hero-mobile.webp',
     'assets/images/homepage-2026/song-library.webp',
@@ -355,6 +364,10 @@ def main() -> None:
             'daily.html',
             'platform-roadmap.html', 'route-recovery.html',
             'content-completeness.html', 'premium-platform-2026'
+            ,'content-reliability-2026',
+            'data/reading-workspace.json',
+            'data/effective-route-registry-runtime.json',
+            'data/temple-directory.json'
         ):
             if required not in text:
                 warnings.append(

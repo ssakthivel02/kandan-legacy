@@ -93,11 +93,12 @@ const installNetworkState = () => {
 
 const installReveal = () => {
   const candidates = document.querySelectorAll(
-    '.premium-card,.collection-card,.platform-tool-grid a,.song-card,.features article'
+    '[data-reveal],.premium-card,.collection-card,.platform-tool-grid a,.song-card,.features article'
   );
   candidates.forEach(node => node.setAttribute('data-reveal', ''));
   if (reducedMotion || !('IntersectionObserver' in globalThis)) {
     candidates.forEach(node => node.dataset.visible = 'true');
+    document.documentElement.dataset.revealReady = 'true';
     return;
   }
   const observer = new IntersectionObserver(entries => {
@@ -109,6 +110,7 @@ const installReveal = () => {
     });
   }, {rootMargin: '0px 0px -8% 0px', threshold: .08});
   candidates.forEach(node => observer.observe(node));
+  document.documentElement.dataset.revealReady = 'true';
 };
 
 const installSpotlights = () => {

@@ -1,0 +1,50 @@
+{
+  "release": 252,
+  "generated": "2026-07-28",
+  "totalDiscoverableRecords": 16,
+  "tiers": {
+    "publishedSourceLinkedGuides": {
+      "count": 6,
+      "index": "/data/temples/index.json",
+      "label": "Arupadai Veedu source-linked guides"
+    },
+    "officialIdentityRecords": {
+      "count": 10,
+      "index": "/data/temples/regional/index.json",
+      "label": "Official identity verified; content review required"
+    }
+  },
+  "regionalRecordIds": [
+    "marudhamalai",
+    "viralimalai",
+    "vallimalai",
+    "thindal",
+    "kundrathur",
+    "vallakottai",
+    "chennimalai",
+    "ettukudi",
+    "kumarakottam",
+    "pookara-street-thanjavur"
+  ],
+  "reviewBoundary": {
+    "verified": [
+      "temple identity",
+      "Tamil and English names",
+      "district",
+      "official temple identifier",
+      "official source URL"
+    ],
+    "notYetPublishedAsVerified": [
+      "historical narrative",
+      "sthala puranam",
+      "ritual details",
+      "festival schedule",
+      "opening times",
+      "contact details",
+      "travel advice",
+      "documentary photography"
+    ]
+  },
+  "noPlaceholderPages": true,
+  "noUnverifiedSacredClaims": true
+}

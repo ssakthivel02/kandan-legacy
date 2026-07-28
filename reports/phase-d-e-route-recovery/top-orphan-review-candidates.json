@@ -627,6 +627,25 @@
     "reachableFromGovernedEntry": false
   },
   {
+    "path": "regional-temple-detail.html",
+    "route": "/regional-temple-detail.html",
+    "classification": "orphan-content-candidate",
+    "reasons": [
+      "substantive HTML not yet governed"
+    ],
+    "title": "Regional Murugan Temple | Om Saravana Bhava",
+    "robots": "",
+    "lang": "ta",
+    "visibleTextCharacters": 478,
+    "mainCount": 1,
+    "h1Count": 1,
+    "imageCount": 0,
+    "registered": false,
+    "inSitemap": false,
+    "inboundLinks": 10,
+    "reachableFromGovernedEntry": true
+  },
+  {
     "path": "analytics.html",
     "route": "/analytics.html",
     "classification": "orphan-content-candidate",
@@ -1574,7 +1593,7 @@
     "registered": false,
     "inSitemap": false,
     "inboundLinks": 3,
-    "reachableFromGovernedEntry": false
+    "reachableFromGovernedEntry": true
   },
   {
     "path": "thiruppugazh/songs/song-024.html",
@@ -7939,7 +7958,7 @@
     "registered": false,
     "inSitemap": false,
     "inboundLinks": 1,
-    "reachableFromGovernedEntry": false
+    "reachableFromGovernedEntry": true
   },
   {
     "path": "literature/kandar-anuboothi/source-notes.html",
@@ -9469,25 +9488,6 @@
       "substantive HTML not yet governed"
     ],
     "title": "திருப்புகழ் பாடல் 353 | Digitized Thiruppugazh Volume 09",
-    "robots": "",
-    "lang": "ta",
-    "visibleTextCharacters": 367,
-    "mainCount": 1,
-    "h1Count": 1,
-    "imageCount": 0,
-    "registered": false,
-    "inSitemap": false,
-    "inboundLinks": 1,
-    "reachableFromGovernedEntry": false
-  },
-  {
-    "path": "literature/thiruppugazh/volume-10/song-0354.html",
-    "route": "/literature/thiruppugazh/volume-10/song-0354.html",
-    "classification": "orphan-content-candidate",
-    "reasons": [
-      "substantive HTML not yet governed"
-    ],
-    "title": "திருப்புகழ் பாடல் 354 | Digitized Thiruppugazh Volume 10",
     "robots": "",
     "lang": "ta",
     "visibleTextCharacters": 367,

@@ -211,6 +211,12 @@ def initial_selection() -> tuple[set[str], deque[str]]:
         'data/mantra-practice.json',
         'data/daily-darshan.json',
         'data/responsive-homepage-images.json',
+        'data/reading-workspace.json',
+        'data/effective-route-registry-runtime.json',
+        'data/temple-directory.json',
+        'data/phase19-content-reliability.json',
+        'data/temples/index.json',
+        'data/temples/regional/index.json',
         'data/murugan-mantras.json',
         'data/search-index.json',
         'data/thiruppugazh.json',
@@ -222,6 +228,9 @@ def initial_selection() -> tuple[set[str], deque[str]]:
         'schemas/mantra-practice.schema.json',
         'schemas/daily-darshan.schema.json',
         'schemas/responsive-homepage-images.schema.json',
+        'schemas/temple-directory.schema.json',
+        'assets/css/content-reliability-2026.css',
+        'assets/js/content-reliability-2026.mjs',
         'assets/css/mantra-practice-2026.css',
         'assets/js/mantra-practice-2026.mjs',
         'assets/js/mantra-practice-core.mjs',
@@ -243,6 +252,16 @@ def initial_selection() -> tuple[set[str], deque[str]]:
         'icons/icon-512.png',
     ):
         add_if_public(key, selected, queue)
+
+    regional = load_json('data/temples/regional/index.json', {})
+    for record in regional.get('records', []):
+        temple_id = str(record.get('id') or '').strip()
+        if temple_id:
+            add_if_public(
+                f'data/temples/regional/{temple_id}.json',
+                selected,
+                queue
+            )
 
     return selected, queue
 

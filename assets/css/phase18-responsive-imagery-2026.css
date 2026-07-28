@@ -5,6 +5,7 @@
 
 .hero {
   background: #080811;
+  min-height: min(680px, calc(100svh - 74px));
 }
 
 .hero-visual {
@@ -59,9 +60,9 @@
   }
 
   .hero {
-    min-height: 790px;
+    min-height: 720px;
     justify-content: flex-end;
-    padding-top: 21rem;
+    padding-top: 18rem;
   }
 
   .hero::before {
@@ -87,8 +88,8 @@
 
 @media (max-width: 440px) {
   .hero {
-    min-height: 760px;
-    padding-top: 19rem;
+    min-height: 700px;
+    padding-top: 17rem;
   }
 }
 
