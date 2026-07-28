@@ -20,7 +20,10 @@ def validate_service_worker(
     if not match or match.group("value") != expected:
         findings.append(Finding(path, "cache-release", f"Service worker cache release must be {expected}."))
     for url in contract.get("requiredPrecacheUrls", []):
-        if f'"{url}"' not in source and f"'{url}'" not in source:
+        versioned_url = re.compile(
+            rf"""(?P<quote>['"]){re.escape(url)}(?:\?[^'"]+)?(?P=quote)"""
+        )
+        if not versioned_url.search(source):
             findings.append(Finding(path, "required-precache", f"Required precache URL is missing: {url}"))
     for url in contract.get("forbiddenPrecacheUrls", []):
         if f'"{url}"' in source or f"'{url}'" in source:

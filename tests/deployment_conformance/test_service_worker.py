@@ -35,6 +35,17 @@ class ServiceWorkerTests(unittest.TestCase):
             for item in findings
         ))
 
+    def test_versioned_required_precache_passes(self):
+        source = (
+            "const RELEASE = '243';\n"
+            "const URLS = "
+            "['/assets/js/site-directory.mjs?v=20260728-p19-1'];\n"
+        )
+        self.assertEqual(
+            validate_service_worker(source, CONTRACT),
+            [],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

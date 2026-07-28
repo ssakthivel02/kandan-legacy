@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import re
 
 from .models import Finding
 
@@ -19,8 +20,12 @@ def validate_consumer_html(
             findings.append(Finding(relative, "consumer-page", "Consumer page is missing."))
             continue
         source = path.read_text(encoding="utf-8")
-        token = f'type="module" src="{module.lstrip("/")}"'
-        if token not in source:
+        module_path = re.escape(module.lstrip("/"))
+        token = re.compile(
+            rf"""<script\b(?=[^>]*\btype=['"]module['"])(?=[^>]*\bsrc=['"]{module_path}(?:\?[^'"]+)?['"])[^>]*>""",
+            re.IGNORECASE,
+        )
+        if not token.search(source):
             findings.append(Finding(relative, "consumer-module", f"Expected module reference is missing: {module}"))
         if 'data-release="237"' in source:
             findings.append(Finding(relative, "stale-page-release", "Consumer page still declares Release 237."))
