@@ -1,42 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
-<title id="title">Vel and Mayil emblem</title>
-<desc id="desc">A bright golden Vel beside a blue-green peacock feather on a cream devotional medallion.</desc>
-<defs>
-  <linearGradient id="medallion" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#fff9e8"/>
-    <stop offset="1" stop-color="#ffd77a"/>
-  </linearGradient>
-  <linearGradient id="velGold" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#fff3ad"/>
-    <stop offset=".45" stop-color="#f2bd54"/>
-    <stop offset="1" stop-color="#b86a08"/>
-  </linearGradient>
-  <linearGradient id="feather" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#59e1ca"/>
-    <stop offset=".48" stop-color="#1686a5"/>
-    <stop offset="1" stop-color="#143a7d"/>
-  </linearGradient>
-</defs>
+  <title id="title">Sacred Vel emblem</title>
+  <desc id="desc">A refined golden Murugan Vel on a deep maroon devotional seal.</desc>
+  <defs>
+    <radialGradient id="seal" cx="38%" cy="28%" r="78%">
+      <stop offset="0" stop-color="#7e2435"/>
+      <stop offset="0.58" stop-color="#4b1120"/>
+      <stop offset="1" stop-color="#230810"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0.18" y1="0" x2="0.82" y2="1">
+      <stop offset="0" stop-color="#fff5bd"/>
+      <stop offset="0.32" stop-color="#f7cf66"/>
+      <stop offset="0.68" stop-color="#d99520"/>
+      <stop offset="1" stop-color="#8d4b08"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff0a6"/>
+      <stop offset="0.48" stop-color="#d99a27"/>
+      <stop offset="1" stop-color="#7c3e08"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#120208" flood-opacity="0.65"/>
+    </filter>
+  </defs>
 
-<circle cx="64" cy="64" r="59" fill="url(#medallion)" stroke="#d89618" stroke-width="6"/>
-<circle cx="64" cy="64" r="50" fill="#fff8e7" stroke="#8f2436" stroke-opacity=".22" stroke-width="2"/>
+  <circle cx="64" cy="64" r="59" fill="#fff8e7" stroke="url(#rim)" stroke-width="5"/>
+  <circle cx="64" cy="64" r="51" fill="url(#seal)" stroke="#f3cc69" stroke-opacity="0.46" stroke-width="1.5"/>
+  <circle cx="64" cy="64" r="44" fill="none" stroke="#f5d77f" stroke-opacity="0.16" stroke-width="1"/>
 
-<!-- Mayil feather: deliberately thick for 40–50 px rendering -->
-<path d="M30 96C22 72 29 39 53 23C47 48 53 70 70 91C57 106 43 109 30 96Z"
-      fill="none" stroke="url(#feather)" stroke-width="10" stroke-linecap="round"/>
-<path d="M34 91C41 69 48 50 57 35"
-      fill="none" stroke="#0d566f" stroke-width="3" stroke-linecap="round"/>
-<ellipse cx="49" cy="52" rx="15" ry="20" transform="rotate(-25 49 52)"
-         fill="#176b82" stroke="#0d3f6d" stroke-width="3"/>
-<ellipse cx="49" cy="52" rx="9" ry="12" transform="rotate(-25 49 52)"
-         fill="#f2bd54"/>
-<ellipse cx="49" cy="52" rx="4" ry="7" transform="rotate(-25 49 52)"
-         fill="#8f2436"/>
+  <g fill="url(#gold)" stroke="#6f3505" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" filter="url(#shadow)">
+    <path d="M64 15C59 29 51 39 41 47C47 49 53 53 58 59L64 68L70 59C75 53 81 49 87 47C77 39 69 29 64 15Z"/>
+    <path d="M60.2 57H67.8V101H60.2Z"/>
+    <path d="M51 98H77L82 107H46Z"/>
+  </g>
 
-<!-- Vel: large, simple and high contrast -->
-<path d="M83 17C80 29 74 38 65 45L76 52L70 61L78 69L71 78L77 86L72 95L76 105H96L100 95L95 86L101 78L94 69L102 61L96 52L107 45C98 38 92 29 89 17Z"
-      fill="url(#velGold)" stroke="#8a4d05" stroke-width="3" stroke-linejoin="round"/>
-<path d="M86 34V104" stroke="#8a4d05" stroke-width="4" stroke-linecap="round"/>
-<path d="M75 105H98" stroke="#8f2436" stroke-width="6" stroke-linecap="round"/>
-<circle cx="86" cy="24" r="4" fill="#fff8d5"/>
+  <path d="M64 22V94" fill="none" stroke="#fff2ad" stroke-opacity="0.68" stroke-width="2" stroke-linecap="round"/>
+  <path d="M52 107H76" fill="none" stroke="#f7d778" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="64" cy="64" r="56" fill="none" stroke="#fff8df" stroke-opacity="0.52" stroke-width="1"/>
 </svg>
