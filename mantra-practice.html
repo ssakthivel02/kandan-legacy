@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ta">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>முருகன் ஜப அறை | Murugan Mantra Practice</title>
+  <meta name="description" content="A private Tamil-first Murugan mantra counter using six governed texts, bounded 6–108 sessions, device speech and browser-local history.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://omsaravanabhava.org/mantra-practice.html">
+  <meta name="theme-color" content="#09070d">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preload" as="image" href="assets/images/brand-vel-mayil.svg" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/release-246.css">
+  <link rel="stylesheet" href="assets/css/premium-platform-2026.css">
+  <link rel="stylesheet" href="assets/css/premium-pages-2026.css">
+  <link rel="stylesheet" href="assets/css/mantra-practice-2026.css?v=20260728-1">
+  <link rel="stylesheet" href="assets/css/global-experience-2026.css?v=20260727-1">
+  <script defer src="assets/js/release-246.js"></script>
+  <script type="module" src="assets/js/mantra-practice-2026.mjs?v=20260728-1"></script>
+  <script type="module" src="assets/js/premium-platform-2026.mjs"></script>
+</head>
+<body class="osb-phase6 japa-page">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header" data-header>
+  <a class="brand" href="index.html" aria-label="Om Saravana Bhava home">
+    <span class="brand-mark osb-brand-symbol" aria-hidden="true"><img src="/assets/images/brand-vel-mayil.svg?v=20260727-1" alt="" width="50" height="50"></span>
+    <span><strong>ஓம் சரவணபவ</strong><small>Om Saravana Bhava</small></span>
+  </a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">Menu</button>
+  <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a><a href="murugan-song-library.html">Songs</a><a href="murugan-mantras.html">Mantras</a><a href="devotional-listening.html">Listening</a><a href="ai-search.html">AI Search</a><a href="platform-hub.html">All Tools</a>
+  </nav>
+</header>
+
+<main id="main-content" data-mantra-practice data-loading>
+  <section class="japa-hero">
+    <div>
+      <p class="japa-eyebrow" lang="ta">வேல் · மந்திரம் · கவனம் · அமைதி</p>
+      <h1 lang="ta">முருகன்<br>ஜப அறை</h1>
+      <h2>A quiet, private mantra practice.</h2>
+      <p>Choose one of six already-published Murugan mantras, set a bounded count and practise at your own pace. The counter works without an account and stores completed-session metadata only in this browser.</p>
+      <div class="japa-actions">
+        <a class="japa-button" href="#practice-room">Begin practice</a>
+        <a class="japa-button" href="murugan-mantras.html">Verify source texts</a>
+      </div>
+      <p class="boundary-card">A devotional aid—not a score of spiritual merit, prophecy, personalised divine instruction, medical advice or a substitute for family tradition, teacher or temple authority.</p>
+    </div>
+    <div class="japa-emblem" aria-hidden="true">
+      <img src="assets/images/brand-vel-mayil.svg?v=20260727-1" alt="" width="420" height="420">
+    </div>
+  </section>
+
+  <section class="japa-trust" aria-label="Practice boundaries">
+    <article><strong>6</strong><span>published mantra records</span></article>
+    <article><strong>5</strong><span>bounded count options</span></article>
+    <article><strong>Local</strong><span>session metadata only</span></article>
+    <article><strong>0</strong><span>analytics or copied audio</span></article>
+  </section>
+
+  <p id="practiceLoadStatus" role="alert" hidden></p>
+
+  <div class="japa-shell">
+    <section aria-labelledby="choose-mantra-heading">
+      <p class="japa-eyebrow">Step 1 · Choose a published record</p>
+      <h2 id="choose-mantra-heading">ஆறு மந்திரங்களில் ஒன்றைத் தேர்ந்தெடுக்கவும்</h2>
+      <p>All six choices come directly from the governed Murugan Mantra Collection. The practice runtime cannot introduce its own sacred text.</p>
+      <div id="mantraChoices" class="mantra-choices" role="group" aria-label="Choose a Murugan mantra"></div>
+    </section>
+
+    <section id="practice-room" class="practice-console" aria-labelledby="practice-heading">
+      <div>
+        <p class="japa-eyebrow">Step 2 · Set a gentle boundary</p>
+        <span id="activeMantraCategory" class="mantra-category">Published mantra</span>
+        <h3 id="practice-heading" lang="ta"><span id="activeMantraTa">ஓம் சரவணபவ</span></h3>
+        <h4 id="activeMantraEn">Om Saravanabhava</h4>
+        <p>Choose a count. The session stops at the selected boundary and is recorded once only after completion.</p>
+        <div id="targetChoices" class="target-choices" role="group" aria-label="Choose repetition target"></div>
+        <div class="japa-actions">
+          <button id="speakMantra" class="japa-button" type="button" aria-pressed="false">தமிழில் கேட்க · Listen</button>
+          <a class="japa-button" href="murugan-mantras.html">Open source collection</a>
+        </div>
+        <label class="preference-row"><input id="vibrationEnabled" type="checkbox"> Use a short device vibration when supported</label>
+      </div>
+      <div class="counter-wrap">
+        <div id="counterProgress" class="counter-progress" role="progressbar" aria-valuemin="0" aria-valuemax="108" aria-valuenow="0">
+          <div class="counter-readout"><strong id="countValue">0</strong><span>of <b id="targetValue">6</b></span></div>
+        </div>
+        <button id="addCount" class="count-button" type="button">Count one · ஒன்று</button>
+        <div class="counter-actions">
+          <button id="subtractCount" class="japa-button" type="button" disabled>− One</button>
+          <button id="resetSession" class="japa-button" type="button">Reset current count</button>
+        </div>
+        <p id="sessionStatus" class="session-status" role="status" aria-live="polite">6 repetitions remaining.</p>
+      </div>
+    </section>
+
+    <section class="history-panel" aria-labelledby="history-heading">
+      <div>
+        <p class="japa-eyebrow">Private session history</p>
+        <h2 id="history-heading"><span id="historyCount">0</span> completed sessions</h2>
+        <p>Only mantra identity, target and completion time are retained. Exported files never contain sacred mantra text. Clear this history whenever you wish.</p>
+        <div class="japa-actions">
+          <button id="exportHistory" class="japa-button" type="button">Export session metadata</button>
+          <button id="clearHistory" class="japa-button danger" type="button">Clear local history</button>
+        </div>
+        <p id="historyStatus" role="status" aria-live="polite"></p>
+      </div>
+      <ol id="sessionHistory" class="history-list"></ol>
+    </section>
+
+    <section aria-labelledby="continue-heading">
+      <p class="japa-eyebrow">Continue with governed content</p>
+      <h2 id="continue-heading">From repetition to reading and song</h2>
+      <div class="mantra-choices">
+        <a class="japa-button" href="devotional-listening.html">Six guided devotional paths</a>
+        <a class="japa-button" href="murugan-song-library.html">12 verified full-song routes</a>
+        <a class="japa-button" href="song-source-requests.html">Track missing-song evidence</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<noscript><section class="boundary-card"><h2>JavaScript is disabled</h2><p>The interactive counter requires JavaScript. The six source-governed texts remain available in the <a href="murugan-mantras.html">Murugan Mantra Collection</a>.</p></section></noscript>
+<footer>
+  <p lang="ta">வேலவேல் முருகா! அரோகரா!</p>
+  <nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="murugan-mantras.html">Mantras</a><a href="murugan-song-library.html">Songs</a><a href="privacy.html">Privacy</a><a href="accessibility.html">Accessibility</a><a href="sources.html">Sources</a></nav>
+  <small>© 2026 Om Saravana Bhava</small>
+</footer>
+<script src="assets/js/premium-pages-2026.js"></script>
+<script defer src="assets/js/global-experience-2026.js?v=20260727-1"></script>
+</body>
+</html>

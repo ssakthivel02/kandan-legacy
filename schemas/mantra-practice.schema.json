@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://omsaravanabhava.org/schemas/mantra-practice.schema.json",
+  "title": "Murugan mantra practice configuration",
+  "type": "object",
+  "required": [
+    "version",
+    "release",
+    "sourcePath",
+    "sourceBoundary",
+    "practiceBoundary",
+    "privacy",
+    "allowedTargets",
+    "mantraIds",
+    "relatedRoutes"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "release": {
+      "const": "phase16"
+    },
+    "sourcePath": {
+      "const": "data/murugan-mantras.json"
+    },
+    "sourceBoundary": {
+      "type": "string",
+      "minLength": 30
+    },
+    "practiceBoundary": {
+      "type": "string",
+      "minLength": 50
+    },
+    "privacy": {
+      "type": "string",
+      "minLength": 30
+    },
+    "allowedTargets": {
+      "const": [
+        6,
+        12,
+        27,
+        54,
+        108
+      ]
+    },
+    "mantraIds": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 3
+      }
+    },
+    "relatedRoutes": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "route",
+          "label"
+        ],
+        "properties": {
+          "route": {
+            "type": "string",
+            "pattern": "^[a-z0-9/-]+\\.html$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 8
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": true
+}

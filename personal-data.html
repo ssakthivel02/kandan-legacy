@@ -86,6 +86,8 @@
 
 <section class="card"><h2>Practice plans are portable</h2><p>Release 228 registers bounded devotional practice plans as the seventh browser-local backup dataset.</p><a class="btn" href="devotional-practice-planner.html">Open Practice Planner</a></section>
 
+<section class="card"><h2>Mantra sessions export separately</h2><p>Phase 16 mantra history is intentionally not merged into the older seven-dataset backup schema. The <a href="mantra-practice.html">Mantra Practice</a> exports its own bounded session metadata without sacred text and provides a page-level clear control.</p><a class="btn" href="mantra-practice.html">Open Mantra Practice</a></section>
+
 <section class="card personal-data-boundary">
 <h2>Data and safety boundary</h2>
 <ul>
@@ -94,6 +96,7 @@
 <li>Selected devotional text, published page bodies, offline cache contents, credentials and unrelated browser-storage keys are excluded.</li>
 <li>Merge uses each dataset’s stable identifier and newest valid timestamp. Accessibility preferences are replaced as one bounded object.</li>
 <li>No upload, cloud synchronization, analytics, server account or collaborative service is used.</li>
+<li>Phase 16 mantra session metadata uses a separate export schema and is not silently included in this older backup format.</li>
 <li>A successful import is local operational evidence, not production certification.</li>
 </ul>
 </section>
