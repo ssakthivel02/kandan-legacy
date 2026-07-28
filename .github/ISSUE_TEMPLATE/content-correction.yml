@@ -1,0 +1,81 @@
+name: Devotional or temple content correction
+about: Propose a source-backed correction without overwriting review status
+labels:
+  - content-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections must preserve source, completeness, rights and review boundaries. Do not submit a remembered version as verified evidence.
+  - type: dropdown
+    id: content_type
+    attributes:
+      label: Content type
+      options:
+        - Devotional text
+        - Translation or meaning
+        - Author attribution
+        - Temple identity
+        - Temple address or geography
+        - Temple timing or contact
+        - Festival information
+        - Audio source or rights
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page URL or record ID
+      placeholder: https://omsaravanabhava.org/... or record-id
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current published value
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed correction
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Source evidence
+      description: Provide edition, page or verse number, official temple page, trust publication, inscription catalogue or other authoritative reference.
+    validations:
+      required: true
+  - type: dropdown
+    id: completeness
+    attributes:
+      label: Does the evidence establish a full work/record or only an extract/field?
+      options:
+        - Full work or complete record
+        - Extract or individual field only
+        - Uncertain
+    validations:
+      required: true
+  - type: dropdown
+    id: rights
+    attributes:
+      label: Rights status
+      options:
+        - Public domain or official open publication
+        - Permission documented
+        - Citation only; republication not established
+        - Unknown
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I understand that the correction may remain needs-review until source and rights checks are complete.
+          required: true
+        - label: I have not included private documents, passwords, access tokens or copyrighted full text without permission.
+          required: true

@@ -4,35 +4,128 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>தொழில்நுட்ப உதவி | Technical Support</title>
-  <meta name="description" content="Troubleshoot Om Saravana Bhava cache, offline, installation, missing-route, browser-local data and accessibility issues with privacy-preserving diagnostics.">
+  <meta name="description" content="Troubleshoot the Om Saravana Bhava website and Saravana Bhava Android app, including cache, offline, installation, local data, Tamil narration and route issues.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://omsaravanabhava.org/support.html">
   <meta name="theme-color" content="#120c18">
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="assets/css/release-246.css">
   <link rel="stylesheet" href="assets/css/premium-platform-2026.css">
+  <link rel="stylesheet" href="assets/css/global-experience-2026.css?v=20260728-2">
   <script defer src="assets/js/release-246.js"></script>
   <script type="module" src="assets/js/premium-platform-2026.mjs"></script>
   <script type="module" src="assets/js/support-tools-2026.mjs"></script>
+  <script defer src="assets/js/pwa-register.js"></script>
 </head>
-<body class="premium-page">
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header" data-header><a class="brand" href="index.html"><span class="brand-mark osb-brand-symbol" aria-hidden="true"><img src="/assets/images/brand-vel-mayil.svg?v=20260727-1" alt="" width="50" height="50" decoding="async"></span><span><strong>ஓம் சரவணபவ</strong><small>Om Saravana Bhava</small></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button><nav id="site-nav" class="site-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="help-centre.html">Help</a><a class="active" href="support.html">Support</a><a href="faq.html">FAQ</a><a href="contact.html">Corrections</a><a href="maintenance.html">Maintenance</a></nav></header>
-<main id="main-content">
-  <section class="premium-hero" style="--premium-hero-image:url('../assets/images/sacred-temple.webp')"><div class="premium-hero-content"><p class="premium-eyebrow">Offline · Cache · Install · Route · Local Data</p><h1 class="premium-title">Technical Support</h1><p class="premium-lead">Diagnose common website problems locally, recover missing routes and refresh cached content without sending browser diagnostics to a server.</p><div class="premium-actions"><a class="premium-button" href="#diagnostics">Run local diagnostics</a><a class="premium-button secondary" href="maintenance.html">Maintenance centre</a><a class="premium-button secondary" href="route-recovery.html">Route recovery</a></div></div></section>
-  <div class="premium-shell">
-    <section id="diagnostics" aria-labelledby="diagnostics-heading"><p class="premium-eyebrow">Privacy-preserving diagnostics</p><h2 id="diagnostics-heading">Current browser status</h2><p id="supportDiagnosticStatus" class="premium-status" role="status" aria-live="polite">Checking this browser locally…</p><div id="supportDiagnostics" class="premium-grid"><article class="premium-card">Loading diagnostics…</article></div></section>
-    <section aria-labelledby="quick-fixes-heading"><p class="premium-eyebrow">Safe quick fixes</p><h2 id="quick-fixes-heading">Use the smallest recovery action first.</h2><div class="premium-grid">
-      <article class="premium-card"><h3>Old homepage or old styles</h3><p>Reload once. When an old service-worker cache persists, clear only runtime/data caches before removing the full site storage.</p><button id="clearRuntimeCaches" class="premium-button secondary" type="button">Clear runtime caches</button></article>
-      <article class="premium-card"><h3>Page did not refresh</h3><p>Reload the current route after cache clearing. A hard refresh may be required when a proxy or CDN retains an earlier asset.</p><button id="reloadCurrentPage" class="premium-button secondary" type="button">Reload page</button></article>
-      <article class="premium-card"><h3>Missing or renamed route</h3><p>The 404 page checks an exact alias registry, then suggests related governed routes without fuzzy automatic redirects.</p><a class="premium-button secondary" href="site-directory.html">Open directory</a></article>
-      <article class="premium-card"><h3>Offline page unavailable</h3><p>Open the site once online so core routes and assets can enter the PWA cache. Optional routes may still require a network connection.</p><a class="premium-button secondary" href="offline.html">Open offline guide</a></article>
-      <article class="premium-card"><h3>Notes or favourites missing</h3><p>Browser-local data is tied to the browser profile and site storage. Restore a prior export where available.</p><a class="premium-button secondary" href="personal-data.html">Personal data tools</a></article>
-      <article class="premium-card"><h3>Content looks incorrect</h3><p>Do not overwrite a source-controlled text from memory. Prepare a correction with page, edition and evidence.</p><a class="premium-button secondary" href="contact.html">Prepare correction</a></article>
-    </div><p id="supportActionStatus" class="premium-status" role="status" aria-live="polite"></p></section>
-    <section class="premium-card"><h2>Escalation information to include</h2><p>Page URL, approximate time, browser/device, online/offline state, visible error, expected result, steps to reproduce and whether a cache refresh changed the behaviour. Never include passwords, private notes or unnecessary personal data.</p></section>
-  </div>
-</main>
-<footer><p>வேலவேல் முருகா! அருள்புரிவாய்!</p><nav aria-label="Footer navigation"><a href="help-centre.html">Help</a><a href="faq.html">FAQ</a><a href="contact.html">Corrections</a><a href="maintenance.html">Maintenance</a><a href="privacy.html">Privacy</a></nav><small>© 2026 Om Saravana Bhava</small></footer>
+<body class="premium-page osb-phase6">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="Om Saravana Bhava home">
+      <span class="brand-mark osb-brand-symbol" aria-hidden="true"><img src="/assets/images/brand-vel-mayil.svg?v=20260727-1" alt="" width="50" height="50" decoding="async"></span>
+      <span><strong>ஓம் சரவணபவ</strong><small>Om Saravana Bhava</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="android-app.html">Android App</a>
+      <a href="help-centre.html">Help</a>
+      <a class="active" href="support.html" aria-current="page">Support</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Corrections</a>
+      <a href="maintenance.html">Maintenance</a>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section class="premium-hero" style="--premium-hero-image:url('../assets/images/sacred-temple.webp')">
+      <div class="premium-hero-content">
+        <p class="premium-eyebrow">Website · Android App · Offline · Cache · Local Data</p>
+        <h1 class="premium-title">Technical Support</h1>
+        <p class="premium-lead">Diagnose common website and Android app problems, recover missing routes, refresh cached content and prepare a reproducible support report without sending unnecessary personal data.</p>
+        <div class="premium-actions">
+          <a class="premium-button" href="#android-support">Android app help</a>
+          <a class="premium-button secondary" href="#diagnostics">Website diagnostics</a>
+          <a class="premium-button secondary" href="data-deletion.html">Delete Local Data</a>
+        </div>
+      </div>
+    </section>
+    <div class="premium-shell">
+      <section id="android-support" aria-labelledby="android-support-heading">
+        <p class="premium-eyebrow">Saravana Bhava – Murugan Bhakti</p>
+        <h2 id="android-support-heading">Android app support</h2>
+        <div class="premium-grid">
+          <article class="premium-card">
+            <h3>Release identity</h3>
+            <p><strong>Version:</strong> 1.1.0<br><strong>VersionCode:</strong> 37<br><strong>Package:</strong> com.saravanabhava.murugan<br><strong>Expo SDK:</strong> 56</p>
+          </article>
+          <article class="premium-card">
+            <h3>App does not open</h3>
+            <p>Restart the phone, confirm the installed version, and record the exact crash or blank-screen behaviour. Do not reinstall until bookmarks or notes have been considered.</p>
+          </article>
+          <article class="premium-card">
+            <h3>Tamil narration is unavailable</h3>
+            <p>Update the Android text-to-speech engine, install a Tamil voice where available, restart the app and try a short devotional passage first.</p>
+          </article>
+          <article class="premium-card">
+            <h3>Bookmark or progress problem</h3>
+            <p>Record the content title, action and restart result. Local data can be reset through the app or Android Settings, but deletion is irreversible.</p>
+            <p><a class="premium-button secondary" href="data-deletion.html">Deletion instructions</a></p>
+          </article>
+          <article class="premium-card">
+            <h3>Temple information looks wrong</h3>
+            <p>Include the temple name, field, current value, proposed correction and an official or authoritative source. Do not overwrite needs-review data from memory.</p>
+            <p><a class="premium-button secondary" href="contact.html">Prepare correction</a></p>
+          </article>
+          <article class="premium-card">
+            <h3>Guided Search result is missing</h3>
+            <p>Provide the Tamil, English or transliterated query, expected content title and actual result. Guided Search uses bundled local records and does not invent missing content.</p>
+          </article>
+        </div>
+      </section>
+      <section class="premium-card" aria-labelledby="app-report-heading">
+        <h2 id="app-report-heading">Android app issue report</h2>
+        <p>Include all of the following:</p>
+        <ul>
+          <li>screen or content title</li>
+          <li>button or action performed</li>
+          <li>expected result</li>
+          <li>actual result and visible error</li>
+          <li>Android version and device model</li>
+          <li>app version and versionCode</li>
+          <li>whether the issue remains after an app restart</li>
+          <li>a screenshot that contains no private information</li>
+        </ul>
+        <p><a class="premium-button" href="mailto:ssakthiveluk02@gmail.com?subject=Saravana%20Bhava%201.1.0%20Android%20Issue">Email Android App Support</a></p>
+      </section>
+      <section id="diagnostics" aria-labelledby="diagnostics-heading">
+        <p class="premium-eyebrow">Privacy-preserving website diagnostics</p>
+        <h2 id="diagnostics-heading">Current browser status</h2>
+        <p id="supportDiagnosticStatus" class="premium-status" role="status" aria-live="polite">Checking this browser locally…</p>
+        <div id="supportDiagnostics" class="premium-grid"><article class="premium-card">Loading diagnostics…</article></div>
+      </section>
+      <section aria-labelledby="quick-fixes-heading">
+        <p class="premium-eyebrow">Safe website quick fixes</p>
+        <h2 id="quick-fixes-heading">Use the smallest recovery action first.</h2>
+        <div class="premium-grid">
+          <article class="premium-card"><h3>Old homepage or old styles</h3><p>Reload once. When an old service-worker cache persists, clear only runtime/data caches before removing the full site storage.</p><button id="clearRuntimeCaches" class="premium-button secondary" type="button">Clear runtime caches</button></article>
+          <article class="premium-card"><h3>Page did not refresh</h3><p>Reload the current route after cache clearing. A hard refresh may be required when a proxy or CDN retains an earlier asset.</p><button id="reloadCurrentPage" class="premium-button secondary" type="button">Reload page</button></article>
+          <article class="premium-card"><h3>Missing or renamed route</h3><p>The 404 page checks an exact alias registry, then suggests related governed routes without fuzzy automatic redirects.</p><a class="premium-button secondary" href="site-directory.html">Open directory</a></article>
+          <article class="premium-card"><h3>Offline page unavailable</h3><p>Open the site once online so core routes and assets can enter the PWA cache. Optional routes may still require a network connection.</p><a class="premium-button secondary" href="offline.html">Open offline guide</a></article>
+          <article class="premium-card"><h3>Notes or favourites missing</h3><p>Browser-local data is tied to the browser profile and site storage. Restore a prior export where available.</p><a class="premium-button secondary" href="personal-data.html">Personal data tools</a></article>
+          <article class="premium-card"><h3>Content looks incorrect</h3><p>Do not overwrite a source-controlled text from memory. Prepare a correction with page, edition and evidence.</p><a class="premium-button secondary" href="contact.html">Prepare correction</a></article>
+        </div>
+        <p id="supportActionStatus" class="premium-status" role="status" aria-live="polite"></p>
+      </section>
+      <section class="premium-card">
+        <h2>Escalation information</h2>
+        <p>Include the page or app screen, approximate time, browser or device, online/offline state, visible error, expected result, steps to reproduce and whether a restart or cache refresh changed the behaviour. Never include passwords, private notes or unnecessary personal data.</p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>வேலவேல் முருகா! அருள்புரிவாய்!</p>
+    <nav aria-label="Footer navigation"><a href="android-app.html">Android App</a><a href="help-centre.html">Help</a><a href="faq.html">FAQ</a><a href="contact.html">Corrections</a><a href="maintenance.html">Maintenance</a><a href="privacy.html">Privacy</a></nav>
+    <small>© 2026 Om Saravana Bhava</small>
+  </footer>
+  <script defer src="assets/js/global-experience-2026.js?v=20260728-2"></script>
 </body>
 </html>

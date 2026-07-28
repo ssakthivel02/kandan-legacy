@@ -1,0 +1,86 @@
+name: Website bug
+about: Report a reproducible Om Saravana Bhava website or PWA problem
+labels:
+  - website
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for public website routes, navigation, PWA, offline, cache or accessibility problems. Do not include passwords, private notes or access tokens.
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      placeholder: https://omsaravanabhava.org/temples.html
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser, device and operating system
+      placeholder: Firefox 153, Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result and visible error
+    validations:
+      required: true
+  - type: dropdown
+    id: network
+    attributes:
+      label: Network state
+      options:
+        - Online
+        - Offline
+        - Both
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: cache
+    attributes:
+      label: Did a normal reload or runtime-cache clear change the result?
+      options:
+        - No
+        - Yes
+        - Not tested
+    validations:
+      required: true
+  - type: textarea
+    id: accessibility
+    attributes:
+      label: Accessibility impact
+      description: Mention keyboard, screen-reader, reduced-motion, contrast or touch-target effects where relevant.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshot, console error or additional evidence
+      description: Remove private information before attaching evidence.
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have not included passwords, tokens, private notes or private documents.
+          required: true
+        - label: I searched existing issues for the same problem.
+          required: true

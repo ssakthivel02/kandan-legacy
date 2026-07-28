@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Public Android app information
+    url: https://omsaravanabhava.org/android-app.html
+    about: Read the current app identity, release status, privacy and support boundaries.
+  - name: Local data deletion
+    url: https://omsaravanabhava.org/data-deletion.html
+    about: Delete Android app data or browser-local website data.
+  - name: Technical support
+    url: https://omsaravanabhava.org/support.html
+    about: Run website diagnostics and review Android troubleshooting steps.

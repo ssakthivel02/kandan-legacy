@@ -31,6 +31,7 @@ def validate_alignment(root:Path)->list[dict]:
     policy=read_json(root/'policies/operations-observability.json')
     conformance=read_json(root/'data/deployment-conformance.json')
     deployment=summary['release'];baseline=summary['baselineRelease']
+    repository_blobs=attestation.get('repositoryAlignmentBlobs',attestation['verifiedGitBlobs'])
     checks=[
         ('alignment-summary-policy',deployment==policy['release'],'policies/operations-observability.json'),
         ('alignment-baseline-catalog',baseline==policy['baselineRelease']==catalog['release'],'data/operations/check-catalog.json'),
@@ -41,7 +42,7 @@ def validate_alignment(root:Path)->list[dict]:
         ('alignment-conformance-release',conformance['release']==deployment,'data/deployment-conformance.json'),
         ('alignment-conformance-cache',str(conformance['expectedCacheRelease'])==str(deployment),'data/deployment-conformance.json'),
         ('alignment-service-worker',f"const RELEASE = '{deployment}';" in (root/'service-worker.js').read_text(encoding='utf-8'),'service-worker.js'),
-        ('alignment-verified-blobs',all((root/path).is_file() and git_blob_sha(root/path)==sha for path,sha in attestation['verifiedGitBlobs'].items()),'data/operations/deployment-attestation.json')
+        ('alignment-verified-blobs',all((root/path).is_file() and git_blob_sha(root/path)==sha for path,sha in repository_blobs.items()),'data/operations/deployment-attestation.json')
     ]
     return [{'id':item,'status':'PASS' if ok else 'FAIL','target':target} for item,ok,target in checks]
 def validate_repository(root:Path,mode:str='package')->dict:

@@ -1,0 +1,91 @@
+name: Android app bug
+about: Report a reproducible problem in Saravana Bhava – Murugan Bhakti
+labels:
+  - android
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form only for the Android app. Do not include passwords, private documents, keystore files or access tokens.
+  - type: input
+    id: app_version
+    attributes:
+      label: App version and versionCode
+      description: Example: 1.1.0 / 37
+      placeholder: 1.1.0 / 37
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version
+      placeholder: Pixel 8, Android 16
+    validations:
+      required: true
+  - type: input
+    id: screen
+    attributes:
+      label: Screen or content title
+      placeholder: Temple Details, Kanda Sashti Kavasam, Guided Search
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide exact taps or actions from a cold start where possible.
+      placeholder: |
+        1. Open the app
+        2. Open ...
+        3. Tap ...
+        4. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result and visible error
+    validations:
+      required: true
+  - type: dropdown
+    id: restart
+    attributes:
+      label: Does the issue remain after an app restart?
+      options:
+        - Yes
+        - No
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: offline
+    attributes:
+      label: Network state
+      options:
+        - Online
+        - Offline
+        - Both
+        - Not relevant
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshot or additional evidence
+      description: Remove private information before attaching evidence.
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have not included passwords, private keys, tokens or private documents.
+          required: true
+        - label: I searched existing issues for the same problem.
+          required: true
