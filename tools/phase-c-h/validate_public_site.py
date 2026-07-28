@@ -43,6 +43,7 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'assets/js/mantra-practice-2026.mjs',
     'assets/js/mantra-practice-core.mjs',
     'assets/css/daily-darshan-2026.css',
+    'assets/css/phase18-responsive-imagery-2026.css',
     'assets/js/daily-darshan-2026.mjs',
     'assets/js/daily-darshan-core.mjs',
     'assets/js/song-source-requests-2026.js',
@@ -57,6 +58,7 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'data/murugan-song-library.json', 'data/devotional-listening-paths.json',
     'data/song-source-requests.json', 'data/mantra-practice.json',
     'data/daily-darshan.json',
+    'data/responsive-homepage-images.json',
     'data/murugan-mantras.json', 'data/search-index.json',
     'data/thiruppugazh.json', 'data/read-aloud-playlist.json',
     'data/audio-catalog.json',
@@ -64,7 +66,18 @@ REQUIRED_FILES = CRITICAL_HTML + [
     'schemas/devotional-listening-path.schema.json',
     'schemas/song-source-request.schema.json',
     'schemas/mantra-practice.schema.json', 'deployment-manifest.json'
-    ,'schemas/daily-darshan.schema.json'
+    ,'schemas/daily-darshan.schema.json',
+    'schemas/responsive-homepage-images.schema.json',
+    'assets/images/homepage-2026/murugan-family-hero-desktop.webp',
+    'assets/images/homepage-2026/murugan-family-hero-mobile.webp',
+    'assets/images/homepage-2026/song-library.webp',
+    'assets/images/homepage-2026/thiruppugazh.webp',
+    'assets/images/homepage-2026/sacred-temples.webp',
+    'assets/images/homepage-2026/slokas-prayers.webp',
+    'assets/images/homepage-2026/palani-pilgrimage.webp',
+    'assets/images/homepage-2026/devotional-listening.webp',
+    'assets/images/homepage-2026/daily-darshan.webp',
+    'assets/images/homepage-2026/mantra-practice.webp'
 ]
 REFERENCE_RE = re.compile(
     r'''(?:href|src|poster|action|data-src|data-href)\s*=\s*["']([^"']+)["']''',

@@ -1,0 +1,100 @@
+:root {
+  --phase18-hero-focus-x: 68%;
+  --phase18-hero-focus-y: 46%;
+}
+
+.hero {
+  background: #080811;
+}
+
+.hero-visual {
+  position: absolute;
+  inset: 0;
+  z-index: -4;
+  display: block;
+  overflow: hidden;
+  contain: layout paint;
+}
+
+.hero-visual-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: var(--phase18-hero-focus-x) var(--phase18-hero-focus-y);
+  filter: saturate(1.05) contrast(1.04);
+}
+
+.hero::before {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(4, 5, 13, .97) 0%, rgba(5, 7, 18, .88) 34%, rgba(5, 7, 18, .36) 60%, rgba(5, 5, 12, .16) 100%),
+    linear-gradient(0deg, rgba(7, 6, 12, .96) 0%, transparent 32%);
+}
+
+.hero-overlay {
+  z-index: -2;
+  background:
+    radial-gradient(circle at 70% 32%, rgba(255, 203, 94, .18), transparent 27%),
+    radial-gradient(circle at 31% 66%, rgba(143, 36, 54, .12), transparent 32%),
+    linear-gradient(0deg, #0b0b12 0, transparent 28%);
+}
+
+.collection-card img {
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 1050px) {
+  .hero::before {
+    background:
+      linear-gradient(90deg, rgba(4, 5, 13, .96) 0%, rgba(5, 7, 18, .78) 48%, rgba(5, 5, 12, .25) 100%),
+      linear-gradient(0deg, rgba(7, 6, 12, .94) 0%, transparent 34%);
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --phase18-hero-focus-x: 56%;
+    --phase18-hero-focus-y: 28%;
+  }
+
+  .hero {
+    min-height: 790px;
+    justify-content: flex-end;
+    padding-top: 21rem;
+  }
+
+  .hero::before {
+    background:
+      linear-gradient(180deg, rgba(5, 7, 16, .08) 0%, rgba(7, 7, 14, .18) 31%, rgba(8, 7, 13, .9) 56%, #0b0b12 79%),
+      linear-gradient(90deg, rgba(7, 7, 14, .2), rgba(7, 7, 14, .08));
+  }
+
+  .hero-overlay {
+    background:
+      radial-gradient(circle at 58% 23%, rgba(255, 203, 94, .14), transparent 28%),
+      linear-gradient(0deg, #0b0b12 0, transparent 46%);
+  }
+
+  .hero-copy {
+    padding-top: 2rem;
+  }
+
+  .collection-card img {
+    object-position: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .hero {
+    min-height: 760px;
+    padding-top: 19rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-visual-image {
+    animation: none !important;
+    transition: none !important;
+  }
+}

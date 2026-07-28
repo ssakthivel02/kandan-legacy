@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://omsaravanabhava.org/schemas/responsive-homepage-images.schema.json",
+  "title": "Responsive homepage image manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "release",
+    "generated",
+    "publicationBoundary",
+    "hero",
+    "items"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "release": {
+      "type": "string",
+      "const": "phase18-responsive-devotional-imagery"
+    },
+    "generated": {
+      "type": "string",
+      "format": "date"
+    },
+    "publicationBoundary": {
+      "type": "string",
+      "minLength": 40
+    },
+    "hero": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "desktop",
+        "mobile",
+        "desktopFocalPoint",
+        "mobileFocalPoint"
+      ],
+      "properties": {
+        "desktop": {
+          "type": "string",
+          "pattern": "^assets/images/homepage-2026/.+\\.webp$"
+        },
+        "mobile": {
+          "type": "string",
+          "pattern": "^assets/images/homepage-2026/.+\\.webp$"
+        },
+        "desktopFocalPoint": {
+          "type": "string"
+        },
+        "mobileFocalPoint": {
+          "type": "string"
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "path",
+          "width",
+          "height",
+          "bytes",
+          "role",
+          "alt",
+          "decorative",
+          "mediaType",
+          "documentaryPhoto",
+          "rightsStatus"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^assets/images/homepage-2026/.+\\.webp$"
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 1080
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 720
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 250000
+          },
+          "role": {
+            "enum": [
+              "homepage-hero-desktop",
+              "homepage-hero-mobile",
+              "collection-card"
+            ]
+          },
+          "alt": {
+            "type": "string"
+          },
+          "decorative": {
+            "type": "boolean"
+          },
+          "mediaType": {
+            "type": "string",
+            "pattern": "^ai-assisted-"
+          },
+          "documentaryPhoto": {
+            "const": false
+          },
+          "rightsStatus": {
+            "const": "site-use-approved"
+          }
+        }
+      }
+    }
+  }
+}
