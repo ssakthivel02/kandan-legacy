@@ -9,13 +9,13 @@
     "automaticMassReplacement": false
   },
   "htmlFilesScanned": 4018,
-  "effectiveRegistryRoutes": 116,
-  "sitemapRoutes": 104,
-  "reachableHtmlAndAssets": 249,
+  "effectiveRegistryRoutes": 117,
+  "sitemapRoutes": 105,
+  "reachableHtmlAndAssets": 252,
   "classificationCounts": {
-    "orphan-content-candidate": 3390,
+    "orphan-content-candidate": 3389,
     "placeholder-or-generated": 431,
-    "canonical-public": 116,
+    "canonical-public": 117,
     "release-showcase": 51,
     "source-register-or-bounded": 17,
     "orphan-quality-review": 11,

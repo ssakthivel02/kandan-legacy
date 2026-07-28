@@ -72,7 +72,7 @@
     "imageCount": 0,
     "registered": false,
     "inSitemap": false,
-    "inboundLinks": 152,
+    "inboundLinks": 151,
     "reachableFromGovernedEntry": false
   },
   {
@@ -91,7 +91,7 @@
     "imageCount": 0,
     "registered": false,
     "inSitemap": false,
-    "inboundLinks": 122,
+    "inboundLinks": 121,
     "reachableFromGovernedEntry": true
   },
   {
@@ -532,25 +532,6 @@
     "reachableFromGovernedEntry": true
   },
   {
-    "path": "learning.html",
-    "route": "/learning.html",
-    "classification": "orphan-content-candidate",
-    "reasons": [
-      "substantive HTML not yet governed"
-    ],
-    "title": "Learning Paths | Om Saravana Bhava",
-    "robots": "",
-    "lang": "en",
-    "visibleTextCharacters": 244,
-    "mainCount": 1,
-    "h1Count": 1,
-    "imageCount": 0,
-    "registered": false,
-    "inSitemap": false,
-    "inboundLinks": 14,
-    "reachableFromGovernedEntry": false
-  },
-  {
     "path": "data-deletion.html",
     "route": "/data-deletion.html",
     "classification": "orphan-content-candidate",
@@ -568,6 +549,25 @@
     "inSitemap": false,
     "inboundLinks": 13,
     "reachableFromGovernedEntry": true
+  },
+  {
+    "path": "learning.html",
+    "route": "/learning.html",
+    "classification": "orphan-content-candidate",
+    "reasons": [
+      "substantive HTML not yet governed"
+    ],
+    "title": "Learning Paths | Om Saravana Bhava",
+    "robots": "",
+    "lang": "en",
+    "visibleTextCharacters": 244,
+    "mainCount": 1,
+    "h1Count": 1,
+    "imageCount": 0,
+    "registered": false,
+    "inSitemap": false,
+    "inboundLinks": 13,
+    "reachableFromGovernedEntry": false
   },
   {
     "path": "temples/encyclopedia/part-2/index.html",
@@ -6925,7 +6925,7 @@
     "title": "Language Access | Om Saravana Bhava",
     "robots": "index,follow",
     "lang": "en",
-    "visibleTextCharacters": 1457,
+    "visibleTextCharacters": 1592,
     "mainCount": 1,
     "h1Count": 1,
     "imageCount": 0,
