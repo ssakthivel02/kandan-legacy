@@ -113,6 +113,12 @@ jobs:
           python -m json.tool schemas/daily-darshan.schema.json > /dev/null
           python -m unittest tests.phase_c_h.test_phase17_publication
 
+      - name: Validate Phase 18 responsive imagery contracts
+        run: |
+          python -m json.tool data/responsive-homepage-images.json > /dev/null
+          python -m json.tool schemas/responsive-homepage-images.schema.json > /dev/null
+          python -m unittest tests.phase_c_h.test_phase18_publication
+
       - name: Reconcile planned versus connected capabilities
         run: python tools/phase-c-h/build_capability_matrix.py
 
