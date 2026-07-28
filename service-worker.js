@@ -1,5 +1,5 @@
 const RELEASE = '251';
-const EXPERIENCE_REV = 'phase15-devotional-listening-phase16-mantra-practice';
+const EXPERIENCE_REV = 'phase15-devotional-listening-phase16-mantra-practice-vel2';
 const CACHE_PREFIX = 'osb-';
 const STATIC_CACHE = `${CACHE_PREFIX}static-v${RELEASE}-${EXPERIENCE_REV}`;
 const RUNTIME_CACHE = `${CACHE_PREFIX}runtime-v${RELEASE}-${EXPERIENCE_REV}`;
