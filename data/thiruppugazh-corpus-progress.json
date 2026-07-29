@@ -1,0 +1,41 @@
+{
+  "$schema": "/schemas/thiruppugazh-corpus-progress.schema.json",
+  "version": 1,
+  "release": 253,
+  "generated": "2026-07-29",
+  "programmeTarget": 1300,
+  "published": {
+    "count": 12,
+    "status": "published-source-linked",
+    "source": "/data/thiruppugazh.json",
+    "note": "Complete Tamil text was manually checked against the registered uploaded compilation."
+  },
+  "quarantinedOcrDrafts": {
+    "count": 39,
+    "status": "not-published",
+    "reason": "OCR or transcription quality has not completed line-level source comparison.",
+    "publicationRule": "Do not expose as verified text, searchable lyrics or audio input."
+  },
+  "excludedEmptyShells": {
+    "count": 18,
+    "status": "not-counted-as-songs",
+    "reason": "Route shells and temple-link pages do not contain a verified complete hymn.",
+    "publicationRule": "Never include these pages in published-song totals."
+  },
+  "nextVerificationBatch": {
+    "minimum": 10,
+    "maximum": 25,
+    "requiredChecks": [
+      "song identity and source-specific number",
+      "line-by-line Tamil comparison",
+      "venue and heading verification",
+      "duplicate detection",
+      "rights and attribution review",
+      "independent editorial sign-off"
+    ]
+  },
+  "calculationPolicy": {
+    "completionPercentagePublished": false,
+    "reason": "The programme target and surviving-corpus boundaries require editorial confirmation; a percentage would imply false precision."
+  }
+}

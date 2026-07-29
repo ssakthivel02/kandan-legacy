@@ -39,14 +39,14 @@
     "assets/css/phase10-trust-quality-2026.css": "f09429ac35b8b5615a1e038a174728b9b6ec9960",
     "assets/images/murugan-divine.webp": "bcbfcddd0561bf92fa3f56afed69f2dcba570563"
   },
-  "repositoryAlignmentCommit": "phase19-content-reliability-cache-delivery-candidate",
+  "repositoryAlignmentCommit": "phase20-temple-corpus-listening-candidate",
   "repositoryAlignmentStatus": "SOURCE_ALIGNED_LIVE_REVERIFY_REQUIRED",
-  "repositoryAlignmentReason": "The Phase 19 candidate makes essential homepage and devotional content resilient without JavaScript, publishes all 12 verified Thiruppugazh cards in initial HTML, exposes 16 governed temple records, repairs reader module loading and includes omitted runtime JSON dependencies. The cache-delivery follow-up versions all four modified homepage reveal assets and rotates the service-worker cache so existing visitors cannot receive the pre-Phase-19 animation contract. Repository package validation uses this source-alignment map while preserving historical live-production evidence until deployment is verified.",
+  "repositoryAlignmentReason": "Phase 20 expands the governed temple directory to 24 records, publishes honest 1,300-song programme accounting, guarantees core song and temple visibility against stale animation styles, corrects the device-speech queue to 4 plus 12 records, reports stalled speech startup, and rotates the service-worker cache. Repository package validation uses this source-alignment map while preserving historical live-production evidence until deployment is verified.",
   "repositoryAlignmentBlobs": {
-    "index.html": "bdbc2699e98b86d6c4a8314309e89722cf14dea8",
+    "index.html": "5930df234a6246faf48ea74151b57cbf7b9c0270",
     "platform-hub.html": "fa512dd17118994fa05b3142fb342884fa98a11b",
     "operations-observability.html": "74330ae5618d7da7329ea4fe197cec0448e798f0",
-    "service-worker.js": "8d33ced0c19a11c8f3424622c146aa482ed08e04",
+    "service-worker.js": "cbc0680983a1ee24f765d2ee57201ffdff03e926",
     "data/platform-capability-matrix.json": "c5fdcde6e71016e0ef2b234e6f8ba26ee6bc08a4",
     "assets/css/global-experience-2026.css": "6b43af1ca6d2c8fbe45067289160d2a05e3add73",
     "assets/js/global-experience-2026.js": "04802e961bb8fc9afdf77c383d024c32d8c459cd",
@@ -64,6 +64,8 @@
     "A fresh live deployment attestation is required after the Phase 19 source candidate is merged and deployed.",
     "Phase 17 daily selection is deterministic from the visitor's local calendar date; it is not a panchangam, astrology or recommendation service.",
     "Phase 18 visual assets are AI-assisted devotional illustrations, not documentary photography, historical evidence, official temple imagery or literal claims about divine appearance.",
-    "Phase 19 regional temple entries verify stable official identities only; narratives, rituals, schedules, travel details and photography remain under review."
+    "Phase 19 and Phase 20 regional temple entries verify stable official identities only; narratives, rituals, schedules, travel details and photography remain under review.",
+    "The 1,300-song figure is a programme target; only twelve manually verified, source-linked Thiruppugazh songs are published.",
+    "Device text-to-speech depends on browser and installed voice support and is not a licensed human devotional recording."
   ]
 }

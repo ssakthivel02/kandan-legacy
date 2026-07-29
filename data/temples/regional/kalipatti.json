@@ -1,0 +1,50 @@
+{
+  "id": "kalipatti",
+  "name": "Arulmigu Kandhasamy Temple",
+  "name_ta": "அருள்மிகு கந்தசாமி திருக்கோயில்",
+  "district": "Namakkal",
+  "state": "Tamil Nadu",
+  "country": "India",
+  "setting": "Village temple",
+  "official_temple_id": "TM004908",
+  "official_source": "https://hrce.tn.gov.in/hrcehome/index_temple.php?tid=4908",
+  "group": "Regional Murugan Temple",
+  "release_origin": "Phase 20",
+  "summary": "Kalipatti Kandhasamy Temple is registered from an official Tamil Nadu HR&CE identity source. Historical, ritual, visitor and image fields remain under editorial review.",
+  "publication": {
+    "status": "identity_verified_content_review_required",
+    "label": "Official identity verified; content review required",
+    "note": "Stable identity fields are sourced from an official HR&CE page. Time-sensitive and narrative fields remain under review."
+  },
+  "profile": [
+    {"label": "Temple name", "value": "Arulmigu Kandhasamy Temple", "status": "official_source"},
+    {"label": "Tamil name", "value": "அருள்மிகு கந்தசாமி திருக்கோயில்", "status": "official_source"},
+    {"label": "District", "value": "Namakkal", "status": "official_source"},
+    {"label": "State", "value": "Tamil Nadu", "status": "official_source"},
+    {"label": "Setting", "value": "Village temple", "status": "editorial_classification"},
+    {"label": "Official temple ID", "value": "TM004908", "status": "official_source"}
+  ],
+  "sources": [{
+    "title": "Tamil Nadu HR&CE temple record",
+    "url": "https://hrce.tn.gov.in/hrcehome/index_temple.php?tid=4908",
+    "authority": "Government of Tamil Nadu HR&CE",
+    "verification_status": "official",
+    "last_checked": "2026-07-29",
+    "freshness_days": 90
+  }],
+  "pending": [
+    {"field": "verified_history", "status": "review_required"},
+    {"field": "sthala_puranam", "status": "review_required"},
+    {"field": "architecture", "status": "review_required"},
+    {"field": "festival_schedule", "status": "review_required"},
+    {"field": "official_timings_snapshot", "status": "review_required"},
+    {"field": "contact_snapshot", "status": "review_required"},
+    {"field": "travel_information", "status": "review_required"},
+    {"field": "licensed_photography", "status": "review_required"}
+  ],
+  "image": {
+    "status": "licensed_asset_required",
+    "note": "No documentary temple photograph is bundled. Add only licensed, attributed and identity-verified imagery."
+  },
+  "data_version": "253.1"
+}

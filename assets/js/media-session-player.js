@@ -15,6 +15,7 @@
     chunkIndex: 0,
     utterance: null,
     generation: 0,
+    startupTimer: null,
     status: 'idle',
     rate: 0.9,
     voiceURI: '',
@@ -33,6 +34,13 @@
 
   const setStatus = message => {
     if (el.status) el.status.textContent = message;
+  };
+
+  const clearStartupTimer = () => {
+    if (state.startupTimer !== null) {
+      window.clearTimeout(state.startupTimer);
+      state.startupTimer = null;
+    }
   };
 
   const setPlaybackState = value => {
@@ -174,6 +182,7 @@
 
     utterance.onstart = () => {
       if (generation !== state.generation) return;
+      clearStartupTimer();
       setPlaybackState('playing');
       setStatus(
         `Reading section ${state.chunkIndex + 1} of ${state.chunks.length}` +
@@ -183,6 +192,7 @@
 
     utterance.onend = () => {
       if (generation !== state.generation) return;
+      clearStartupTimer();
       state.utterance = null;
       state.chunkIndex += 1;
       speakChunk();
@@ -190,6 +200,7 @@
 
     utterance.onerror = event => {
       if (generation !== state.generation) return;
+      clearStartupTimer();
       state.utterance = null;
       if (!['canceled', 'interrupted'].includes(event.error)) {
         setPlaybackState('idle');
@@ -197,7 +208,24 @@
       }
     };
 
-    window.speechSynthesis.speak(utterance);
+    setStatus('Starting Tamil read-aloud…');
+    state.startupTimer = window.setTimeout(() => {
+      if (generation !== state.generation || state.status === 'playing') return;
+      window.speechSynthesis.cancel();
+      state.utterance = null;
+      setPlaybackState('idle');
+      setStatus(
+        'Tamil read-aloud did not start. Enable a device speech voice or try another supported browser.'
+      );
+    }, 5000);
+    try {
+      window.speechSynthesis.speak(utterance);
+    } catch (error) {
+      clearStartupTimer();
+      state.utterance = null;
+      setPlaybackState('idle');
+      setStatus('Tamil read-aloud could not start in this browser.');
+    }
   };
 
   const play = () => {
@@ -233,6 +261,7 @@
 
   const stop = (announce = true) => {
     state.generation += 1;
+    clearStartupTimer();
     window.speechSynthesis?.cancel?.();
     state.utterance = null;
     state.chunkIndex = 0;

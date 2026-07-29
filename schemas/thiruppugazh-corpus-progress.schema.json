@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://omsaravanabhava.org/schemas/thiruppugazh-corpus-progress.schema.json",
+  "title": "Thiruppugazh Corpus Progress",
+  "type": "object",
+  "required": [
+    "version",
+    "release",
+    "programmeTarget",
+    "published",
+    "quarantinedOcrDrafts",
+    "excludedEmptyShells",
+    "nextVerificationBatch",
+    "calculationPolicy"
+  ],
+  "properties": {
+    "version": {"const": 1},
+    "release": {"type": "integer", "minimum": 253},
+    "programmeTarget": {"const": 1300},
+    "published": {
+      "type": "object",
+      "required": ["count", "status", "source"],
+      "properties": {
+        "count": {"const": 12},
+        "status": {"const": "published-source-linked"},
+        "source": {"const": "/data/thiruppugazh.json"}
+      }
+    },
+    "quarantinedOcrDrafts": {
+      "type": "object",
+      "required": ["count", "status", "publicationRule"],
+      "properties": {
+        "count": {"const": 39},
+        "status": {"const": "not-published"}
+      }
+    },
+    "excludedEmptyShells": {
+      "type": "object",
+      "required": ["count", "status", "publicationRule"],
+      "properties": {
+        "count": {"const": 18},
+        "status": {"const": "not-counted-as-songs"}
+      }
+    },
+    "nextVerificationBatch": {
+      "type": "object",
+      "required": ["minimum", "maximum", "requiredChecks"],
+      "properties": {
+        "minimum": {"const": 10},
+        "maximum": {"const": 25},
+        "requiredChecks": {"type": "array", "minItems": 6}
+      }
+    },
+    "calculationPolicy": {
+      "type": "object",
+      "required": ["completionPercentagePublished", "reason"],
+      "properties": {
+        "completionPercentagePublished": {"const": false}
+      }
+    }
+  },
+  "additionalProperties": true
+}

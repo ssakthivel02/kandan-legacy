@@ -18,11 +18,15 @@
   <link rel="stylesheet" href="assets/css/release-247.css">
   <link rel="stylesheet" href="assets/css/premium-platform-2026.css">
   <link rel="stylesheet" href="assets/css/premium-pages-2026.css">
-  <link rel="stylesheet" href="assets/css/content-reliability-2026.css?v=20260728-1">
+  <link rel="stylesheet" href="assets/css/content-reliability-2026.css?v=20260729-p20-1">
+  <style id="osb-critical-content-visibility">
+    [data-regional-temple],[data-reveal],.reveal{opacity:1!important;visibility:visible!important;transform:none!important}
+    [data-regional-temple][hidden]{display:none!important}
+  </style>
   <script defer src="assets/js/release-247.js"></script>
   <script defer src="assets/js/pwa-register.js"></script>
   <script type="module" src="assets/js/premium-platform-2026.mjs"></script>
-  <script type="module" src="assets/js/content-reliability-2026.mjs?v=20260728-1"></script>
+  <script type="module" src="assets/js/content-reliability-2026.mjs?v=20260729-p20-1"></script>
   <link rel="stylesheet" href="assets/css/global-experience-2026.css?v=20260727-1">
   <link rel="stylesheet" href="assets/css/phase6-experience-2026.css?v=20260726-1">
   <link rel="stylesheet" href="assets/css/phase7-sacred-places-2026.css?v=20260727-1">
@@ -165,13 +169,13 @@
       <div class="intro">
         <div>
           <p class="eyebrow">Official-identity directory</p>
-          <h2 id="regional-temples-heading">Ten more Murugan temples to discover.</h2>
+          <h2 id="regional-temples-heading">Eighteen more Murugan temples to discover.</h2>
           <p>These records confirm stable temple identities from Government of Tamil Nadu HR&amp;CE sources. Historical narratives, rituals, opening times, travel advice and documentary photography remain clearly under review.</p>
         </div>
       </div>
 
       <div class="content-reliability-note" role="note">
-        <strong>Publication boundary:</strong> six Arupadai Veedu routes are source-linked guides. The ten records below are identity-verified directory entries, not complete visitor guides.
+        <strong>Publication boundary:</strong> six Arupadai Veedu routes are source-linked guides. The eighteen records below are identity-verified directory entries, not complete visitor guides.
       </div>
 
       <div class="regional-temple-toolbar" aria-label="Regional temple filters">
@@ -184,11 +188,12 @@
             <option value="Hill temple">Hill temple</option>
             <option value="Village temple">Village temple</option>
             <option value="Urban temple">Urban temple</option>
+            <option value="Town temple">Town temple</option>
           </select>
         </label>
         <button id="regionalTempleReset" type="button">Reset</button>
       </div>
-      <p id="regionalTempleCount" role="status" aria-live="polite">10 of 10 official-identity temple records shown.</p>
+      <p id="regionalTempleCount" role="status" aria-live="polite">18 of 18 official-identity temple records shown.</p>
 
       <div class="regional-temple-grid">
         <article class="regional-temple-card" data-regional-temple data-category="Hill temple" data-search="Marudhamalai மருதமலை Coimbatore hill temple TM009762">
@@ -250,6 +255,54 @@
           <p class="ta" lang="ta">பூக்காரத்தெரு சுப்பிரமணிய சுவாமி திருக்கோயில்</p>
           <p>Thanjavur · Urban temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
           <a class="btn alt" href="regional-temple-detail.html?id=pookara-street-thanjavur">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Town temple" data-search="Thiruporur திருப்போரூர் Chengalpattu Kandaswamy town temple TM001734">
+          <span class="pill">Official identity</span><h3>Thiruporur</h3>
+          <p class="ta" lang="ta">அருள்மிகு கந்தசுவாமி திருக்கோயில்</p>
+          <p>Chengalpattu · Town temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=thiruporur">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Urban temple" data-search="Vadapalani வடபழநி Chennai Andavar urban temple TM000006">
+          <span class="pill">Official identity</span><h3>Vadapalani</h3>
+          <p class="ta" lang="ta">அருள்மிகு வடபழநி ஆண்டவர் திருக்கோயில்</p>
+          <p>Chennai · Urban temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=vadapalani">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Village temple" data-search="Siruvapuri சிறுவாபுரி Chinnambedu Tiruvallur village temple TM001596">
+          <span class="pill">Official identity</span><h3>Siruvapuri / Chinnambedu</h3>
+          <p class="ta" lang="ta">அருள்மிகு பாலசுப்பிரமணியசுவாமி திருக்கோயில்</p>
+          <p>Tiruvallur · Village temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=siruvapuri">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Urban temple" data-search="Kandhakottam கந்தகோட்டம் Muthu Kumara Swamy Chennai urban temple TM000388">
+          <span class="pill">Official identity</span><h3>Kandhakottam</h3>
+          <p class="ta" lang="ta">அருள்மிகு கந்தசாமி (எ) முத்துக்குமாரசுவாமி திருக்கோயில்</p>
+          <p>Chennai · Urban temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=kandhakottam">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Town temple" data-search="Thiruverumbur திருவெறும்பூர் Tiruchirappalli town temple TM026368">
+          <span class="pill">Official identity</span><h3>Thiruverumbur</h3>
+          <p class="ta" lang="ta">அருள்மிகு சுப்பிரமணிய சுவாமி திருக்கோயில்</p>
+          <p>Tiruchirappalli · Town temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=thiruverumbur">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Urban temple" data-search="Pollachi பொள்ளாச்சி Coimbatore urban temple TM009785">
+          <span class="pill">Official identity</span><h3>Pollachi</h3>
+          <p class="ta" lang="ta">அருள்மிகு சுப்பிரமணியசுவாமி திருக்கோயில்</p>
+          <p>Coimbatore · Urban temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=pollachi">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Village temple" data-search="Kalipatti காளிப்பட்டி Namakkal Kandhasamy village temple TM004908">
+          <span class="pill">Official identity</span><h3>Kalipatti</h3>
+          <p class="ta" lang="ta">அருள்மிகு கந்தசாமி திருக்கோயில்</p>
+          <p>Namakkal · Village temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=kalipatti">Open identity record →</a>
+        </article>
+        <article class="regional-temple-card" data-regional-temple data-category="Hill temple" data-search="Sivanmalai சிவன்மலை Kangeyam Tiruppur hill temple TM010054">
+          <span class="pill">Official identity</span><h3>Sivanmalai</h3>
+          <p class="ta" lang="ta">அருள்மிகு சுப்பிரமணியசுவாமி திருக்கோயில்</p>
+          <p>Tiruppur · Hill temple</p><p class="review-boundary">Narrative and visitor details under review.</p>
+          <a class="btn alt" href="regional-temple-detail.html?id=sivanmalai">Open identity record →</a>
         </article>
       </div>
     </section>

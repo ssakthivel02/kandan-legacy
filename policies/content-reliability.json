@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "release": 252,
+  "version": 2,
+  "release": 253,
   "failClosedRules": [
     "Essential published content must exist in initial HTML.",
     "JavaScript may filter or enhance content but must not be the only publication path.",
@@ -10,12 +10,16 @@
   ],
   "requiredStaticSongCount": 12,
   "requiredTempleGuideCount": 6,
-  "requiredTempleIdentityCount": 10,
-  "requiredTempleDirectoryCount": 16,
+  "requiredTempleIdentityCount": 18,
+  "requiredTempleDirectoryCount": 24,
+  "requiredDeviceSpeechCount": 16,
+  "requiredThiruppugazhSpeechCount": 12,
   "requiredRuntimeData": [
     "/data/reading-workspace.json",
     "/data/effective-route-registry-runtime.json",
     "/data/temple-directory.json",
-    "/data/phase19-content-reliability.json"
+    "/data/phase19-content-reliability.json",
+    "/data/phase20-content-expansion.json",
+    "/data/thiruppugazh-corpus-progress.json"
   ]
 }
