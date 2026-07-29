@@ -1,0 +1,50 @@
+name: Phase 20 Content Expansion
+
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "temples.html"
+      - "thiruppugazh.html"
+      - "audio-library.html"
+      - "assets/css/content-reliability-2026.css"
+      - "assets/js/content-reliability-2026.mjs"
+      - "assets/js/read-aloud.js"
+      - "assets/js/media-session-player.js"
+      - "data/phase20-content-expansion.json"
+      - "data/thiruppugazh-corpus-progress.json"
+      - "data/temple-directory.json"
+      - "data/temples/regional/**"
+      - "data/search-index.json"
+      - "schemas/temple-directory.schema.json"
+      - "schemas/thiruppugazh-corpus-progress.schema.json"
+      - "service-worker.js"
+      - "tools/phase-c-h/**"
+      - "tests/js/content-reliability.test.mjs"
+      - "tests/phase_c_h/test_phase19_publication.py"
+      - ".github/workflows/phase20-content-expansion.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run content reliability tests
+        run: node --test tests/js/content-reliability.test.mjs
+      - name: Run publication contract tests
+        run: python -B -m unittest tests.phase_c_h.test_phase19_publication -v
+      - name: Build deterministic Pages artifact
+        run: python -B tools/phase-c-h/build_public_site.py
+      - name: Validate public artifact
+        run: python -B tools/phase-c-h/validate_public_site.py

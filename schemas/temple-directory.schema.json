@@ -13,10 +13,10 @@
   "properties": {
     "release": {
       "type": "integer",
-      "minimum": 252
+      "minimum": 253
     },
     "totalDiscoverableRecords": {
-      "const": 16
+      "const": 24
     },
     "tiers": {
       "type": "object",
@@ -27,8 +27,8 @@
     },
     "regionalRecordIds": {
       "type": "array",
-      "minItems": 10,
-      "maxItems": 10,
+      "minItems": 18,
+      "maxItems": 18,
       "uniqueItems": true,
       "items": {
         "type": "string",

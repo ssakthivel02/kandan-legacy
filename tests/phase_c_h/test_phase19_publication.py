@@ -21,8 +21,8 @@ class Phase19PublicationTests(unittest.TestCase):
             )
         )
         self.assertEqual(guides['count'], 6)
-        self.assertEqual(regional['count'], 10)
-        self.assertEqual(contract['totalDiscoverableRecords'], 16)
+        self.assertEqual(regional['count'], 18)
+        self.assertEqual(contract['totalDiscoverableRecords'], 24)
         self.assertEqual(
             set(contract['regionalRecordIds']),
             {item['id'] for item in regional['records']}
@@ -80,7 +80,7 @@ class Phase19PublicationTests(unittest.TestCase):
             for limitation in config['limitations']
         ))
 
-    def test_search_exposes_exactly_ten_bounded_regional_temples(self):
+    def test_search_exposes_exactly_eighteen_bounded_regional_temples(self):
         records = json.loads(
             (ROOT / 'data/search-index.json').read_text(encoding='utf-8')
         )
@@ -89,7 +89,7 @@ class Phase19PublicationTests(unittest.TestCase):
             if item.get('kind') == 'Temple'
             and item.get('status') == 'identity-verified-review-required'
         ]
-        self.assertEqual(len(regional), 10)
+        self.assertEqual(len(regional), 18)
         for item in regional:
             self.assertIn('remain under review', item['summary'])
 
@@ -118,6 +118,51 @@ class Phase19PublicationTests(unittest.TestCase):
                 rf'{re.escape(asset)}\?v=20260728-p19-1',
                 msg=f'{asset} must be cache-versioned in the homepage',
             )
+
+    def test_phase20_contract_and_corpus_progress_are_fail_closed(self):
+        contract = json.loads(
+            (ROOT / 'data/phase20-content-expansion.json').read_text(
+                encoding='utf-8'
+            )
+        )
+        progress = json.loads(
+            (ROOT / 'data/thiruppugazh-corpus-progress.json').read_text(
+                encoding='utf-8'
+            )
+        )
+        self.assertEqual(contract['requirements']['discoverableTempleRecords'], 24)
+        self.assertEqual(contract['requirements']['deviceSpeechPlaylistRecords'], 16)
+        self.assertEqual(progress['programmeTarget'], 1300)
+        self.assertEqual(progress['published']['count'], 12)
+        self.assertEqual(progress['quarantinedOcrDrafts']['status'], 'not-published')
+        self.assertEqual(
+            progress['excludedEmptyShells']['status'],
+            'not-counted-as-songs'
+        )
+        self.assertFalse(
+            progress['calculationPolicy']['completionPercentagePublished']
+        )
+
+    def test_phase20_official_identifiers_are_unique(self):
+        directory = json.loads(
+            (ROOT / 'data/temples/regional/index.json').read_text(
+                encoding='utf-8'
+            )
+        )
+        identifiers = [
+            item['official_temple_id'] for item in directory['records']
+        ]
+        self.assertEqual(len(identifiers), len(set(identifiers)))
+        self.assertEqual(
+            {
+                item['id'] for item in directory['records']
+                if item.get('release_origin') == 'Phase 20'
+            },
+            {
+                'thiruporur', 'vadapalani', 'siruvapuri', 'kandhakottam',
+                'thiruverumbur', 'pollachi', 'kalipatti', 'sivanmalai'
+            }
+        )
 
 
 if __name__ == '__main__':

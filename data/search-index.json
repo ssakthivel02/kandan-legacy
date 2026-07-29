@@ -876,5 +876,85 @@
     "route": "regional-temple-detail.html?id=pookara-street-thanjavur",
     "tags": ["Thanjavur", "Urban temple", "TM014103"],
     "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "thiruporur",
+    "titleTa": "அருள்மிகு கந்தசுவாமி திருக்கோயில்",
+    "titleEn": "Thiruporur Kandaswamy Temple",
+    "summary": "Official temple identity record for Chengalpattu. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=thiruporur",
+    "tags": ["Chengalpattu", "Town temple", "TM001734"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "vadapalani",
+    "titleTa": "அருள்மிகு வடபழநி ஆண்டவர் திருக்கோயில்",
+    "titleEn": "Vadapalani Andavar Temple",
+    "summary": "Official temple identity record for Chennai. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=vadapalani",
+    "tags": ["Chennai", "Urban temple", "TM000006"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "siruvapuri",
+    "titleTa": "அருள்மிகு பாலசுப்பிரமணியசுவாமி திருக்கோயில்",
+    "titleEn": "Siruvapuri Balasubramaniya Swamy Temple",
+    "summary": "Official temple identity record for Tiruvallur. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=siruvapuri",
+    "tags": ["Tiruvallur", "Chinnambedu", "Village temple", "TM001596"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "kandhakottam",
+    "titleTa": "அருள்மிகு கந்தசாமி (எ) முத்துக்குமாரசுவாமி திருக்கோயில்",
+    "titleEn": "Kandhakottam Muthu Kumara Swamy Devasthanam",
+    "summary": "Official temple identity record for Chennai. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=kandhakottam",
+    "tags": ["Chennai", "Park Town", "Urban temple", "TM000388"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "thiruverumbur",
+    "titleTa": "அருள்மிகு சுப்பிரமணிய சுவாமி திருக்கோயில்",
+    "titleEn": "Thiruverumbur Subramaniya Swamy Temple",
+    "summary": "Official temple identity record for Tiruchirappalli. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=thiruverumbur",
+    "tags": ["Tiruchirappalli", "Town temple", "TM026368"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "pollachi",
+    "titleTa": "அருள்மிகு சுப்பிரமணியசுவாமி திருக்கோயில்",
+    "titleEn": "Pollachi Subramaniya Swamy Temple",
+    "summary": "Official temple identity record for Coimbatore. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=pollachi",
+    "tags": ["Coimbatore", "Pollachi", "Urban temple", "TM009785"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "kalipatti",
+    "titleTa": "அருள்மிகு கந்தசாமி திருக்கோயில்",
+    "titleEn": "Kalipatti Kandhasamy Temple",
+    "summary": "Official temple identity record for Namakkal. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=kalipatti",
+    "tags": ["Namakkal", "Village temple", "TM004908"],
+    "status": "identity-verified-review-required"
+  },
+  {
+    "kind": "Temple",
+    "id": "sivanmalai",
+    "titleTa": "அருள்மிகு சுப்பிரமணியசுவாமி திருக்கோயில்",
+    "titleEn": "Sivanmalai Subramaniyaswamy Temple",
+    "summary": "Official temple identity record for Tiruppur. History, rituals, schedules and visitor details remain under review.",
+    "route": "regional-temple-detail.html?id=sivanmalai",
+    "tags": ["Tiruppur", "Kangeyam", "Hill temple", "TM010054"],
+    "status": "identity-verified-review-required"
   }
 ]

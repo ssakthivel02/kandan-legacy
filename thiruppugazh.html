@@ -15,7 +15,11 @@
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/css/osb44.css">
 <link rel="stylesheet" href="assets/css/premium-pages-2026.css">
-<link rel="stylesheet" href="assets/css/content-reliability-2026.css?v=20260728-1">
+<link rel="stylesheet" href="assets/css/content-reliability-2026.css?v=20260729-p20-1">
+<style id="osb-critical-content-visibility">
+  [data-song-card],[data-reveal]{opacity:1!important;visibility:visible!important;transform:none!important}
+  [data-song-card][hidden]{display:none!important}
+</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://omsaravanabhava.org/thiruppugazh.html#webpage","url":"https://omsaravanabhava.org/thiruppugazh.html","name":"Thiruppugazh Digital Library","alternateName":"திருப்புகழ் மின்னியல் நூலகம்","description":"Read the first verified source-linked Thiruppugazh songs digitised from the user-uploaded Arunagirinathar compilation, with venue and rhythmic metadata.","inLanguage":["ta","en"],"dateModified":"2026-07-11","isPartOf":{"@id":"https://omsaravanabhava.org/#website"},"about":{"@type":"Book","name":"Thiruppugazh","alternateName":"திருப்புகழ்","author":{"@type":"Person","name":"Arunagirinathar"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://omsaravanabhava.org/"},{"@type":"ListItem","position":2,"name":"Slokas","item":"https://omsaravanabhava.org/sloka-library.html"},{"@type":"ListItem","position":3,"name":"Thiruppugazh","item":"https://omsaravanabhava.org/thiruppugazh.html"}]}]}</script>
 <script defer src="assets/js/osb44.js"></script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -29,7 +33,7 @@
 <script defer src="assets/js/pwa-register.js"></script>
 <script defer src="assets/js/premium-interactions.js"></script>
 <script type="module" src="assets/js/reader-experience.js"></script>
-<script type="module" src="assets/js/content-reliability-2026.mjs?v=20260728-1"></script>
+<script type="module" src="assets/js/content-reliability-2026.mjs?v=20260729-p20-1"></script>
 <script defer src="assets/js/desktop-layout.js"></script>
   <link rel="stylesheet" href="assets/css/global-experience-2026.css?v=20260727-1">
   <link rel="stylesheet" href="assets/css/phase6-experience-2026.css?v=20260726-1">
@@ -89,6 +93,18 @@
   <div class="content-reliability-note" role="note">
     <strong>Reliable reading:</strong> all twelve source-linked songs are included in this page before JavaScript runs. Search and venue controls progressively filter this published list.
   </div>
+
+  <section class="card corpus-progress" aria-labelledby="corpus-progress-heading">
+    <span class="pill">1,300-song programme · governed progress</span>
+    <h2 id="corpus-progress-heading">Twelve verified songs—not a fake completion claim.</h2>
+    <div class="corpus-progress-grid">
+      <p><strong>12</strong><span>published and source-linked</span></p>
+      <p><strong>39</strong><span>unchecked OCR drafts quarantined</span></p>
+      <p><strong>18</strong><span>empty route shells excluded</span></p>
+    </div>
+    <p>The 1,300 figure is a programme target. A completion percentage is deliberately withheld until the surviving-corpus boundary and every candidate text are editorially established.</p>
+    <p><a class="btn secondary" href="data/thiruppugazh-corpus-progress.json">Open the machine-readable progress record</a></p>
+  </section>
 
   <section id="thiruppugazhGrid" class="grid" aria-busy="false" aria-label="Thiruppugazh songs">
     <article class="card thiruppugazh-card" data-song-card data-category="Thiruvarunai" data-search="6 முத்தைத்தரு Muththaiththaru திருவருணை Thiruvarunai">

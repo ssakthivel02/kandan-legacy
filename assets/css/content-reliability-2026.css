@@ -1,4 +1,13 @@
-/* Phase 19: essential devotional content remains readable before JavaScript. */
+/* Phase 20: essential devotional content remains readable before JavaScript
+   and when a visitor still has an older animation stylesheet cached. */
+[data-reveal],
+.reveal,
+[data-song-card],
+[data-regional-temple] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
 .content-reliability-note {
   margin: 1rem 0 1.5rem;
   padding: 1rem 1.1rem;
@@ -78,6 +87,37 @@
   display: none !important;
 }
 
+.corpus-progress {
+  margin: 1rem 0 1.5rem;
+}
+
+.corpus-progress-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .8rem;
+  margin: 1rem 0;
+}
+
+.corpus-progress-grid p {
+  display: grid;
+  gap: .2rem;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid rgba(242, 189, 84, .24);
+  border-radius: 14px;
+  background: rgba(242, 189, 84, .06);
+}
+
+.corpus-progress-grid strong {
+  color: var(--gold, #efb94f);
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+.corpus-progress-grid span {
+  color: inherit;
+  font-size: .9rem;
+}
+
 @media (max-width: 900px) {
   .regional-temple-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -86,7 +126,8 @@
 
 @media (max-width: 640px) {
   .regional-temple-toolbar,
-  .regional-temple-grid {
+  .regional-temple-grid,
+  .corpus-progress-grid {
     grid-template-columns: 1fr;
   }
 }

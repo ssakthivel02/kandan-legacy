@@ -1,7 +1,7 @@
 {
-  "release": 252,
-  "generated": "2026-07-28",
-  "totalDiscoverableRecords": 16,
+  "release": 253,
+  "generated": "2026-07-29",
+  "totalDiscoverableRecords": 24,
   "tiers": {
     "publishedSourceLinkedGuides": {
       "count": 6,
@@ -9,7 +9,7 @@
       "label": "Arupadai Veedu source-linked guides"
     },
     "officialIdentityRecords": {
-      "count": 10,
+      "count": 18,
       "index": "/data/temples/regional/index.json",
       "label": "Official identity verified; content review required"
     }
@@ -24,7 +24,15 @@
     "chennimalai",
     "ettukudi",
     "kumarakottam",
-    "pookara-street-thanjavur"
+    "pookara-street-thanjavur",
+    "thiruporur",
+    "vadapalani",
+    "siruvapuri",
+    "kandhakottam",
+    "thiruverumbur",
+    "pollachi",
+    "kalipatti",
+    "sivanmalai"
   ],
   "reviewBoundary": {
     "verified": [

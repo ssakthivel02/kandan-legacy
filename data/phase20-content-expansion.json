@@ -1,0 +1,32 @@
+{
+  "release": 253,
+  "phase": "Phase 20",
+  "title": "Temple expansion, corpus truth and resilient listening",
+  "generated": "2026-07-29",
+  "requirements": {
+    "essentialContentVisibleWithStaleStyles": true,
+    "verifiedThiruppugazhSongs": 12,
+    "targetThiruppugazhProgramme": 1300,
+    "discoverableTempleRecords": 24,
+    "publishedTempleGuideRecords": 6,
+    "officialIdentityReviewRecords": 18,
+    "deviceSpeechPlaylistRecords": 16,
+    "mantraAndKavasamSpeechRecords": 4,
+    "thiruppugazhSpeechRecords": 12,
+    "speechStartupTimeoutHandled": true,
+    "speechErrorsAnnounced": true
+  },
+  "contentSafety": {
+    "generatedSacredText": 0,
+    "ocrOnlyTextPromoted": 0,
+    "placeholderSongsCountedAsPublished": 0,
+    "placeholderTempleGuidesPublished": 0,
+    "commercialAudioCopied": 0
+  },
+  "limitations": [
+    "The 1,300-song figure is a programme target, not a completion claim.",
+    "Only twelve manually verified, source-linked Thiruppugazh songs are published.",
+    "Regional temple records verify stable identities only.",
+    "Device read-aloud is not a licensed human devotional recording and depends on browser speech support."
+  ]
+}

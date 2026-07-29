@@ -3,6 +3,14 @@
 
   let activeUtterance = null;
   let activeStatus = null;
+  let startupTimer = null;
+
+  const clearStartupTimer = () => {
+    if (startupTimer !== null) {
+      window.clearTimeout(startupTimer);
+      startupTimer = null;
+    }
+  };
 
   const getTamilVoice = () => {
     const voices = window.speechSynthesis?.getVoices?.() || [];
@@ -17,6 +25,7 @@
 
   const stop = () => {
     if (!('speechSynthesis' in window)) return;
+    clearStartupTimer();
     window.speechSynthesis.cancel();
     activeUtterance = null;
     setStatus(activeStatus, 'Read-aloud stopped.');
@@ -44,24 +53,49 @@
     activeUtterance = utterance;
     activeStatus = statusElement;
 
-    utterance.onstart = () => setStatus(
-      statusElement,
-      tamilVoice
-        ? `Playing with ${tamilVoice.name}.`
-        : 'Playing with the browser’s available voice; install a Tamil voice for better pronunciation.'
-    );
+    utterance.onstart = () => {
+      clearStartupTimer();
+      setStatus(
+        statusElement,
+        tamilVoice
+          ? `Playing with ${tamilVoice.name}.`
+          : 'Playing with the browser’s available voice; install a Tamil voice for better pronunciation.'
+      );
+    };
     utterance.onend = () => {
+      clearStartupTimer();
       activeUtterance = null;
       setStatus(statusElement, 'Read-aloud completed.');
     };
     utterance.onerror = event => {
+      clearStartupTimer();
       activeUtterance = null;
       if (event.error !== 'canceled' && event.error !== 'interrupted') {
         setStatus(statusElement, 'The browser could not play this text.');
       }
     };
 
-    window.speechSynthesis.speak(utterance);
+    setStatus(statusElement, 'Starting Tamil read-aloud…');
+    startupTimer = window.setTimeout(() => {
+      if (activeUtterance !== utterance) return;
+      window.speechSynthesis.cancel();
+      activeUtterance = null;
+      setStatus(
+        statusElement,
+        'Tamil read-aloud did not start. Check that a speech voice is enabled, then try again.'
+      );
+    }, 5000);
+    try {
+      window.speechSynthesis.speak(utterance);
+    } catch (error) {
+      clearStartupTimer();
+      activeUtterance = null;
+      setStatus(
+        statusElement,
+        'Tamil read-aloud could not start in this browser.'
+      );
+      return false;
+    }
     return true;
   };
 

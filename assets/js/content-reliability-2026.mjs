@@ -103,6 +103,10 @@ export const initialiseRegionalTempleFilters = root => {
 export const initialiseContentReliability = (
   root = document
 ) => {
+  root.documentElement?.setAttribute(
+    'data-content-reliability-ready',
+    'true'
+  );
   initialiseThiruppugazhFilters(root);
   initialiseRegionalTempleFilters(root);
 };
