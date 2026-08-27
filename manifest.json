@@ -1,123 +1,29 @@
 {
   "id": "/",
-  "name": "Om Saravana Bhava",
-  "short_name": "Saravana Bhava",
-  "description": "Tamil-first Murugan devotional knowledge platform for sacred literature, temples, Guided Search, audio and spiritual learning.",
+  "name": "Kandan",
+  "short_name": "Kandan",
+  "description": "Tamil-first Murugan devotional knowledge platform for sacred literature, temples, guided search, audio and spiritual learning.",
   "lang": "ta",
   "dir": "ltr",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "display_override": [
-    "standalone",
-    "minimal-ui"
-  ],
+  "display_override": ["standalone", "minimal-ui"],
   "orientation": "any",
   "background_color": "#120c18",
   "theme_color": "#a51d17",
-  "categories": [
-    "education",
-    "lifestyle",
-    "books"
-  ],
+  "categories": ["education", "lifestyle", "books"],
   "icons": [
-    {
-      "src": "/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-maskable-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
+    {"src":"/icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"/icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"/icons/icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
   ],
   "shortcuts": [
-    {
-      "name": "Daily Murugan Darshan",
-      "short_name": "Daily Darshan",
-      "description": "Open a private Tamil-first morning or evening Murugan practice.",
-      "url": "/daily.html",
-      "icons": [
-        {
-          "src": "/icons/icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Saravana Bhava Android App",
-      "short_name": "Android App",
-      "description": "Official Android app information, privacy, support and release status.",
-      "url": "/android-app.html",
-      "icons": [
-        {
-          "src": "/icons/icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Temples",
-      "short_name": "Temples",
-      "description": "Explore source-aware Murugan temple records and pilgrimage guidance.",
-      "url": "/temples.html",
-      "icons": [
-        {
-          "src": "/icons/icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Sloka Library",
-      "short_name": "Slokas",
-      "description": "Open the Tamil devotional sloka and prayer library.",
-      "url": "/sloka-library.html",
-      "icons": [
-        {
-          "src": "/icons/icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Festivals",
-      "short_name": "Festivals",
-      "description": "Explore Murugan festivals and reviewed traditional references.",
-      "url": "/festivals.html",
-      "icons": [
-        {
-          "src": "/icons/icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Saravana Bhava Guided Search",
-      "short_name": "Guided Search",
-      "description": "Search published devotional and temple records.",
-      "url": "/ai-search.html",
-      "icons": [
-        {
-          "src": "/icons/icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    }
+    {"name":"Daily Murugan Darshan","short_name":"Daily Darshan","description":"Open a private Tamil-first morning or evening Murugan practice.","url":"/daily.html","icons":[{"src":"/icons/icon-192.png","sizes":"192x192","type":"image/png"}]},
+    {"name":"Saravana Bhava Android App","short_name":"Android App","description":"Official Android app information, privacy, support and release status.","url":"/android-app.html","icons":[{"src":"/icons/icon-192.png","sizes":"192x192","type":"image/png"}]},
+    {"name":"Temples","short_name":"Temples","description":"Explore source-aware Murugan temple records and pilgrimage guidance.","url":"/temples.html","icons":[{"src":"/icons/icon-192.png","sizes":"192x192","type":"image/png"}]},
+    {"name":"Sloka Library","short_name":"Slokas","description":"Open the Tamil devotional sloka and prayer library.","url":"/sloka-library.html","icons":[{"src":"/icons/icon-192.png","sizes":"192x192","type":"image/png"}]},
+    {"name":"Festivals","short_name":"Festivals","description":"Explore Murugan festivals and reviewed traditional references.","url":"/festivals.html","icons":[{"src":"/icons/icon-192.png","sizes":"192x192","type":"image/png"}]},
+    {"name":"Kandan Guided Search","short_name":"Guided Search","description":"Search published devotional and temple records.","url":"/ai-search.html","icons":[{"src":"/icons/icon-192.png","sizes":"192x192","type":"image/png"}]}
   ]
 }
