@@ -12,6 +12,12 @@ Source product: OmSaravanaBhava
 - Use this migration branch and PR workflow; do not rewrite `main` history.
 - DNS/Cloudflare cutover occurs only after repository validation.
 
+## Current migration state
+- Public homepage identity is now `கந்தன் · Kandan`.
+- Canonical, OpenGraph and sitemap production URLs now target `kandan.omsaravanabhava.org`.
+- Existing Vel/Mayil devotional artwork is retained intentionally until a dedicated Kandan visual-identity enhancement is approved.
+- This user-authored status commit intentionally retriggers the full migration CI after the previous bot-authored identity commit was held as `action_required` by GitHub.
+
 ## Migration phases
 1. Legacy domain and Kandan branding baseline.
 2. Repair known manifest/PWA/sitemap/placeholder defects.
