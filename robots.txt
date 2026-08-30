@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://omsaravanabhava.org/sitemap.xml
-Sitemap: https://omsaravanabhava.org/sitemap-songs.xml
-Sitemap: https://omsaravanabhava.org/sitemap-platform.xml
-Sitemap: https://omsaravanabhava.org/sitemap-app.xml
+Sitemap: https://kandan.omsaravanabhava.org/sitemap.xml
+Sitemap: https://kandan.omsaravanabhava.org/sitemap-songs.xml
+Sitemap: https://kandan.omsaravanabhava.org/sitemap-platform.xml
+Sitemap: https://kandan.omsaravanabhava.org/sitemap-app.xml
