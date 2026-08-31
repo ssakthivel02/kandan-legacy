@@ -43,7 +43,7 @@
   "repositoryAlignmentStatus": "SOURCE_ALIGNED_LIVE_REVERIFY_REQUIRED",
   "repositoryAlignmentReason": "Phase 20 expands the governed temple directory to 24 records, publishes honest 1,300-song programme accounting, guarantees core song and temple visibility against stale animation styles, corrects the device-speech queue to 4 plus 12 records, reports stalled speech startup, and rotates the service-worker cache. Repository package validation uses this source-alignment map while preserving historical live-production evidence until deployment is verified.",
   "repositoryAlignmentBlobs": {
-    "index.html": "5930df234a6246faf48ea74151b57cbf7b9c0270",
+    "index.html": "d4e713ce8693a1005b75b70045d53534ced2fd56",
     "platform-hub.html": "fa512dd17118994fa05b3142fb342884fa98a11b",
     "operations-observability.html": "74330ae5618d7da7329ea4fe197cec0448e798f0",
     "service-worker.js": "cbc0680983a1ee24f765d2ee57201ffdff03e926",
