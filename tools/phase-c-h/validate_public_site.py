@@ -386,9 +386,10 @@ def main() -> None:
         if (SITE / 'CNAME').is_file()
         else ''
     )
-    if cname != 'omsaravanabhava.org':
+    expected_cname = 'kandan.omsaravanabhava.org'
+    if cname != expected_cname:
         errors.append(
-            f'CNAME must be omsaravanabhava.org, found {cname!r}'
+            f'CNAME must be {expected_cname}, found {cname!r}'
         )
 
     summary = {
