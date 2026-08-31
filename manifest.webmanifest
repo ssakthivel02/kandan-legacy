@@ -1,7 +1,9 @@
 {
-  "name": "Om Saravana Bhava",
-  "short_name": "OSB",
-  "start_url": "/index.html",
+  "name": "Kandan",
+  "short_name": "Kandan",
+  "description": "Murugan devotional knowledge, literature, temples, pilgrimage and learning.",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "theme_color": "#a51d17",
   "background_color": "#fff7ec",

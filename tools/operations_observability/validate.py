@@ -32,6 +32,12 @@ def validate_alignment(root:Path)->list[dict]:
     conformance=read_json(root/'data/deployment-conformance.json')
     deployment=summary['release'];baseline=summary['baselineRelease']
     repository_blobs=attestation.get('repositoryAlignmentBlobs',attestation['verifiedGitBlobs'])
+    mismatches=[]
+    for path,expected_sha in repository_blobs.items():
+        candidate=root/path
+        actual_sha=git_blob_sha(candidate) if candidate.is_file() else None
+        if actual_sha!=expected_sha:
+            mismatches.append({'path':path,'expected':expected_sha,'actual':actual_sha})
     checks=[
         ('alignment-summary-policy',deployment==policy['release'],'policies/operations-observability.json'),
         ('alignment-baseline-catalog',baseline==policy['baselineRelease']==catalog['release'],'data/operations/check-catalog.json'),
@@ -42,9 +48,15 @@ def validate_alignment(root:Path)->list[dict]:
         ('alignment-conformance-release',conformance['release']==deployment,'data/deployment-conformance.json'),
         ('alignment-conformance-cache',str(conformance['expectedCacheRelease'])==str(deployment),'data/deployment-conformance.json'),
         ('alignment-service-worker',f"const RELEASE = '{deployment}';" in (root/'service-worker.js').read_text(encoding='utf-8'),'service-worker.js'),
-        ('alignment-verified-blobs',all((root/path).is_file() and git_blob_sha(root/path)==sha for path,sha in repository_blobs.items()),'data/operations/deployment-attestation.json')
+        ('alignment-verified-blobs',not mismatches,'data/operations/deployment-attestation.json')
     ]
-    return [{'id':item,'status':'PASS' if ok else 'FAIL','target':target} for item,ok,target in checks]
+    results=[{'id':item,'status':'PASS' if ok else 'FAIL','target':target} for item,ok,target in checks]
+    if mismatches:
+        for result in results:
+            if result['id']=='alignment-verified-blobs':
+                result['mismatches']=mismatches
+                break
+    return results
 def validate_repository(root:Path,mode:str='package')->dict:
     catalog=read_json(root/'data/operations/check-catalog.json');baseline=read_json(root/'data/production-baseline.json');manifest=read_json(root/baseline['manifest'])
     policy=read_json(root/'policies/deployment-attestation.json')
