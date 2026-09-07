@@ -21,53 +21,18 @@
     "checkout_v4": false
   },
   {
+    "path": ".github/workflows/kandan-public-brand-migration.yml",
+    "push_trigger": true,
+    "pull_request_trigger": false,
+    "workflow_dispatch": true,
+    "checkout_v4": true
+  },
+  {
     "path": ".github/workflows/operations-observability.yml",
     "push_trigger": true,
     "pull_request_trigger": true,
     "workflow_dispatch": true,
-    "checkout_v4": true
-  },
-  {
-    "path": ".github/workflows/pack-101-canonical-song-registry.yml",
-    "push_trigger": true,
-    "pull_request_trigger": false,
-    "workflow_dispatch": true,
-    "checkout_v4": true
-  },
-  {
-    "path": ".github/workflows/pack-101-html-metadata-batch-002.yml",
-    "push_trigger": true,
-    "pull_request_trigger": false,
-    "workflow_dispatch": true,
-    "checkout_v4": true
-  },
-  {
-    "path": ".github/workflows/pack-101-html-metadata-batch.yml",
-    "push_trigger": true,
-    "pull_request_trigger": false,
-    "workflow_dispatch": true,
-    "checkout_v4": true
-  },
-  {
-    "path": ".github/workflows/pack-101-reachability-song-audit.yml",
-    "push_trigger": true,
-    "pull_request_trigger": false,
-    "workflow_dispatch": true,
-    "checkout_v4": true
-  },
-  {
-    "path": ".github/workflows/pack-101-remediation-plan.yml",
-    "push_trigger": true,
-    "pull_request_trigger": false,
-    "workflow_dispatch": true,
-    "checkout_v4": true
-  },
-  {
-    "path": ".github/workflows/pack-101-workflow-rationalisation-review.yml",
-    "push_trigger": true,
-    "pull_request_trigger": false,
-    "workflow_dispatch": true,
-    "checkout_v4": true
+    "checkout_v4": false
   },
   {
     "path": ".github/workflows/phase-c-h-recovery-quality.yml",
@@ -89,6 +54,20 @@
     "pull_request_trigger": true,
     "workflow_dispatch": true,
     "checkout_v4": false
+  },
+  {
+    "path": ".github/workflows/phase19-content-reliability.yml",
+    "push_trigger": false,
+    "pull_request_trigger": true,
+    "workflow_dispatch": true,
+    "checkout_v4": true
+  },
+  {
+    "path": ".github/workflows/phase20-content-expansion.yml",
+    "push_trigger": false,
+    "pull_request_trigger": true,
+    "workflow_dispatch": true,
+    "checkout_v4": true
   },
   {
     "path": ".github/workflows/production-baseline.yml",

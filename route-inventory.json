@@ -448,6 +448,13 @@
     "has_description": false
   },
   {
+    "path": "android-app.html",
+    "title": "Saravana Bhava Android App | Om Saravana Bhava",
+    "has_main": true,
+    "has_viewport": true,
+    "has_description": true
+  },
+  {
     "path": "animation-guidelines.html",
     "title": "Animation Guidelines \u00b7 Om Saravana Bhava",
     "has_main": true,
@@ -2976,7 +2983,7 @@
   },
   {
     "path": "daily.html",
-    "title": "Daily Murugan Reflection | Om Saravana Bhava",
+    "title": "\u0b87\u0ba9\u0bcd\u0bb1\u0bc8\u0baf \u0bae\u0bc1\u0bb0\u0bc1\u0b95\u0ba9\u0bcd \u0ba4\u0bb0\u0bbf\u0b9a\u0ba9\u0bae\u0bcd | Daily Murugan Darshan",
     "has_main": true,
     "has_viewport": true,
     "has_description": true
@@ -2984,6 +2991,13 @@
   {
     "path": "dark-mode-audit.html",
     "title": "Dark Mode Audit \u00b7 Om Saravana Bhava",
+    "has_main": true,
+    "has_viewport": true,
+    "has_description": true
+  },
+  {
+    "path": "data-deletion.html",
+    "title": "Local Data Deletion | Saravana Bhava",
     "has_main": true,
     "has_viewport": true,
     "has_description": true
@@ -3180,6 +3194,13 @@
   {
     "path": "devotional-dictionary.html",
     "title": "Tamil\u2013English Devotional Dictionary | Om Saravana Bhava",
+    "has_main": true,
+    "has_viewport": true,
+    "has_description": true
+  },
+  {
+    "path": "devotional-listening.html",
+    "title": "\u0bae\u0bc1\u0bb0\u0bc1\u0b95\u0ba9\u0bcd \u0baa\u0b95\u0bcd\u0ba4\u0bbf \u0baa\u0baf\u0ba3\u0bae\u0bcd | Devotional Listening",
     "has_main": true,
     "has_viewport": true,
     "has_description": true
@@ -5132,7 +5153,7 @@
   },
   {
     "path": "index.html",
-    "title": "\u0b93\u0bae\u0bcd \u0b9a\u0bb0\u0bb5\u0ba3\u0baa\u0bb5 | Lord Murugan Devotional Knowledge Platform",
+    "title": "Kandan | Lord Murugan Devotional Knowledge Platform",
     "has_main": true,
     "has_viewport": true,
     "has_description": true
@@ -13762,6 +13783,13 @@
     "has_description": true
   },
   {
+    "path": "mantra-practice.html",
+    "title": "\u0bae\u0bc1\u0bb0\u0bc1\u0b95\u0ba9\u0bcd \u0b9c\u0baa \u0b85\u0bb1\u0bc8 | Murugan Mantra Practice",
+    "has_main": true,
+    "has_viewport": true,
+    "has_description": true
+  },
+  {
     "path": "media-library.html",
     "title": "Media Library | Om Saravana Bhava",
     "has_main": true,
@@ -15366,7 +15394,7 @@
   },
   {
     "path": "privacy.html",
-    "title": "Privacy and Local Preferences | Om Saravana Bhava",
+    "title": "Privacy Policy | Om Saravana Bhava",
     "has_main": true,
     "has_viewport": true,
     "has_description": true
@@ -21817,6 +21845,13 @@
     "has_main": false,
     "has_viewport": false,
     "has_description": false
+  },
+  {
+    "path": "song-source-requests.html",
+    "title": "\u0bb5\u0bbf\u0b9f\u0bc1\u0baa\u0b9f\u0bcd\u0b9f \u0bae\u0bc1\u0bb0\u0bc1\u0b95\u0ba9\u0bcd \u0baa\u0bbe\u0b9f\u0bb2\u0bcd\u0b95\u0bb3\u0bcd | Song Source Requests",
+    "has_main": true,
+    "has_viewport": true,
+    "has_description": true
   },
   {
     "path": "source-catalog.html",
